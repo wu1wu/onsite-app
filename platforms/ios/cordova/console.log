@@ -1057,3 +1057,48 @@ Terminating in response to SpringBoard's termination.
 2014-06-10 11:05:09.926 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
 2014-06-10 11:05:09.926 HelloCordova[12430:70b] hiding
 2014-06-10 11:05:09.926 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:20:40.484 HelloCordova[14147:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 18:20:40.493 HelloCordova[14147:70b] Unlimited access to network resources
+2014-06-10 18:20:40.518 HelloCordova[14147:70b] [CDVTimer][keyboard] 0.156999ms
+2014-06-10 18:20:40.527 HelloCordova[14147:70b] [CDVTimer][statusbar] 7.762969ms
+2014-06-10 18:20:40.528 HelloCordova[14147:70b] [CDVTimer][TotalPluginStartup] 10.096014ms
+2014-06-10 18:20:40.757 HelloCordova[14147:70b] Resetting plugins due to page load.
+2014-06-10 18:20:41.290 HelloCordova[14147:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 18:20:51.452 HelloCordova[14147:70b] --listening to changes in db: onsite
+2014-06-10 18:20:51.603 HelloCordova[14147:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:20:51.604 HelloCordova[14147:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:04.436 HelloCordova[14599:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 18:24:04.444 HelloCordova[14599:70b] Unlimited access to network resources
+2014-06-10 18:24:04.466 HelloCordova[14599:70b] [CDVTimer][keyboard] 0.077009ms
+2014-06-10 18:24:04.474 HelloCordova[14599:70b] [CDVTimer][statusbar] 7.434011ms
+2014-06-10 18:24:04.475 HelloCordova[14599:70b] [CDVTimer][TotalPluginStartup] 9.109974ms
+2014-06-10 18:24:04.601 HelloCordova[14599:70b] Resetting plugins due to page load.
+2014-06-10 18:24:05.235 HelloCordova[14599:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 18:24:06.734 HelloCordova[14599:70b] --listening to changes in db: onsite
+2014-06-10 18:24:06.901 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:06.901 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:11.720 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:11.721 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.995 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.996 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.996 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.996 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.996 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.997 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.997 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.997 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.997 HelloCordova[14599:70b] hiding
+2014-06-10 18:24:12.998 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.998 HelloCordova[14599:70b] hiding
+2014-06-10 18:24:12.998 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.998 HelloCordova[14599:70b] hiding
+2014-06-10 18:24:12.999 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.999 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.999 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.999 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:12.999 HelloCordova[14599:70b] hiding
+2014-06-10 18:24:13.000 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:13.000 HelloCordova[14599:70b] hiding
+2014-06-10 18:24:13.000 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 18:24:13.000 HelloCordova[14599:70b] hiding
+2014-06-10 18:24:13.000 HelloCordova[14599:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.

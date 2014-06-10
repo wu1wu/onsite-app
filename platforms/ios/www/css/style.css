@@ -233,7 +233,7 @@ textarea {
 	-webkit-flex: 1 1 100px;
 }
 
-.item-input input {
+onsite-inputs .item-input input {
 	flex: 1 20 140px;
 	-webkit-flex: 1 20 140px;
 }
