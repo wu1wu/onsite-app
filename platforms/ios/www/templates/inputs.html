@@ -1,0 +1,56 @@
+<ion-scroll zoom='false' ng-hide="component.schema.type === 'Descriptive'" >
+  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
+	  <div class="item item-divider">
+	    {{section.name}}
+	  </div>
+	  <label class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
+	     <span class="input-label">{{input.name}}</span>
+ 
+	     <input  ng-hide='input.view.options.length > 1' type='{{input.keyboard ? input.keyboard:"text"}}'
+	             placeholder='{{input.name}}' ng-model='component.values[input.alias]' 
+	             ng-change="onInputChange(component.values[input.alias])" ng-readonly="input.restricted == '1'" 
+			     ng-blur='onInputBlur(component.values[input.alias], input)'
+			     ng-focus='onInputFocus(component.values[input.alias])'> 
+
+	     <select ng-show='input.view.options.length > 1' ng-model='component.values[input.alias]' 
+	             ng-change="onInputChange(component.values[input.alias])" ng-options="o for o in input.view.options" 
+			  	 ng-blur='onInputBlur(component.values[input.alias], input)'
+			  	 ng-focus='onInputFocus(component.values[input.alias])'>
+		 </select>
+ 
+ 
+		 <button class="button button-dark button-clear" ng-show='input.units'>
+		     {{input.units}}
+		   </button>
+	   </label>
+   </div>
+</ion-scroll>
+
+<ion-scroll zoom='false' ng-hide="component.schema.type !== 'Descriptive'">
+  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
+	  <div class="item item-divider">
+	    {{section.name}}
+	  </div>
+	  <label class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
+	     <span class="input-label">{{input.name}}</span>
+ 
+	     <input  ng-hide='input.view.options.length > 1' type='{{input.keyboard ? input.keyboard:"text"}}'
+	             placeholder='{{input.name}}' ng-model='project.values[input.alias]' 
+	             ng-change="onInputChange(project.values[input.alias])" ng-readonly="input.restricted == '1'" 
+			     ng-blur='onInputBlur(project.values[input.alias], input)'
+			     ng-focus='onInputFocus(project.values[input.alias])' clear-button> 
+
+	     <select ng-show='input.view.options.length > 1' ng-model='project.values[input.alias]' 
+	             ng-change="onInputChange(project.values[input.alias])" ng-options="o for o in input.view.options" 
+			  	 ng-blur='onInputBlur(project.values[input.alias], input)'
+			  	 ng-focus='onInputFocus(project.values[input.alias])'>
+		 </select>
+ 
+ 
+		 <button class="button button-dark button-clear" ng-show='input.units'>
+		     {{input.units}}
+		   </button>
+	   </label>
+   </div>
+</ion-scroll>
+

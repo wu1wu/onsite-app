@@ -1,0 +1,110 @@
+<ion-view title="Projects">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-plus-round" io-tap='dialogOpen()'></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header" scroll='false'>
+	<div class="row">
+	  <div class="col-25">
+		<ion-list>
+  		<div class="card" ng-repeat="tag in tags" io-tap='view.activeTag = tag'>
+  		  <div class="item item-text-wrap"  ng-class="{selected: tag === view.activeTag}">
+  		    {{tag}}
+  		  </div>
+  		</div>
+	  </div>
+	  <div class="col">
+		  <ion-list class='card-list' ng-show='view.activeTag'>		  
+		          <ion-item ng-repeat="item in items | filter: {tag: view.activeTag}" 
+		                    item="item"
+		                    href="#/app/project/{{item._id}}">
+		            <div class='bold'>{{item.name}}</div>
+			    <div class='italic'>Last Update: {{item.updated | date:'longDate'}}</div>
+		            <ion-option-button class="button-assertive option-button-2" ng-click="deleteItem(item)">Delete</ion-option-button>
+		            <ion-option-button class="button-positive option-button-2" ng-click="dialogOpen(item)">Edit</ion-option-button>
+			    <ion-option-button class="button-stable option-button-2" ng-click="downloadDialog(item)">Reports</ion-option-button>
+		          </ion-item>
+		   </ion-list>
+	  </div>
+  </div>
+  </ion-content>
+</ion-view>
+
+
+
+<!--MODAL DIALOGS -->
+
+<!--ADD NEW -->
+<script type="text/ng-template" id="AddNew-Content.html">
+	<div class="modal">
+		<ion-header-bar>
+		  <button class="button button-stable" ng-click='close()'>
+		    Close
+		  </button>
+		  <h1 class="title">{{title}}</h1>
+		  <button class="button button-positive" ng-click='ok()' ng-disabled='(!newItem.name || !newItem.tag) &&  (!newItem.template || itemToUpdate)'>
+		    Save
+		  </button>
+		</ion-header-bar>
+		<ion-content scroll='false' padding='true'>
+		  <div class="list bottom-border">
+		    <label class="item item-input">
+		      <span class="input-label">Name</span>
+		      <input type="text" ng-model='newItem.name' placeholder='Name' tabindex='100' clear-button has-focus='view.firstFocus'>
+		    </label>
+		    <label class="item item-input autocomplete-label">
+		      <span class="input-label">Tag</span>
+			  <autocomplete ng-model="newItem.tag" data="tags" on-type="" attr-placeholder='Tag' click-activation='true' class='autocomplete-tag'></autocomplete>
+		    </label>			  
+		  </div>
+		  <h4 ng-hide='itemToUpdate'>Templates</h4>
+		  <ion-scroll  style='height: -webkit-calc(100% - 160px);' ng-hide='itemToUpdate'>
+	  		  <div class="list">
+				 <div ng-repeat="template in templates">
+   				  <div class="item item-divider" ng-show='template.tag != templates[$index-1].tag'>
+   				      {{template.tag}}
+   				   </div>
+   	  		       <ion-radio ng-model="newItem.template" ng-value="template">{{template.name}}</ion-radio>
+			     </div>
+	  		  </div>
+		  </ion-scroll>
+		</ion-content>
+	</div>
+</script>
+
+<!--REPORTS-->
+<script type="text/ng-template" id="reportsDialog.html">
+	<div class="modal">
+		<ion-header-bar>
+		  <button class="button button-stable" ng-click='close()'>
+		    Close
+		  </button>
+		  <h1 class="title">Download Report for {{project.name}}</h1>
+		</ion-header-bar>
+		<ion-content scroll='false' padding='true'>
+		  <div class="list bottom-border">
+		    <label class="item item-input  item-select">
+		      <span class="input-label">Report</span>
+			  	<select ng-model='selectedReport' 
+				ng-change='reportChanged()'
+				ng-options='report.name for report in reports'>
+			    </select>
+		    </label>
+		    <label class="item item-input">
+		      <span class="input-label">Name</span>
+			  <input type="text" placeholder="Report Name" ng-model='reportName'>
+		    </label>			  
+		  </div>
+		  <a class="button button-block button-positive" ng-disabled='!generatedReport' ng-click='viewReport()'>
+		    View Report
+		  </a>
+		  <a class="button button-block button-stable" ng-disabled='!generatedReport' ng-click='emailReport()'>
+		    Email Report
+		  </a>
+		</ion-content>
+	</div>
+</script>
+
+

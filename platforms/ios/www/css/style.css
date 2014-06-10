@@ -1,0 +1,214 @@
+/* Empty. Add your own CSS if you like */
+textarea {
+   resize: none;
+}
+.center-align{
+	text-align:center;
+}
+
+.login-page{
+	background: url("../img/noisy_grid.png");
+}
+
+.login-box{
+	margin-top: 200px;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: 30px 10px 30px 10px;
+	box-shadow: 0 0 40px 5px #444444;
+}
+
+.login-box .logo{
+	margin-bottom: 10px;
+}
+
+.login-box .button{
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+}
+
+
+.pull-right{
+	float:right;
+}
+/* Inner fade on scrolls */
+
+.fade-scroll .item{
+	border-left-width:0;
+	border-right-width:0;
+}
+.fade-scroll .list div:first-child .item:first-child{
+	border-top-width:0;
+}
+.fade-scroll .item:last-child{
+	border-bottom-width:0;
+}
+
+.fade-scroll {
+	border: 1px solid #ddd;
+}
+/*
+.scroll-view::before {
+  box-shadow: 0px 15px 10px -15px black inset;
+  content: " ";
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: -15px;
+  height: 15px;
+  z-index:25;
+}
+
+*/
+.selected{
+	color: #ffffff;
+	background-color: #0088cc;
+}
+
+
+.card-list > .list{
+	margin-top:15px;
+}
+
+.card-list .item{
+	margin-bottom:20px;
+}
+
+.option-button-2{
+	line-height: 69px;
+}
+
+.bottom-border{
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 0px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.italic{
+	font-style:italic;
+}
+
+.item-input input{
+	font-size:16px;
+	padding-right: 12px;
+}
+
+.icon-left a{
+	max-height:100%;
+}
+.placeholder-icon:last-child {
+   padding-left: 0px;
+   margin-right: 30px;
+   z-index:300;
+   position:relative;
+   -webkit-transform: scale(0.8);
+   opacity: .75;
+}
+
+/* AUTOCOMPLETE */
+
+.autocomplete-label{
+	overflow:visible;
+}
+
+.autocomplete-tag{
+	width: 100%;
+	padding-right: 12px;
+	-webkit-flex: 1 0 220px;
+	-moz-box-flex: 1;
+	-moz-flex: 1 0 220px;
+	-ms-flex: 1 0 220px;
+	flex: 1 0 220px; 
+}
+
+.autocomplete{
+  width: 100%;
+  position: relative;
+}
+
+.autocomplete input{
+  padding-right: 0;
+}
+
+
+.autocomplete ul{
+  position: absolute;
+  left: 0;
+  top: 39px;
+  width: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  /*border-left: 1px solid #888;
+  
+  border-bottom: 1px solid #888;
+  border-top: 1px solid #888;
+  border-radius: 5px;*/
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*---arrow----*/
+.autocomplete .arrow{
+	color: #fff;
+	text-shadow: 0 -4px 3px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: -webkit-calc(50% - 10px);
+	font-size: 48px;
+	z-index:101;
+	top: 10px;
+	-webkit-transform: scaleX(1.5);
+}
+
+.autocomplete li{
+  text-align: left;
+  list-style:none;
+  width: 100%;
+  margin-left: -1px;
+  z-index:110;
+  position:relative;
+}
+
+
+
+.autocomplete li.active{
+  width: 100%;
+  background-color: #4bf;
+  
+}
+
+.autocomplete .highlight {
+  background-color: #E2E2E2;
+
+}
+
+.autocomplete li.active .highlight {
+  background: #666;
+  color: #fff;
+}
+
+.notes{
+    
+}
+.notes .card {
+    height: calc(100% - 40px);
+}
+
+.notes .item, textarea{
+    height:100%;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.right-shadow{
+    box-shadow: 2px 0 5px 0px #ddd;
+}
+
+.selected .item-content:not(.activated){
+	background-color: #0088cc;
+}

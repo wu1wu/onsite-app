@@ -1,0 +1,113 @@
+<ion-view title="{{project.name}}">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-share"></button>
+  </ion-nav-buttons>
+  
+  <div class="tabs tabs-dark tabs-icon-top">
+    <a class="tab-item" ng-class="{'tab-item-active': library == view.activeLibrary}" ng-repeat='library in project.libraries' ng-click='view.activeLibrary = library'>
+      <i class="icon" ng-class="{'ion-home': library.tag === 'Descriptive', 'ion-ios7-gear': library.tag === 'Component-Based'}"></i>
+      {{library.name}}
+    </a>
+    <a class="tab-item" ng-class="{'tab-item-active': view.activeLibrary == 'notes'}" ng-click='view.activeLibrary = "notes"'>
+      <i class="icon ion-compose"></i>
+      Notes
+    </a>
+  </div>
+	<ion-content has-tabs="true" scroll='false'>
+	    <div class="row no-padding" ng-show='view.activeLibrary != "notes"'>
+	      <!--component list-->
+	      <div class='col-33 right-shadow' style='z-index: 100'>
+	        <div class='bar bar-light bar-subheader' style='position: relative;top:0; '>
+	            <button class="button button-icon icon ion-ios7-copy" ng-click='copyComponent()'></button>
+	          <h2 class='title'>{{view.activeLibrary.name}}</h2>
+	          <button class="button button-icon icon ion-plus-round" io-tap='dialogOpen()'></button>
+	        </div>
+	      </div>
+	      <div class='col-67'>
+	        <div class='bar bar-light bar-subheader' style='position: relative;top:0;'>
+	          <h2 class='title'>{{view.activeLibrary.selected.name}}</h2>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="row" style='height:calc(100% - 44px); padding: 0; margin-top:0;' ng-show='view.activeLibrary != "notes"'>
+	      <!--component list-->
+	      <ion-scroll zoom='false' class='col-33 right-shadow'>
+	            <ion-list>
+					<div ng-repeat='group in view.groups[view.activeLibrary._id]'>
+		                <div class="item item-divider">
+		                  {{group.name}}
+		                </div>
+		                <ion-item ng-repeat='component in group.components' ng-click='view.activeLibrary.selected = component' ng-class="{'selected': component == view.activeLibrary.selected}">
+		                  {{component.name}}
+		                  <ion-option-button class="button-positive" ng-click='dialogOpen(component)'>Edit</ion-option-button>
+		                  <ion-option-button class="button-assertive" ng-click='deleteComponent(component)'>Delete</ion-option-button>
+		                </ion-item>
+					</div>
+	            </ion-list>
+	      </ion-scroll>
+	      <!-- input content -->
+	      <onsite-inputs component='view.activeLibrary.selected' project='project' save-component='saveComponent()' class='col-67'></onsite-inputs>
+	   </div>
+	   
+	   
+	   <div class="row no-padding" ng-show='view.activeLibrary == "notes"'>
+	  	   <!--NOTES FIELD-->
+		   <div class='col'>
+	 	  	   <div class="card">
+	 	           <div class="item item-text-wrap">
+	 	             <textarea placeholder='Project Notes' autofocus style='height:400px'></textarea>
+	 	           </div>
+	 	       </div>
+		   </div>
+	   </div>
+	   
+	</ion-content>
+</ion-view>
+
+
+
+
+<!--MODAL DIALOGS -->
+
+<!--ADD NEW -->
+<script type="text/ng-template" id="AddNew-Content.html">
+	<div class="modal">
+		<ion-header-bar>
+		  <button class="button button-stable" ng-click='close()'>
+		    Close
+		  </button>
+		  <h1 class="title">{{title}}</h1>
+		  <button class="button button-positive" ng-click='ok()' ng-disabled='!newItem.name || newItem.name === "" || !newItem.space || newItem.space === "" || (!newItem.schema && !itemToUpdate)'>
+		    Save
+		  </button>
+		</ion-header-bar>
+		<ion-content scroll='false' style='overflow: visible;'>
+		  <div class="list bottom-border list-inset" style='overflow: visible;'>
+		    <label class="item item-input">
+		      <span class="input-label">Name</span>
+		      <input type="text" ng-model='newItem.name' placeholder='Name' tabindex='100' clear-button has-focus='view.firstFocus' ng-click='view.named = true'>
+		    </label>
+		    <label class="item item-input autocomplete-label">
+		      <span class="input-label">Space</span>
+			  <autocomplete ng-model="newItem.space" data="spaces" on-type="" attr-placeholder='Space' click-activation='true' class='autocomplete-tag'></autocomplete>
+		    </label>			  
+		  </div>
+		  <h4 ng-hide='itemToUpdate' style='padding-left:5px;'>Component Schemas</h4>
+		  <ion-scroll  style='height: -webkit-calc(100% - 160px);' ng-hide='itemToUpdate'>
+	  		  <div class="list list-inset" style="margin-top:0">
+				 <div ng-repeat="schema in schemas">
+	 				  <div class="item item-divider" ng-show='schema.tag != schemas[$index-1].tag'>
+	 				      {{schema.tag}}
+	 				   </div>
+	 	  		       <ion-radio ng-model="newItem.schema" ng-value="schema" ng-change='view.named || name(schema)'>{{schema.name}}</ion-radio>
+			     </div>
+	  		  </div>
+		  </ion-scroll>		  
+		</ion-content>
+		  
+	</div>
+</script>
+
