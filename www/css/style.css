@@ -216,7 +216,7 @@ textarea {
 .item-select select {
  position: relative;
  padding: 0; 
- max-width: 100%;
+ width: 100%;
  direction: ltr;
 }
 
@@ -230,10 +230,11 @@ textarea {
 .input-accessories {
 	text-align: right;
 	flex: 1 1 100px;
-	align-self: center;
+	-webkit-flex: 1 1 100px;
 }
 
 .item-input input {
 	flex: 1 20 140px;
+	-webkit-flex: 1 20 140px;
 }
 

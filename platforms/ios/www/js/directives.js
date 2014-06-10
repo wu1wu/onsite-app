@@ -182,15 +182,18 @@ angular.module('starter.directives', [])
 	                      //console.log(placeholder.inputValue);
 	                  }
 	              }
-            
+				  
 	              if(input.defaultValue){//set up dropdown options
 	                  if(input.defaultValue.indexOf(";") !== -1){    
 	                      var inputOptions = input.defaultValue.split(";");                
 	                      //console.log(inputOptions);
-	                      input.view.options = [];              
-	                      if(inputOptions.length === 1 && !input.userValue){                    
+	                      input.view.options = []; 
+						  
+						  //set first value as default             
+	                      if(!input.userValue){                    
 	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);                    
 	                      }
+						  
 	                      if(inputOptions.length > 1){
 	                          for(var i = 0;i < inputOptions.length; i++){
 	                              input.view.options.push($parse(inputOptions[i])(inputScope));
@@ -247,11 +250,18 @@ angular.module('starter.directives', [])
 			//find label
 			var label = element.closest('label');
 			//find button
-			//var button = element.closest('button');
+			var container = element.siblings('.input-accessories');
 			
 			//append
 			//element.after(button);
-			label.append(button);
+			console.log(container);
+			if(container.length > 0){
+				container.append(button);
+			}else{
+				label.append(button);
+			}
+			
+		
 		
 			//attach event handler
 			var $input = element;
@@ -269,6 +279,17 @@ angular.module('starter.directives', [])
 					}
 				});
 			}, button);
+			
+			//match input show/hide
+			scope.$watch(attrs.ngHide, function(newVal){
+				if(newVal){
+					console.log("hiding");
+					console.log(button);
+					button.hide();
+				}else{
+					button.show();
+				}
+			});
 		}
 	};
 })

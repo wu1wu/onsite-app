@@ -212,3 +212,29 @@ textarea {
 .selected .item-content:not(.activated){
 	background-color: #0088cc;
 }
+/* right align selects */
+.item-select select {
+ position: relative;
+ padding: 0; 
+ width: 100%;
+ direction: ltr;
+}
+
+.input-accessories .button-clear{
+	min-height: 0;
+	line-height: 22.857118606567383px;
+	vertical-align: middle;
+	
+}
+
+.input-accessories {
+	text-align: right;
+	flex: 1 1 100px;
+	-webkit-flex: 1 1 100px;
+}
+
+.item-input input {
+	flex: 1 20 140px;
+	-webkit-flex: 1 20 140px;
+}
+

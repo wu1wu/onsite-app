@@ -306,3 +306,754 @@
 2014-06-09 18:49:33.365 HelloCordova[2689:70b] --listening to changes in db: onsite
 2014-06-09 18:49:33.457 HelloCordova[2689:70b] {"loggedIn":true,"offline":false,"name":"drew.trafton@gdsassociates.com","password":"RedSox06","groups":[{"name":"onsite","role":"0"}],"settings":{"groupBy":"tag"},"activeGroup":{"name":"onsite","role":"0"}}
 2014-06-09 18:49:33.458 HelloCordova[2689:70b] []
+2014-06-10 10:16:13.158 HelloCordova[7646:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:16:13.166 HelloCordova[7646:70b] Unlimited access to network resources
+2014-06-10 10:16:13.183 HelloCordova[7646:70b] [CDVTimer][keyboard] 0.090003ms
+2014-06-10 10:16:13.191 HelloCordova[7646:70b] [CDVTimer][statusbar] 8.137941ms
+2014-06-10 10:16:13.192 HelloCordova[7646:70b] [CDVTimer][TotalPluginStartup] 9.239018ms
+2014-06-10 10:16:13.262 HelloCordova[7646:70b] Resetting plugins due to page load.
+2014-06-10 10:16:13.581 HelloCordova[7646:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/C948EFBA-2EE2-4FA9-85BA-2CB42217FA10/HelloCordova.app/www/index.html#/login
+2014-06-10 10:16:16.648 HelloCordova[7646:70b] --listening to changes in db: onsite
+2014-06-10 10:16:16.804 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:16.805 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:18.875 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:18.875 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.235 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.236 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.236 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.236 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.236 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.237 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.237 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.237 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.237 HelloCordova[7646:70b] hiding
+2014-06-10 10:16:20.238 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.238 HelloCordova[7646:70b] hiding
+2014-06-10 10:16:20.238 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.238 HelloCordova[7646:70b] hiding
+2014-06-10 10:16:20.238 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.239 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.239 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.239 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.239 HelloCordova[7646:70b] hiding
+2014-06-10 10:16:20.240 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.240 HelloCordova[7646:70b] hiding
+2014-06-10 10:16:20.240 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:16:20.240 HelloCordova[7646:70b] hiding
+2014-06-10 10:16:20.240 HelloCordova[7646:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:17:34.137 HelloCordova[8080:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:17:34.144 HelloCordova[8080:70b] Unlimited access to network resources
+2014-06-10 10:17:34.161 HelloCordova[8080:70b] [CDVTimer][keyboard] 0.075996ms
+2014-06-10 10:17:34.169 HelloCordova[8080:70b] [CDVTimer][statusbar] 6.985962ms
+2014-06-10 10:17:34.169 HelloCordova[8080:70b] [CDVTimer][TotalPluginStartup] 8.004010ms
+2014-06-10 10:17:34.183 HelloCordova[8080:70b] Resetting plugins due to page load.
+2014-06-10 10:17:34.397 HelloCordova[8080:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/C948EFBA-2EE2-4FA9-85BA-2CB42217FA10/HelloCordova.app/www/index.html#/login
+2014-06-10 10:17:56.591 HelloCordova[8080:70b] --listening to changes in db: onsite
+2014-06-10 10:17:56.704 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:17:56.705 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:17:59.563 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:17:59.564 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.506 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.507 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.507 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.507 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.507 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.507 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.508 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.508 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.508 HelloCordova[8080:70b] hiding
+2014-06-10 10:18:05.508 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.508 HelloCordova[8080:70b] hiding
+2014-06-10 10:18:05.509 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.509 HelloCordova[8080:70b] hiding
+2014-06-10 10:18:05.509 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.509 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.510 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.510 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.510 HelloCordova[8080:70b] hiding
+2014-06-10 10:18:05.510 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.510 HelloCordova[8080:70b] hiding
+2014-06-10 10:18:05.511 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:18:05.511 HelloCordova[8080:70b] hiding
+2014-06-10 10:18:05.511 HelloCordova[8080:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:40.192 HelloCordova[8633:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:22:40.199 HelloCordova[8633:70b] Unlimited access to network resources
+2014-06-10 10:22:40.216 HelloCordova[8633:70b] [CDVTimer][keyboard] 0.074983ms
+2014-06-10 10:22:40.225 HelloCordova[8633:70b] [CDVTimer][statusbar] 7.906973ms
+2014-06-10 10:22:40.225 HelloCordova[8633:70b] [CDVTimer][TotalPluginStartup] 8.919001ms
+2014-06-10 10:22:40.239 HelloCordova[8633:70b] Resetting plugins due to page load.
+2014-06-10 10:22:40.446 HelloCordova[8633:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/C948EFBA-2EE2-4FA9-85BA-2CB42217FA10/HelloCordova.app/www/index.html#/login
+2014-06-10 10:22:50.578 HelloCordova[8633:70b] --listening to changes in db: onsite
+2014-06-10 10:22:50.695 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:50.695 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:52.151 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:52.152 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.931 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.932 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.932 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.932 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.933 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.933 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.933 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.933 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.934 HelloCordova[8633:70b] hiding
+2014-06-10 10:22:53.934 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.934 HelloCordova[8633:70b] hiding
+2014-06-10 10:22:53.934 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.935 HelloCordova[8633:70b] hiding
+2014-06-10 10:22:53.935 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.935 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.935 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.936 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.936 HelloCordova[8633:70b] hiding
+2014-06-10 10:22:53.936 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.936 HelloCordova[8633:70b] hiding
+2014-06-10 10:22:53.936 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:22:53.937 HelloCordova[8633:70b] hiding
+2014-06-10 10:22:53.937 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:11.861 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:11.861 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:13.167 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:13.167 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:15.450 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:15.450 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:16.409 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:16.410 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:19.526 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:19.526 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:20.413 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:20.413 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:35.994 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:35.995 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:39.165 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:39.165 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.360 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.361 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.361 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.361 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.362 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.362 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.362 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.363 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.363 HelloCordova[8633:70b] hiding
+2014-06-10 10:23:48.363 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.363 HelloCordova[8633:70b] hiding
+2014-06-10 10:23:48.364 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.364 HelloCordova[8633:70b] hiding
+2014-06-10 10:23:48.364 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.364 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.364 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.365 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.365 HelloCordova[8633:70b] hiding
+2014-06-10 10:23:48.365 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.365 HelloCordova[8633:70b] hiding
+2014-06-10 10:23:48.366 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:23:48.366 HelloCordova[8633:70b] hiding
+2014-06-10 10:23:48.366 HelloCordova[8633:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:24:39.876 HelloCordova[9060:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:24:39.884 HelloCordova[9060:70b] Unlimited access to network resources
+2014-06-10 10:24:39.902 HelloCordova[9060:70b] [CDVTimer][keyboard] 0.087976ms
+2014-06-10 10:24:39.913 HelloCordova[9060:70b] [CDVTimer][statusbar] 10.441959ms
+2014-06-10 10:24:39.914 HelloCordova[9060:70b] [CDVTimer][TotalPluginStartup] 11.515021ms
+2014-06-10 10:24:40.054 HelloCordova[9060:70b] Resetting plugins due to page load.
+2014-06-10 10:24:40.356 HelloCordova[9060:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 10:25:23.632 HelloCordova[9060:70b] --listening to changes in db: onsite
+2014-06-10 10:25:23.675 HelloCordova[9060:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"","user":"","userInfo":"","authority":"base.onsitedatacollection.com","protocol":"http","source":"http://base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"db":"onsite","headers":{}}
+2014-06-10 10:25:23.676 HelloCordova[9060:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"","user":"","userInfo":"","authority":"base.onsitedatacollection.com","protocol":"http","source":"http://base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"db":"onsite","headers":{}}
+2014-06-10 10:25:23.676 HelloCordova[9060:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-10 10:25:23.676 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-10 10:25:23.676 HelloCordova[9060:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"","user":"","userInfo":"","authority":"base.onsitedatacollection.com","protocol":"http","source":"http://base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"db":"onsite","headers":{}}
+2014-06-10 10:25:23.677 HelloCordova[9060:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"","user":"","userInfo":"","authority":"base.onsitedatacollection.com","protocol":"http","source":"http://base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"db":"onsite","headers":{}}
+2014-06-10 10:25:23.677 HelloCordova[9060:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-10 10:25:23.677 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-10 10:25:23.736 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-10 10:25:23.770 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-10 10:25:23.812 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=0&limit=25","timeout":0}
+2014-06-10 10:25:23.845 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/10caaf794452e844e2c1f7cd51ccc655"}
+2014-06-10 10:25:23.884 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-10 10:25:23.889 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=32&limit=25","timeout":0}
+2014-06-10 10:25:23.943 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/502c4338f90fb5fb0532b8d4eb000cb2?revs=true&open_revs=[\"2-dd3790370818058d469143ebbed9212e\"]&attachments=true"}
+2014-06-10 10:25:23.996 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=66&limit=25","timeout":0}
+2014-06-10 10:25:24.036 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e"}
+2014-06-10 10:25:24.071 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=91&limit=25","timeout":0}
+2014-06-10 10:25:24.102 HelloCordova[9060:70b] {"headers":{},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e","body":{"_id":"_local/de6855f4f5effe0215f64f403f488d4e","last_seq":1}}
+2014-06-10 10:25:24.133 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=116&limit=25","timeout":0}
+2014-06-10 10:25:24.194 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-10 10:25:24.234 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=143&limit=25","timeout":0}
+2014-06-10 10:25:24.258 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fc858?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:24.309 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=168&limit=25","timeout":0}
+2014-06-10 10:25:24.339 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e"}
+2014-06-10 10:25:24.389 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=207&limit=25","timeout":0}
+2014-06-10 10:25:24.408 HelloCordova[9060:70b] {"headers":{},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e","body":{"_id":"_local/de6855f4f5effe0215f64f403f488d4e","_rev":"0-1","last_seq":2}}
+2014-06-10 10:25:24.455 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=264&limit=25","timeout":0}
+2014-06-10 10:25:24.538 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=305&limit=25","timeout":0}
+2014-06-10 10:25:24.599 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%222de5d63c33ef1f0d36fe57d6e5003cf8%22%2C%222de5d63c33ef1f0d36fe57d6e5008a7d%22%2C%222de5d63c33ef1f0d36fe57d6e500c57c%22%2C%22590da4f57e1280c18e16d21c89004109%22%2C%22590da4f57e1280c18e16d21c89004a0f%22%2C%228a1b57cf415184c49ea7656eb4004f85%22%5D"}
+2014-06-10 10:25:24.615 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=369&limit=25","timeout":0}
+2014-06-10 10:25:24.665 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fd484?revs=true&open_revs=[\"2-8e8837381bbbe3e69680397c88403fcc\"]&attachments=true"}
+2014-06-10 10:25:24.698 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=371&limit=25","timeout":0}
+2014-06-10 10:25:24.735 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2163f4a96c332365108014297d0049b9?revs=true&open_revs=[\"2-0489d00bef091a90e13228efcbd40ff4\"]&attachments=true"}
+2014-06-10 10:25:24.800 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2163f4a96c332365108014297d004f10?revs=true&open_revs=[\"2-9ebdf4be36edfa2df2f024307f386654\"]&attachments=true"}
+2014-06-10 10:25:24.866 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2163f4a96c332365108014297d0052f7?revs=true&open_revs=[\"2-da8f97d125281d4102e6d0f1b499724f\"]&attachments=true"}
+2014-06-10 10:25:24.933 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e50118ad?revs=true&open_revs=[\"3-b406af3c9bda08ef3f53c93703c30aec\"]&attachments=true"}
+2014-06-10 10:25:24.994 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e5014f6b?revs=true&open_revs=[\"2-b1b211dce4292fe446c1d9cc8ab22caf\"]&attachments=true"}
+2014-06-10 10:25:25.067 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e5015c45?revs=true&open_revs=[\"3-4941b3f71cbc14fd4fd5dc92fda5fe7c\"]&attachments=true"}
+2014-06-10 10:25:25.138 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e5019bde?revs=true&open_revs=[\"2-8272196d752945022b8db248d0124b81\"]&attachments=true"}
+2014-06-10 10:25:25.208 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e501a42d?revs=true&open_revs=[\"2-d7a9d5510c20c95b252be88c0d18b0ac\"]&attachments=true"}
+2014-06-10 10:25:25.282 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e501ae58?revs=true&open_revs=[\"2-b87a81be551505f859f501a361c211c6\"]&attachments=true"}
+2014-06-10 10:25:25.342 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e501eb19?revs=true&open_revs=[\"2-0f908ff42d5d86f1bbc0e2705b882da8\"]&attachments=true"}
+2014-06-10 10:25:25.407 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e501f84b?revs=true&open_revs=[\"2-709c276eab5a62abaad7a3e4b8a52bac\"]&attachments=true"}
+2014-06-10 10:25:25.476 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e50206e3?revs=true&open_revs=[\"2-709c276eab5a62abaad7a3e4b8a52bac\"]&attachments=true"}
+2014-06-10 10:25:25.547 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2de5d63c33ef1f0d36fe57d6e5024aaa?revs=true&open_revs=[\"11-23468443c310dd993bab7811d6fd9a46\"]&attachments=true"}
+2014-06-10 10:25:25.613 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/502c4338f90fb5fb0532b8d4eb001baa?revs=true&open_revs=[\"3-8b8c0bfbccfb6e682471ea4b7ab1fb13\"]&attachments=true"}
+2014-06-10 10:25:25.683 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/502c4338f90fb5fb0532b8d4eb0029d7?revs=true&open_revs=[\"2-cb2d2d489d820ecf1e3a155554688499\"]&attachments=true"}
+2014-06-10 10:25:25.755 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900338a?revs=true&open_revs=[\"5-777bc7e62b6166f8b0d8419dec9eaab2\"]&attachments=true"}
+2014-06-10 10:25:25.823 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900e920?revs=true&open_revs=[\"2-a6ae3511518445578c307bbaa79a2cf4\"]&attachments=true"}
+2014-06-10 10:25:25.889 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c89014549?revs=true&open_revs=[\"7-92021ee3b5a253c25d2093dabb99dc54\"]&attachments=true"}
+2014-06-10 10:25:25.957 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4008b05?revs=true&open_revs=[\"2-f62ab9b6ae26876d964be68fdc485125\"]&attachments=true"}
+2014-06-10 10:25:26.020 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb400ccfc?revs=true&open_revs=[\"2-074ebf93c376ca6b8bf56efc4ef58dce\"]&attachments=true"}
+2014-06-10 10:25:26.091 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4023b7f?revs=true&open_revs=[\"2-bd4cbd1529244eab4efedf68eb8f2232\"]&attachments=true"}
+2014-06-10 10:25:26.161 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4024596?revs=true&open_revs=[\"2-dcbd8b29da5c3d3e08156f037f01c8e8\"]&attachments=true"}
+2014-06-10 10:25:26.224 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4028d18?revs=true&open_revs=[\"2-f2f8ab756bf35b59a5744f241de2a48a\"]&attachments=true"}
+2014-06-10 10:25:26.295 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb402dbe4?revs=true&open_revs=[\"2-7e58cb76f122780c42ce6625a16dcd71\"]&attachments=true"}
+2014-06-10 10:25:26.367 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4033054?revs=true&open_revs=[\"2-44d495cfafa948428ac2e11a7016a566\"]&attachments=true"}
+2014-06-10 10:25:26.430 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4038144?revs=true&open_revs=[\"2-c7f645bd4e1583e0a23633166eef8e7c\"]&attachments=true"}
+2014-06-10 10:25:26.501 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb403d73e?revs=true&open_revs=[\"2-973731753aa7412807137bd99f8dc137\"]&attachments=true"}
+2014-06-10 10:25:26.571 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb404109a?revs=true&open_revs=[\"2-dfde957d1ba39d438ba6a9eec01afa7f\"]&attachments=true"}
+2014-06-10 10:25:26.637 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4041c78?revs=true&open_revs=[\"2-9d8678578ee3181d2c479a416133ca6f\"]&attachments=true"}
+2014-06-10 10:25:26.705 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/F9CD220E-35C7-E78C-B589-A990BF48034D?revs=true&open_revs=[\"2-83c41c630ec94f9d24f95cf45266cd16\"]&attachments=true"}
+2014-06-10 10:25:26.776 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/componentSchemas?revs=true&open_revs=[\"6-d1702a7a93ec357ad6cd7d04d3309e07\"]&attachments=true"}
+2014-06-10 10:25:26.842 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/components?revs=true&open_revs=[\"3-7fdadcf333a2f4b9a768529106103a9c\"]&attachments=true"}
+2014-06-10 10:25:26.922 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/libraries?revs=true&open_revs=[\"9-ac00a6860cfb606b26d8d743be8fcf1f\"]&attachments=true"}
+2014-06-10 10:25:26.986 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/lookupTables?revs=true&open_revs=[\"2-9914c6b5e0b686cccf04e17d653c38b6\",\"2-a18af591c4b8701d0276bef016ecb14c\"]&attachments=true"}
+2014-06-10 10:25:27.054 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/projects?revs=true&open_revs=[\"12-292ff035c2ac4d4b01a94ff259c61ef4\"]&attachments=true"}
+2014-06-10 10:25:27.120 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/reports?revs=true&open_revs=[\"2-e5ca0cc59ecbf8bd117630316b86518d\"]&attachments=true"}
+2014-06-10 10:25:27.202 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/templates?revs=true&open_revs=[\"8-dec309cbcd33e3ed2edd5fd0ca965ebf\"]&attachments=true"}
+2014-06-10 10:25:27.271 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/b0a7f4284a619deb7c7560d12e000f4c?revs=true&open_revs=[\"2-526281be8aafb59c5a4467233197181f\"]&attachments=true"}
+2014-06-10 10:25:27.337 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/b84e6cbc65901ff81bca44b640006a6a?revs=true&open_revs=[\"2-922c2ce8c7631bd96d9b347a7dddaf55\"]&attachments=true"}
+2014-06-10 10:25:27.422 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/b84e6cbc65901ff81bca44b64000bc33?revs=true&open_revs=[\"2-98f80189e6ae61257034777b60ebe280\"]&attachments=true"}
+2014-06-10 10:25:27.493 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0007696?revs=true&open_revs=[\"4-4fe6083ec9c57470cc4ea2c1fa49044e\"]&attachments=true"}
+2014-06-10 10:25:27.554 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d000cee3?revs=true&open_revs=[\"2-77ad021adaf9776efd3a2396af2c2647\"]&attachments=true"}
+2014-06-10 10:25:27.626 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0012664?revs=true&open_revs=[\"2-70b7dded02e0799e9008cf2a63583929\"]&attachments=true"}
+2014-06-10 10:25:27.700 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0012ccc?revs=true&open_revs=[\"2-92c041427e26052d6b09181f8e8a5c29\"]&attachments=true"}
+2014-06-10 10:25:27.764 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0013352?revs=true&open_revs=[\"10-249b520889c6c21ed1c4661c0077b532\"]&attachments=true"}
+2014-06-10 10:25:27.832 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0018353?revs=true&open_revs=[\"2-b9178f0382afaaf33e8c0f9114c8bb20\"]&attachments=true"}
+2014-06-10 10:25:27.905 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d001c6f4?revs=true&open_revs=[\"2-d92e0f629479bf5cb9cd49f7dcc0f1f7\"]&attachments=true"}
+2014-06-10 10:25:27.966 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d001c93a?revs=true&open_revs=[\"2-b9731671f3ef49457df777bf77dd4774\"]&attachments=true"}
+2014-06-10 10:25:28.038 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d002288f?revs=true&open_revs=[\"2-a96c42823a2612aa09069d3b911ab658\"]&attachments=true"}
+2014-06-10 10:25:28.107 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00274ed?revs=true&open_revs=[\"2-f76def4ff04a91e22bc936c31ffed764\"]&attachments=true"}
+2014-06-10 10:25:28.173 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d002d027?revs=true&open_revs=[\"2-21035f34ea938eaf403d54c6104cebe5\"]&attachments=true"}
+2014-06-10 10:25:28.242 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d002d385?revs=true&open_revs=[\"2-6044ae9377ed6a212bf7d9675b7614a5\"]&attachments=true"}
+2014-06-10 10:25:28.311 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00322d7?revs=true&open_revs=[\"2-964b363b0b19de8131f984291471ce9b\"]&attachments=true"}
+2014-06-10 10:25:28.374 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0037d72?revs=true&open_revs=[\"2-49724a620c9d9b0e8608a5fada5c7880\"]&attachments=true"}
+2014-06-10 10:25:28.446 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d003d54a?revs=true&open_revs=[\"2-755f430762f25bff53b085405bb82a81\"]&attachments=true"}
+2014-06-10 10:25:28.516 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d003d63d?revs=true&open_revs=[\"2-26e74ca5bb292cdf81f3e278b2993f2c\"]&attachments=true"}
+2014-06-10 10:25:28.582 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0041660?revs=true&open_revs=[\"2-a2575c7a271d280626d60d94c050c31e\"]&attachments=true"}
+2014-06-10 10:25:28.651 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00423b5?revs=true&open_revs=[\"2-3ca65373ec889f25b26481e8d6405287\"]&attachments=true"}
+2014-06-10 10:25:28.721 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0046e7e?revs=true&open_revs=[\"2-f79a4c7551f96510f51b8c2e0a97c912\"]&attachments=true"}
+2014-06-10 10:25:28.788 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d004c12b?revs=true&open_revs=[\"2-775921852b5329286e28244129caf714\"]&attachments=true"}
+2014-06-10 10:25:28.855 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0051670?revs=true&open_revs=[\"2-b1162b6b01dcefb7339d24836f7e8dbb\"]&attachments=true"}
+2014-06-10 10:25:28.926 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d005671c?revs=true&open_revs=[\"2-4c32baf5e1c4afe00b2418b6062f7b64\"]&attachments=true"}
+2014-06-10 10:25:28.992 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d005ad4f?revs=true&open_revs=[\"2-3dd749370355f69e1c0e9a775d7d81bc\"]&attachments=true"}
+2014-06-10 10:25:29.060 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d005b3f6?revs=true&open_revs=[\"2-6148afce2c55f27313e980e4f778db38\"]&attachments=true"}
+2014-06-10 10:25:29.130 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0061515?revs=true&open_revs=[\"2-cd7c53449cde69da484688bfe6959b80\"]&attachments=true"}
+2014-06-10 10:25:29.206 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00660f7?revs=true&open_revs=[\"2-88a548231991ca84955b35f33537ec3b\"]&attachments=true"}
+2014-06-10 10:25:29.270 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d006a24b?revs=true&open_revs=[\"2-66ba32379253092235e12937bb55c5e6\"]&attachments=true"}
+2014-06-10 10:25:29.336 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d006f5d3?revs=true&open_revs=[\"2-66ba32379253092235e12937bb55c5e6\"]&attachments=true"}
+2014-06-10 10:25:29.416 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0073c73?revs=true&open_revs=[\"2-f6ebc2149369ed17a369ddcbd9968706\"]&attachments=true"}
+2014-06-10 10:25:29.479 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00747a7?revs=true&open_revs=[\"4-8d220e1ee59b7d43f1a0d1b7e2888e67\"]&attachments=true"}
+2014-06-10 10:25:29.552 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d007a31c?revs=true&open_revs=[\"2-738615a51b3b06f07e2d260a2cc653ff\"]&attachments=true"}
+2014-06-10 10:25:29.615 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d007f2fc?revs=true&open_revs=[\"2-7a01ef0f60be11dc6f85bffd4f97ef2b\"]&attachments=true"}
+2014-06-10 10:25:29.680 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0084ee3?revs=true&open_revs=[\"2-8ad846df8d43813a67d5892764c61192\"]&attachments=true"}
+2014-06-10 10:25:29.745 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00882a5?revs=true&open_revs=[\"2-61b1a5de15e89aebde789916812cc9af\"]&attachments=true"}
+2014-06-10 10:25:29.815 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d008bd8a?revs=true&open_revs=[\"2-0938212cae2894744ddb9803458c1c57\"]&attachments=true"}
+2014-06-10 10:25:29.878 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0091509?revs=true&open_revs=[\"2-191cf72e67abb7adf2957662c83c2b2a\"]&attachments=true"}
+2014-06-10 10:25:29.951 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0094595?revs=true&open_revs=[\"2-eb2ed102179720090cb30aa47070db87\"]&attachments=true"}
+2014-06-10 10:25:30.017 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d009988b?revs=true&open_revs=[\"2-58b78e652a866fe1c6a3727eeb8788fc\"]&attachments=true"}
+2014-06-10 10:25:30.085 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d009ba11?revs=true&open_revs=[\"2-beda4e7d779605f2c41ee838829f9d19\"]&attachments=true"}
+2014-06-10 10:25:30.157 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00a14f8?revs=true&open_revs=[\"2-696c624863e3dd8e8ce7f15eb8ac490d\"]&attachments=true"}
+2014-06-10 10:25:30.221 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00a4f7a?revs=true&open_revs=[\"2-ca16c6f4e8ea324959aa719caa670d89\"]&attachments=true"}
+2014-06-10 10:25:30.290 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00a5eb2?revs=true&open_revs=[\"2-9ede7145fa8382caa48641c9bd1ab2b3\"]&attachments=true"}
+2014-06-10 10:25:30.362 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00a6917?revs=true&open_revs=[\"3-af7b3a5621e7e637a1ade48a4f34eccb\"]&attachments=true"}
+2014-06-10 10:25:30.426 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00a77ec?revs=true&open_revs=[\"2-f7fed521ca7cc79978034d25caca0e8f\"]&attachments=true"}
+2014-06-10 10:25:30.493 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00ac539?revs=true&open_revs=[\"2-2b3dcae77d7c3564e2a6a7f8b9a927d9\"]&attachments=true"}
+2014-06-10 10:25:30.555 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00ad024?revs=true&open_revs=[\"5-38cf96f377e5b24a8781eda10fb57753\"]&attachments=true"}
+2014-06-10 10:25:30.625 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00b1168?revs=true&open_revs=[\"3-7ae1e4e90a7a51bbf0d561a404f85358\"]&attachments=true"}
+2014-06-10 10:25:30.701 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00b53af?revs=true&open_revs=[\"2-f78f58382868dde584156accec40dfb4\"]&attachments=true"}
+2014-06-10 10:25:30.770 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00ba2db?revs=true&open_revs=[\"2-4798722c2a262bc1729fa9c4eeb779e4\"]&attachments=true"}
+2014-06-10 10:25:30.834 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00c12ef?revs=true&open_revs=[\"2-644fcd97d4f1f697701aefc83115e9f2\"]&attachments=true"}
+2014-06-10 10:25:30.904 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00c63f7?revs=true&open_revs=[\"2-a2ca9a3043421c8e30693fd1529e166c\"]&attachments=true"}
+2014-06-10 10:25:31.030 HelloCordova[9060:70b] ERROR: (node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit.
+2014-06-10 10:25:31.042 HelloCordova[9060:70b] CREATED - 2de5d63c33ef1f0d36fe57d6e5003cf8
+2014-06-10 10:25:31.043 HelloCordova[9060:70b] CREATED - 2de5d63c33ef1f0d36fe57d6e5008a7d
+2014-06-10 10:25:31.043 HelloCordova[9060:70b] CREATED - 2de5d63c33ef1f0d36fe57d6e500c57c
+2014-06-10 10:25:31.043 HelloCordova[9060:70b] CREATED - 590da4f57e1280c18e16d21c89004109
+2014-06-10 10:25:31.043 HelloCordova[9060:70b] CREATED - 590da4f57e1280c18e16d21c89004a0f
+2014-06-10 10:25:31.043 HelloCordova[9060:70b] CREATED - 8a1b57cf415184c49ea7656eb4004f85
+2014-06-10 10:25:31.534 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e"}
+2014-06-10 10:25:31.601 HelloCordova[9060:70b] {"headers":{},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e","body":{"_id":"_local/de6855f4f5effe0215f64f403f488d4e","_rev":"0-2","last_seq":116}}
+2014-06-10 10:25:31.791 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%22d28edc84c851a2fb2321a9b7d01259df%22%5D"}
+2014-06-10 10:25:31.854 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00cbf58?revs=true&open_revs=[\"2-763b5642e1509992ab0bb53ed47e1d1c\"]&attachments=true"}
+2014-06-10 10:25:31.927 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00d17e2?revs=true&open_revs=[\"2-da6476dd0a4b858635220a5a922a2317\"]&attachments=true"}
+2014-06-10 10:25:31.998 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00d45e3?revs=true&open_revs=[\"2-ab883e9651ed480686041f45b0a4b664\"]&attachments=true"}
+2014-06-10 10:25:32.064 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00d9bcb?revs=true&open_revs=[\"2-bb0e2fb201083e7e5b44226e91c9b720\"]&attachments=true"}
+2014-06-10 10:25:32.132 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00df42e?revs=true&open_revs=[\"2-5e625aca638a788d84824bd5f395c458\"]&attachments=true"}
+2014-06-10 10:25:32.203 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00e483e?revs=true&open_revs=[\"2-e936d782d608ba3ea8e90e766bd24215\"]&attachments=true"}
+2014-06-10 10:25:32.265 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00e80ed?revs=true&open_revs=[\"2-4e0845a184eba60af11a0d141001baa5\"]&attachments=true"}
+2014-06-10 10:25:32.337 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00ef7a5?revs=true&open_revs=[\"2-0e9139a7a86b9d8dd80f525235e7ba9c\"]&attachments=true"}
+2014-06-10 10:25:32.415 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f47e1?revs=true&open_revs=[\"2-b06fdf5c24df4d6468500de85ad323c0\"]&attachments=true"}
+2014-06-10 10:25:32.478 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f8b09?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:32.544 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f94be?revs=true&open_revs=[\"2-aa5db61d890e6ba9c6b6149ee2db5328\"]&attachments=true"}
+2014-06-10 10:25:32.612 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f97da?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:32.677 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f984b?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:32.749 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fa59f?revs=true&open_revs=[\"2-15b0ed2fbd3b1cdfacdd393b6f8a18da\"]&attachments=true"}
+2014-06-10 10:25:32.817 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fa8d7?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:32.879 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00faede?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:32.952 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fbdeb?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:33.022 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fbe44?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:33.085 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fc69a?revs=true&open_revs=[\"2-91bc74ab111bac44dbda0e66dcdcf8c7\"]&attachments=true"}
+2014-06-10 10:25:33.159 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fcb93?revs=true&open_revs=[\"2-bbc7db73f47a028113e6005a4874ebdb\"]&attachments=true"}
+2014-06-10 10:25:33.227 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0102c28?revs=true&open_revs=[\"2-d87753b9654e860ac3f3f6768fe408b3\"]&attachments=true"}
+2014-06-10 10:25:33.291 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0108049?revs=true&open_revs=[\"3-f9c7fb87f5bc43cfef96e42804448da0\"]&attachments=true"}
+2014-06-10 10:25:33.365 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0108ae5?revs=true&open_revs=[\"2-8e8837381bbbe3e69680397c88403fcc\"]&attachments=true"}
+2014-06-10 10:25:33.432 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0108cbe?revs=true&open_revs=[\"2-97c86801db33a97e33e25061d9f3f718\"]&attachments=true"}
+2014-06-10 10:25:33.495 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0109906?revs=true&open_revs=[\"2-97c86801db33a97e33e25061d9f3f718\"]&attachments=true"}
+2014-06-10 10:25:33.566 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010a035?revs=true&open_revs=[\"2-c28a8764738ca37fd0ba208e118b2993\"]&attachments=true"}
+2014-06-10 10:25:33.639 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010a18c?revs=true&open_revs=[\"2-3307eb816d503098d1a9324df85144de\"]&attachments=true"}
+2014-06-10 10:25:33.707 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010e1da?revs=true&open_revs=[\"2-38c95c24d47047e146aee4312401fdd2\"]&attachments=true"}
+2014-06-10 10:25:33.771 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010e2ad?revs=true&open_revs=[\"2-493ad5b2833a82512c3819c6458aad5d\"]&attachments=true"}
+2014-06-10 10:25:33.842 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010f033?revs=true&open_revs=[\"2-c744f493261fa4892e60f65c0b6ae543\"]&attachments=true"}
+2014-06-10 10:25:33.904 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010fab3?revs=true&open_revs=[\"2-c744f493261fa4892e60f65c0b6ae543\"]&attachments=true"}
+2014-06-10 10:25:33.976 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010fbc6?revs=true&open_revs=[\"2-7728d5ebf1d334ff31322f2f94244b6c\"]&attachments=true"}
+2014-06-10 10:25:34.046 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d010ffc6?revs=true&open_revs=[\"2-7728d5ebf1d334ff31322f2f94244b6c\"]&attachments=true"}
+2014-06-10 10:25:34.110 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0114f96?revs=true&open_revs=[\"2-fd3947990c2a397061137acf823fe7f5\"]&attachments=true"}
+2014-06-10 10:25:34.189 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0115215?revs=true&open_revs=[\"2-bba002c753757ac35c168cfe23e5e931\"]&attachments=true"}
+2014-06-10 10:25:34.251 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d011592c?revs=true&open_revs=[\"2-bba002c753757ac35c168cfe23e5e931\"]&attachments=true"}
+2014-06-10 10:25:34.314 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0116745?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:34.386 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0117244?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:34.456 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d01175f2?revs=true&open_revs=[\"2-06e2257edab0a79fb86178e6b2d4d2e7\"]&attachments=true"}
+2014-06-10 10:25:34.522 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0117bd4?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:34.589 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d01187ae?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:34.661 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0119332?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:34.725 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0119b0b?revs=true&open_revs=[\"2-0de0bdeed33ab7aa0975b81a794b04ce\"]&attachments=true"}
+2014-06-10 10:25:34.795 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d011a8d8?revs=true&open_revs=[\"2-f9b325b1ac6380987735c0dbd5aa8a6f\"]&attachments=true"}
+2014-06-10 10:25:34.865 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d011ef6f?revs=true&open_revs=[\"2-f9b325b1ac6380987735c0dbd5aa8a6f\"]&attachments=true"}
+2014-06-10 10:25:34.931 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d011f0ce?revs=true&open_revs=[\"2-30c274b8337ebb4e943f50dfe9ea786f\"]&attachments=true"}
+2014-06-10 10:25:35.000 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d011f16d?revs=true&open_revs=[\"2-f9b325b1ac6380987735c0dbd5aa8a6f\"]&attachments=true"}
+2014-06-10 10:25:35.070 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d011fcc9?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.134 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d012017e?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.207 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d01206a6?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.275 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0120d71?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.346 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d012196e?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.419 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0122842?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.481 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d01228f9?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.548 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0122de0?revs=true&open_revs=[\"2-65dcbf7ee9fd151ce68ab8be8e3e48e3\"]&attachments=true"}
+2014-06-10 10:25:35.628 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0123354?revs=true&open_revs=[\"2-9e234d5197886b834b6e52bb94e6a67e\"]&attachments=true"}
+2014-06-10 10:25:35.696 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0123652?revs=true&open_revs=[\"2-43e2a8e2c4b680b8d1142b5cc4d3e372\"]&attachments=true"}
+2014-06-10 10:25:35.761 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0123816?revs=true&open_revs=[\"2-43e2a8e2c4b680b8d1142b5cc4d3e372\"]&attachments=true"}
+2014-06-10 10:25:35.825 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0123cb1?revs=true&open_revs=[\"2-846d4589d03a91c4c167b73ebbc8a61a\"]&attachments=true"}
+2014-06-10 10:25:35.892 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0124aa5?revs=true&open_revs=[\"2-846d4589d03a91c4c167b73ebbc8a61a\"]&attachments=true"}
+2014-06-10 10:25:35.956 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d0129896?revs=true&open_revs=[\"2-a5942596365a40208aa358564f262af3\"]&attachments=true"}
+2014-06-10 10:25:36.028 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4012457?revs=true&open_revs=[\"6-d937152bdc38810802a2214a00621df5\"]&attachments=true"}
+2014-06-10 10:25:36.095 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb401645a?revs=true&open_revs=[\"2-d4c29298adc49b764906d932ce668615\"]&attachments=true"}
+2014-06-10 10:25:36.164 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb4032c26?revs=true&open_revs=[\"2-831f45def89c7efa7fb58598d0b47bed\"]&attachments=true"}
+2014-06-10 10:25:36.229 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb40210f1?revs=true&open_revs=[\"2-5895107711ddba85c43115293e85aa7a\"]&attachments=true"}
+2014-06-10 10:25:36.299 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8a1b57cf415184c49ea7656eb401c07c?revs=true&open_revs=[\"3-3d6fdaa57f14031c59041219d710bdb7\"]&attachments=true"}
+2014-06-10 10:25:36.367 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c004910?revs=true&open_revs=[\"2-541c1fdcc855b7f583cc88146aba7908\"]&attachments=true"}
+2014-06-10 10:25:36.433 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8901b5fb?revs=true&open_revs=[\"2-b396b64ae6d882feac093ab56753bc22\"]&attachments=true"}
+2014-06-10 10:25:36.504 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8901b9d1?revs=true&open_revs=[\"2-b396b64ae6d882feac093ab56753bc22\"]&attachments=true"}
+2014-06-10 10:25:36.574 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8901c865?revs=true&open_revs=[\"2-b9b4432b0ff8fb43574b186a6172105a\"]&attachments=true"}
+2014-06-10 10:25:36.643 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f815d?revs=true&open_revs=[\"4-72fba3fe1d2273e901a65db7e81efb0f\"]&attachments=true"}
+2014-06-10 10:25:36.722 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00fd05f?revs=true&open_revs=[\"2-df09d1e9738ceefc418f13bb3cc0e121\"]&attachments=true"}
+2014-06-10 10:25:36.791 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/d28edc84c851a2fb2321a9b7d00f8552?revs=true&open_revs=[\"3-75d3bb2fcd79da134952d5f44a209580\"]&attachments=true"}
+2014-06-10 10:25:36.873 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c00f15e?revs=true&open_revs=[\"2-0b3e59a63141e861da1edf9fd0e8aa2e\"]&attachments=true"}
+2014-06-10 10:25:36.946 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c00e7dc?revs=true&open_revs=[\"2-2bca008795e62f46f723222e1d77cc55\"]&attachments=true"}
+2014-06-10 10:25:37.016 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0137a8?revs=true&open_revs=[\"2-862b502ca529d757c114f9592a8281e8\"]&attachments=true"}
+2014-06-10 10:25:37.080 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c01280f?revs=true&open_revs=[\"2-8ce0454977ace8d9e23cc209a9cf5044\"]&attachments=true"}
+2014-06-10 10:25:37.155 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c01330d?revs=true&open_revs=[\"2-e70816f2bd867d15c9dcfca82a61ebc7\"]&attachments=true"}
+2014-06-10 10:25:37.221 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c018777?revs=true&open_revs=[\"2-3fbf289f3b4706fcec549d271a5e5af1\"]&attachments=true"}
+2014-06-10 10:25:37.285 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c01d798?revs=true&open_revs=[\"2-2b0f96397f65eb2f98b1a6e578decdbf\"]&attachments=true"}
+2014-06-10 10:25:37.359 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c02a112?revs=true&open_revs=[\"2-0a72e9e4978b32bb1375a9cc7d1b5a33\"]&attachments=true"}
+2014-06-10 10:25:37.428 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900166d?revs=true&open_revs=[\"33-bf4fa8122bf008b5c3b1d72fb405537b\"]&attachments=true"}
+2014-06-10 10:25:37.497 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c02352b?revs=true&open_revs=[\"6-f44e3a0976873dae7d96ce1e7c35fcf2\"]&attachments=true"}
+2014-06-10 10:25:37.562 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/0103187A-6553-1B9F-8C51-525386F31B24?revs=true&open_revs=[\"2-ef9cac99432b2725160c3108c7ae1950\"]&attachments=true"}
+2014-06-10 10:25:37.633 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/023FFC77-DD70-D3D1-ADA0-9956E54C86A5?revs=true&open_revs=[\"2-8af47bc502a54d9b88c3195d2f100d5e\"]&attachments=true"}
+2014-06-10 10:25:37.701 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/0C0AF845-1608-4430-9C11-7FCCC10FA5A7?revs=true&open_revs=[\"2-4baa015e0238a76c717c37b78a1a2747\"]&attachments=true"}
+2014-06-10 10:25:37.771 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/10C10AF0-7A91-0DC9-A838-17F82715F6D9?revs=true&open_revs=[\"2-2115c85f28fccf92d9c07dfe9f4982c0\"]&attachments=true"}
+2014-06-10 10:25:37.835 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/20FD74C6-F456-251B-85A7-CFCED2412CD5?revs=true&open_revs=[\"2-b3da7d43c462ae280d1d00cf46a9cb35\"]&attachments=true"}
+2014-06-10 10:25:37.908 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/22384767-49B1-A0F7-8651-C0F8E97ADBAE?revs=true&open_revs=[\"3-f27e57d6eed2ff6943e9ffde6b5d102d\"]&attachments=true"}
+2014-06-10 10:25:37.974 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/258DFE0A-B6E6-EBD4-8896-128D05559C19?revs=true&open_revs=[\"2-6c36b6da87ac9c885c9a04163c5ab46b\"]&attachments=true"}
+2014-06-10 10:25:38.039 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/5582F789-1ABE-1648-A60A-D12526BB5370?revs=true&open_revs=[\"2-64997f2452c9aa0cfb1d5bb4f68fe9e3\"]&attachments=true"}
+2014-06-10 10:25:38.102 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900a55c?revs=true&open_revs=[\"7-70d811eacab06a45a8c9b1a7996178d0\"]&attachments=true"}
+2014-06-10 10:25:38.174 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8901a34f?revs=true&open_revs=[\"5-e73e182f5b03c428da41fc6332dc700a\"]&attachments=true"}
+2014-06-10 10:25:38.250 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/5E9DA9CC-6836-A54B-898D-378053FA2960?revs=true&open_revs=[\"2-04f2ff2088845075e8f709d0b4e601d8\"]&attachments=true"}
+2014-06-10 10:25:38.322 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/62B44CE0-BA6D-1587-BC48-FF56F92DE33C?revs=true&open_revs=[\"2-6ab9316929b208355f4ffa67f7ba9a13\"]&attachments=true"}
+2014-06-10 10:25:38.384 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/749AF241-2DF3-FA21-8F8C-19AFC9B1BC7E?revs=true&open_revs=[\"2-2cb0a06de7dcb7680cf40eb05c460ecc\"]&attachments=true"}
+2014-06-10 10:25:38.449 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/79355115-6A27-25C5-8A5D-0D7B64C7C5B8?revs=true&open_revs=[\"2-d4066646d0375d0da452d1a7722a19ac\"]&attachments=true"}
+2014-06-10 10:25:38.517 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8FC18302-DE31-8FC4-883E-4EC5BBE261BB?revs=true&open_revs=[\"2-3e6fe56bbe1175d84ba762addba6bf36\"]&attachments=true"}
+2014-06-10 10:25:38.590 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ABD5D786-EC3F-A2D9-A448-C6665C9E805F?revs=true&open_revs=[\"2-15f63f6a9a0842e0731c1f0d9a39f44c\"]&attachments=true"}
+2014-06-10 10:25:38.719 HelloCordova[9060:70b] CREATED - d28edc84c851a2fb2321a9b7d01259df
+2014-06-10 10:25:39.268 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e"}
+2014-06-10 10:25:39.331 HelloCordova[9060:70b] {"headers":{},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e","body":{"_id":"_local/de6855f4f5effe0215f64f403f488d4e","_rev":"0-3","last_seq":264}}
+2014-06-10 10:25:39.466 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-10 10:25:39.534 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/AD103764-E0EB-3EC9-BDA2-B5A0674F47C1?revs=true&open_revs=[\"2-2100f6d56cb624709539f55867f7540b\"]&attachments=true"}
+2014-06-10 10:25:39.616 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/B1CFB78A-9F6B-88B4-B6FB-C59EBA070D95?revs=true&open_revs=[\"3-406012e96c34811dc319a7ece0571cd9\"]&attachments=true"}
+2014-06-10 10:25:39.683 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/B92ED240-D171-ECAA-83F5-4770D8EEA647?revs=true&open_revs=[\"2-2a22fee09ba379853f6c5460016afdd3\"]&attachments=true"}
+2014-06-10 10:25:39.750 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/C0F67A5D-A0A2-45E4-B892-A6F8274F2CF2?revs=true&open_revs=[\"2-7e159125671574232078cbd3af4020b5\"]&attachments=true"}
+2014-06-10 10:25:39.815 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/CC995C61-8328-022B-859B-2478333392A5?revs=true&open_revs=[\"2-1a983eb36d02c150308a13b9f2656c62\"]&attachments=true"}
+2014-06-10 10:25:39.883 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/CDA67B23-8F84-873C-8B39-BCE2F9550251?revs=true&open_revs=[\"2-f2453c65a3180af84e24cdf6587e1d61\"]&attachments=true"}
+2014-06-10 10:25:39.946 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/F25B8295-1DB3-8F4F-86F4-9E65E02237E8?revs=true&open_revs=[\"2-463f778b305f0afb49d774ec702c3d63\"]&attachments=true"}
+2014-06-10 10:25:40.018 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0092a3?revs=true&open_revs=[\"2-89eb20db960817d27b1dd512284e3574\"]&attachments=true"}
+2014-06-10 10:25:40.088 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c01391a?revs=true&open_revs=[\"3-37faf80a0fdb81cf1b1f4b070cbe8997\"]&attachments=true"}
+2014-06-10 10:25:40.160 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c01dac0?revs=true&open_revs=[\"5-cba49f986ed68a6da154d024989a5bd8\"]&attachments=true"}
+2014-06-10 10:25:40.224 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0042a5?revs=true&open_revs=[\"11-2915fa95546dcd0f56693296a50e2218\"]&attachments=true"}
+2014-06-10 10:25:40.293 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8C14BEEB-27C3-B07A-BECB-46FF5EA38F60?revs=true&open_revs=[\"2-b31667f352319b516683df8ae9ffb93b\"]&attachments=true"}
+2014-06-10 10:25:40.356 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/CF9145B0-29AB-9AA2-85AC-40C6818C53B0?revs=true&open_revs=[\"2-aa4a3ee2494d9fa64bba339ffd201a80\"]&attachments=true"}
+2014-06-10 10:25:40.433 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/0F42BD44-232C-7856-BB7F-282B57A3375A?revs=true&open_revs=[\"2-6179c4815d6c9d8c8a67ad85b68a4628\"]&attachments=true"}
+2014-06-10 10:25:40.497 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c89001aab?revs=true&open_revs=[\"20-514a54c2f5384a454ee19ec1e7dbbb4f\"]&attachments=true"}
+2014-06-10 10:25:40.562 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/CB36C302-0C82-2CD4-A8E5-ED5FE94FEE9F?revs=true&open_revs=[\"2-3ed44583df64cf9de7af08339abaadf2\"]&attachments=true"}
+2014-06-10 10:25:40.632 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/EFB10761-5B04-0ED1-91D0-71E506C011B7?revs=true&open_revs=[\"4-becfc581df158dfee4b9483c3532bf79\"]&attachments=true"}
+2014-06-10 10:25:40.702 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c02dd41?revs=true&open_revs=[\"2-8b3a17e70fde0c1181bfe7be30596ab9\"]&attachments=true"}
+2014-06-10 10:25:40.770 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c02ea9a?revs=true&open_revs=[\"2-5efdf71cd54301bc54bad660ccd0f4bb\"]&attachments=true"}
+2014-06-10 10:25:40.843 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c02f415?revs=true&open_revs=[\"2-151586d4038936f332c36006e50caafe\"]&attachments=true"}
+2014-06-10 10:25:40.910 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c89003064?revs=true&open_revs=[\"28-d04058bee1104eebbf87e9de2ccb8d72\",\"23-1cb6a45de9ee480eb869c2aeba76c8fd\",\"10-cb476821c150c2f2e7593ca3ae9ba233\"]&attachments=true"}
+2014-06-10 10:25:40.980 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c034d96?revs=true&open_revs=[\"2-95a4f4278766652c8ca3420b95b973a8\"]&attachments=true"}
+2014-06-10 10:25:41.047 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c033413?revs=true&open_revs=[\"2-088bcd43c454c3128d25787b7b83cb22\"]&attachments=true"}
+2014-06-10 10:25:41.114 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c032a03?revs=true&open_revs=[\"2-51ce716ef51fdea8c0076aae73e7ab0b\"]&attachments=true"}
+2014-06-10 10:25:41.183 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900389b?revs=true&open_revs=[\"17-ca54113addc88831895c340ab4597869\"]&attachments=true"}
+2014-06-10 10:25:41.248 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c038d2b?revs=true&open_revs=[\"2-84e0dd3e51fabf09798a8de7006cd0a6\"]&attachments=true"}
+2014-06-10 10:25:41.319 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0384b9?revs=true&open_revs=[\"2-d11bf9237545fdca620ecd26ebcd2901\"]&attachments=true"}
+2014-06-10 10:25:41.387 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0381d2?revs=true&open_revs=[\"2-a40bbbd88d41f3b73de2a5512a109c6a\"]&attachments=true"}
+2014-06-10 10:25:41.453 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c037b0d?revs=true&open_revs=[\"2-ccd2fe2aaf3945b8c2ece6fd105083e4\"]&attachments=true"}
+2014-06-10 10:25:41.524 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0374b0?revs=true&open_revs=[\"2-2b4fcd4e3322c2da5be4cfece9a5fa25\"]&attachments=true"}
+2014-06-10 10:25:41.587 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c036fa9?revs=true&open_revs=[\"2-800eb07cfafc1c22ae385537444a1664\"]&attachments=true"}
+2014-06-10 10:25:41.657 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03646d?revs=true&open_revs=[\"2-19c3bed58ed3692aa6dbd1f2773ba2cc\"]&attachments=true"}
+2014-06-10 10:25:41.728 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c035eab?revs=true&open_revs=[\"2-fc30da09140daea63a7916481d362e67\"]&attachments=true"}
+2014-06-10 10:25:41.792 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c035139?revs=true&open_revs=[\"2-a92a4834811dbc14fbb5e34c53dbb034\"]&attachments=true"}
+2014-06-10 10:25:42.141 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03de41?revs=true&open_revs=[\"2-a2d9cb619e16c5cd3683299c2707c16f\"]&attachments=true"}
+2014-06-10 10:25:42.202 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03d254?revs=true&open_revs=[\"2-8dddc9e17a0c15f3fdcdf3ce0919cddb\"]&attachments=true"}
+2014-06-10 10:25:42.271 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03cbd2?revs=true&open_revs=[\"2-ab817ecc241496c7d959057ce4202a73\"]&attachments=true"}
+2014-06-10 10:25:42.342 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03c5df?revs=true&open_revs=[\"2-040abbb11131de9694dd7b8df1ef39f4\"]&attachments=true"}
+2014-06-10 10:25:42.406 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03b6e3?revs=true&open_revs=[\"2-1de195d65aa947b69efc32c102c1dd4c\"]&attachments=true"}
+2014-06-10 10:25:42.485 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03b0d9?revs=true&open_revs=[\"2-61f1854c0a6c0d67de50ea6d3f39fa13\"]&attachments=true"}
+2014-06-10 10:25:42.546 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03ac36?revs=true&open_revs=[\"2-d13e3a08028003028395c5ce4fe9c95d\"]&attachments=true"}
+2014-06-10 10:25:42.616 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c03a088?revs=true&open_revs=[\"2-00741fc53b532842e3c0ae1fc5c679f4\"]&attachments=true"}
+2014-06-10 10:25:42.686 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c039818?revs=true&open_revs=[\"2-3cb2707fc2004b21eb2517ac52cee2f1\"]&attachments=true"}
+2014-06-10 10:25:42.753 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c038f84?revs=true&open_revs=[\"2-93a2773b3cff54bb8f8dccdb7c377f81\"]&attachments=true"}
+2014-06-10 10:25:42.814 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/82616BD7-8B05-9E33-BC13-FE763BE8190D?revs=true&open_revs=[\"2-00f6cd20904e40aed5c271936d427b44\"]&attachments=true"}
+2014-06-10 10:25:42.889 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/8F9133AB-91C8-2713-9F0D-F5E732E3FA2F?revs=true&open_revs=[\"2-16a8645533063d06114ff5fef86d0639\"]&attachments=true"}
+2014-06-10 10:25:42.963 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/BB240A1A-1CAC-99DF-B0CB-2F9CC8CC9DC3?revs=true&open_revs=[\"2-fff972edd251c66d313079083dc98bc8\"]&attachments=true"}
+2014-06-10 10:25:43.030 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c043370?revs=true&open_revs=[\"2-59e66f7351eddf9524c7505ffa0e348d\"]&attachments=true"}
+2014-06-10 10:25:43.103 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c034331?revs=true&open_revs=[\"31-1c031099d265eaf426a60068cd8a2a86\",\"28-7ccdd222daf524fe63c9146188b58489\"]&attachments=true"}
+2014-06-10 10:25:43.170 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0321b1?revs=true&open_revs=[\"4-f0e34abfa366fa1cf24dfb495c2a1891\"]&attachments=true"}
+2014-06-10 10:25:43.237 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c89002497?revs=true&open_revs=[\"8-4d235822ebc20d7a3996717934e8daf2\",\"2-22ae707c11204f226dfa81451d8e58e1\"]&attachments=true"}
+2014-06-10 10:25:43.302 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/656d1bd32dc697e94dae022cee001582?revs=true&open_revs=[\"12-0730bb77763662f7b8b5ef2b96e59f12\",\"6-c865bb6454fbc30b022c38fb1d83c0e4\"]&attachments=true"}
+2014-06-10 10:25:43.677 HelloCordova[9060:70b] {"headers":{},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e"}
+2014-06-10 10:25:43.744 HelloCordova[9060:70b] {"headers":{},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/de6855f4f5effe0215f64f403f488d4e","body":{"_id":"_local/de6855f4f5effe0215f64f403f488d4e","_rev":"0-4","last_seq":371}}
+2014-06-10 10:25:44.025 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:44.025 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:53.517 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:53.518 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.510 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.510 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.511 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.511 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.511 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.511 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.512 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.512 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.512 HelloCordova[9060:70b] hiding
+2014-06-10 10:25:56.512 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.512 HelloCordova[9060:70b] hiding
+2014-06-10 10:25:56.513 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.513 HelloCordova[9060:70b] hiding
+2014-06-10 10:25:56.513 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.513 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.513 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.514 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.514 HelloCordova[9060:70b] hiding
+2014-06-10 10:25:56.514 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.514 HelloCordova[9060:70b] hiding
+2014-06-10 10:25:56.515 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:56.515 HelloCordova[9060:70b] hiding
+2014-06-10 10:25:56.515 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:58.423 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:58.424 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:59.326 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:25:59.326 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.155 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.155 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.155 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.156 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.156 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.156 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.156 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.157 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.157 HelloCordova[9060:70b] hiding
+2014-06-10 10:26:04.157 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.157 HelloCordova[9060:70b] hiding
+2014-06-10 10:26:04.157 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.158 HelloCordova[9060:70b] hiding
+2014-06-10 10:26:04.158 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.158 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.158 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.159 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.159 HelloCordova[9060:70b] hiding
+2014-06-10 10:26:04.159 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.159 HelloCordova[9060:70b] hiding
+2014-06-10 10:26:04.159 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:26:04.160 HelloCordova[9060:70b] hiding
+2014-06-10 10:26:04.160 HelloCordova[9060:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+Terminating in response to SpringBoard's termination.
+2014-06-10 10:34:44.327 HelloCordova[9578:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:34:44.335 HelloCordova[9578:70b] Unlimited access to network resources
+2014-06-10 10:34:44.352 HelloCordova[9578:70b] [CDVTimer][keyboard] 0.079989ms
+2014-06-10 10:34:44.360 HelloCordova[9578:70b] [CDVTimer][statusbar] 7.235944ms
+2014-06-10 10:34:44.360 HelloCordova[9578:70b] [CDVTimer][TotalPluginStartup] 8.236945ms
+2014-06-10 10:34:44.433 HelloCordova[9578:70b] Resetting plugins due to page load.
+2014-06-10 10:34:45.032 HelloCordova[9578:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 10:34:46.480 HelloCordova[9578:70b] --listening to changes in db: onsite
+2014-06-10 10:34:46.615 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:46.615 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:48.037 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:48.037 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.533 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.533 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.533 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.533 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.534 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.534 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.534 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.534 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.534 HelloCordova[9578:70b] hiding
+2014-06-10 10:34:50.535 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.535 HelloCordova[9578:70b] hiding
+2014-06-10 10:34:50.535 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.535 HelloCordova[9578:70b] hiding
+2014-06-10 10:34:50.535 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.536 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.536 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.536 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.536 HelloCordova[9578:70b] hiding
+2014-06-10 10:34:50.537 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.537 HelloCordova[9578:70b] hiding
+2014-06-10 10:34:50.537 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:34:50.537 HelloCordova[9578:70b] hiding
+2014-06-10 10:34:50.537 HelloCordova[9578:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+Terminating in response to SpringBoard's termination.
+2014-06-10 10:40:33.103 HelloCordova[10068:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:40:33.111 HelloCordova[10068:70b] Unlimited access to network resources
+2014-06-10 10:40:33.130 HelloCordova[10068:70b] [CDVTimer][keyboard] 0.079989ms
+2014-06-10 10:40:33.138 HelloCordova[10068:70b] [CDVTimer][statusbar] 7.111967ms
+2014-06-10 10:40:33.138 HelloCordova[10068:70b] [CDVTimer][TotalPluginStartup] 8.126020ms
+2014-06-10 10:40:33.218 HelloCordova[10068:70b] Resetting plugins due to page load.
+2014-06-10 10:40:33.585 HelloCordova[10068:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 10:40:43.946 HelloCordova[10068:70b] --listening to changes in db: onsite
+2014-06-10 10:40:44.220 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:44.220 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:45.745 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:45.746 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:49.107 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:49.107 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:50.033 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:50.033 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.034 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.035 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.035 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.035 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.035 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.035 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.036 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.036 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.036 HelloCordova[10068:70b] hiding
+2014-06-10 10:40:53.036 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.037 HelloCordova[10068:70b] hiding
+2014-06-10 10:40:53.037 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.037 HelloCordova[10068:70b] hiding
+2014-06-10 10:40:53.037 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.038 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.038 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.038 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.038 HelloCordova[10068:70b] hiding
+2014-06-10 10:40:53.039 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.039 HelloCordova[10068:70b] hiding
+2014-06-10 10:40:53.039 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:40:53.039 HelloCordova[10068:70b] hiding
+2014-06-10 10:40:53.040 HelloCordova[10068:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:16.685 HelloCordova[10509:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:48:16.693 HelloCordova[10509:70b] Unlimited access to network resources
+2014-06-10 10:48:16.715 HelloCordova[10509:70b] [CDVTimer][keyboard] 0.082970ms
+2014-06-10 10:48:16.724 HelloCordova[10509:70b] [CDVTimer][statusbar] 8.271992ms
+2014-06-10 10:48:16.725 HelloCordova[10509:70b] [CDVTimer][TotalPluginStartup] 9.372950ms
+2014-06-10 10:48:16.836 HelloCordova[10509:70b] Resetting plugins due to page load.
+2014-06-10 10:48:17.517 HelloCordova[10509:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 10:48:28.476 HelloCordova[10509:70b] --listening to changes in db: onsite
+2014-06-10 10:48:28.722 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:28.722 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:29.980 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:29.980 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.965 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.965 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.965 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.966 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.966 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.966 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.966 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.966 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.967 HelloCordova[10509:70b] hiding
+2014-06-10 10:48:31.967 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.967 HelloCordova[10509:70b] hiding
+2014-06-10 10:48:31.967 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.968 HelloCordova[10509:70b] hiding
+2014-06-10 10:48:31.968 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.968 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.968 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.968 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.969 HelloCordova[10509:70b] hiding
+2014-06-10 10:48:31.969 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.969 HelloCordova[10509:70b] hiding
+2014-06-10 10:48:31.969 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:48:31.970 HelloCordova[10509:70b] hiding
+2014-06-10 10:48:31.970 HelloCordova[10509:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+Terminating in response to SpringBoard's termination.
+2014-06-10 10:50:27.180 HelloCordova[10981:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 10:50:27.187 HelloCordova[10981:70b] Unlimited access to network resources
+2014-06-10 10:50:27.204 HelloCordova[10981:70b] [CDVTimer][keyboard] 0.079989ms
+2014-06-10 10:50:27.212 HelloCordova[10981:70b] [CDVTimer][statusbar] 7.009983ms
+2014-06-10 10:50:27.212 HelloCordova[10981:70b] [CDVTimer][TotalPluginStartup] 8.082032ms
+2014-06-10 10:50:27.356 HelloCordova[10981:70b] Resetting plugins due to page load.
+2014-06-10 10:50:28.041 HelloCordova[10981:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 10:50:29.127 HelloCordova[10981:70b] --listening to changes in db: onsite
+2014-06-10 10:50:29.240 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:29.240 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:30.444 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:30.444 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.190 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.191 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.191 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.191 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.191 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.192 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.192 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.192 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.192 HelloCordova[10981:70b] hiding
+2014-06-10 10:50:32.192 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.193 HelloCordova[10981:70b] hiding
+2014-06-10 10:50:32.193 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.193 HelloCordova[10981:70b] hiding
+2014-06-10 10:50:32.193 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.194 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.194 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.194 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.194 HelloCordova[10981:70b] hiding
+2014-06-10 10:50:32.194 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.195 HelloCordova[10981:70b] hiding
+2014-06-10 10:50:32.195 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 10:50:32.195 HelloCordova[10981:70b] hiding
+2014-06-10 10:50:32.195 HelloCordova[10981:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+Terminating in response to SpringBoard's termination.
+2014-06-10 11:02:32.798 HelloCordova[11505:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 11:02:32.806 HelloCordova[11505:70b] Unlimited access to network resources
+2014-06-10 11:02:32.827 HelloCordova[11505:70b] [CDVTimer][keyboard] 0.079989ms
+2014-06-10 11:02:32.836 HelloCordova[11505:70b] [CDVTimer][statusbar] 7.806003ms
+2014-06-10 11:02:32.836 HelloCordova[11505:70b] [CDVTimer][TotalPluginStartup] 9.086967ms
+2014-06-10 11:02:32.919 HelloCordova[11505:70b] Resetting plugins due to page load.
+2014-06-10 11:02:33.543 HelloCordova[11505:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 11:02:34.749 HelloCordova[11505:70b] --listening to changes in db: onsite
+2014-06-10 11:02:34.921 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:34.922 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:36.090 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:36.090 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.937 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.937 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.937 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.938 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.938 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.938 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.938 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.939 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.939 HelloCordova[11505:70b] hiding
+2014-06-10 11:02:39.939 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.939 HelloCordova[11505:70b] hiding
+2014-06-10 11:02:39.939 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.940 HelloCordova[11505:70b] hiding
+2014-06-10 11:02:39.940 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.940 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.940 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.940 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.941 HelloCordova[11505:70b] hiding
+2014-06-10 11:02:39.941 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.941 HelloCordova[11505:70b] hiding
+2014-06-10 11:02:39.941 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:02:39.942 HelloCordova[11505:70b] hiding
+2014-06-10 11:02:39.942 HelloCordova[11505:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:22.009 HelloCordova[11975:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 11:04:22.018 HelloCordova[11975:70b] Unlimited access to network resources
+2014-06-10 11:04:22.036 HelloCordova[11975:70b] [CDVTimer][keyboard] 0.077963ms
+2014-06-10 11:04:22.044 HelloCordova[11975:70b] [CDVTimer][statusbar] 7.557988ms
+2014-06-10 11:04:22.046 HelloCordova[11975:70b] [CDVTimer][TotalPluginStartup] 10.201991ms
+2014-06-10 11:04:22.315 HelloCordova[11975:70b] Resetting plugins due to page load.
+2014-06-10 11:04:22.845 HelloCordova[11975:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 11:04:23.975 HelloCordova[11975:70b] --listening to changes in db: onsite
+2014-06-10 11:04:24.135 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:24.135 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:25.400 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:25.401 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.596 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.596 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.597 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.597 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.597 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.597 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.597 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.598 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.598 HelloCordova[11975:70b] hiding
+2014-06-10 11:04:28.598 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.598 HelloCordova[11975:70b] hiding
+2014-06-10 11:04:28.599 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.599 HelloCordova[11975:70b] hiding
+2014-06-10 11:04:28.599 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.599 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.599 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.600 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.600 HelloCordova[11975:70b] hiding
+2014-06-10 11:04:28.600 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.600 HelloCordova[11975:70b] hiding
+2014-06-10 11:04:28.601 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:04:28.601 HelloCordova[11975:70b] hiding
+2014-06-10 11:04:28.601 HelloCordova[11975:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+Terminating in response to SpringBoard's termination.
+2014-06-10 11:05:02.656 HelloCordova[12430:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-10 11:05:02.663 HelloCordova[12430:70b] Unlimited access to network resources
+2014-06-10 11:05:02.684 HelloCordova[12430:70b] [CDVTimer][keyboard] 0.092983ms
+2014-06-10 11:05:02.817 HelloCordova[12430:70b] [CDVTimer][statusbar] 131.420970ms
+2014-06-10 11:05:02.817 HelloCordova[12430:70b] [CDVTimer][TotalPluginStartup] 132.875025ms
+2014-06-10 11:05:02.921 HelloCordova[12430:70b] Resetting plugins due to page load.
+2014-06-10 11:05:03.717 HelloCordova[12430:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/0A053EEE-AFA6-48B7-828D-7EE7BBA7CBE3/HelloCordova.app/www/index.html#/login
+2014-06-10 11:05:07.152 HelloCordova[12430:70b] --listening to changes in db: onsite
+2014-06-10 11:05:07.272 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:07.273 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:08.393 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:08.394 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.920 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.920 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.920 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.920 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.920 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.921 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.921 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.921 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.921 HelloCordova[12430:70b] hiding
+2014-06-10 11:05:09.922 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.922 HelloCordova[12430:70b] hiding
+2014-06-10 11:05:09.922 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.923 HelloCordova[12430:70b] hiding
+2014-06-10 11:05:09.923 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.923 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.923 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.923 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.925 HelloCordova[12430:70b] hiding
+2014-06-10 11:05:09.925 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.926 HelloCordova[12430:70b] hiding
+2014-06-10 11:05:09.926 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2014-06-10 11:05:09.926 HelloCordova[12430:70b] hiding
+2014-06-10 11:05:09.926 HelloCordova[12430:70b] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.

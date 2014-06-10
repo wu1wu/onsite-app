@@ -3,7 +3,7 @@
 	  <div class="item item-divider">
 	    {{section.name}}
 	  </div>
-	  <label class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
+	  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
 	     <span class="input-label">{{input.name}}</span>
  
 	     <input  ng-hide='input.view.options.length > 1' type='{{input.keyboard ? input.keyboard:"text"}}'
@@ -23,7 +23,7 @@
 		     {{input.units}}
 		   </button>
 	   </div>
-	   </label>
+	   </div>
    </div>
 </ion-scroll>
 
@@ -32,7 +32,7 @@
 	  <div class="item item-divider">
 	    {{section.name}}
 	  </div>
-	  <label class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
+	  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
 	     <span class="input-label">{{input.name}}</span>
  
 	     <input  ng-hide='input.view.options.length > 1' type='{{input.keyboard ? input.keyboard:"text"}}'
@@ -53,7 +53,7 @@
   		   </button>
   	   </div>
 		 
-	   </label>
+	   </div>
    </div>
 </ion-scroll>
 
