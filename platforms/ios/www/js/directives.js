@@ -190,8 +190,10 @@ angular.module('starter.directives', [])
 	                      input.view.options = []; 
 						  
 						  //set first value as default             
-	                      if(!input.userValue){                    
-	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);                    
+	                      if(!input.userValue){     
+							  console.log("setting first value");               
+	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);           
+							  console.log("set first value");         
 	                      }
 						  
 	                      if(inputOptions.length > 1){

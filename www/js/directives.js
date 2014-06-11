@@ -100,7 +100,7 @@ angular.module('starter.directives', [])
           
 	            _.each(section.inputs, function(input){
 	              var timer = new Date();  
-	              //console.log('----------' + input.name + "----------"); 
+	              console.log('----------' + input.name + "----------"); 
 	              //console.log(input);
 	              input.view = {};
             
@@ -190,8 +190,10 @@ angular.module('starter.directives', [])
 	                      input.view.options = []; 
 						  
 						  //set first value as default             
-	                      if(!input.userValue){                    
-	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);                    
+	                      if(!input.userValue){     
+							  console.log("setting first value");               
+	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);           
+							  console.log("set first value");         
 	                      }
 						  
 	                      if(inputOptions.length > 1){
@@ -219,6 +221,7 @@ angular.module('starter.directives', [])
 				  //console.log($scope.component);
 				  //console.log("---Project---");
 				  //console.log($scope.project);
+				  
 	          });
 	          if(section.inputs.length === hiddenInputs){
 				  section.view.isHidden = true;

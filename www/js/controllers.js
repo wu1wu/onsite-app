@@ -690,6 +690,7 @@ angular.module('starter.controllers', [])
 		   	  newItem.type = "component";
 		   	  newItem.channels = ["public"];
 		   	  newItem.projectId = $scope.project._id;
+			  newItem.values = {};
   
 		   	  //move these forward for easy access
 		   	  newItem.libraryId = newItem.schema.libraryId;
