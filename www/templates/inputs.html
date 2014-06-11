@@ -10,7 +10,7 @@
 	             placeholder='{{input.name}}' ng-model='component.values[input.alias]' 
 	             ng-change="onInputChange(component.values[input.alias])" ng-readonly="input.restricted == '1'" 
 			     ng-blur='onInputBlur(component.values[input.alias], input)'
-			     ng-focus='onInputFocus(component.values[input.alias])'> 
+			     ng-focus='onInputFocus(component.values[input.alias])' clear-button> 
 
 	     <select ng-show='input.view.options.length > 1' ng-model='component.values[input.alias]' 
 	             ng-change="onInputChange(component.values[input.alias])" ng-options="o for o in input.view.options" 

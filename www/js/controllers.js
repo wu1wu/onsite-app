@@ -637,11 +637,14 @@ angular.module('starter.controllers', [])
 		//console.log(copy);
 	    //save doc to db
 		$ngPouch.doc(copy).then(function(newComponent){
-			//console.log("saved");
+			console.log("saved");
 			
 			if(newComponent.libraryId === $scope.view.activeLibrary._id){
-				//console.log("set selected");
-				$scope.view.activeLibrary.selected = _.findWhere($scope.components, {_id:newComponent._id});
+				console.log("set selected");
+				$timeout(function(){
+					$scope.view.activeLibrary.selected = _.findWhere($scope.components, {_id:newComponent._id});
+				}, 50);
+				
 			}
 			
 			
