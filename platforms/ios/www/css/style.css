@@ -242,3 +242,7 @@ onsite-inputs .item-input input {
 	height:100%;
 }
 
+.height-100 .scroll{
+	padding-bottom: 30px;
+}
+

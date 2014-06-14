@@ -31,9 +31,11 @@ angular.module('starter.controllers', [])
         $scope.user.password = localStorage.password;
 	
 	$scope.login = function(){
-                //temporary during testing
-                localStorage.name = $scope.user.name;
-                localStorage.password = $scope.user.password;
+        //temporary during testing
+		$scope.user.name = $scope.user.name.toLowerCase();
+		
+        localStorage.name = $scope.user.name;
+        localStorage.password = $scope.user.password;
                 
 		$user.logIn($scope.user);
 	};

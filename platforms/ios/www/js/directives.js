@@ -207,10 +207,10 @@ angular.module('starter.directives', [])
             
 	              if(placeholder.inputValue !== undefined){//if a new value should be assigned
 	                  //console.log("reassigning value")
-			  //if not not a number (ie a number), then set it as such
-			  if(!isNaN(placeholder.inputValue))
-				  placeholder.inputValue = Number(placeholder.inputValue);
-			  };
+					  //if not not a number (ie a number), then set it as such
+					  if(!isNaN(placeholder.inputValue)){
+						  placeholder.inputValue = Number(placeholder.inputValue);
+					  }
 
 	                  if($scope.component.schema.type === 'Descriptive'){
 	                      $scope.project.values[input.alias] = placeholder.inputValue;//if descriptive library, add it to the project values

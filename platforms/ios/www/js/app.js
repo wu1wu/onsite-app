@@ -20,6 +20,12 @@ angular.module('starter',
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+	//disable native scrolling
+	if(cordova){
+		cordova.plugins.Keyboard.disableScroll(true);
+	}
+	
+	
     //assign default server
     if(!localStorage.server){
             localStorage.server = 'http://192.168.0.12:5984/';
