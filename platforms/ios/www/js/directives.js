@@ -100,7 +100,7 @@ angular.module('starter.directives', [])
           
 	            _.each(section.inputs, function(input){
 	              var timer = new Date();  
-	              //console.log('----------' + input.name + "----------"); 
+	              console.log('----------' + input.name + "----------"); 
 	              //console.log(input);
 	              input.view = {};
             
@@ -221,6 +221,7 @@ angular.module('starter.directives', [])
 				  //console.log($scope.component);
 				  //console.log("---Project---");
 				  //console.log($scope.project);
+				  
 	          });
 	          if(section.inputs.length === hiddenInputs){
 				  section.view.isHidden = true;
