@@ -203,7 +203,7 @@ angular.module("corner-pocket", [])
 		});			
 	}	
 	
-	function PouchCollection(docs, map, $scope){
+	function PouchCollection(docs, map, options, $scope){
 		var self = this;
 		
 		self.docs = docs;
@@ -237,17 +237,51 @@ angular.module("corner-pocket", [])
 				//reset the map function
 				//run the function
 				self.mapResults = [];
-				console.log(map);
 				map(change.doc, self.emit);
-				console.log(change.doc);
-				console.log(self.mapResults);
 				
 				//check the result
 				$rootScope.$apply(function(){				
 					if(self.mapResults.length > 0){//because create could result in more than one row
-						//add new row
-						self.docs.push(new PouchDoc(change.doc, $scope));
-						console.log("added new Row!");
+						
+						//check each new result to ensure it meets the conditions
+						for(var i = 0; i < self.mapResults.length; i++){
+							var result = self.mapResults[i];
+							var include = false;
+							console.log(options);
+							if(options.startkey && options.endkey){
+								//various key types
+								include = true;
+								if(result.key instanceof Array){
+									console.log("key is array");
+									for(var w = 0; w < result.key.length; w++){
+										var key = result.key[w];
+										var startKey = options.startkey[w];
+										var endKey = options.endkey[w];
+										
+										console.log("key: " + key);
+										console.log("startKey: " + startKey);
+										console.log("endKey: " + endKey);
+										
+										if(key < startKey || key > endKey){
+											include = false;
+										}
+									}
+								}else if(result.key instanceof Object){
+									console.log("key is object");
+									include = false;
+								}else if(typeof result.key === 'string'){
+									console.log("key is string");
+									include = false;
+								}
+							}
+							
+							if(include){
+								//add new row
+								self.docs.push(new PouchDoc(change.doc, $scope));
+								console.log("added new Row!");
+							}
+							
+						}
 					}
 					
 					delete self.mapResults;//no longer needed					
@@ -384,7 +418,7 @@ angular.module("corner-pocket", [])
 					if(err){
 						deferred.reject(err);
 					}else{			
-						deferred.resolve(new PouchCollection(_.pluck(response.rows, "value"), map));
+						deferred.resolve(new PouchCollection(_.pluck(response.rows, "value"), map, options));
 					}
 				});
 			}
