@@ -6,28 +6,28 @@
     <button class="button button-icon icon ion-plus-round" io-tap='dialogOpen()'></button>
   </ion-nav-buttons>
   <ion-content class="has-header" scroll='false'>
-	<div class="row">
-	  <div class="col-25">
-		<ion-list>
-  		<div class="card" ng-repeat="tag in tags" io-tap='view.activeTag = tag'>
-  		  <div class="item item-text-wrap"  ng-class="{selected: tag === view.activeTag}">
-  		    {{tag}}
-  		  </div>
-  		</div>
-	  </div>
-	  <div class="col">
-		  <ion-list class='card-list' ng-show='view.activeTag'>		  
-		          <ion-item ng-repeat="item in items | filter: {tag: view.activeTag}" 
-		                    item="item"
-		                    href="#/app/project/{{item._id}}">
-		            <div class='bold'>{{item.name}}</div>
-			    <div class='italic'>Last Update: {{item.updated | date:'longDate'}}</div>
-		            <ion-option-button class="button-assertive option-button-2" ng-click="deleteItem(item)">Delete</ion-option-button>
-		            <ion-option-button class="button-positive option-button-2" ng-click="dialogOpen(item)">Edit</ion-option-button>
-		          </ion-item>
-		   </ion-list>
-	  </div>
-  </div>
+  	<div class="row height-100">
+  	  <ion-scroll class="col-25 height-100">
+    		<div class="card" ng-repeat="tag in tags" io-tap='view.activeTag = tag'>
+    		  <div class="item item-text-wrap"  ng-class="{selected: tag === view.activeTag}">
+    		    {{tag}}
+    		  </div>
+    		</div>
+  	  </ion-scroll>
+  	  <ion-scroll class="col height-100">
+  		  <ion-list class='card-list' ng-show='view.activeTag'>		  
+  		          <ion-item ng-repeat="item in items | filter: {tag: view.activeTag}" 
+  		                    item="item"
+  		                    href="#/app/project/{{item._id}}">
+  		            <div class='bold'>{{item.name}}</div>
+  			    <div class='italic'>Last Update: {{item.updated | date:'longDate'}}</div>
+  		            <ion-option-button class="button-assertive option-button-2" ng-click="deleteItem(item)">Delete</ion-option-button>
+  		            <ion-option-button class="button-positive option-button-2" ng-click="dialogOpen(item)">Edit</ion-option-button>
+  			    <ion-option-button class="button-stable option-button-2" ng-click="downloadDialog(item)">Reports</ion-option-button>
+  		          </ion-item>
+  		   </ion-list>
+  	  </ion-scroll>
+    </div>
   </ion-content>
 </ion-view>
 
