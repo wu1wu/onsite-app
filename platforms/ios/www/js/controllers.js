@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 .controller('loginController', function($scope, $ionicPopup, $user) {
 	
-	if(typeof StatusBar  === 'function'){
+	if(window.StatusBar){
 		StatusBar.styleDefault();
 	}
 	

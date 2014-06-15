@@ -3,7 +3,7 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-share"></button>
+    <button ng-show="project.type === 'project'" class="button button-icon icon ion-share" ng-click='saveAsTemplate()'></button>
   </ion-nav-buttons>
   
   <div class="tabs tabs-dark tabs-icon-top">
@@ -106,6 +106,36 @@
 			     </div>
 	  		  </div>
 		  </ion-scroll>		  
+		</ion-content>
+		  
+	</div>
+</script>
+
+
+
+<!--SAVE AS TEMPLATE -->
+<script type="text/ng-template" id="save-as-template.html">
+	<div class="modal">
+		<ion-header-bar>
+		  <button class="button button-stable" ng-click='close()'>
+		    Close
+		  </button>
+		  <h1 class="title">Save As Template</h1>
+		  <button class="button button-positive" ng-click='ok()' ng-disabled='!template.name || template.name === "" || !template.tag || template.tag === ""'>
+		    Save
+		  </button>
+		</ion-header-bar>
+		<ion-content scroll='false' style='overflow: visible;'>
+		  <div class="list bottom-border list-inset" style='overflow: visible;'>
+		    <label class="item item-input">
+		      <span class="input-label">Name</span>
+		      <input type="text" ng-model='template.name' placeholder='Name' tabindex='100' clear-button has-focus='view.firstFocus'>
+		    </label>
+		    <label class="item item-input autocomplete-label">
+		      <span class="input-label">Tag</span>
+			  <autocomplete ng-model="template.tag" data="tags" on-type="" attr-placeholder='Tag' click-activation='true' class='autocomplete-tag'></autocomplete>
+		    </label>			  
+		  </div>  
 		</ion-content>
 		  
 	</div>

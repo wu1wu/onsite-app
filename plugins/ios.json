@@ -39,6 +39,10 @@
                         {
                             "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -69,25 +73,25 @@
     },
     "installed_plugins": {
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         },
         "com.phonegap.plugins.fileopener": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         },
         "emailcomposer": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
+            "PACKAGE_NAME": "com.onsitedatacollection.app"
         }
     },
     "dependent_plugins": {}

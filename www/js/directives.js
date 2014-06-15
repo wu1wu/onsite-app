@@ -262,15 +262,11 @@ angular.module('starter.directives', [])
 			
 			//append
 			//element.after(button);
-			console.log(container);
 			if(container.length > 0){
 				container.append(button);
 			}else{
 				label.append(button);
-			}
-			
-		
-		
+			}		
 			//attach event handler
 			var $input = element;
 			$ionicGesture.on('tap click', function(e){
@@ -292,7 +288,6 @@ angular.module('starter.directives', [])
 			scope.$watch(attrs.ngHide, function(newVal){
 				if(newVal){
 					console.log("hiding");
-					console.log(button);
 					button.hide();
 				}else{
 					button.show();

@@ -28,7 +28,7 @@ angular.module('starter',
 	
     //assign default server
     if(!localStorage.server){
-            localStorage.server = 'http://192.168.0.12:5984/';
+            localStorage.server = 'http://base.onsitedatacollection.com/';
     }
   });  
 })

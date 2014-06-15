@@ -21,14 +21,14 @@ angular.module('starter',
       StatusBar.styleDefault();
     }
 	//disable native scrolling
-	if(cordova){
+	if(window.cordova){
 		cordova.plugins.Keyboard.disableScroll(true);
 	}
 	
 	
     //assign default server
     if(!localStorage.server){
-            localStorage.server = 'http://192.168.0.12:5984/';
+            localStorage.server = 'http://base.onsitedatacollection.com/';
     }
   });  
 })
@@ -74,20 +74,20 @@ angular.module('starter',
       views: {
         'menuContent' :{
           templateUrl: "templates/templates.html",
-          controller: 'templatePageController'
+          controller: 'templatesController'
         }
       }
     })
-	/*
+	
     .state('app.single', {
       url: "/template/:projectId",
       views: {
         'menuContent' :{
-          templateUrl: "templates/playlist.html",
-          controller: 'PlaylistCtrl'
+          templateUrl: "templates/projectPage.html",
+          controller: 'templatePageController'
         }
       }
-    })*/;
+    });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
   /*
