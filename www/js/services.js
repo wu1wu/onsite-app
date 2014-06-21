@@ -606,4 +606,32 @@ angular.module('starter.services', [])
 			$ngPouch.autoSync = result;
 		}
 	};
+}])
+.factory('utils',['$rootScope', '$q', function($rootScope, $q) {
+
+  return {
+    base64ToBlob: function(data) {
+      // https://github.com/daleharvey/pouchdb/blob/master/tests/test.attachments.js#L523
+	  console.log("start");
+      var decodedData = PouchDB.utils.atob(data);
+	  console.log("1");
+      var fixedBinary = PouchDB.utils.fixBinary(decodedData);
+	  console.log("2");
+      var blob = PouchDB.utils.createBlob([fixedBinary], {type: 'image/jpeg'});
+	  console.log("end");
+      return blob;
+    },
+    blobToBase64: function(blob) {
+      var deferred = $q.defer();
+      var reader = new FileReader();
+      reader.readAsBinaryString(blob);
+      reader.onloadend = function() {
+        var res = this.result;
+        $rootScope.$apply(function() {
+          deferred.resolve(PouchDB.utils.btoa(res));
+        });
+      };
+      return deferred.promise;
+    }
+  };
 }]);

@@ -478,7 +478,7 @@ angular.module('starter.controllers', [])
     };
   };
 })
-.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate) {
+.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate, $cordovaCamera, utils) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -789,6 +789,7 @@ angular.module('starter.controllers', [])
    $scope.$on('$destroy', function() {
      $scope.addNewModal.remove();
 	 $scope.templateModal.remove();
+	 $scope.photoModal.remove();
    });    
    
 
@@ -901,6 +902,94 @@ angular.module('starter.controllers', [])
 		modalScope.view.firstFocus = true;
 	});
   };
+  
+  //COMPONENT PHOTOTS
+  $ionicModal.fromTemplateUrl('photos.html', {}).then(function(modal) {
+  	$scope.photoModal = modal;
+	//configure modalScope
+	var modalScope = $scope.photoModal.scope;
+	
+	modalScope.image = {};
+	
+ 	modalScope.close = function(){
+ 		$scope.photoModal.hide().then(function(){
+ 			//clean modal scope
+ 			delete modalScope.image.data;
+ 		});
+		
+ 	};
+	
+   });
+  
+  $scope.showPhotos = function(){	  
+	//configure modal scope
+	var modalScope = $scope.photoModal.scope;
+
+	//lets actually open it up
+	$scope.photoModal.show().then(function(){
+	});
+  };
+  
+  
+  /* ---- ADDITIONAL FUNCTIONALITY --- */
+  
+  //PHOTOS
+  $scope.takePicture = function() {
+	  var nextPhoto = 1;
+	  var component = $scope.view.activeLibrary.selected;
+	  
+	  if(component._attachments){
+		  nextPhoto = nextPhoto + component._attachments.length;
+	  }
+	  
+      var options = { 
+          quality : 100, 
+          destinationType : Camera.DestinationType.NATIVE_URI, 
+          sourceType : Camera.PictureSourceType.CAMERA, 
+          allowEdit : false,
+          encodingType: Camera.EncodingType.JPEG,
+          saveToPhotoAlbum: true
+      };
+
+      $cordovaCamera.getPicture(options).then(function(imageData) {
+        // Success! Image data is here
+		$ionicPopup.prompt({
+		   title: 'Name Photo',
+		   inputType: 'text',
+		   inputPlaceholder: 'Name',
+		   default: "Photo" + nextPhoto
+		 }).then(function(name) {
+			 //if no name (user hit cancel), don't save
+			 if(!name){
+				 return;
+			 }
+			 //otherwise, lets save this image!
+			 //clean name to be compatable
+			 name = name.replace(/\s+/g, '_').toLowerCase();
+			 console.log(imageData);
+			 
+			 $scope.photoModal.scope.image.data = imageData;
+			 /*
+			 //remove newlines
+			 imageData = imageData.replace(/\s/g, '');
+			
+			 //save data
+			 $ngPouch.db.putAttachment(component._id, name, component._rev, imageData, 'image/png', function(err,res){
+				 if(err){
+					 //error handling
+					 console.log(err);
+					 alert('ERROR');
+				 }else{
+					 console.log("SAVED!");
+				 }
+			 }); 
+			 */
+		 });
+      }, function(err) {
+        // An error occured. Show a message to the user
+      });
+	  
+    };
 })
 
 .controller('templatesController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, generateReport) {

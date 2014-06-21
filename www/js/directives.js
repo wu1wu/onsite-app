@@ -223,9 +223,9 @@ angular.module('starter.directives', [])
             
 	              var endTime = new Date();
 	              var elapsed = endTime.getTime() - timer.getTime();
-	              //console.log("Timer: " + elapsed);
-				  //console.log("---Component---");
-				  //console.log($scope.component);
+	              console.log("Timer: " + elapsed);
+				  console.log("---Component---");
+				  console.log($scope.component);
 				  //console.log("---Project---");
 				  //console.log($scope.project);
 				  
@@ -334,6 +334,7 @@ angular.module('starter.directives', [])
 		restrict: 'A',
 		link:function(scope, element, attrs){
 			$(element[0]).on("change",function(){
+				console.log("changed!");
 				var address = attrs.index.split(".");
 				
 				var nextInput = parseInt(address[1]) + 1;

@@ -11,7 +11,8 @@ angular.module('starter',
 	'starter.directives',
 	'starter.services',
 	'corner-pocket',
-	'autocomplete'
+	'autocomplete',
+	'ngCordova'
 ])
 
 .run(function($ionicPlatform, $ngPouch) {
