@@ -1,0 +1,649 @@
+2014-06-21 09:54:00.786 Onsite[5423:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 09:54:00.841 Onsite[5423:70b] Unlimited access to network resources
+2014-06-21 09:54:01.661 Onsite[5423:70b] [CDVTimer][keyboard] 0.136018ms
+2014-06-21 09:54:01.783 Onsite[5423:70b] [CDVTimer][statusbar] 121.095955ms
+2014-06-21 09:54:01.784 Onsite[5423:70b] [CDVTimer][TotalPluginStartup] 122.488976ms
+2014-06-21 09:54:01.862 Onsite[5423:70b] Resetting plugins due to page load.
+2014-06-21 09:54:02.466 Onsite[5423:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 09:54:30.586 Onsite[5841:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 09:54:30.594 Onsite[5841:70b] Unlimited access to network resources
+2014-06-21 09:54:30.613 Onsite[5841:70b] [CDVTimer][keyboard] 0.074029ms
+2014-06-21 09:54:30.622 Onsite[5841:70b] [CDVTimer][statusbar] 7.903993ms
+2014-06-21 09:54:30.622 Onsite[5841:70b] [CDVTimer][TotalPluginStartup] 8.899033ms
+2014-06-21 09:54:30.744 Onsite[5841:70b] Resetting plugins due to page load.
+2014-06-21 09:54:31.281 Onsite[5841:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 09:54:38.276 Onsite[5841:70b] --listening to changes in db: onsite
+2014-06-21 09:54:38.609 Onsite[5841:70b] CREATED - E7769D08-3C68-4739-9F54-D9A4F0614494
+2014-06-21 09:54:38.609 Onsite[5841:70b] CREATED - EF9F6FB2-015D-9B51-A271-0CFD6C5566E9
+2014-06-21 09:54:38.609 Onsite[5841:70b] CREATED - F6983663-1F22-91C8-99DD-25B5BA06217B
+2014-06-21 09:54:38.609 Onsite[5841:70b] CREATED - 6F115FCA-9F76-E803-913A-9EBA49E2EE7A
+2014-06-21 09:54:44.520 Onsite[5841:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 09:54:44.521 Onsite[5841:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 09:54:44.521 Onsite[5841:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 09:54:44.521 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 09:54:44.521 Onsite[5841:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 09:54:44.522 Onsite[5841:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 09:54:44.522 Onsite[5841:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 09:54:44.522 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 09:54:44.578 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 09:54:44.628 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 09:54:44.658 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 09:54:44.689 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 09:54:44.727 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=647&limit=25","timeout":0}
+2014-06-21 09:54:44.794 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=659&limit=25","timeout":0}
+2014-06-21 09:54:44.884 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"B92ED240-D171-ECAA-83F5-4770D8EEA647":["2-2a22fee09ba379853f6c5460016afdd3"]}}
+2014-06-21 09:54:44.885 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-21 09:54:44.935 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 09:54:44.941 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_design/projects?revs=true&open_revs=[\"13-8c8113b3397cae3d34f62566ba17fcfc\"]&attachments=true"}
+2014-06-21 09:54:45.000 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-4","last_seq":212}}
+2014-06-21 09:54:45.036 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 09:54:45.092 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"C0F67A5D-A0A2-45E4-B892-A6F8274F2CF2":["2-7e159125671574232078cbd3af4020b5"]}}
+2014-06-21 09:54:45.102 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-8","last_seq":648}}
+2014-06-21 09:54:45.162 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 09:54:45.205 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-21 09:54:45.229 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-5","last_seq":216}}
+2014-06-21 09:54:45.271 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900389b?revs=true&open_revs=[\"30-6aa9c1a72a23f2292dec17db01266d52\"]&attachments=true"}
+2014-06-21 09:54:45.329 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"ea0e2d1e6ea88061cd77cc0b0c047101":["1-b427807610f37d697bd7a1278c4ee869"],"ea0e2d1e6ea88061cd77cc0b0c046afd":["1-13735a890acb7d741d8569f299cc0d8b"],"ea0e2d1e6ea88061cd77cc0b0c06229f":["1-d92ad63e54d7ee9c0ad8e1d9b710abf6"],"ea0e2d1e6ea88061cd77cc0b0c0788ae":["1-75f066980d1a2f89f9d529459b7c18fd"],"FEA56545-547A-0978-BEDB-7D481FDB6FFD":["1-0aa8e3d8e842b660d0c74414a08fed25"],"CC995C61-8328-022B-859B-2478333392A5":["2-1a983eb36d02c150308a13b9f2656c62"],"CDA67B23-8F84-873C-8B39-BCE2F9550251":["2-f2453c65a3180af84e24cdf6587e1d61"],"F25B8295-1DB3-8F4F-86F4-9E65E02237E8":["2-463f778b305f0afb49d774ec702c3d63"],"ea0e2d1e6ea88061cd77cc0b0c0092a3":["2-89eb20db960817d27b1dd512284e3574"],"ea0e2d1e6ea88061cd77cc0b0c01391a":["3-37faf80a0fdb81cf1b1f4b070cbe8997"],"ea0e2d1e6ea88061cd77cc0b0c01dac0":["5-cba49f986ed68a6da154d024989a5bd8"],"ea0e2d1e6ea88061cd77cc0b0c0042a5":["11-2915fa95546dcd0f56693296a50e2218"],"8C14BEEB-27C3-B07A-BECB-46FF5EA38F60":["2-b31667f352319b516683df8ae9ffb93b"],"CF9145B0-29AB-9AA2-85AC-40C6818C53B0":["2-aa4a3ee2494d9fa64bba339ffd201a80"],"0F42BD44-232C-7856-BB7F-282B57A3375A":["2-6179c4815d6c9d8c8a67ad85b68a4628"],"590da4f57e1280c18e16d21c89001aab":["20-514a54c2f5384a454ee19ec1e7dbbb4f"],"CB36C302-0C82-2CD4-A8E5-ED5FE94FEE9F":["2-3ed44583df64cf9de7af08339abaadf2"],"EFB10761-5B04-0ED1-91D0-71E506C011B7":["4-becfc581df158dfee4b9483c3532bf79"],"ea0e2d1e6ea88061cd77cc0b0c02dd41":["2-8b3a17e70fde0c1181bfe7be30596ab9"],"ea0e2d1e6ea88061cd77cc0b0c02ea9a":["2-5efdf71cd54301bc54bad660ccd0f4bb"],"ea0e2d1e6ea88061cd77cc0b0c02f415":["2-151586d4038936f332c36006e50caafe"],"590da4f57e1280c18e16d21c89003064":["23-1cb6a45de9ee480eb869c2aeba76c8fd","10-cb476821c150c2f2e7593ca3ae9ba233"],"ea0e2d1e6ea88061cd77cc0b0c034d96":["2-95a4f4278766652c8ca3420b95b973a8"],"ea0e2d1e6ea88061cd77cc0b0c033413":["2-088bcd43c454c3128d25787b7b83cb22"],"ea0e2d1e6ea88061cd77cc0b0c032a03":["2-51ce716ef51fdea8c0076aae73e7ab0b"],"ea0e2d1e6ea88061cd77cc0b0c038d2b":["2-84e0dd3e51fabf09798a8de7006cd0a6"],"ea0e2d1e6ea88061cd77cc0b0c0384b9":["2-d11bf9237545fdca620ecd26ebcd2901"],"ea0e2d1e6ea88061cd77cc0b0c0381d2":["2-a40bbbd88d41f3b73de2a5512a109c6a"],"ea0e2d1e6ea88061cd77cc0b0c037b0d":["2-ccd2fe2aaf3945b8c2ece6fd105083e4"],"ea0e2d1e6ea88061cd77cc0b0c0374b0":["2-2b4fcd4e3322c2da5be4cfece9a5fa25"],"ea0e2d1e6ea88061cd77cc0b0c036fa9":["2-800eb07cfafc1c22ae385537444a1664"],"ea0e2d1e6ea88061cd77cc0b0c03646d":["2-19c3bed58ed3692aa6dbd1f2773ba2cc"],"ea0e2d1e6ea88061cd77cc0b0c035eab":["2-fc30da09140daea63a7916481d362e67"],"ea0e2d1e6ea88061cd77cc0b0c035139":["2-a92a4834811dbc14fbb5e34c53dbb034"],"ea0e2d1e6ea88061cd77cc0b0c03de41":["2-a2d9cb619e16c5cd3683299c2707c16f"],"ea0e2d1e6ea88061cd77cc0b0c03d254":["2-8dddc9e17a0c15f3fdcdf3ce0919cddb"],"ea0e2d1e6ea88061cd77cc0b0c03cbd2":["2-ab817ecc241496c7d959057ce4202a73"],"ea0e2d1e6ea88061cd77cc0b0c03c5df":["2-040abbb11131de9694dd7b8df1ef39f4"],"ea0e2d1e6ea88061cd77cc0b0c03b6e3":["2-1de195d65aa947b69efc32c102c1dd4c"],"ea0e2d1e6ea88061cd77cc0b0c03b0d9":["2-61f1854c0a6c0d67de50ea6d3f39fa13"],"ea0e2d1e6ea88061cd77cc0b0c03ac36":["2-d13e3a08028003028395c5ce4fe9c95d"],"ea0e2d1e6ea88061cd77cc0b0c03a088":["2-00741fc53b532842e3c0ae1fc5c679f4"],"ea0e2d1e6ea88061cd77cc0b0c039818":["2-3cb2707fc2004b21eb2517ac52cee2f1"],"ea0e2d1e6ea88061cd77cc0b0c038f84":["2-93a2773b3cff54bb8f8dccdb7c377f81"],"82616BD7-8B05-9E33-BC13-FE763BE8190D":["2-00f6cd20904e40aed5c271936d427b44"],"8F9133AB-91C8-2713-9F0D-F5E732E3FA2F":["2-16a8645533063d06114ff5fef86d0639"],"BB240A1A-1CAC-99DF-B0CB-2F9CC8CC9DC3":["2-fff972edd251c66d313079083dc98bc8"],"ea0e2d1e6ea88061cd77cc0b0c043370":["2-59e66f7351eddf9524c7505ffa0e348d"],"590da4f57e1280c18e16d21c89002497":["8-4d235822ebc20d7a3996717934e8daf2","2-22ae707c11204f226dfa81451d8e58e1"],"656d1bd32dc697e94dae022cee001582":["12-0730bb77763662f7b8b5ef2b96e59f12","6-c865bb6454fbc30b022c38fb1d83c0e4"],"590da4f57e1280c18e16d21c89014549":["8-2c40a6437cc1261d73b2a3c11945780a"],"590da4f57e1280c18e16d21c8900338a":["6-4e73de37371e5843214f966260e73117"],"ea0e2d1e6ea88061cd77cc0b0c047796":["8-765a85a6905c7f992d35f71501333c37"],"ea0e2d1e6ea88061cd77cc0b0c047345":["9-04cc02cbb1f5e490533548e3ed6b4ea6"],"88BBFF39-D358-812A-BC89-BB0562013EBD":["2-b6d48115670326babc8090cf1e27da14"],"566F0F29-13A4-B14A-8AD8-883BBDE85D34":["2-3254f7bd5d63471a7369374e31f2cb1d"],"08ED8622-E323-D9A6-84F0-EB2BDB27BD8C":["11-95f688b87453a97ea8e804e26af2c841"],"ea0e2d1e6ea88061cd77cc0b0c0508f2":["2-836dbb5bef8552266381454c67896f75"],"ea0e2d1e6ea88061cd77cc0b0c05063f":["2-2ad30d14b8344878c16f125401c83563"],"ea0e2d1e6ea88061cd77cc0b0c05032d":["7-53565bca825b52daf20fbb970db0e554"],"ea0e2d1e6ea88061cd77cc0b0c0501fc":["5-c371a6c319ab16441f4c0323406a950d"],"ea0e2d1e6ea88061cd77cc0b0c0556ab":["8-c8d07e1a7d60ad5fcc1d23c0f7dcb37d"],"69F3572A-D85B-A436-BA07-AD75E99FF3A1":["2-006921ffef192adc8902c3433ee918bb"],"223189C4-583E-4643-B1D5-1949722CE273":["2-cebbd8cdb41e6041ec56e94c11afe6d3"],"538C53F5-20E9-9D66-810B-E7B7CB255DC0":["5-4bed99d4ecbd81b72a051c2965fbc431"],"7FCAEF7F-59DD-1BC6-8007-A2D0DDB8396E":["2-180ea33c9d68df8f7d623997023b1dd7"],"81EBAB6D-36AC-9315-A7F1-0502CE287E54":["2-2ecff4ef8b3af3ea491cecf6e62d1c5c"],"D7A3B6CA-4F81-4A10-B7AC-E62627D22FE8":["2-ae64d86a24b772041a9a9cbfdd8f8fb1"],"EE5C4E89-6BF6-A309-B5DF-FC22A941E752":["2-95b9037b015e51e86637dce1f948f33c"],"ea0e2d1e6ea88061cd77cc0b0c0321b1":["5-6725cbb7028cbfe5c537238165f13e18"],"ea0e2d1e6ea88061cd77cc0b0c04ea4a":["2-84b6570a57bd99e8efb48255eb28b35c"],"ea0e2d1e6ea88061cd77cc0b0c04f38a":["2-7cc7bdb8874f2437a98b1fb4ceebb3c0"],"C22A93FC-4238-5981-B349-262CF92C69B0":["2-a98cc09633c197e057a328386d1be0c6"],"ea0e2d1e6ea88061cd77cc0b0c05dfc3":["2-fc37d7815e82506f8bac04f3d815ddd1"],"9362BA8F-900B-7AC0-9588-DFBCF06755CC":["15-5638707a5459d2651fb01038f38f1b01"],"9F71BA91-172F-AD99-936F-62E213479CA7":["2-b782cfe43385969697d1c842a26f1fd4"],"5B2A1DE8-DD9A-0ECF-A147-827CFCE39932":["2-46214ed3cbf5d36c5540d3a21d619080"],"16586C2E-39F8-6914-9C7B-E5948616156E":["2-ec09bd10cbb2a75e412ca0eea1840658"],"31FC3CE9-4517-24DD-96BE-F041458AB2A8":["2-5b444676b21ec7c1cd96f1591eb81613"],"38EB5F44-914E-3CC3-A171-25281CFD1967":["2-3e4a34981f07e33d3006a6e59de56979"],"AA4F5877-C6CD-F307-A2AE-AA782A721BBB":["2-0920b12fe790316d27ff4af2d704e37c","2-1d03a4b8480a81166021a18d58888f73"],"C069F317-1265-08B6-9195-FBEBA75799F8":["2-52c0cc811ac0842904fb58a192878c42"],"ea0e2d1e6ea88061cd77cc0b0c0618f3":["3-867605791febeff8109db832b4224e65"],"D60C2629-BCDE-5073-8B7C-E836AABF4B9B":["2-d904db871fea13e07fc3b4806a4be7c5"],"ea0e2d1e6ea88061cd77cc0b0c05a9ba":["31-2dd9f1ac78297d4c4190e4e84433effe","30-3edbfd1ae7a3042a2d99dac027a146c0"],"ea0e2d1e6ea88061cd77cc0b0c034331":["45-d63a05591eab4369402d2f5e39090214","29-a6c83b43474d4805009dcc2a1e8bbb4f"],"ea0e2d1e6ea88061cd77cc0b0c061d09":["3-7d094887282977baf91b825b1bf809ec"],"ea0e2d1e6ea88061cd77cc0b0c06119c":["4-74c162d353d61847843cb3472ad8919f"],"590da4f57e1280c18e16d21c8900389b":["28-658329e7c8e2efd7a27bd6fd0384f982"],"ea0e2d1e6ea88061cd77cc0b0c06676c":["3-f218e8b6a6f63fdc2f28a37eaf473a24"],"ea0e2d1e6ea88061cd77cc0b0c06d8f1":["13-5be78f3d419aadfcf8d6976f06d4a821"],"ea0e2d1e6ea88061cd77cc0b0c07861b":["2-beed6442bfbcb144ddb0efdb4601d4a2"],"ea0e2d1e6ea88061cd77cc0b0c066e7b":["17-9d22162530c11ae709236363ba66df10"],"ea0e2d1e6ea88061cd77cc0b0c0775a0":["2-d664e7c4d4d37d53b274067e66fcb072"],"ea0e2d1e6ea88061cd77cc0b0c077b3a":["2-6fdfe03efc8d079b2bacfffda2bf1247"],"ea0e2d1e6ea88061cd77cc0b0c077cdf":["6-f3a8ee570dcd52cd02bf915f24e574f5"],"ea0e2d1e6ea88061cd77cc0b0c074489":["12-09700410c1a661f8e5b5e53852bc4b76"],"ea0e2d1e6ea88061cd77cc0b0c079283":["9-e621835982ae5caca467ec2cb14501ce"]}}
+2014-06-21 09:54:45.359 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 09:54:45.428 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-9","last_seq":650}}
+2014-06-21 09:54:45.454 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 09:54:45.519 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-6","last_seq":326}}
+2014-06-21 09:54:45.532 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%22ea0e2d1e6ea88061cd77cc0b0c07da82%22%5D"}
+2014-06-21 09:54:45.606 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"398A10E2-CF23-6745-BA6F-56FF765342EB":["1-2d51fc4d10638b68ee55969557d8062e"],"18C12E6B-8711-BFAE-BC80-FEF102811C90":["1-d84dd32faf870a8be94d7fc42388ec43"],"1954B6EC-D318-4CAB-8BEC-A0672B86B426":["1-9073dc808a9227599a8561699c9a9d47"],"2806A072-6E18-CF04-AB29-F4FD3C8DC475":["1-30471017cf4b085ecdca886d7038268d"],"493DAFED-C532-8704-917D-65D69AE0649D":["1-719c5f39b411f1bbd2c2e84d67df16b7"],"81253217-0DAC-356C-9D9C-9AB0ADEB7C64":["1-0d8afe32444b715300ac0d3ea51e1a08"],"90321044-4BF9-C34F-8883-EFFABDAD4E92":["1-f40fa6dc31d284281480ea8871a33eb7"],"9D0C88CA-F74E-2ED7-9B6D-4F04D4A9A19B":["1-1635a9d07d65331e27aacfd9c1077491"],"A26E3477-A1E3-010D-97B3-0EB26A4DF6E9":["1-65d3abea9941123dbac6ae6e7e15cf15"],"A3E0AE3D-BEB0-8E12-B4B0-FDBBE814E911":["1-7cc1f3b3492fadd1cbb9e2f24be57785"],"C443A364-790F-861A-8B20-FDA04E3DE166":["1-9e15413ba28bb7a19d19fcd7463cdc9e"],"E7769D08-3C68-4739-9F54-D9A4F0614494":["1-fda5598ac7c14606ede929bc4bf30506"],"EF9F6FB2-015D-9B51-A271-0CFD6C5566E9":["1-667b3486c5823ecd3b4b1f379695150c"],"F6983663-1F22-91C8-99DD-25B5BA06217B":["1-a2aec97562591cd8b38c79fdf8916b10"],"ea0e2d1e6ea88061cd77cc0b0c04d272":["55-c44693e16512cd39747348a59c4d8d07"],"11678391-E255-B624-856C-C212E034396A":["2-6f2bf6616fc965df1232b0df22c632d0"],"A696D454-7991-FF2E-9349-7B9ECF334D6B":["5-f7b7b66883ba672003ecf1a4c26d805d"],"C2CF0D1A-CDC9-4908-951B-D7E450769142":["3-93b6b6666dd6b0d584a3d93810f30502"],"911053D1-C205-8393-896E-44DD971A0799":["2-5deaaa4862c5e4a20ad6d22e7027edc5"],"7224BE18-C288-E3AA-A7D2-6ED0551DA5C9":["6-ff98aef7ab0a667a34ec6477a0a62a7f"],"ea0e2d1e6ea88061cd77cc0b0c0626cf":["18-81e101d2131c8bde46d93d8ce0541de0","17-c56c34388baa537d64f517e135cb01a8"],"D3397924-A136-9AA2-B91D-688BE0A8A3EE":["3-6d72c4cabdd2fd52af16eaad1925addf"],"ea0e2d1e6ea88061cd77cc0b0c0608a3":["8-2e70141baad09d175d9f61739c65cfd6"],"0AB74A4B-6167-7249-AD00-FD120595F0D7":["2-a087a7803c66004ae0133a0bc6aa84e9"],"79ED6F15-27F7-04EF-8475-C6D0B12C681B":["2-b2077f0141179fddbc2ae844eef92e3a"],"F5D244F7-BD22-3D6F-BE8F-801468571C40":["19-506a837ac75c8fc92256828634184c4e"],"6F115FCA-9F76-E803-913A-9EBA49E2EE7A":["1-2cbdf86d050ecc13c08ac28b985371fc"]}}
+2014-06-21 09:54:45.612 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c06229f?revs=true&open_revs=[\"2-e25cdb1d36ddf071f638472da6b925e1\"]&attachments=true"}
+2014-06-21 09:54:45.688 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0626cf?revs=true&open_revs=[\"19-66332e480a64a885b812372f53fdacdb\"]&attachments=true"}
+2014-06-21 09:54:45.693 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_bulk_docs","body":{"docs":[{"space":"Facility","name":"High Efficiency Air Compressors            14","schema":{"name":"High Efficiency Air Compressors","sections":[{"name":"Measure Info","inputs":[{"name":"Measure Type","lookupTableId":"None","restricted":0,"alias":"MT","keyboard":"text","defaultValue":"'Lost Opportunity';'Retrofit'","view":{"options":["Lost Opportunity","Retrofit"]},"userValue":true},{"name":"Run Hours","lookupTableId":"None","restricted":0,"alias":"RUNHOURS","keyboard":"number","defaultValue":"HOURS","view":{},"userValue":true}],"view":{}},{"name":"Existing Namplate","inputs":[{"name":"Make","lookupTableId":"None","restricted":0,"alias":"E_MAKE","keyboard":"text","hidden":"MT == 'Lost Opportunity'","view":{"isHidden":false}},{"name":"Model","lookupTableId":"None","restricted":0,"alias":"E_MODEL","keyboard":"text","hidden":"MT == 'Lost Opportunity'","view":{"isHidden":false}},{"name":"Rated Capacity","lookupTableId":"None","restricted":0,"alias":"E_RATEDCAPACITY","keyboard":"number","units":"CFM","hidden":"MT == 'Lost Opportunity'","view":{"isHidden":false},"userValue":true},{"name":"Operating Pressure","lookupTableId":"None","restricted":0,"alias":"E_OPERATINGPRESSURE","keyboard":"number","units":"psig","hidden":"MT == 'Lost Opportunity'","view":{"isHidden":false},"userValue":true},{"name":"Nominal Horsepower","lookupTableId":"None","restricted":0,"alias":"E_HP","keyboard":"number","units":"HP","hidden":"MT == 'Lost Opportunity'","view":{"isHidden":false},"userValue":true},{"name":"Control Type","lookupTableId":"None","restricted":0,"alias":"E_CT","keyboard":"text","defaultValue":"'Load/No Load';'VSD';'Variable Displacement'","hidden":"MT == 'Lost Opportunity'","view":{"isHidden":false,"options":["Load/No Load","VSD","Variable Displacement"]}}],"view":{}},{"name":"Proposed Nameplate","inputs":[{"name":"Make","lookupTableId":"None","restricted":0,"alias":"MAKE","keyboard":"text","view":{},"userValue":true},{"name":"Model","lookupTableId":"None","restricted":0,"alias":"MODEL","keyboard":"text","view":{},"userValue":true},{"name":"Rated Capacity","lookupTableId":"None","restricted":0,"alias":"RATEDCAPACITY","keyboard":"number","units":"CFM","view":{},"userValue":true},{"name":"Operating Pressure","lookupTableId":"None","restricted":0,"alias":"OPERATINGPRESSURE","keyboard":"number","units":"psig","view":{},"userValue":true},{"name":"Nominal Horsepower","lookupTableId":"None","restricted":0,"alias":"HP","keyboard":"number","units":"HP","view":{},"userValue":true},{"name":"Control Type","lookupTableId":"None","restricted":0,"alias":"CT","keyboard":"text","defaultValue":"'Load/No Load';'VSD';'Variable Displacement'","view":{"options":["Load/No Load","VSD","Variable Displacement"]},"userValue":true}],"view":{}},{"name":"Calc Outputs","inputs":[{"name":"SAVE","lookupTableId":"Custom","restricted":"1","alias":"SAVE","keyboard":"text","lookupTable":{"name":"Click to Change Lookup Table Name","tag":"Lookup Table","xConditions":["MT == 'Lost Opportunity'","MT == 'Retrofit'"],"yConditions":["CT == 'Load/No Load' && HP >= 15 && HP < 25","CT == 'Load/No Load' && HP >= 25 && HP <= 75","CT == 'VSD' && HP >= 15 && HP < 25","CT == 'VSD' && HP >= 25 && HP <= 75","CT == 'Variable Displacement' && HP >= 50 && HP <= 75"],"optionCells":[["0.076","0.102"],["0.114","0.102"],["0.159","0.207"],["0.228","0.206"],["0.110","0.116"]]},"view":{"options":[]}},{"name":"Demand Savings","lookupTableId":"None","restricted":"1","alias":"KW","keyboard":"text","units":"kW","defaultValue":"SAVE * HP","view":{}},{"name":"Energy Savings","lookupTableId":"None","restricted":0,"alias":"ENERGYSAVINGS","keyboard":"text","units":"kWh","defaultValue":"KW * RUNHOURS","view":{}}],"view":{}}],"type":"Component-Based","created":"2014-06-10T20:44:09.569Z","updated":"2014-06-11T19:31:14.484Z"},"tag":"Compressed Air","type":"component","channels":["public"],"projectId":"ea0e2d1e6ea88061cd77cc0b0c066e7b","values":{"MT":"Retrofit","RUNHOURS":7300,"CT":"Load/No Load","KW":4.08,"ENERGYSAVINGS":29784,"RATEDCAPACITY":180,"OPERATINGPRESSURE":125,"HP":40,"SAVE":0.102,"E_CT":"Load/No Load","E_RATEDCAPACITY":125,"E_OPERATINGPRESSURE":125,"E_HP":30,"MAKE":"Atlas CopCo","MODEL":"GA30VSD"},"libraryId":"590da4f57e1280c18e16d21c89004109","schemaId":"ea0e2d1e6ea88061cd77cc0b0c04d272","created":"2014-06-14T20:26:29.194Z","updated":"2014-06-14T20:26:29.194Z","_id":"6F115FCA-9F76-E803-913A-9EBA49E2EE7A","_rev":"1-2cbdf86d050ecc13c08ac28b985371fc","_revisions":{"start":1,"ids":["2cbdf86d050ecc13c08ac28b985371fc"]}}],"new_edits":false}}
+2014-06-21 09:54:45.748 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c04d272?revs=true&open_revs=[\"57-0f813ae57b6e836d55c589ad00a5397f\"]&attachments=true"}
+2014-06-21 09:54:45.785 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 09:54:45.812 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0608a3?revs=true&open_revs=[\"9-7783891da71ae8854c13e052857222fb\"]&attachments=true"}
+2014-06-21 09:54:45.850 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-7","last_seq":360}}
+2014-06-21 09:54:45.879 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/0AB74A4B-6167-7249-AD00-FD120595F0D7?revs=true&open_revs=[\"3-8fd6ba65b4d3c2ed511fae6f09e3e206\"]&attachments=true"}
+2014-06-21 09:54:45.944 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c083346?revs=true&open_revs=[\"2-e1e94c7d951a4b9596ce0f79d7e09dc0\"]&attachments=true"}
+2014-06-21 09:54:46.056 Onsite[5841:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c07da82
+2014-06-21 09:54:46.090 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 09:54:46.154 Onsite[5841:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-10","last_seq":659}}
+2014-06-21 09:54:54.833 Onsite[5841:70b] ----------Project Address----------
+2014-06-21 09:54:54.833 Onsite[5841:70b] ----------Project City----------
+2014-06-21 09:54:54.833 Onsite[5841:70b] ----------Project State----------
+2014-06-21 09:54:54.834 Onsite[5841:70b] ----------Square Footage----------
+2014-06-21 09:54:54.834 Onsite[5841:70b] ----------Volume----------
+2014-06-21 09:54:54.834 Onsite[5841:70b] ----------Annual Operating Hours----------
+2014-06-21 09:54:54.834 Onsite[5841:70b] ----------Program----------
+2014-06-21 09:54:54.835 Onsite[5841:70b] setting first value
+2014-06-21 09:54:54.835 Onsite[5841:70b] set first value
+2014-06-21 09:54:54.835 Onsite[5841:70b] ----------Notes----------
+2014-06-21 09:54:54.835 Onsite[5841:70b] hiding
+2014-06-21 09:54:54.835 Onsite[5841:70b] hiding
+2014-06-21 09:54:54.836 Onsite[5841:70b] hiding
+2014-06-21 09:54:54.836 Onsite[5841:70b] hiding
+2014-06-21 10:07:26.246 Onsite[6379:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 10:07:26.253 Onsite[6379:70b] Unlimited access to network resources
+2014-06-21 10:07:26.271 Onsite[6379:70b] [CDVTimer][keyboard] 0.073969ms
+2014-06-21 10:07:26.281 Onsite[6379:70b] [CDVTimer][statusbar] 9.338021ms
+2014-06-21 10:07:26.282 Onsite[6379:70b] [CDVTimer][TotalPluginStartup] 10.417998ms
+2014-06-21 10:07:26.383 Onsite[6379:70b] Resetting plugins due to page load.
+2014-06-21 10:07:26.818 Onsite[6379:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 10:07:29.523 Onsite[6379:70b] --listening to changes in db: onsite
+2014-06-21 10:07:29.668 Onsite[6379:70b] CREATED - 6F115FCA-9F76-E803-913A-9EBA49E2EE7A
+2014-06-21 10:07:29.668 Onsite[6379:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c07da82
+2014-06-21 10:07:35.404 Onsite[6379:70b] ----------Project Address----------
+2014-06-21 10:07:35.404 Onsite[6379:70b] ----------Project City----------
+2014-06-21 10:07:35.405 Onsite[6379:70b] ----------Project State----------
+2014-06-21 10:07:35.405 Onsite[6379:70b] ----------Square Footage----------
+2014-06-21 10:07:35.405 Onsite[6379:70b] ----------Volume----------
+2014-06-21 10:07:35.405 Onsite[6379:70b] ----------Annual Operating Hours----------
+2014-06-21 10:07:35.405 Onsite[6379:70b] ----------Program----------
+2014-06-21 10:07:35.406 Onsite[6379:70b] setting first value
+2014-06-21 10:07:35.406 Onsite[6379:70b] set first value
+2014-06-21 10:07:35.406 Onsite[6379:70b] ----------Notes----------
+2014-06-21 10:07:35.406 Onsite[6379:70b] hiding
+2014-06-21 10:07:35.406 Onsite[6379:70b] hiding
+2014-06-21 10:07:35.407 Onsite[6379:70b] hiding
+2014-06-21 10:07:35.407 Onsite[6379:70b] hiding
+2014-06-21 10:09:26.627 Onsite[6379:70b] ----------Project Address----------
+2014-06-21 10:09:26.628 Onsite[6379:70b] ----------Project City----------
+2014-06-21 10:09:26.628 Onsite[6379:70b] ----------Project State----------
+2014-06-21 10:09:26.628 Onsite[6379:70b] ----------Square Footage----------
+2014-06-21 10:09:26.629 Onsite[6379:70b] ----------Volume----------
+2014-06-21 10:09:26.629 Onsite[6379:70b] ----------Annual Operating Hours----------
+2014-06-21 10:09:26.629 Onsite[6379:70b] ----------Program----------
+2014-06-21 10:09:26.629 Onsite[6379:70b] setting first value
+2014-06-21 10:09:26.629 Onsite[6379:70b] set first value
+2014-06-21 10:09:26.630 Onsite[6379:70b] ----------Notes----------
+Terminating in response to SpringBoard's termination.
+2014-06-21 10:53:32.583 Onsite[7237:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 10:53:32.601 Onsite[7237:70b] Unlimited access to network resources
+2014-06-21 10:53:32.635 Onsite[7237:70b] [CDVTimer][keyboard] 0.075996ms
+2014-06-21 10:53:32.858 Onsite[7237:70b] [CDVTimer][statusbar] 221.891999ms
+2014-06-21 10:53:32.858 Onsite[7237:70b] [CDVTimer][TotalPluginStartup] 223.285019ms
+2014-06-21 10:53:32.933 Onsite[7237:70b] Resetting plugins due to page load.
+2014-06-21 10:53:33.214 Onsite[7237:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 10:53:35.202 Onsite[7237:70b] --listening to changes in db: onsite
+2014-06-21 10:53:35.416 Onsite[7237:70b] CREATED - 6F115FCA-9F76-E803-913A-9EBA49E2EE7A
+2014-06-21 10:53:35.417 Onsite[7237:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c07da82
+2014-06-21 10:53:38.292 Onsite[7237:70b] ----------Project Address----------
+2014-06-21 10:53:38.292 Onsite[7237:70b] ----------Project City----------
+2014-06-21 10:53:38.292 Onsite[7237:70b] ----------Project State----------
+2014-06-21 10:53:38.293 Onsite[7237:70b] ----------Square Footage----------
+2014-06-21 10:53:38.293 Onsite[7237:70b] ----------Volume----------
+2014-06-21 10:53:38.293 Onsite[7237:70b] ----------Annual Operating Hours----------
+2014-06-21 10:53:38.293 Onsite[7237:70b] ----------Program----------
+2014-06-21 10:53:38.293 Onsite[7237:70b] setting first value
+2014-06-21 10:53:38.294 Onsite[7237:70b] set first value
+2014-06-21 10:53:38.294 Onsite[7237:70b] ----------Notes----------
+2014-06-21 10:53:38.294 Onsite[7237:70b] hiding
+2014-06-21 10:53:38.295 Onsite[7237:70b] hiding
+2014-06-21 10:53:38.295 Onsite[7237:70b] hiding
+2014-06-21 10:53:38.295 Onsite[7237:70b] hiding
+2014-06-21 10:53:41.161 Onsite[7237:70b] ----------Project Address----------
+2014-06-21 10:53:41.161 Onsite[7237:70b] ----------Project City----------
+2014-06-21 10:53:41.161 Onsite[7237:70b] ----------Project State----------
+2014-06-21 10:53:41.162 Onsite[7237:70b] ----------Square Footage----------
+2014-06-21 10:53:41.162 Onsite[7237:70b] ----------Volume----------
+2014-06-21 10:53:41.162 Onsite[7237:70b] ----------Annual Operating Hours----------
+2014-06-21 10:53:41.162 Onsite[7237:70b] ----------Program----------
+2014-06-21 10:53:41.163 Onsite[7237:70b] ----------Notes----------
+2014-06-21 10:53:51.419 Onsite[7237:70b] ----------Project Address----------
+2014-06-21 10:53:51.419 Onsite[7237:70b] ----------Project City----------
+2014-06-21 10:53:51.420 Onsite[7237:70b] ----------Project State----------
+2014-06-21 10:53:51.420 Onsite[7237:70b] ----------Square Footage----------
+2014-06-21 10:53:51.420 Onsite[7237:70b] ----------Volume----------
+2014-06-21 10:53:51.420 Onsite[7237:70b] ----------Annual Operating Hours----------
+2014-06-21 10:53:51.421 Onsite[7237:70b] ----------Program----------
+2014-06-21 10:53:51.421 Onsite[7237:70b] ----------Notes----------
+2014-06-21 10:55:58.982 Onsite[8039:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 10:55:58.990 Onsite[8039:70b] Unlimited access to network resources
+2014-06-21 10:55:59.012 Onsite[8039:70b] [CDVTimer][keyboard] 0.074983ms
+2014-06-21 10:55:59.025 Onsite[8039:70b] [CDVTimer][statusbar] 11.110961ms
+2014-06-21 10:55:59.026 Onsite[8039:70b] [CDVTimer][TotalPluginStartup] 13.945997ms
+2014-06-21 10:55:59.101 Onsite[8039:70b] Resetting plugins due to page load.
+2014-06-21 10:55:59.688 Onsite[8039:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 10:56:00.684 Onsite[8039:70b] --listening to changes in db: onsite
+2014-06-21 10:56:00.836 Onsite[8039:70b] CREATED - 6F115FCA-9F76-E803-913A-9EBA49E2EE7A
+2014-06-21 10:56:00.836 Onsite[8039:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c07da82
+2014-06-21 10:56:03.757 Onsite[8039:70b] ----------Project Address----------
+2014-06-21 10:56:03.757 Onsite[8039:70b] ----------Project City----------
+2014-06-21 10:56:03.758 Onsite[8039:70b] ----------Project State----------
+2014-06-21 10:56:03.758 Onsite[8039:70b] ----------Square Footage----------
+2014-06-21 10:56:03.758 Onsite[8039:70b] ----------Volume----------
+2014-06-21 10:56:03.758 Onsite[8039:70b] ----------Annual Operating Hours----------
+2014-06-21 10:56:03.759 Onsite[8039:70b] ----------Program----------
+2014-06-21 10:56:03.759 Onsite[8039:70b] setting first value
+2014-06-21 10:56:03.759 Onsite[8039:70b] set first value
+2014-06-21 10:56:03.759 Onsite[8039:70b] ----------Notes----------
+2014-06-21 10:56:03.759 Onsite[8039:70b] hiding
+2014-06-21 10:56:03.760 Onsite[8039:70b] hiding
+2014-06-21 10:56:03.760 Onsite[8039:70b] hiding
+2014-06-21 10:56:03.760 Onsite[8039:70b] hiding
+2014-06-21 10:56:05.943 Onsite[8039:70b] ----------Project Address----------
+2014-06-21 10:56:05.943 Onsite[8039:70b] ----------Project City----------
+2014-06-21 10:56:05.943 Onsite[8039:70b] ----------Project State----------
+2014-06-21 10:56:05.943 Onsite[8039:70b] ----------Square Footage----------
+2014-06-21 10:56:05.944 Onsite[8039:70b] ----------Volume----------
+2014-06-21 10:56:05.944 Onsite[8039:70b] ----------Annual Operating Hours----------
+2014-06-21 10:56:05.944 Onsite[8039:70b] ----------Program----------
+2014-06-21 10:56:05.944 Onsite[8039:70b] ----------Notes----------
+2014-06-21 10:56:14.481 Onsite[8039:70b] ----------Project Address----------
+2014-06-21 10:56:14.481 Onsite[8039:70b] ----------Project City----------
+2014-06-21 10:56:14.482 Onsite[8039:70b] ----------Project State----------
+2014-06-21 10:56:14.482 Onsite[8039:70b] ----------Square Footage----------
+2014-06-21 10:56:14.482 Onsite[8039:70b] ----------Volume----------
+2014-06-21 10:56:14.482 Onsite[8039:70b] ----------Annual Operating Hours----------
+2014-06-21 10:56:14.482 Onsite[8039:70b] ----------Program----------
+2014-06-21 10:56:14.483 Onsite[8039:70b] ----------Notes----------
+2014-06-21 10:56:43.228 Onsite[8039:70b] ----------Project Address----------
+2014-06-21 10:56:43.228 Onsite[8039:70b] ----------Project City----------
+2014-06-21 10:56:43.229 Onsite[8039:70b] ----------Project State----------
+2014-06-21 10:56:43.229 Onsite[8039:70b] ----------Square Footage----------
+2014-06-21 10:56:43.229 Onsite[8039:70b] ----------Volume----------
+2014-06-21 10:56:43.229 Onsite[8039:70b] ----------Annual Operating Hours----------
+2014-06-21 10:56:43.230 Onsite[8039:70b] ----------Program----------
+2014-06-21 10:56:43.230 Onsite[8039:70b] ----------Notes----------
+2014-06-21 11:11:30.511 Onsite[9802:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 11:11:30.518 Onsite[9802:70b] Unlimited access to network resources
+2014-06-21 11:11:30.604 Onsite[9802:70b] [CDVTimer][keyboard] 0.071049ms
+2014-06-21 11:11:30.852 Onsite[9802:70b] [CDVTimer][statusbar] 247.911990ms
+2014-06-21 11:11:30.853 Onsite[9802:70b] [CDVTimer][TotalPluginStartup] 248.914003ms
+2014-06-21 11:11:30.932 Onsite[9802:70b] Resetting plugins due to page load.
+2014-06-21 11:11:31.319 Onsite[9802:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 11:11:32.944 Onsite[9802:70b] --listening to changes in db: onsite
+2014-06-21 11:11:33.159 Onsite[9802:70b] CREATED - 6F115FCA-9F76-E803-913A-9EBA49E2EE7A
+2014-06-21 11:11:33.160 Onsite[9802:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c07da82
+2014-06-21 11:11:35.886 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:11:35.886 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:11:35.886 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:11:35.887 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:11:35.887 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:11:35.887 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:11:35.887 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:11:35.887 Onsite[9802:70b] setting first value
+2014-06-21 11:11:35.888 Onsite[9802:70b] set first value
+2014-06-21 11:11:35.888 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:11:35.888 Onsite[9802:70b] hiding
+2014-06-21 11:11:35.888 Onsite[9802:70b] hiding
+2014-06-21 11:11:35.889 Onsite[9802:70b] hiding
+2014-06-21 11:11:35.889 Onsite[9802:70b] hiding
+2014-06-21 11:11:38.315 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:11:38.316 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:11:38.316 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:11:38.316 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:11:38.317 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:11:38.317 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:11:38.317 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:11:38.318 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:11:41.698 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:11:41.698 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:11:41.699 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:11:41.699 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:11:41.699 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:11:41.699 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:11:41.700 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:11:41.700 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:11:44.839 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:11:44.840 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:11:44.840 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:11:44.840 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:11:44.840 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:11:44.840 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:11:44.841 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:11:44.841 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:12:08.345 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:12:08.346 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:12:08.346 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:12:08.346 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:12:08.347 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:12:08.347 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:12:08.347 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:12:08.348 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:12:13.587 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:12:13.588 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:12:13.588 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:12:13.588 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:12:13.588 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:12:13.589 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:12:13.589 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:12:13.589 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:13:21.630 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:13:21.631 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:13:21.631 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:13:21.631 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:13:21.631 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:13:21.632 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:13:21.632 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:13:21.632 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:13:28.116 Onsite[9802:70b] ----------Project Address----------
+2014-06-21 11:13:28.117 Onsite[9802:70b] ----------Project City----------
+2014-06-21 11:13:28.117 Onsite[9802:70b] ----------Project State----------
+2014-06-21 11:13:28.117 Onsite[9802:70b] ----------Square Footage----------
+2014-06-21 11:13:28.117 Onsite[9802:70b] ----------Volume----------
+2014-06-21 11:13:28.117 Onsite[9802:70b] ----------Annual Operating Hours----------
+2014-06-21 11:13:28.118 Onsite[9802:70b] ----------Program----------
+2014-06-21 11:13:28.118 Onsite[9802:70b] ----------Notes----------
+2014-06-21 11:25:48.906 Onsite[10362:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 11:25:48.914 Onsite[10362:70b] Unlimited access to network resources
+2014-06-21 11:25:48.932 Onsite[10362:70b] [CDVTimer][keyboard] 0.072002ms
+2014-06-21 11:25:48.942 Onsite[10362:70b] [CDVTimer][statusbar] 8.860052ms
+2014-06-21 11:25:48.942 Onsite[10362:70b] [CDVTimer][TotalPluginStartup] 9.916008ms
+2014-06-21 11:25:49.045 Onsite[10362:70b] Resetting plugins due to page load.
+2014-06-21 11:25:49.653 Onsite[10362:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 11:25:50.828 Onsite[10362:70b] --listening to changes in db: onsite
+2014-06-21 11:25:51.024 Onsite[10362:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c07da82
+2014-06-21 11:25:54.243 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:25:54.244 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:25:54.244 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:25:54.244 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:25:54.244 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:25:54.245 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:25:54.245 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:25:54.245 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:25:54.316 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:25:54.347 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:25:54.387 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:25:54.415 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:25:54.450 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=659&limit=25","timeout":0}
+2014-06-21 11:25:54.511 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"_design/projects":["13-8c8113b3397cae3d34f62566ba17fcfc"]}}
+2014-06-21 11:25:54.521 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-21 11:25:54.528 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=684&limit=25","timeout":0}
+2014-06-21 11:25:54.588 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:25:54.618 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:25:54.633 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=709&limit=25","timeout":0}
+2014-06-21 11:25:54.649 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-8","last_seq":361}}
+2014-06-21 11:25:54.683 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-11","last_seq":660}}
+2014-06-21 11:25:54.705 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=734&limit=25","timeout":0}
+2014-06-21 11:25:54.742 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"590da4f57e1280c18e16d21c8900389b":["30-6aa9c1a72a23f2292dec17db01266d52"]}}
+2014-06-21 11:25:54.778 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=759&limit=25","timeout":0}
+2014-06-21 11:25:54.798 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%222E02B40D-547E-BDB1-83F8-9345FF5F485A%22%5D"}
+2014-06-21 11:25:54.805 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:25:54.887 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=785&limit=25","timeout":0}
+2014-06-21 11:25:54.926 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-9","last_seq":365}}
+2014-06-21 11:25:54.931 Onsite[10362:70b] CREATED - 2E02B40D-547E-BDB1-83F8-9345FF5F485A
+2014-06-21 11:25:54.940 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:25:54.974 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=787&limit=25","timeout":0}
+2014-06-21 11:25:55.008 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-12","last_seq":661}}
+2014-06-21 11:25:55.022 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"ea0e2d1e6ea88061cd77cc0b0c07da82":["1-4f91dd3c330eb609c00cf9fe11390c2e"],"ea0e2d1e6ea88061cd77cc0b0c06229f":["2-e25cdb1d36ddf071f638472da6b925e1"],"ea0e2d1e6ea88061cd77cc0b0c04d272":["57-0f813ae57b6e836d55c589ad00a5397f"],"ea0e2d1e6ea88061cd77cc0b0c0608a3":["9-7783891da71ae8854c13e052857222fb"],"0AB74A4B-6167-7249-AD00-FD120595F0D7":["3-8fd6ba65b4d3c2ed511fae6f09e3e206"],"ea0e2d1e6ea88061cd77cc0b0c083346":["2-e1e94c7d951a4b9596ce0f79d7e09dc0"],"ea0e2d1e6ea88061cd77cc0b0c0626cf":["32-0c00a4e9deb3cc2f89059e33fce9f26d","17-c56c34388baa537d64f517e135cb01a8"]}}
+2014-06-21 11:25:55.103 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_bulk_docs","body":{"docs":[{"channels":["public"],"values":{"ELECTRICUTILITY":"NSTAR","GASUTILITY":"NGRID","CUSTOMERSIZE":"Small","PROJECTADDRESS":"262 Concord Way","PROJECTCITY":"Portsmouth","PROJECTSTATE":"NH","SQUAREFOOTAGE":"","VOLUME":"","HOURS":"","NOTES":"","PROGRAM":"C&I New Construction and Major Renovation Program"},"libraries":[{"_id":"590da4f57e1280c18e16d21c89004a0f","name":"Facility","tag":"Descriptive","active":true,"groupBy":"tag"},{"_id":"590da4f57e1280c18e16d21c89004109","name":"Measures","tag":"Component-Based","groupBy":"tag","active":false}],"name":"Demo","tag":"Demo","type":"project","created":"2014-06-11T11:38:44.818Z","updated":"2014-06-21T15:13:28.089Z","defaultSpace":"Facility","_id":"ea0e2d1e6ea88061cd77cc0b0c0626cf","_rev":"32-0c00a4e9deb3cc2f89059e33fce9f26d","_revisions":{"start":32,"ids":["0c00a4e9deb3cc2f89059e33fce9f26d","1c05e5f60171a7590538b3f1c33cdeb4","76ba3ce92b69d8dc4a2b6e16e5e09f0e","89e8c47267bddb44b22010110d101e6d","e367f0a26d92ac7512fce7a3c93c147a","2450af29ba6b137a0563d7418db8b905","d0e05683ce554677d57b7381c3f7543c","fbd2b61caa21319c638502538055f256","b58dd447328876a0fb83bd570c59ecae","f6ed01761349418e0663be82dcea54d5","3a9eb90c83c5fab49ef15256706f30e2","1cc1a79d25e244d2ebbef80924895b4c","f0c77f5dc1aa392f728a42d2294308f7","66332e480a64a885b812372f53fdacdb","81e101d2131c8bde46d93d8ce0541de0","1a525007113c6b68d92adb11b230e48b","1907370f578cae0605366f29f70ece31","efa850d2c1055503cc9cbce8a6b09400","80b4ea954e5acdbacec9d044a4c2595a","c220a8387cfa4b1351b2d21acaaf2ff2","af3208eda1b1588b72ced0218a21b6fb","acdd4cf5af459e2a710cfe8ff0eed888","93aa81cf73a740c7a2aa18988c07f666","93e87aaae757d58c1d0af6d2897b466e","9ebcc28cf9855d44e2aa3ba7d57cc114","ff3490fce764bcc9206cfbcd8e15f76b","e9342ec56d43a4017c7b653bd46ab8e3","75c5e6c9022c5cbdd237c8f2705a055e","3bc2e4df918a56f9d1a4c259f71a7f54","ebb864a5418a2a4836131f06c9427878","b84d230f7fbefbe7b78ecc7e83f16ca7","5dba3225b34d7623cce2c78d7df3d4c7"]}}],"new_edits":false}}
+2014-06-21 11:25:55.191 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:25:55.213 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true","body":"{\"keys\":[\"056A9251-C11F-AEE6-ABDB-B20CB06D4B54\",\"05E4DC06-78B2-00F7-B655-D08691DEDAF7\",\"065056CD-46B1-0DC7-B676-89E0DBAADFCD\",\"12DF071A-797E-3DE7-926B-2EFE5354EC25\",\"16AE8147-904D-1D73-9016-41F3E00DF886\",\"177048D5-9C0F-88F8-B691-52F07D50BFA4\",\"1BDC2F44-14E0-DEA0-A490-09D47AC1FC8C\",\"24522A3C-8CE0-A9D8-A63C-8A32C3A0DE75\",\"24FA7CFF-2C4B-FE75-B937-9DE3AB13B261\",\"283C9102-9DE6-80D1-AF87-E7F11D583A69\",\"2DBAD327-7CB9-0920-A735-830120ACCEF8\",\"316BC855-1023-0A1D-AA67-130E43F5AD2D\",\"31F385E1-C98A-F9CB-AD60-E433C1342523\",\"36BDA881-E2B1-E013-9751-F5BC173EEBD5\",\"381ECEEF-9FBC-4A92-B0B2-3F433D1D4C7B\",\"39ABEA52-4431-90E5-990E-957370F75D42\",\"3ABC7F9C-3A40-2BB6-8DAA-E32CF5D57D8A\",\"3B62F6F7-FBAB-6E8B-826F-590FF5B9251C\",\"3D718013-D992-E821-893F-899277C7E7F8\",\"4076455C-08DA-6AB8-BF2B-9DF33E36C5B8\",\"4275E01F-188A-8F58-A7E3-BFE196C3920A\",\"43EDCDD4-FE27-C225-8BBD-F169DBB7E1C0\",\"467DC7E4-B8F3-B9BF-90F2-3524C2557917\",\"49864FB5-50BE-E3DA-A45C-A300B36E10D9\",\"49A993AF-7CF0-37F2-BBDF-929ADE023A9F\",\"51A931B4-64CC-9FB6-9CFC-927012E81998\",\"5250E7CA-41F9-D8E5-9D33-4C4A06949D4D\",\"56BF60E0-41B4-ECFE-9F7A-FF38E410DBD4\",\"59868C11-9D7C-2475-BF93-CE4F37546AE4\",\"5E288132-B89E-0688-96CB-E606E5390B23\",\"654EC571-F702-EC18-AF27-317BDDB154D1\",\"65F0926D-60F4-7FF8-96D0-BA5E7FB813E2\",\"68738126-B42B-6397-83F7-EE0366C3CE3A\",\"6C37A55F-8F92-916A-8B61-9852E5DD16F9\",\"700C6B70-98B0-41EE-A828-351C7DE9FAF3\",\"71DDA179-00EA-A805-A564-9B8CBED311A6\",\"7A14EDF6-90DA-743C-8A2C-018B1AC72E4C\",\"7E4D159C-D5F3-8400-8FE5-E34587A88178\",\"7F70070F-9A88-AA42-A2C6-1CB0E734748E\",\"80F34A6F-70FC-6CF8-A2F9-B473E58030CD\",\"84D26973-0E00-F8FB-A543-AD4C877E29DC\",\"881FBADB-A4AE-78F9-9350-72505C01E6FB\",\"8AF6F924-5448-24AC-9258-FBA499453F07\",\"8EB1AB1A-AD43-D073-AFB5-19B7979F6A3B\",\"8FB9EDC0-27EE-572C-B5A8-CC83658FA045\",\"928FFBA2-AB09-1FDF-880C-3AD3B18FC50F\",\"94FC7DF5-FFB5-DE6C-8D45-3EDCCC0D43E9\",\"9DC34893-986C-7605-883C-401C86322735\",\"9E10EF33-BF7D-FA94-8A59-0678F3304771\",\"9EF309A1-A3FC-4EDD-A95B-5011A4B9DC79\",\"A08A1048-6A2F-CA55-8B62-58CB3C0570E5\",\"A101E41F-0B00-C20D-AF0F-A3BBB00ADB5D\",\"A2468EF6-8A74-B9B1-850C-BB14D52D90B3\",\"A2E8326E-7A59-6E50-88FA-B67A39B3F903\",\"A94B1458-A1AE-D675-B904-17F0719535C4\",\"BCB6BC43-5D0C-9E63-A57F-AE19A6F6EFF7\",\"BDB2452E-B231-89EB-9A88-57E7A1C9A729\",\"C17F5243-9C24-AF97-AA9C-C804F603A015\",\"C2015B8D-0B1A-1766-8DCC-166BE08F4D3A\",\"C4ED8A78-6B0D-C4B5-B826-496C6A4E29D9\",\"CAC3B30A-93E1-8430-A232-FC9FDF6D6B68\",\"CB12078B-30CA-5851-B893-F16255FFAF4C\",\"CEB30F17-5D55-1A26-800D-08070DD6C45E\",\"D0C2A039-FD6C-52DB-8881-1DCD914271D8\",\"D1F66AE4-7EE7-504A-9F16-7975D2BCFF9B\",\"D6335768-66E5-9E0B-B343-71BEE1B50EA0\",\"E4CBD425-F92A-A077-AEA2-82748EC8611E\",\"E4CF6055-1399-A765-B33C-BEEB69E38F2B\",\"E57394D7-1F41-D46B-AB77-22CDCDBAC013\",\"E820564E-1189-6332-B789-7C68D74F007E\",\"ED99AD96-6FB0-6CAD-B1F2-A25B21426B53\",\"F2470F82-CC69-5C60-8956-590EADD86A04\",\"F55B1E6F-11BF-670C-9251-F4A609AFCBB0\",\"F6EACD74-E0A0-90D2-974E-83057C460E28\",\"FCDB0254-7CC7-A1FC-AF16-E80F9215FEE3\",\"FDF72259-0C49-BFF1-B7F1-1BCBA6565BC4\",\"FFE45AD5-0736-F67D-A5A2-4B7216E31298\"]}"}
+2014-06-21 11:25:55.255 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-10","last_seq":393}}
+2014-06-21 11:25:55.466 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/2434513E-7A5D-12B2-82F4-97FB7A1F3635?revs=true&open_revs=[\"2-d0094f0055c928e035b599e1352c1ae5\"]&attachments=true"}
+2014-06-21 11:25:55.528 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/037B120A-B9A4-5149-9045-F0127E48DC75?revs=true&open_revs=[\"2-105051c6f93ed28d79add482694cf034\"]&attachments=true"}
+2014-06-21 11:25:55.597 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/0CD83568-DF77-C818-BE67-B79C31FAAD11?revs=true&open_revs=[\"2-8ebcd573d99a4be4d65a5a11324e0e65\"]&attachments=true"}
+2014-06-21 11:25:55.662 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/14D24E3E-AF6F-08E8-8B07-91BBDDEB9A0D?revs=true&open_revs=[\"2-8e940d263d72e5a5db6dab33ff221c9a\"]&attachments=true"}
+2014-06-21 11:25:55.725 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/1B8A2CD6-CB23-7602-A4A1-FB3DD63BF44A?revs=true&open_revs=[\"2-ffae75995055cb5f348ac5260486a1d2\"]&attachments=true"}
+2014-06-21 11:25:55.789 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/1BC71C65-C8D5-B823-8EEB-A1A9A2E2D0B8?revs=true&open_revs=[\"2-d6b92c37e85c04c834475277b31d0de0\"]&attachments=true"}
+2014-06-21 11:25:55.860 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/1E816A4C-7376-0A03-907B-5716CF676312?revs=true&open_revs=[\"2-2d60bc61a56cc0498ed1b5a71ce5ff57\"]&attachments=true"}
+2014-06-21 11:25:55.924 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/37005726-07ED-2D59-974F-5195D1BB139D?revs=true&open_revs=[\"2-fa7c4cd090bea7c3326a976ec5d8da05\"]&attachments=true"}
+2014-06-21 11:25:55.991 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/3ACEF573-226B-3D37-85D5-7B83514F8987?revs=true&open_revs=[\"2-ca06dad7145f755e8b111d61dcfb21ec\"]&attachments=true"}
+2014-06-21 11:25:56.053 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/4FE6C277-55DF-C9C3-AC2D-BEA08C5C2E97?revs=true&open_revs=[\"2-b6a7cfbf690a0ae85d5f2c8d072eed05\"]&attachments=true"}
+2014-06-21 11:25:56.119 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/5B672932-DB1E-D6AD-90A3-BAE0C7F281AD?revs=true&open_revs=[\"2-8d2f646750e0684406e64bf85acd53f0\"]&attachments=true"}
+2014-06-21 11:25:56.184 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/5FCF96D0-C413-47B1-AC6F-25B26DCC7D1A?revs=true&open_revs=[\"2-3527a3fb694f7dc1c4ec66f550a27aa1\"]&attachments=true"}
+2014-06-21 11:25:56.250 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/6CBAE4C9-E164-7CC5-A71F-D247DCFAD29D?revs=true&open_revs=[\"2-3093c9ab7139e6d23eca676265947e56\"]&attachments=true"}
+2014-06-21 11:25:56.323 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/7AC9D68F-DF8D-CEF3-8535-1A803865D078?revs=true&open_revs=[\"2-206112855a87353105d166d04e477fe0\"]&attachments=true"}
+2014-06-21 11:25:56.401 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/A8EB90C4-2ED3-5458-8777-A87D967032C3?revs=true&open_revs=[\"2-66b151da6fb95c125ae8ca0882caa3c9\"]&attachments=true"}
+2014-06-21 11:25:56.465 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/BF9E9E13-C4A1-4E32-A6E1-DC709C7DB928?revs=true&open_revs=[\"2-2b6fe87664fce1d74602de455021ccdf\"]&attachments=true"}
+2014-06-21 11:25:56.534 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/C6D5CE5F-D227-EE20-BC29-7CDB8F265B63?revs=true&open_revs=[\"2-7c9ada0c472b0799b33d57e866e557ea\"]&attachments=true"}
+2014-06-21 11:25:56.598 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/CB88B9F9-0EDC-F497-BE8C-28439F85FA78?revs=true&open_revs=[\"2-81d89b27a289eac255c088668b38f949\"]&attachments=true"}
+2014-06-21 11:25:56.679 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/CFFDB0F6-0D4D-92D7-85E1-E6C076F20E58?revs=true&open_revs=[\"2-23cab26137c4ada508f20fca1dc53168\"]&attachments=true"}
+2014-06-21 11:25:56.744 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/EF9F6FB2-015D-9B51-A271-0CFD6C5566E9?revs=true&open_revs=[\"2-8f372e6d4b8ead295fce9d4b6b641a8b\"]&attachments=true"}
+2014-06-21 11:25:56.811 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c046afd?revs=true&open_revs=[\"2-cd085f5fb50436f97dc1bd090a9332e0\"]&attachments=true"}
+2014-06-21 11:25:56.938 Onsite[10362:70b] ERROR: (node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit.
+2014-06-21 11:25:57.036 Onsite[10362:70b] CREATED - 056A9251-C11F-AEE6-ABDB-B20CB06D4B54
+2014-06-21 11:25:57.036 Onsite[10362:70b] CREATED - 05E4DC06-78B2-00F7-B655-D08691DEDAF7
+2014-06-21 11:25:57.037 Onsite[10362:70b] CREATED - 065056CD-46B1-0DC7-B676-89E0DBAADFCD
+2014-06-21 11:25:57.037 Onsite[10362:70b] CREATED - 12DF071A-797E-3DE7-926B-2EFE5354EC25
+2014-06-21 11:25:57.037 Onsite[10362:70b] CREATED - 16AE8147-904D-1D73-9016-41F3E00DF886
+2014-06-21 11:25:57.038 Onsite[10362:70b] CREATED - 177048D5-9C0F-88F8-B691-52F07D50BFA4
+2014-06-21 11:25:57.038 Onsite[10362:70b] CREATED - 1BDC2F44-14E0-DEA0-A490-09D47AC1FC8C
+2014-06-21 11:25:57.038 Onsite[10362:70b] CREATED - 24522A3C-8CE0-A9D8-A63C-8A32C3A0DE75
+2014-06-21 11:25:57.038 Onsite[10362:70b] CREATED - 24FA7CFF-2C4B-FE75-B937-9DE3AB13B261
+2014-06-21 11:25:57.038 Onsite[10362:70b] CREATED - 283C9102-9DE6-80D1-AF87-E7F11D583A69
+2014-06-21 11:25:57.039 Onsite[10362:70b] CREATED - 2DBAD327-7CB9-0920-A735-830120ACCEF8
+2014-06-21 11:25:57.039 Onsite[10362:70b] CREATED - 316BC855-1023-0A1D-AA67-130E43F5AD2D
+2014-06-21 11:25:57.039 Onsite[10362:70b] CREATED - 31F385E1-C98A-F9CB-AD60-E433C1342523
+2014-06-21 11:25:57.039 Onsite[10362:70b] CREATED - 36BDA881-E2B1-E013-9751-F5BC173EEBD5
+2014-06-21 11:25:57.040 Onsite[10362:70b] CREATED - 381ECEEF-9FBC-4A92-B0B2-3F433D1D4C7B
+2014-06-21 11:25:57.040 Onsite[10362:70b] CREATED - 39ABEA52-4431-90E5-990E-957370F75D42
+2014-06-21 11:25:57.040 Onsite[10362:70b] CREATED - 3ABC7F9C-3A40-2BB6-8DAA-E32CF5D57D8A
+2014-06-21 11:25:57.040 Onsite[10362:70b] CREATED - 3B62F6F7-FBAB-6E8B-826F-590FF5B9251C
+2014-06-21 11:25:57.041 Onsite[10362:70b] CREATED - 3D718013-D992-E821-893F-899277C7E7F8
+2014-06-21 11:25:57.041 Onsite[10362:70b] CREATED - 4076455C-08DA-6AB8-BF2B-9DF33E36C5B8
+2014-06-21 11:25:57.041 Onsite[10362:70b] CREATED - 4275E01F-188A-8F58-A7E3-BFE196C3920A
+2014-06-21 11:25:57.041 Onsite[10362:70b] CREATED - 43EDCDD4-FE27-C225-8BBD-F169DBB7E1C0
+2014-06-21 11:25:57.041 Onsite[10362:70b] CREATED - 467DC7E4-B8F3-B9BF-90F2-3524C2557917
+2014-06-21 11:25:57.042 Onsite[10362:70b] CREATED - 49864FB5-50BE-E3DA-A45C-A300B36E10D9
+2014-06-21 11:25:57.043 Onsite[10362:70b] CREATED - 49A993AF-7CF0-37F2-BBDF-929ADE023A9F
+2014-06-21 11:25:57.043 Onsite[10362:70b] CREATED - 51A931B4-64CC-9FB6-9CFC-927012E81998
+2014-06-21 11:25:57.044 Onsite[10362:70b] CREATED - 5250E7CA-41F9-D8E5-9D33-4C4A06949D4D
+2014-06-21 11:25:57.044 Onsite[10362:70b] CREATED - 56BF60E0-41B4-ECFE-9F7A-FF38E410DBD4
+2014-06-21 11:25:57.044 Onsite[10362:70b] CREATED - 59868C11-9D7C-2475-BF93-CE4F37546AE4
+2014-06-21 11:25:57.044 Onsite[10362:70b] CREATED - 5E288132-B89E-0688-96CB-E606E5390B23
+2014-06-21 11:25:57.045 Onsite[10362:70b] CREATED - 654EC571-F702-EC18-AF27-317BDDB154D1
+2014-06-21 11:25:57.045 Onsite[10362:70b] CREATED - 65F0926D-60F4-7FF8-96D0-BA5E7FB813E2
+2014-06-21 11:25:57.046 Onsite[10362:70b] CREATED - 68738126-B42B-6397-83F7-EE0366C3CE3A
+2014-06-21 11:25:57.046 Onsite[10362:70b] CREATED - 6C37A55F-8F92-916A-8B61-9852E5DD16F9
+2014-06-21 11:25:57.047 Onsite[10362:70b] CREATED - 700C6B70-98B0-41EE-A828-351C7DE9FAF3
+2014-06-21 11:25:57.047 Onsite[10362:70b] CREATED - 71DDA179-00EA-A805-A564-9B8CBED311A6
+2014-06-21 11:25:57.047 Onsite[10362:70b] CREATED - 7A14EDF6-90DA-743C-8A2C-018B1AC72E4C
+2014-06-21 11:25:57.047 Onsite[10362:70b] CREATED - 7E4D159C-D5F3-8400-8FE5-E34587A88178
+2014-06-21 11:25:57.047 Onsite[10362:70b] CREATED - 7F70070F-9A88-AA42-A2C6-1CB0E734748E
+2014-06-21 11:25:57.048 Onsite[10362:70b] CREATED - 80F34A6F-70FC-6CF8-A2F9-B473E58030CD
+2014-06-21 11:25:57.048 Onsite[10362:70b] CREATED - 84D26973-0E00-F8FB-A543-AD4C877E29DC
+2014-06-21 11:25:57.048 Onsite[10362:70b] CREATED - 881FBADB-A4AE-78F9-9350-72505C01E6FB
+2014-06-21 11:25:57.048 Onsite[10362:70b] CREATED - 8AF6F924-5448-24AC-9258-FBA499453F07
+2014-06-21 11:25:57.049 Onsite[10362:70b] CREATED - 8EB1AB1A-AD43-D073-AFB5-19B7979F6A3B
+2014-06-21 11:25:57.049 Onsite[10362:70b] CREATED - 8FB9EDC0-27EE-572C-B5A8-CC83658FA045
+2014-06-21 11:25:57.049 Onsite[10362:70b] CREATED - 928FFBA2-AB09-1FDF-880C-3AD3B18FC50F
+2014-06-21 11:25:57.049 Onsite[10362:70b] CREATED - 94FC7DF5-FFB5-DE6C-8D45-3EDCCC0D43E9
+2014-06-21 11:25:57.049 Onsite[10362:70b] CREATED - 9DC34893-986C-7605-883C-401C86322735
+2014-06-21 11:25:57.050 Onsite[10362:70b] CREATED - 9E10EF33-BF7D-FA94-8A59-0678F3304771
+2014-06-21 11:25:57.050 Onsite[10362:70b] CREATED - 9EF309A1-A3FC-4EDD-A95B-5011A4B9DC79
+2014-06-21 11:25:57.050 Onsite[10362:70b] CREATED - A08A1048-6A2F-CA55-8B62-58CB3C0570E5
+2014-06-21 11:25:57.050 Onsite[10362:70b] CREATED - A101E41F-0B00-C20D-AF0F-A3BBB00ADB5D
+2014-06-21 11:25:57.051 Onsite[10362:70b] CREATED - A2468EF6-8A74-B9B1-850C-BB14D52D90B3
+2014-06-21 11:25:57.051 Onsite[10362:70b] CREATED - A2E8326E-7A59-6E50-88FA-B67A39B3F903
+2014-06-21 11:25:57.051 Onsite[10362:70b] CREATED - A94B1458-A1AE-D675-B904-17F0719535C4
+2014-06-21 11:25:57.051 Onsite[10362:70b] CREATED - BCB6BC43-5D0C-9E63-A57F-AE19A6F6EFF7
+2014-06-21 11:25:57.052 Onsite[10362:70b] CREATED - BDB2452E-B231-89EB-9A88-57E7A1C9A729
+2014-06-21 11:25:57.052 Onsite[10362:70b] CREATED - C17F5243-9C24-AF97-AA9C-C804F603A015
+2014-06-21 11:25:57.053 Onsite[10362:70b] CREATED - C2015B8D-0B1A-1766-8DCC-166BE08F4D3A
+2014-06-21 11:25:57.053 Onsite[10362:70b] CREATED - C4ED8A78-6B0D-C4B5-B826-496C6A4E29D9
+2014-06-21 11:25:57.053 Onsite[10362:70b] CREATED - CAC3B30A-93E1-8430-A232-FC9FDF6D6B68
+2014-06-21 11:25:57.054 Onsite[10362:70b] CREATED - CB12078B-30CA-5851-B893-F16255FFAF4C
+2014-06-21 11:25:57.054 Onsite[10362:70b] CREATED - CEB30F17-5D55-1A26-800D-08070DD6C45E
+2014-06-21 11:25:57.054 Onsite[10362:70b] CREATED - D0C2A039-FD6C-52DB-8881-1DCD914271D8
+2014-06-21 11:25:57.054 Onsite[10362:70b] CREATED - D1F66AE4-7EE7-504A-9F16-7975D2BCFF9B
+2014-06-21 11:25:57.055 Onsite[10362:70b] CREATED - D6335768-66E5-9E0B-B343-71BEE1B50EA0
+2014-06-21 11:25:57.055 Onsite[10362:70b] CREATED - E4CBD425-F92A-A077-AEA2-82748EC8611E
+2014-06-21 11:25:57.055 Onsite[10362:70b] CREATED - E4CF6055-1399-A765-B33C-BEEB69E38F2B
+2014-06-21 11:25:57.055 Onsite[10362:70b] CREATED - E57394D7-1F41-D46B-AB77-22CDCDBAC013
+2014-06-21 11:25:57.055 Onsite[10362:70b] CREATED - E820564E-1189-6332-B789-7C68D74F007E
+2014-06-21 11:25:57.056 Onsite[10362:70b] CREATED - ED99AD96-6FB0-6CAD-B1F2-A25B21426B53
+2014-06-21 11:25:57.056 Onsite[10362:70b] CREATED - F2470F82-CC69-5C60-8956-590EADD86A04
+2014-06-21 11:25:57.056 Onsite[10362:70b] CREATED - F55B1E6F-11BF-670C-9251-F4A609AFCBB0
+2014-06-21 11:25:57.056 Onsite[10362:70b] CREATED - F6EACD74-E0A0-90D2-974E-83057C460E28
+2014-06-21 11:25:57.056 Onsite[10362:70b] CREATED - FCDB0254-7CC7-A1FC-AF16-E80F9215FEE3
+2014-06-21 11:25:57.057 Onsite[10362:70b] CREATED - FDF72259-0C49-BFF1-B7F1-1BCBA6565BC4
+2014-06-21 11:25:57.057 Onsite[10362:70b] CREATED - FFE45AD5-0736-F67D-A5A2-4B7216E31298
+2014-06-21 11:25:58.539 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:25:58.603 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-13","last_seq":759}}
+2014-06-21 11:25:58.724 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%220124577F-E28C-2606-B050-B3152C0DE92D%22%2C%220D7E8690-FFAD-430C-92B7-342EB1AB793D%22%2C%221D6447C8-0521-276F-BB44-A0BB6027891D%22%2C%223E463113-8436-D0F5-BE8A-AADBCFDA047B%22%2C%22460742DE-E60D-685A-A887-0229A951B58D%22%2C%2246E53761-6FE1-00BB-9D09-82D66D3D95E2%22%2C%224FE49C90-9DF4-2BBA-B3A1-12EFF2B8AA48%22%2C%2258157545-6855-BA3B-ABA0-6C7CB3B82EEF%22%2C%2275E965E7-E9AB-7FCE-8F99-811B0B894332%22%2C%2296E30EF7-10D9-E3B0-8AC3-B2ED0EFED90B%22%2C%229B0FE739-C79D-79EA-BBEA-95220A719B66%22%2C%22B915ADCC-9619-E1B3-AD3B-2B33F40AFFBC%22%2C%22C2D8E831-8081-0E03-984C-4A74946BB27D%22%2C%22CFE2DF0A-7DAD-3EF8-8880-CAB499C9453F%22%2C%22F30A04BA-E8DB-12C1-9950-D38D25C70670%22%2C%22F5044B89-A851-1CF7-A004-98CC4C68A1A8%22%2C%22FEAB0BF5-1154-F533-870D-E5F070BFFA7F%22%2C%22ea0e2d1e6ea88061cd77cc0b0c088e90%22%5D"}
+2014-06-21 11:25:58.803 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c047101?revs=true&open_revs=[\"2-8189cf4ffdc938312af68bb2e6e8b3d2\"]&attachments=true"}
+2014-06-21 11:25:58.876 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/68C0122F-1562-EB3E-9E42-7C8E2ADDC91E?revs=true&open_revs=[\"3-b20db6039153fc27d53764fbd83584ef\"]&attachments=true"}
+2014-06-21 11:25:58.939 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/A696D454-7991-FF2E-9349-7B9ECF334D6B?revs=true&open_revs=[\"8-e1649c263235a62727783a6b91716950\"]&attachments=true"}
+2014-06-21 11:25:59.000 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/C2CF0D1A-CDC9-4908-951B-D7E450769142?revs=true&open_revs=[\"5-01cf61003caba046464ca1074b1fa19d\"]&attachments=true"}
+2014-06-21 11:25:59.067 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/F5D244F7-BD22-3D6F-BE8F-801468571C40?revs=true&open_revs=[\"42-a747b6d07b4da4a4308d218737e345f6\"]&attachments=true"}
+2014-06-21 11:25:59.128 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0608a3?revs=true&open_revs=[\"9-9fba4c8c7346f105fe263375bf97c999\"]&attachments=true"}
+2014-06-21 11:25:59.191 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c066e7b?revs=true&open_revs=[\"25-41dcc28d47004702c1c866342be8453f\"]&attachments=true"}
+2014-06-21 11:25:59.256 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/590da4f57e1280c18e16d21c8900389b?revs=true&open_revs=[\"32-7e7d8dfdc8cf9c3c3b1080e216797e2d\"]&attachments=true"}
+2014-06-21 11:25:59.321 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c07da82?revs=true&open_revs=[\"2-f0666112d7544db261da5ade4ff20425\"]&attachments=true"}
+2014-06-21 11:25:59.447 Onsite[10362:70b] CREATED - 0124577F-E28C-2606-B050-B3152C0DE92D
+2014-06-21 11:25:59.447 Onsite[10362:70b] CREATED - 0D7E8690-FFAD-430C-92B7-342EB1AB793D
+2014-06-21 11:25:59.448 Onsite[10362:70b] CREATED - 1D6447C8-0521-276F-BB44-A0BB6027891D
+2014-06-21 11:25:59.448 Onsite[10362:70b] CREATED - 3E463113-8436-D0F5-BE8A-AADBCFDA047B
+2014-06-21 11:25:59.448 Onsite[10362:70b] CREATED - 460742DE-E60D-685A-A887-0229A951B58D
+2014-06-21 11:25:59.448 Onsite[10362:70b] CREATED - 46E53761-6FE1-00BB-9D09-82D66D3D95E2
+2014-06-21 11:25:59.449 Onsite[10362:70b] CREATED - 4FE49C90-9DF4-2BBA-B3A1-12EFF2B8AA48
+2014-06-21 11:25:59.449 Onsite[10362:70b] CREATED - 58157545-6855-BA3B-ABA0-6C7CB3B82EEF
+2014-06-21 11:25:59.449 Onsite[10362:70b] CREATED - 75E965E7-E9AB-7FCE-8F99-811B0B894332
+2014-06-21 11:25:59.449 Onsite[10362:70b] CREATED - 96E30EF7-10D9-E3B0-8AC3-B2ED0EFED90B
+2014-06-21 11:25:59.449 Onsite[10362:70b] CREATED - 9B0FE739-C79D-79EA-BBEA-95220A719B66
+2014-06-21 11:25:59.450 Onsite[10362:70b] CREATED - B915ADCC-9619-E1B3-AD3B-2B33F40AFFBC
+2014-06-21 11:25:59.450 Onsite[10362:70b] CREATED - C2D8E831-8081-0E03-984C-4A74946BB27D
+2014-06-21 11:25:59.450 Onsite[10362:70b] CREATED - CFE2DF0A-7DAD-3EF8-8880-CAB499C9453F
+2014-06-21 11:25:59.450 Onsite[10362:70b] CREATED - F30A04BA-E8DB-12C1-9950-D38D25C70670
+2014-06-21 11:25:59.450 Onsite[10362:70b] CREATED - F5044B89-A851-1CF7-A004-98CC4C68A1A8
+2014-06-21 11:25:59.451 Onsite[10362:70b] CREATED - FEAB0BF5-1154-F533-870D-E5F070BFFA7F
+2014-06-21 11:25:59.451 Onsite[10362:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c088e90
+2014-06-21 11:25:59.588 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:25:59.651 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-14","last_seq":787}}
+2014-06-21 11:26:11.162 Onsite[10362:70b] ----------Project Address----------
+2014-06-21 11:26:11.163 Onsite[10362:70b] ----------Project City----------
+2014-06-21 11:26:11.163 Onsite[10362:70b] ----------Project State----------
+2014-06-21 11:26:11.163 Onsite[10362:70b] ----------Visit Date----------
+2014-06-21 11:26:11.164 Onsite[10362:70b] ----------Square Footage----------
+2014-06-21 11:26:11.164 Onsite[10362:70b] ----------Volume----------
+2014-06-21 11:26:11.164 Onsite[10362:70b] ----------Annual Operating Hours----------
+2014-06-21 11:26:11.164 Onsite[10362:70b] ----------Program----------
+2014-06-21 11:26:11.165 Onsite[10362:70b] setting first value
+2014-06-21 11:26:11.165 Onsite[10362:70b] set first value
+2014-06-21 11:26:11.165 Onsite[10362:70b] ----------Notes----------
+2014-06-21 11:26:11.165 Onsite[10362:70b] hiding
+2014-06-21 11:26:11.165 Onsite[10362:70b] hiding
+2014-06-21 11:26:11.166 Onsite[10362:70b] hiding
+2014-06-21 11:26:11.166 Onsite[10362:70b] hiding
+2014-06-21 11:26:34.110 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:34.110 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:34.111 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:26:34.111 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:26:34.111 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:34.111 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:34.112 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:26:34.112 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:26:34.195 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:26:34.198 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:26:34.260 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:26:34.263 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:26:34.330 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=787&limit=25","timeout":0}
+2014-06-21 11:26:34.373 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"2E02B40D-547E-BDB1-83F8-9345FF5F485A":["1-d28d4df992a716a1abbc2cc7bce9ff7b"]}}
+2014-06-21 11:26:34.396 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=788&limit=25","timeout":0}
+2014-06-21 11:26:34.400 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-21 11:26:34.432 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:26:34.497 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-11","last_seq":396}}
+2014-06-21 11:26:34.500 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:26:34.575 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-15","last_seq":788}}
+2014-06-21 11:26:34.587 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"056A9251-C11F-AEE6-ABDB-B20CB06D4B54":["1-4f44694a1bf81648b3bc09377f08cbff"]}}
+2014-06-21 11:26:34.669 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:26:34.733 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-12","last_seq":400}}
+2014-06-21 11:26:34.832 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"05E4DC06-78B2-00F7-B655-D08691DEDAF7":["1-ae6d2383a73016ae614d5a9eb18d8d00"],"065056CD-46B1-0DC7-B676-89E0DBAADFCD":["1-27d3b49a150730e833d60e64da1922e2"],"12DF071A-797E-3DE7-926B-2EFE5354EC25":["1-e3f76b4e2ad2548a7ece47fb50d9b0c3"],"16AE8147-904D-1D73-9016-41F3E00DF886":["1-1e3e73625b3ad685e9502fe5687cddc7"],"177048D5-9C0F-88F8-B691-52F07D50BFA4":["1-1e7af3ead0fcc0f574b240b31e1971a3"],"1BDC2F44-14E0-DEA0-A490-09D47AC1FC8C":["1-60bd60196377395b34fbe4dcf5dde77f"],"24522A3C-8CE0-A9D8-A63C-8A32C3A0DE75":["1-e85f67fb7adf5a593a1791db693a4db2"],"24FA7CFF-2C4B-FE75-B937-9DE3AB13B261":["1-84a9948cd54bda5d0e92236466379be5"],"283C9102-9DE6-80D1-AF87-E7F11D583A69":["1-fcb94d9b23203e10553fc0163302bfc3"],"2DBAD327-7CB9-0920-A735-830120ACCEF8":["1-7896634a1e9025afacd7db64ca4cf9d5"],"316BC855-1023-0A1D-AA67-130E43F5AD2D":["1-748176b4024fddf5b547d195348862b0"],"31F385E1-C98A-F9CB-AD60-E433C1342523":["1-9498bb3848e8fba1f2fc31e8998ecf07"],"36BDA881-E2B1-E013-9751-F5BC173EEBD5":["1-be66150cef490f7f7530527e2e8759a8"],"381ECEEF-9FBC-4A92-B0B2-3F433D1D4C7B":["1-2f2ddbeef1e661d00da250acabed7959"],"39ABEA52-4431-90E5-990E-957370F75D42":["1-8b4d207f85af8e31291edd5f1335e82e"],"3ABC7F9C-3A40-2BB6-8DAA-E32CF5D57D8A":["1-c113ee73842f8173fe1c5666c411faa3"],"3B62F6F7-FBAB-6E8B-826F-590FF5B9251C":["1-bfcf76291d0d57888c150a7d23acfd1f"],"3D718013-D992-E821-893F-899277C7E7F8":["1-46b0b0fa576f6c2d14053b7fc54ccf6c"],"4076455C-08DA-6AB8-BF2B-9DF33E36C5B8":["1-30c2ff083bc8c04f0e4f68877d81cab7"],"4275E01F-188A-8F58-A7E3-BFE196C3920A":["1-71540928ebfe2e9941ba144af33b6650"],"43EDCDD4-FE27-C225-8BBD-F169DBB7E1C0":["1-91ee793ed241a0d0900e32d8c83d47f3"],"467DC7E4-B8F3-B9BF-90F2-3524C2557917":["1-2631f8d37a61e637cdb8136bd16066aa"],"49864FB5-50BE-E3DA-A45C-A300B36E10D9":["1-a2f0272886b2fcf68ee048d88d916f8a"],"49A993AF-7CF0-37F2-BBDF-929ADE023A9F":["1-6e20785571f87879a0905b8e72c981ba"],"51A931B4-64CC-9FB6-9CFC-927012E81998":["1-deed99c425a536efbc96531d92ee55f8"],"5250E7CA-41F9-D8E5-9D33-4C4A06949D4D":["1-b66ad81381e137154c4ee4c40f5b638f"],"56BF60E0-41B4-ECFE-9F7A-FF38E410DBD4":["1-860cb5ddc13d9cbd9f40037f98f86e58"],"59868C11-9D7C-2475-BF93-CE4F37546AE4":["1-5795bea4f460b3a7bf8e759e154b8762"],"5E288132-B89E-0688-96CB-E606E5390B23":["1-1f9a53df33d455a16e7046423ae08f12"],"654EC571-F702-EC18-AF27-317BDDB154D1":["1-0791478201bff2d089aedafb9c4310a6"],"65F0926D-60F4-7FF8-96D0-BA5E7FB813E2":["1-c9e1dd1dd69914d74490e459c1fd234a"],"68738126-B42B-6397-83F7-EE0366C3CE3A":["1-e89279cf6b6eadb4dfe8bcd5fa34ab50"],"6C37A55F-8F92-916A-8B61-9852E5DD16F9":["1-aa39d05e3cb83a73eebd6031f933ce67"],"700C6B70-98B0-41EE-A828-351C7DE9FAF3":["1-200d294f3b7b7aa8e517fb9afa3f1cef"],"71DDA179-00EA-A805-A564-9B8CBED311A6":["1-4392f0395c448fa028d5e79cb36a2dfb"],"7A14EDF6-90DA-743C-8A2C-018B1AC72E4C":["1-3cf919af201aa70b78f7dcd424c0446b"],"7E4D159C-D5F3-8400-8FE5-E34587A88178":["1-33d7b618d08bb64f428e1b0c29f9bf2d"],"7F70070F-9A88-AA42-A2C6-1CB0E734748E":["1-2f250797aa15964e927c47dba30a5135"],"80F34A6F-70FC-6CF8-A2F9-B473E58030CD":["1-e79771f55807433b7e986907214f4ac1"],"84D26973-0E00-F8FB-A543-AD4C877E29DC":["1-4a696050c5044aea8019743d11eb2a04"],"881FBADB-A4AE-78F9-9350-72505C01E6FB":["1-0553a95a531287983d67f5c51315dd32"],"8AF6F924-5448-24AC-9258-FBA499453F07":["1-eceef429cfe0a73d854bae8fa6b72a65"],"8EB1AB1A-AD43-D073-AFB5-19B7979F6A3B":["1-d2c9d9276488352d0b77cccee1adf858"],"8FB9EDC0-27EE-572C-B5A8-CC83658FA045":["1-43c6719a7bdc75b0653064096ba25669"],"928FFBA2-AB09-1FDF-880C-3AD3B18FC50F":["1-7e0a4ae5955e784d22b92e7a984359da"],"94FC7DF5-FFB5-DE6C-8D45-3EDCCC0D43E9":["1-efd2bf3ac9aa5bfaeb4d030876e41754"],"9DC34893-986C-7605-883C-401C86322735":["1-fe46ff9aa62ab65bce056fe4fdbe4c1c"],"9E10EF33-BF7D-FA94-8A59-0678F3304771":["1-9cd7d32167b005c2e1a58e884bd8b953"],"9EF309A1-A3FC-4EDD-A95B-5011A4B9DC79":["1-57653f37b9920265e58ec6d9e523d91d"],"A08A1048-6A2F-CA55-8B62-58CB3C0570E5":["1-55bfe567437284688482d4e1c512f4b3"],"A101E41F-0B00-C20D-AF0F-A3BBB00ADB5D":["1-32f8e971105803f7a4053c594131bf95"],"A2468EF6-8A74-B9B1-850C-BB14D52D90B3":["1-e333f9ffcb2ea56c23a45fa488863633"],"A2E8326E-7A59-6E50-88FA-B67A39B3F903":["1-eb04f6f8d5ccc093cfd859efad889dbc"],"A94B1458-A1AE-D675-B904-17F0719535C4":["1-57e1023831b07f1feeb368d8a67b10d0"],"BCB6BC43-5D0C-9E63-A57F-AE19A6F6EFF7":["1-d1b35dfb43f8c3458c9bc2b4041108d6"],"BDB2452E-B231-89EB-9A88-57E7A1C9A729":["1-b5804064582c56b17b4bfd6d1d51384f"],"C17F5243-9C24-AF97-AA9C-C804F603A015":["1-6b5481728ea3db0d2dc659a001ecc404"],"C2015B8D-0B1A-1766-8DCC-166BE08F4D3A":["1-e817ed58e3d015ac810384971db3d6be"],"C4ED8A78-6B0D-C4B5-B826-496C6A4E29D9":["1-f4d4523cf68d40080985d98f0b6fe2c3"],"CAC3B30A-93E1-8430-A232-FC9FDF6D6B68":["1-2b298d82d130cae66cc9d2ee24651162"],"CB12078B-30CA-5851-B893-F16255FFAF4C":["1-872d8fa493b045ab77194ed90ec87466"],"CEB30F17-5D55-1A26-800D-08070DD6C45E":["1-51a6c2c676bb8d4360ca663afa6256f5"],"D0C2A039-FD6C-52DB-8881-1DCD914271D8":["1-d499362c8e2b3d316c744d2926ade005"],"D1F66AE4-7EE7-504A-9F16-7975D2BCFF9B":["1-53c7d7071f3371adceb29b0e6f449fcb"],"D6335768-66E5-9E0B-B343-71BEE1B50EA0":["1-d8aafffcd7bdc1a021de7802252e2ba6"],"E4CBD425-F92A-A077-AEA2-82748EC8611E":["1-5b959b2d20f731ea8780a1cdc449c98f"],"E4CF6055-1399-A765-B33C-BEEB69E38F2B":["1-d7be0ffb1bf29895b1a7815f6f1d9e4e"],"E57394D7-1F41-D46B-AB77-22CDCDBAC013":["1-039252cd4a0dc6c289303fa0229d2720"],"E820564E-1189-6332-B789-7C68D74F007E":["1-066a42bd73a926c0349dce014d23c36c"],"ED99AD96-6FB0-6CAD-B1F2-A25B21426B53":["1-76accacfdea3aaf9267eceff75bb9ff1"],"F2470F82-CC69-5C60-8956-590EADD86A04":["1-30e5ab3400fb9bdd8077f123021e77a2"],"F55B1E6F-11BF-670C-9251-F4A609AFCBB0":["1-516069e7967fd95579f974b844042412"],"F6EACD74-E0A0-90D2-974E-83057C460E28":["1-91258f7de8b2bebda81ef3fecdc9fcc4"],"FCDB0254-7CC7-A1FC-AF16-E80F9215FEE3":["1-758e2888dea120168e6ae1414521f6c4"],"FDF72259-0C49-BFF1-B7F1-1BCBA6565BC4":["1-e9d1f9de1de4a22251c68b07f24a23d4"],"FFE45AD5-0736-F67D-A5A2-4B7216E31298":["1-4f8eaa4bdca0e5f5f6d3263fcef873f7"],"2434513E-7A5D-12B2-82F4-97FB7A1F3635":["2-d0094f0055c928e035b599e1352c1ae5"],"037B120A-B9A4-5149-9045-F0127E48DC75":["2-105051c6f93ed28d79add482694cf034"],"0CD83568-DF77-C818-BE67-B79C31FAAD11":["2-8ebcd573d99a4be4d65a5a11324e0e65"],"14D24E3E-AF6F-08E8-8B07-91BBDDEB9A0D":["2-8e940d263d72e5a5db6dab33ff221c9a"],"1B8A2CD6-CB23-7602-A4A1-FB3DD63BF44A":["2-ffae75995055cb5f348ac5260486a1d2"],"1BC71C65-C8D5-B823-8EEB-A1A9A2E2D0B8":["2-d6b92c37e85c04c834475277b31d0de0"],"1E816A4C-7376-0A03-907B-5716CF676312":["2-2d60bc61a56cc0498ed1b5a71ce5ff57"],"37005726-07ED-2D59-974F-5195D1BB139D":["2-fa7c4cd090bea7c3326a976ec5d8da05"],"3ACEF573-226B-3D37-85D5-7B83514F8987":["2-ca06dad7145f755e8b111d61dcfb21ec"],"4FE6C277-55DF-C9C3-AC2D-BEA08C5C2E97":["2-b6a7cfbf690a0ae85d5f2c8d072eed05"],"5B672932-DB1E-D6AD-90A3-BAE0C7F281AD":["2-8d2f646750e0684406e64bf85acd53f0"],"5FCF96D0-C413-47B1-AC6F-25B26DCC7D1A":["2-3527a3fb694f7dc1c4ec66f550a27aa1"],"6CBAE4C9-E164-7CC5-A71F-D247DCFAD29D":["2-3093c9ab7139e6d23eca676265947e56"],"7AC9D68F-DF8D-CEF3-8535-1A803865D078":["2-206112855a87353105d166d04e477fe0"],"A8EB90C4-2ED3-5458-8777-A87D967032C3":["2-66b151da6fb95c125ae8ca0882caa3c9"],"BF9E9E13-C4A1-4E32-A6E1-DC709C7DB928":["2-2b6fe87664fce1d74602de455021ccdf"],"C6D5CE5F-D227-EE20-BC29-7CDB8F265B63":["2-7c9ada0c472b0799b33d57e866e557ea"],"CB88B9F9-0EDC-F497-BE8C-28439F85FA78":["2-81d89b27a289eac255c088668b38f949"],"CFFDB0F6-0D4D-92D7-85E1-E6C076F20E58":["2-23cab26137c4ada508f20fca1dc53168"],"EF9F6FB2-015D-9B51-A271-0CFD6C5566E9":["2-8f372e6d4b8ead295fce9d4b6b641a8b"],"ea0e2d1e6ea88061cd77cc0b0c046afd":["2-cd085f5fb50436f97dc1bd090a9332e0"],"0124577F-E28C-2606-B050-B3152C0DE92D":["1-92598e3bd88aa1d3e76950681ea7077c"]}}
+2014-06-21 11:26:34.937 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:26:34.999 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-13","last_seq":499}}
+2014-06-21 11:26:35.104 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"POST","url":"http://base.onsitedatacollection.com:/onsite/_revs_diff","body":{"0D7E8690-FFAD-430C-92B7-342EB1AB793D":["1-e5157e94d2326f61a71de275995da117"],"1D6447C8-0521-276F-BB44-A0BB6027891D":["1-673667435d273d0afbb74e86898b9c72"],"3E463113-8436-D0F5-BE8A-AADBCFDA047B":["1-e04f08485bfbcc66927a5b1104f350b2"],"460742DE-E60D-685A-A887-0229A951B58D":["1-b8e7d9bf580d7d4684f7d76cf2894751"],"46E53761-6FE1-00BB-9D09-82D66D3D95E2":["1-147145dc2f909f96761af0f6be6d2563"],"4FE49C90-9DF4-2BBA-B3A1-12EFF2B8AA48":["1-9b85cb780315bb3a32d33a56782bbf61"],"58157545-6855-BA3B-ABA0-6C7CB3B82EEF":["1-6faeeabe4bafb38223d84139fbd014ab"],"75E965E7-E9AB-7FCE-8F99-811B0B894332":["1-053e598a3517138ea0f3770f361c3c00"],"96E30EF7-10D9-E3B0-8AC3-B2ED0EFED90B":["1-48f32ac0956783cd2de81ee4c55199c5"],"9B0FE739-C79D-79EA-BBEA-95220A719B66":["1-8c3dcc681d7708942483e5c675f534bf"],"B915ADCC-9619-E1B3-AD3B-2B33F40AFFBC":["1-ef3e103b0a50d3a22fc2684e2ff6fb06"],"C2D8E831-8081-0E03-984C-4A74946BB27D":["1-4d3bc5c5113b48e5f73c65d7f2957c84"],"CFE2DF0A-7DAD-3EF8-8880-CAB499C9453F":["1-c008dc618e2e0d9ba0465c8845e92714"],"F30A04BA-E8DB-12C1-9950-D38D25C70670":["1-084848af076297109732b676eebbc558"],"F5044B89-A851-1CF7-A004-98CC4C68A1A8":["1-bf2f4d92ad861f322aead28be7496d31"],"FEAB0BF5-1154-F533-870D-E5F070BFFA7F":["1-00a43a12416fb339176a91ab77a1e91c"],"ea0e2d1e6ea88061cd77cc0b0c088e90":["1-421154fbaf49828f286f7f056c846be5"],"ea0e2d1e6ea88061cd77cc0b0c047101":["2-8189cf4ffdc938312af68bb2e6e8b3d2"],"68C0122F-1562-EB3E-9E42-7C8E2ADDC91E":["3-b20db6039153fc27d53764fbd83584ef"],"A696D454-7991-FF2E-9349-7B9ECF334D6B":["8-e1649c263235a62727783a6b91716950"],"C2CF0D1A-CDC9-4908-951B-D7E450769142":["5-01cf61003caba046464ca1074b1fa19d"],"F5D244F7-BD22-3D6F-BE8F-801468571C40":["42-a747b6d07b4da4a4308d218737e345f6","19-506a837ac75c8fc92256828634184c4e"],"ea0e2d1e6ea88061cd77cc0b0c0608a3":["9-7783891da71ae8854c13e052857222fb","9-9fba4c8c7346f105fe263375bf97c999"],"ea0e2d1e6ea88061cd77cc0b0c066e7b":["25-41dcc28d47004702c1c866342be8453f"],"590da4f57e1280c18e16d21c8900389b":["32-7e7d8dfdc8cf9c3c3b1080e216797e2d"],"ea0e2d1e6ea88061cd77cc0b0c07da82":["2-f0666112d7544db261da5ade4ff20425"]}}
+2014-06-21 11:26:35.174 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:26:35.243 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee","body":{"_id":"_local/206141d2fade4705ed57d3044497ebee","_rev":"0-14","last_seq":525}}
+2014-06-21 11:26:47.547 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:47.547 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:47.548 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:26:47.548 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:26:47.548 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:47.549 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:26:47.549 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:26:47.549 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:26:47.609 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:26:47.611 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:26:47.679 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:26:47.681 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:26:47.743 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=788&limit=25","timeout":0}
+2014-06-21 11:34:18.395 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:18.396 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:18.396 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:34:18.396 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:34:18.397 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:18.397 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:18.397 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:34:18.398 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:34:18.482 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:34:18.486 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:34:18.549 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:34:18.553 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:34:18.621 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=788&limit=25","timeout":0}
+2014-06-21 11:34:18.685 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=789&limit=25","timeout":0}
+2014-06-21 11:34:18.687 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_all_docs?include_docs=true&keys=%5B%5D"}
+2014-06-21 11:34:18.750 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/ea0e2d1e6ea88061cd77cc0b0c0626cf?revs=true&open_revs=[\"18-c99193226c319fd8eb61755a7a03ab58\"]&attachments=true"}
+2014-06-21 11:34:18.839 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:34:18.902 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"PUT","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316","body":{"_id":"_local/9c91f17ba2a9179d5f539d40338fb316","_rev":"0-16","last_seq":789}}
+2014-06-21 11:34:23.350 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:23.350 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:23.350 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:34:23.351 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:34:23.351 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:23.352 Onsite[10362:70b] {"anchor":"","query":"","file":"","directory":"/onsite","path":"","relative":"/onsite","port":"","host":"base.onsitedatacollection.com","password":"RedSox06","user":"drew.trafton@gdsassociates.com","userInfo":"drew.trafton%40gdsassociates.com:RedSox06","authority":"drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com","protocol":"http","source":"http://drew.trafton%40gdsassociates.com:RedSox06@base.onsitedatacollection.com/onsite","queryKey":{},"remote":true,"auth":{"username":"drew.trafton@gdsassociates.com","password":"RedSox06"},"db":"onsite","headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"}}
+2014-06-21 11:34:23.352 Onsite[10362:70b] http://base.onsitedatacollection.com:/onsite/
+2014-06-21 11:34:23.352 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/"}
+2014-06-21 11:34:23.408 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:34:23.416 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/"}
+2014-06-21 11:34:23.485 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/206141d2fade4705ed57d3044497ebee"}
+2014-06-21 11:34:23.487 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_local/9c91f17ba2a9179d5f539d40338fb316"}
+2014-06-21 11:34:23.562 Onsite[10362:70b] {"headers":{"Authorization":"Basic ZHJldy50cmFmdG9uQGdkc2Fzc29jaWF0ZXMuY29tOlJlZFNveDA2"},"method":"GET","url":"http://base.onsitedatacollection.com:/onsite/_changes?timeout=20000&style=all_docs&since=789&limit=25","timeout":0}
+2014-06-21 11:47:38.133 Onsite[11001:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 11:47:38.141 Onsite[11001:70b] Unlimited access to network resources
+2014-06-21 11:47:38.161 Onsite[11001:70b] [CDVTimer][keyboard] 0.074983ms
+2014-06-21 11:47:38.169 Onsite[11001:70b] [CDVTimer][statusbar] 7.673025ms
+2014-06-21 11:47:38.170 Onsite[11001:70b] [CDVTimer][TotalPluginStartup] 9.105027ms
+2014-06-21 11:47:38.278 Onsite[11001:70b] Resetting plugins due to page load.
+2014-06-21 11:47:38.795 Onsite[11001:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 11:47:40.505 Onsite[11001:70b] --listening to changes in db: onsite
+2014-06-21 11:47:40.536 Onsite[11001:70b] CREATED - 0D7E8690-FFAD-430C-92B7-342EB1AB793D
+2014-06-21 11:47:40.536 Onsite[11001:70b] CREATED - 1D6447C8-0521-276F-BB44-A0BB6027891D
+2014-06-21 11:47:40.536 Onsite[11001:70b] CREATED - 3E463113-8436-D0F5-BE8A-AADBCFDA047B
+2014-06-21 11:47:40.537 Onsite[11001:70b] CREATED - 460742DE-E60D-685A-A887-0229A951B58D
+2014-06-21 11:47:40.537 Onsite[11001:70b] CREATED - 46E53761-6FE1-00BB-9D09-82D66D3D95E2
+2014-06-21 11:47:40.537 Onsite[11001:70b] CREATED - 4FE49C90-9DF4-2BBA-B3A1-12EFF2B8AA48
+2014-06-21 11:47:40.537 Onsite[11001:70b] CREATED - 58157545-6855-BA3B-ABA0-6C7CB3B82EEF
+2014-06-21 11:47:40.537 Onsite[11001:70b] CREATED - 75E965E7-E9AB-7FCE-8F99-811B0B894332
+2014-06-21 11:47:40.538 Onsite[11001:70b] CREATED - 96E30EF7-10D9-E3B0-8AC3-B2ED0EFED90B
+2014-06-21 11:47:40.538 Onsite[11001:70b] CREATED - 9B0FE739-C79D-79EA-BBEA-95220A719B66
+2014-06-21 11:47:40.538 Onsite[11001:70b] CREATED - B915ADCC-9619-E1B3-AD3B-2B33F40AFFBC
+2014-06-21 11:47:40.538 Onsite[11001:70b] CREATED - C2D8E831-8081-0E03-984C-4A74946BB27D
+2014-06-21 11:47:40.539 Onsite[11001:70b] CREATED - CFE2DF0A-7DAD-3EF8-8880-CAB499C9453F
+2014-06-21 11:47:40.539 Onsite[11001:70b] CREATED - F30A04BA-E8DB-12C1-9950-D38D25C70670
+2014-06-21 11:47:40.539 Onsite[11001:70b] CREATED - F5044B89-A851-1CF7-A004-98CC4C68A1A8
+2014-06-21 11:47:40.539 Onsite[11001:70b] CREATED - FEAB0BF5-1154-F533-870D-E5F070BFFA7F
+2014-06-21 11:47:40.539 Onsite[11001:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c088e90
+2014-06-21 11:47:46.081 Onsite[11001:70b] ----------Project Address----------
+2014-06-21 11:47:46.082 Onsite[11001:70b] ----------Project City----------
+2014-06-21 11:47:46.082 Onsite[11001:70b] ----------Project State----------
+2014-06-21 11:47:46.082 Onsite[11001:70b] ----------Visit Date----------
+2014-06-21 11:47:46.082 Onsite[11001:70b] ----------Square Footage----------
+2014-06-21 11:47:46.083 Onsite[11001:70b] ----------Volume----------
+2014-06-21 11:47:46.083 Onsite[11001:70b] ----------Annual Operating Hours----------
+2014-06-21 11:47:46.083 Onsite[11001:70b] ----------Program----------
+2014-06-21 11:47:46.083 Onsite[11001:70b] setting first value
+2014-06-21 11:47:46.083 Onsite[11001:70b] set first value
+2014-06-21 11:47:46.084 Onsite[11001:70b] ----------Notes----------
+2014-06-21 11:47:46.084 Onsite[11001:70b] hiding
+2014-06-21 11:47:46.084 Onsite[11001:70b] hiding
+2014-06-21 11:47:46.084 Onsite[11001:70b] hiding
+2014-06-21 11:47:46.085 Onsite[11001:70b] hiding
+Terminating in response to SpringBoard's termination.
+2014-06-21 11:49:22.175 Onsite[11463:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-21 11:49:22.184 Onsite[11463:70b] Unlimited access to network resources
+2014-06-21 11:49:22.203 Onsite[11463:70b] [CDVTimer][keyboard] 0.077963ms
+2014-06-21 11:49:22.210 Onsite[11463:70b] [CDVTimer][statusbar] 7.167995ms
+2014-06-21 11:49:22.211 Onsite[11463:70b] [CDVTimer][TotalPluginStartup] 8.219004ms
+2014-06-21 11:49:22.385 Onsite[11463:70b] Resetting plugins due to page load.
+2014-06-21 11:49:23.030 Onsite[11463:70b] Finished load of: file:///Users/DrewT/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B85F1E3E-E66B-461F-9749-9EBE303A9E34/Onsite.app/www/index.html#/login
+2014-06-21 11:49:24.208 Onsite[11463:70b] --listening to changes in db: onsite
+2014-06-21 11:49:24.256 Onsite[11463:70b] CREATED - 0D7E8690-FFAD-430C-92B7-342EB1AB793D
+2014-06-21 11:49:24.257 Onsite[11463:70b] CREATED - 1D6447C8-0521-276F-BB44-A0BB6027891D
+2014-06-21 11:49:24.257 Onsite[11463:70b] CREATED - 3E463113-8436-D0F5-BE8A-AADBCFDA047B
+2014-06-21 11:49:24.257 Onsite[11463:70b] CREATED - 460742DE-E60D-685A-A887-0229A951B58D
+2014-06-21 11:49:24.257 Onsite[11463:70b] CREATED - 46E53761-6FE1-00BB-9D09-82D66D3D95E2
+2014-06-21 11:49:24.258 Onsite[11463:70b] CREATED - 4FE49C90-9DF4-2BBA-B3A1-12EFF2B8AA48
+2014-06-21 11:49:24.258 Onsite[11463:70b] CREATED - 58157545-6855-BA3B-ABA0-6C7CB3B82EEF
+2014-06-21 11:49:24.258 Onsite[11463:70b] CREATED - 75E965E7-E9AB-7FCE-8F99-811B0B894332
+2014-06-21 11:49:24.258 Onsite[11463:70b] CREATED - 96E30EF7-10D9-E3B0-8AC3-B2ED0EFED90B
+2014-06-21 11:49:24.258 Onsite[11463:70b] CREATED - 9B0FE739-C79D-79EA-BBEA-95220A719B66
+2014-06-21 11:49:24.259 Onsite[11463:70b] CREATED - B915ADCC-9619-E1B3-AD3B-2B33F40AFFBC
+2014-06-21 11:49:24.259 Onsite[11463:70b] CREATED - C2D8E831-8081-0E03-984C-4A74946BB27D
+2014-06-21 11:49:24.259 Onsite[11463:70b] CREATED - CFE2DF0A-7DAD-3EF8-8880-CAB499C9453F
+2014-06-21 11:49:24.259 Onsite[11463:70b] CREATED - F30A04BA-E8DB-12C1-9950-D38D25C70670
+2014-06-21 11:49:24.259 Onsite[11463:70b] CREATED - F5044B89-A851-1CF7-A004-98CC4C68A1A8
+2014-06-21 11:49:24.260 Onsite[11463:70b] CREATED - FEAB0BF5-1154-F533-870D-E5F070BFFA7F
+2014-06-21 11:49:24.260 Onsite[11463:70b] CREATED - ea0e2d1e6ea88061cd77cc0b0c088e90
+2014-06-21 11:49:29.695 Onsite[11463:70b] ----------Project Address----------
+2014-06-21 11:49:29.695 Onsite[11463:70b] ----------Project City----------
+2014-06-21 11:49:29.696 Onsite[11463:70b] ----------Project State----------
+2014-06-21 11:49:29.696 Onsite[11463:70b] ----------Visit Date----------
+2014-06-21 11:49:29.696 Onsite[11463:70b] ----------Square Footage----------
+2014-06-21 11:49:29.696 Onsite[11463:70b] ----------Volume----------
+2014-06-21 11:49:29.696 Onsite[11463:70b] ----------Annual Operating Hours----------
+2014-06-21 11:49:29.697 Onsite[11463:70b] ----------Program----------
+2014-06-21 11:49:29.697 Onsite[11463:70b] setting first value
+2014-06-21 11:49:29.697 Onsite[11463:70b] set first value
+2014-06-21 11:49:29.697 Onsite[11463:70b] ----------Notes----------
+2014-06-21 11:49:29.698 Onsite[11463:70b] hiding
+2014-06-21 11:49:29.698 Onsite[11463:70b] hiding
+2014-06-21 11:49:29.698 Onsite[11463:70b] hiding
+2014-06-21 11:49:29.698 Onsite[11463:70b] hiding
+2014-06-21 11:50:09.877 Onsite[11463:70b] ----------Project Address----------
+2014-06-21 11:50:09.877 Onsite[11463:70b] ----------Project City----------
+2014-06-21 11:50:09.878 Onsite[11463:70b] ----------Project State----------
+2014-06-21 11:50:09.878 Onsite[11463:70b] ----------Visit Date----------
+2014-06-21 11:50:09.878 Onsite[11463:70b] ----------Square Footage----------
+2014-06-21 11:50:09.878 Onsite[11463:70b] ----------Volume----------
+2014-06-21 11:50:09.879 Onsite[11463:70b] ----------Annual Operating Hours----------
+2014-06-21 11:50:09.879 Onsite[11463:70b] ----------Program----------
+2014-06-21 11:50:09.879 Onsite[11463:70b] setting first value
+2014-06-21 11:50:09.879 Onsite[11463:70b] set first value
+2014-06-21 11:50:09.879 Onsite[11463:70b] ----------Notes----------
+2014-06-21 11:50:12.846 Onsite[11463:70b] ----------Project Address----------
+2014-06-21 11:50:12.846 Onsite[11463:70b] ----------Project City----------
+2014-06-21 11:50:12.846 Onsite[11463:70b] ----------Project State----------
+2014-06-21 11:50:12.846 Onsite[11463:70b] ----------Visit Date----------
+2014-06-21 11:50:12.846 Onsite[11463:70b] ----------Square Footage----------
+2014-06-21 11:50:12.847 Onsite[11463:70b] ----------Volume----------
+2014-06-21 11:50:12.847 Onsite[11463:70b] ----------Annual Operating Hours----------
+2014-06-21 11:50:12.847 Onsite[11463:70b] ----------Program----------
+2014-06-21 11:50:12.847 Onsite[11463:70b] setting first value
+2014-06-21 11:50:12.848 Onsite[11463:70b] set first value
+2014-06-21 11:50:12.848 Onsite[11463:70b] ----------Notes----------

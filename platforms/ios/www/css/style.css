@@ -2,6 +2,11 @@
 textarea {
    resize: none;
 }
+
+.memo-label{
+	align-self: baseline;
+	-webkit-align-self: baseline;
+}
 .center-align{
 	text-align:center;
 }
@@ -216,8 +221,9 @@ textarea {
 .item-select select {
  position: relative;
  padding: 0; 
- width: 100%;
  direction: ltr;
+ -webkit-flex: 1 1 290px;
+ text-overfl0w: ellipsis;
 }
 
 .input-accessories .button-clear{
@@ -246,3 +252,6 @@ onsite-inputs .item-input input {
 	padding-bottom: 30px;
 }
 
+.item-input textarea{
+	padding-top: 7px;
+}

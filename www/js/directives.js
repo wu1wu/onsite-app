@@ -210,6 +210,8 @@ angular.module('starter.directives', [])
 					  //if not not a number (ie a number), then set it as such
 					  if(!isNaN(placeholder.inputValue)){
 						  placeholder.inputValue = Number(placeholder.inputValue);
+					  }else if(Object.prototype.toString.call(placeholder.inputValue) === '[object Date]'){
+					  	  placeholder.inputValue = placeholder.inputValue.toISOString();
 					  }
 
 	                  if($scope.component.schema.type === 'Descriptive'){
@@ -327,4 +329,27 @@ angular.module('starter.directives', [])
 		}
 	}
 })
-;
+.directive('advanceOnChange', function(){
+	return {
+		restrict: 'A',
+		link:function(scope, element, attrs){
+			$(element[0]).on("change",function(){
+				var address = attrs.index.split(".");
+				
+				var nextInput = parseInt(address[1]) + 1;
+				var nextAddress = address[0] + "." + nextInput;
+				
+				var nextElement = $("[data-index='"+nextAddress+"']")
+				
+				if(nextElement.length == 1){
+					nextElement.focus();
+				}else{
+					var section = parseInt(address[0]) + 1;
+					nextAddress = section + ".0";
+					nextElement = $("[data-index='"+nextAddress+"']");
+					nextElement.focus();
+				}
+			});
+		}
+	};
+});
