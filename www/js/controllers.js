@@ -943,50 +943,24 @@ angular.module('starter.controllers', [])
 	  }
 	  
       var options = { 
-          quality : 100, 
-          destinationType : Camera.DestinationType.NATIVE_URI, 
+          quality : 25, 
+          destinationType : Camera.DestinationType.FILE_URI, 
           sourceType : Camera.PictureSourceType.CAMERA, 
           allowEdit : false,
           encodingType: Camera.EncodingType.JPEG,
-          saveToPhotoAlbum: true
+          saveToPhotoAlbum: false,
+		  correctOrientation: true
       };
 
       $cordovaCamera.getPicture(options).then(function(imageData) {
         // Success! Image data is here
-		$ionicPopup.prompt({
-		   title: 'Name Photo',
-		   inputType: 'text',
-		   inputPlaceholder: 'Name',
-		   default: "Photo" + nextPhoto
-		 }).then(function(name) {
-			 //if no name (user hit cancel), don't save
-			 if(!name){
-				 return;
-			 }
-			 //otherwise, lets save this image!
-			 //clean name to be compatable
-			 name = name.replace(/\s+/g, '_').toLowerCase();
-		
-			 //need to figure how to SAVE this bitch.
+		setTimeout(function(){
+			console.log(imageData);
+		}, 100);
 			 
 			 
-			 $scope.photoModal.scope.image.data = imageData;
-			 /*
-			 //remove newlines
-			 imageData = imageData.replace(/\s/g, '');
+		$scope.photoModal.scope.image.data = imageData;
 			
-			 //save data
-			 $ngPouch.db.putAttachment(component._id, name, component._rev, imageData, 'image/png', function(err,res){
-				 if(err){
-					 //error handling
-					 console.log(err);
-					 alert('ERROR');
-				 }else{
-					 console.log("SAVED!");
-				 }
-			 }); 
-			 */
-		 });
       }, function(err) {
         // An error occured. Show a message to the user
       });

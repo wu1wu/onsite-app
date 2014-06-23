@@ -1,0 +1,130 @@
+From 893466c7a9e45fd1772a9a5c9006d7856076c4b4 Mon Sep 17 00:00:00 2001
+From: John Hurliman <jhurliman@jhurliman.org>
+Date: Sat, 29 Mar 2014 00:05:35 -0700
+Subject: [PATCH 1/2] Make dest NATIVE_URI compatible with source CAMERA
+
+When using the camera in iOS, UIImagePickerControllerReferenceURL does not exist because the image only exists in memory immediately after taking a photo. This waits for the image to be written to disk before firing the JS callback when Camera.SourceType.CAMERA, Camera.DestinationType.NATIVE_URI, and saveToPhotoAlbum=true are used together in iOS.
+---
+ src/ios/CDVCamera.m | 37 +++++++++++++++++++++++++++++--------
+ 1 file changed, 29 insertions(+), 8 deletions(-)
+
+diff --git a/src/ios/CDVCamera.m b/src/ios/CDVCamera.m
+index 42c5237..bd1de80 100644
+--- a/src/ios/CDVCamera.m
++++ b/src/ios/CDVCamera.m
+@@ -277,7 +277,7 @@ - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingM
+     NSString* mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+     // IMAGE TYPE
+     if ([mediaType isEqualToString:(NSString*)kUTTypeImage]) {
+-        if (cameraPicker.returnType == DestinationTypeNativeUri) {
++        if (cameraPicker.returnType == DestinationTypeNativeUri && cameraPicker.sourceType != UIImagePickerControllerSourceTypeCamera) {
+             NSString* nativeUri = [(NSURL*)[info objectForKey:UIImagePickerControllerReferenceURL] absoluteString];
+             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:nativeUri];
+         } else {
+@@ -678,7 +678,29 @@ - (void)imagePickerControllerReturnImageResult
+     
+     if (self.pickerController.saveToPhotoAlbum) {
+         ALAssetsLibrary *library = [ALAssetsLibrary new];
+-        [library writeImageDataToSavedPhotosAlbum:self.data metadata:self.metadata completionBlock:nil];
++        [library writeImageDataToSavedPhotosAlbum:self.data metadata:self.metadata completionBlock:^(NSURL *assetURL, NSError *error) {
++            
++            if (self.pickerController.returnType == DestinationTypeNativeUri) {
++                CDVPluginResult* result;
++                if (error) {
++                    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_IO_EXCEPTION messageAsString:[error localizedDescription]];
++                } else {
++                    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[assetURL absoluteString]];
++                }
++                
++                [self.commandDelegate sendPluginResult:result callbackId:self.pickerController.callbackId];
++                
++                self.hasPendingOperation = NO;
++                self.pickerController = nil;
++                self.data = nil;
++                self.metadata = nil;
++            }
++        }];
++        
++        if (self.pickerController.returnType == DestinationTypeNativeUri) {
++            // JS callback will be handler in the writeImageDataToSavedPhotosAlbum completionBlock
++            return;
++        }
+     }
+     
+     if (self.pickerController.returnType == DestinationTypeFileUri) {
+@@ -703,17 +725,16 @@ - (void)imagePickerControllerReturnImageResult
+             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[[NSURL fileURLWithPath:filePath] absoluteString]];
+         }
+     }
+-    else {
++    else if (self.pickerController.returnType == DestinationTypeDataUrl) {
+         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[self.data base64EncodedString]];
+     }
+-    if (result) {
+-        [self.commandDelegate sendPluginResult:result callbackId:self.pickerController.callbackId];
+-    }
+     
+-    if (result) {
+-        [self.commandDelegate sendPluginResult:result callbackId:self.pickerController.callbackId];
++    if (!result) {
++        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Invalid options"];
+     }
+     
++    [self.commandDelegate sendPluginResult:result callbackId:self.pickerController.callbackId];
++    
+     self.hasPendingOperation = NO;
+     self.pickerController = nil;
+     self.data = nil;
+-- 
+1.9.3
+
+
+From d75c34533ae1edc27b17278d3fc63b5b08b906b2 Mon Sep 17 00:00:00 2001
+From: John Hurliman <jhurliman@jhurliman.org>
+Date: Mon, 21 Apr 2014 10:05:47 -0700
+Subject: [PATCH 2/2] Use a __weak reference to self
+
+Use a __weak reference to self in writeImageDataToSavedPhotosAlbum completion block
+---
+ src/ios/CDVCamera.m | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+
+diff --git a/src/ios/CDVCamera.m b/src/ios/CDVCamera.m
+index bd1de80..169138e 100644
+--- a/src/ios/CDVCamera.m
++++ b/src/ios/CDVCamera.m
+@@ -677,10 +677,12 @@ - (void)imagePickerControllerReturnImageResult
+     }
+     
+     if (self.pickerController.saveToPhotoAlbum) {
++    	CDVCamera* __weak weakSelf = self;  // play it safe to avoid retain cycles
+         ALAssetsLibrary *library = [ALAssetsLibrary new];
++        
+         [library writeImageDataToSavedPhotosAlbum:self.data metadata:self.metadata completionBlock:^(NSURL *assetURL, NSError *error) {
+             
+-            if (self.pickerController.returnType == DestinationTypeNativeUri) {
++            if (weakSelf.pickerController.returnType == DestinationTypeNativeUri) {
+                 CDVPluginResult* result;
+                 if (error) {
+                     result = [CDVPluginResult resultWithStatus:CDVCommandStatus_IO_EXCEPTION messageAsString:[error localizedDescription]];
+@@ -688,12 +690,12 @@ - (void)imagePickerControllerReturnImageResult
+                     result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:[assetURL absoluteString]];
+                 }
+                 
+-                [self.commandDelegate sendPluginResult:result callbackId:self.pickerController.callbackId];
++                [weakSelf.commandDelegate sendPluginResult:result callbackId:weakSelf.pickerController.callbackId];
+                 
+-                self.hasPendingOperation = NO;
+-                self.pickerController = nil;
+-                self.data = nil;
+-                self.metadata = nil;
++                weakSelf.hasPendingOperation = NO;
++                weakSelf.pickerController = nil;
++                weakSelf.data = nil;
++                weakSelf.metadata = nil;
+             }
+         }];
+         
+-- 
+1.9.3
+
