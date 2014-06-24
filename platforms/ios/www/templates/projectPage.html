@@ -146,15 +146,25 @@
 
 <!-- PHOTOS -->
 <script type="text/ng-template" id="photos.html">
-	<div class="modal">
+	<div class="modal fullscreen-modal">
 		<ion-header-bar>
 		  <button class="button button-stable" ng-click='close()'>
 		    Close
 		  </button>
 		  <h1 class="title">Component Photos</h1>
 		</ion-header-bar>
-		<ion-content scroll='false' style='overflow: visible;'>
-		  <img src='{{image.data}}' style='height: 1000px; length: 1000px;'>
+		<ion-content scroll='true'>
+		  <div class="list">
+		      <div class="item image-item" ng-repeat='image in images' ng-show='image.visible'>
+				<img src="{{image.url}}"></img>
+				<h2>
+					{{image.name}}
+					<!--<a class="button button-icon icon ion-edit"></a>-->
+					<a class="button button-icon icon ion-trash-b" ng-click='deleteImage($index)'></a>
+				</h2>
+				<p></p>
+		      </div>
+		   </div>
 		</ion-content>
 	</div>
 </script>

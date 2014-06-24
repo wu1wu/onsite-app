@@ -131,7 +131,7 @@ angular.module('starter.controllers', [])
         $user.settings.groupBy = groupBy;
         $user.save();
     };
-})
+ })
 
 .controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, generateReport) {
            
@@ -909,24 +909,73 @@ angular.module('starter.controllers', [])
 	//configure modalScope
 	var modalScope = $scope.photoModal.scope;
 	
-	modalScope.image = {};
+	//close dialog
+	modalScope.close = function(){
+		//set status bar color
+		if(window.StatusBar){
+			StatusBar.styleLightContent();
+		}
+		$scope.photoModal.hide().then(function(){
+			//clean modal scope
+			delete modalScope.images;
+		}); 			
+	};	
 	
- 	modalScope.close = function(){
- 		$scope.photoModal.hide().then(function(){
- 			//clean modal scope
- 			delete modalScope.image.data;
- 		});
-		
- 	};
-	
-   });
+	//loads image in viewing object
+	modalScope.loadImages = function(){		
+		modalScope.images = [];
+		//get doc with attachements
+		$ngPouch.db.get(modalScope.component._id, {attachments:true}).then(function(doc){
+			for(var prop in doc._attachments){
+				var attachment = doc._attachments[prop];
+				modalScope.images.push({
+					name: prop,
+					url: "data:" + attachment.content_type + ";base64," + attachment.data,
+					visible:true
+				});
+			}
+			$scope.$apply();
+		}, function(err){
+			console.log(err);
+		});	
+   };
+   
+   modalScope.deleteImage = function(index){
+	  var image = modalScope.images[index]; 
+   	  var promise = $ionicPopup.confirm({
+   		  title:"Confirm Delete",
+   		  subTitle: "Are you sure you want to delete " + image.name + "?"
+   	  });
+ 	  promise.then(function(result){
+ 		  if(result){ 
+	   		$ngPouch.db.removeAttachment(modalScope.component._id, image.name, modalScope.component._rev, function(err,res){
+	   			if(err){
+	   				console.log(err);
+	   			}else{
+					$scope.$apply(function(){
+						image.visible = false;
+					});
+	   			}
+	   		});
+   		  }
+ 	  });  
+   };
+  });
   
   $scope.showPhotos = function(){	  
 	//configure modal scope
 	var modalScope = $scope.photoModal.scope;
-
+	
 	//lets actually open it up
 	$scope.photoModal.show().then(function(){
+		//set status bar color
+		if(window.StatusBar){
+			StatusBar.styleDefault();
+		}
+		//set up component
+		modalScope.component = $scope.view.activeLibrary.selected;
+		modalScope.loadImages();
+		
 	});
   };
   
@@ -938,28 +987,35 @@ angular.module('starter.controllers', [])
 	  var nextPhoto = 1;
 	  var component = $scope.view.activeLibrary.selected;
 	  
+	  console.log(component._attachments);
 	  if(component._attachments){
-		  nextPhoto = nextPhoto + component._attachments.length;
+		  console.log(Object.keys(component._attachments).length);
+		  nextPhoto = nextPhoto + Object.keys(component._attachments).length;
 	  }
 	  
       var options = { 
           quality : 25, 
-          destinationType : Camera.DestinationType.FILE_URI, 
+          destinationType : Camera.DestinationType.DATA_URL, 
           sourceType : Camera.PictureSourceType.CAMERA, 
           allowEdit : false,
           encodingType: Camera.EncodingType.JPEG,
           saveToPhotoAlbum: false,
-		  correctOrientation: true
+		  correctOrientation: true,
+		  targetWidth: 300,
+		  targetHeight:400
       };
 
       $cordovaCamera.getPicture(options).then(function(imageData) {
         // Success! Image data is here
-		setTimeout(function(){
-			console.log(imageData);
-		}, 100);
-			 
-			 
-		$scope.photoModal.scope.image.data = imageData;
+		imageData = imageData = imageData.replace(/\s/g, '');
+		$ngPouch.db.putAttachment(component._id, component.name + nextPhoto + ".jpg", component._rev, imageData, 'image/jpeg', function(err, result){
+			if(err){
+				//error handling
+				setTimeout(function(){console.log(err);},100);
+			}else{
+				setTimeout(function(){console.log("Saved image: " + component.name + nextPhoto + ".jpg");},100);
+			}
+		});
 			
       }, function(err) {
         // An error occured. Show a message to the user
