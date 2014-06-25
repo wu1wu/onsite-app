@@ -55,7 +55,6 @@ angular.module('starter.services', [])
 .factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','$ngPouch', function($q, $rootScope, $compile, $parse,$timeout, $ngPouch){
 	
 	//trigger object, for later use
-	
 	function Trigger(){
 		var self = this;
 		
@@ -98,7 +97,8 @@ angular.module('starter.services', [])
 			var deferred = $q.defer();
 			var options = {
 				startkey: [project._id,"0"],
-				endkey: [project._id, "9"]
+				endkey: [project._id, "9"],
+				attachments:true
 			};
 			
 			$ngPouch.db.query('components/forProjectId', options, function(err, result){
@@ -110,13 +110,10 @@ angular.module('starter.services', [])
 				//project's components
 				var components = _.pluck(result.rows, "value");
 
-				
-    			
-				
 				//begin scope configuration
 			    var scope = $rootScope.$new(true);
 				scope.project = $.extend({}, project.values);
-				scope.project.notes = project.notes;
+				scope.project._notes = project.notes;
 			    scope.project._name = project.name;
 				scope.project._tag = project.tag;
 				scope.project._created = project.created;
@@ -139,54 +136,59 @@ angular.module('starter.services', [])
 			        ////console.log(trigger);
 					//we'll need to echo the body for each qualifiying component
 			        if(trigger.schemaIds){
-			            _.each(components, function(element){
-			                var componentScope = {};
-			                componentScope = element.values;
-			                componentScope['name'] = element.name;
-			                componentScope['tag'] = element.tag;
-			                componentScope['space'] = element.space;                 
-                			
+			            _.each(components, function(element){             
+							//test to make sure this component qualifies for this trigger
 			                if(_.contains(trigger.schemaIds, element.schemaId)){
-			                    if($parse(trigger.condition)(componentScope) === true || !trigger.condition){                         
+								//ok, we've got a match - lets prep the componentScope
+				                var componentScope = {};
+				                componentScope = element.values;
+				                componentScope['name'] = element.name;
+				                componentScope['tag'] = element.tag;
+				                componentScope['space'] = element.space;
+							
+			                    if($parse(trigger.condition)(componentScope) === true || !trigger.condition){    
+									//ok, we're in - lets add the attachments, now that we're sure this will be used
+									componentScope.attachments = .map(element._attachments, function(value, key){
+										value.name = key;
+										return value;
+									});                       
 									//add component to the list
 									scope.triggers[cleanedName].components.push(componentScope); 
 			                    }
 			                }
 			            });             
             			
-						//if we found at least one component...
-						if(scope.triggers[cleanedName].components.length > 0){
-							//echo header
-				            if(trigger.header){
-				                bodyText += trigger.header;
-				            } 
+					//if we found at least one component...
+					if(scope.triggers[cleanedName].components.length > 0){
+						//echo header
+			            if(trigger.header){
+			                bodyText += trigger.header;
+			            } 
+						
+						//echo body and add in the ngRepeat
+			            if(trigger.body){
+							var asElement = angular.element(trigger.body);
+							//console.log("--element");
+							//console.log(asElement);
 							
-							//echo body and add in the ngRepeat
-				            if(trigger.body){
-								var asElement = angular.element(trigger.body);
-								//console.log("--element");
-								//console.log(asElement);
-								
-								//if body has single parent element
-								if(asElement.length === 1){
-									//console.log(asElement[0]);
-									asElement[0].setAttribute("ng-repeat", 'component in triggers.' + cleanedName + '.components');
-									bodyText += asElement[0].outerHTML;
-									//console.log(asElement[0].outerHTML);
-								}else{//wrap in div
-									bodyText += "<div ng-repeat='component in triggers." + cleanedName + ".components'>";
-					                bodyText += trigger.body;
-									bodyText += "</div>";
-								}
-				            }
-							
-				            //lets echo the footer
-				            if(trigger.footer){
-				                bodyText += trigger.footer;
-				            } 
-							
-						}
-			            
+							//if body has single parent element
+							if(asElement.length === 1){
+								//console.log(asElement[0]);
+								asElement[0].setAttribute("ng-repeat", 'component in triggers.' + cleanedName + '.components');
+								bodyText += asElement[0].outerHTML;
+								//console.log(asElement[0].outerHTML);
+							}else{//wrap in div
+								bodyText += "<div ng-repeat='component in triggers." + cleanedName + ".components'>";
+				                bodyText += trigger.body;
+								bodyText += "</div>";
+							}
+			            }
+						
+			            //lets echo the footer
+			            if(trigger.footer){
+			                bodyText += trigger.footer;
+			            } 
+		            
 			        }else{//just echo once
 			            //Echo header
 			            if(trigger.header){
@@ -561,13 +563,13 @@ angular.module('starter.services', [])
 			var deferred = $q.defer();
 			
 		   //add auth to the remote db URL
-                    var currentBase = localStorage.server + $user.activeGroup.name;
-                    if(currentBase.indexOf('http://') >= 0){
-                            //console.log('http');
-                            currentBase = currentBase.substr(0, 7) + encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase.substr(7);
-                    }else{
-                            currentBase = encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase;
-                    }	
+	        var currentBase = localStorage.server + $user.activeGroup.name;
+	        if(currentBase.indexOf('http://') >= 0){
+	                //console.log('http');
+	                currentBase = currentBase.substr(0, 7) + encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase.substr(7);
+	        }else{
+	                currentBase = encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase;
+	        }	
 			
 			
 		  var loadingPopup = $ionicPopup.show({	
@@ -606,32 +608,4 @@ angular.module('starter.services', [])
 			$ngPouch.autoSync = result;
 		}
 	};
-}])
-.factory('utils',['$rootScope', '$q', function($rootScope, $q) {
-
-  return {
-    base64ToBlob: function(data) {
-      // https://github.com/daleharvey/pouchdb/blob/master/tests/test.attachments.js#L523
-	  console.log("start");
-      var decodedData = PouchDB.utils.atob(data);
-	  console.log("1");
-      var fixedBinary = PouchDB.utils.fixBinary(decodedData);
-	  console.log("2");
-      var blob = PouchDB.utils.createBlob([fixedBinary], {type: 'image/jpeg'});
-	  console.log("end");
-      return blob;
-    },
-    blobToBase64: function(blob) {
-      var deferred = $q.defer();
-      var reader = new FileReader();
-      reader.readAsBinaryString(blob);
-      reader.onloadend = function() {
-        var res = this.result;
-        $rootScope.$apply(function() {
-          deferred.resolve(PouchDB.utils.btoa(res));
-        });
-      };
-      return deferred.promise;
-    }
-  };
 }]);
