@@ -824,7 +824,6 @@ function getHost(name, opts) {
     if (opts.headers) {
       uri.headers = opts.headers;
     }
-	console.log(uri);
     return uri;
   }
 
@@ -862,16 +861,13 @@ function HttpPouch(opts, callback) {
 
   // Parse the URI given by opts.name into an easy-to-use object
   var host = api.getHost(opts.name, opts);
-  console.log(host);
   // Generate the database URL based on the host
   var dbUrl = genDBUrl(host, '');
-  console.log(dbUrl);
   api.getUrl = function () {return dbUrl; };
 
   var ajaxOpts = opts.ajax || {};
   opts = utils.clone(opts);
   function ajax(options, callback) {
-	  console.log(options);
     return utils.ajax(utils.extend({}, ajaxOpts, options), callback);
   }
   var uuids = {

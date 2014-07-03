@@ -41,13 +41,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
-        "id": "org.apache.cordova.inappbrowser.inappbrowser",
-        "clobbers": [
-            "window.open"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
         "id": "org.apache.cordova.statusbar.statusbar",
         "clobbers": [
@@ -227,6 +220,13 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -237,10 +237,10 @@ module.exports.metadata =
     "emailcomposer": "2.0.2",
     "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.device": "0.2.9",
-    "org.apache.cordova.inappbrowser": "0.4.0",
     "org.apache.cordova.statusbar": "0.1.6",
     "org.apache.cordova.camera": "0.3.0",
-    "org.apache.cordova.file": "1.2.0"
+    "org.apache.cordova.file": "1.2.0",
+    "org.apache.cordova.inappbrowser": "0.5.0"
 }
 // BOTTOM OF METADATA
 });

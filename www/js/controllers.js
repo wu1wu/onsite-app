@@ -191,11 +191,13 @@ angular.module('starter.controllers', [])
 		  //query start/end
 		  var options = {
 			  startkey:[id, "0"],
-			  endkey:[id, "9"]
+			  endkey:[id, "9"],
+			  include_docs:true
 		  };
 		  //get all the docs to delete
 		  $ngPouch.db.query("components/forProjectId", options).then(function(result){
-			  var components = _.pluck(result.rows, "value");
+			  console.log(result);
+			  var components = _.pluck(result.rows, "doc");
 			  
 			  for(var i = 0; i < components.length; i++){
 				  components[i]._deleted = true;
@@ -262,7 +264,8 @@ angular.module('starter.controllers', [])
 			var oldId = newProject._id;
 			var options = {
 				startkey: [oldId, "0"],
-				endkey: [oldId, "9"]
+				endkey: [oldId, "9"],
+				include_docs:true
 			};
 			
 			//strip the new project
@@ -275,11 +278,12 @@ angular.module('starter.controllers', [])
 			//post project to DB
 			$ngPouch.db.post(newProject).then(function(result){
 				var newId = result.id;
-				
+				console.log(result);
 				//get all existing components associated with the template
 				$ngPouch.db.query("components/forProjectId", options).then(function(result){
-					var components = _.pluck(result.rows, "value");
-					
+					console.log(result);
+					var components = _.pluck(result.rows, "doc");
+					console.log(components);
 					//strip all info from the components
 		  			for(var i = 0; i < components.length; i++){
 		  				var component = components[i];
@@ -289,7 +293,7 @@ angular.module('starter.controllers', [])
 		  				//assign new projectId
 		  				component.projectId = newId;
 		  			}
-					
+					console.log(components);
 					$ngPouch.bulkDocs({docs:components}).then(function(){
 						//console.log("Saved!");
 					});
@@ -378,17 +382,23 @@ angular.module('starter.controllers', [])
 	  //configure modalScope
 	  modalScope.close = function(){
 		  modal.hide().then(function(){
-			  modalScope.project = null;
+			  delete modalScope.project;
+			  //delete modalScope.selectedReport;
+			  //delete modalScope.reportName;
 		  });
 	  };
 	  
-	  modalScope.reportChanged = function(){
-		  modalScope.reportName = modalScope.project.name + ' - ' + modalScope.selectedReport.name;
+	  modalScope.reportChanged = function(selectedReport){
+		  console.log("change");
+		  modalScope.reportName = modalScope.project.name + ' - ' + selectedReport.name;
 		  modalScope.generatedReport = null;
 		  
-		  generateReport.fn(modalScope.project, modalScope.selectedReport).then(function(report){
+		  generateReport.fn(modalScope.project, selectedReport).then(function(report){
 			  modalScope.generatedReport = report;
 		  });
+		  
+		  console.log("report changed");
+		  console.log(selectedReport);
 	  };
 	  
 	  //open report
@@ -434,51 +444,28 @@ angular.module('starter.controllers', [])
 	  //configure scope again
 	  $scope.reportModal.scope.project = project;
 	  $scope.reportModal.scope.reports = $scope.reports;
-	  $scope.reportModal.scope.selectedReport = $scope.reports[0];
-	  $scope.reportModal.scope.reportName = project.name + ' - ' + $scope.reports[0].name;
-	  
-	  //console.log($scope.reportModal.scope.project);
-	  //console.log($scope.reportModal.scope.selectedReport);
-	  
+
+	  $scope.reportModal.scope.selectedReport =  $scope.reportModal.scope.reports[0];
+	  $scope.reportModal.scope.reportName = project.name + ' - ' + $scope.reportModal.scope.selectedReport.name;
+  
 	  //generate default report
 	  generateReport.fn($scope.reportModal.scope.project, $scope.reportModal.scope.selectedReport).then(function(report){
 		  //console.log('gened');
 		  $scope.reportModal.scope.generatedReport = report;
 	  });
 	  
+	  console.log($scope.reportModal.scope.project);
+	  console.log($scope.reportModal.scope.selectedReport);
+	  //console.log($scope.reports);
+	  
+	  
+	  
 	  $scope.reportModal.show().then(function(){
-	  	
+		  
 	  });
   };
-  $scope.downloadReport = function (report, project) {
-      var modalInstance = $modal.open({
-        templateUrl: 'Download-Content.html',
-        controller: ReportModalInstanceCtrl,
-        resolve: {
-          report: function () {
-            return report;
-          },
-          project: function(){
-              return project;
-          }
-        }
-      });
-  };
-  
-  var ReportModalInstanceCtrl = function ($scope, $modalInstance, generateReport, report, project) {
-    $scope.status = 'Generating Report...';
-	generateReport.fn(project, report).then(function(finalReport){
-		//console.log(finalReport);
-		$scope.report = finalReport;
-		$scope.status = 'Report Ready for Download'; 
-	});
-    
-    $scope.cancel = function () {
-      $modalInstance.dismiss('cancel');
-    };
-  };
 })
-.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate, $cordovaCamera, utils) {
+.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate, $cordovaCamera) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -1008,14 +995,26 @@ angular.module('starter.controllers', [])
       $cordovaCamera.getPicture(options).then(function(imageData) {
         // Success! Image data is here
 		imageData = imageData = imageData.replace(/\s/g, '');
-		$ngPouch.db.putAttachment(component._id, component.name + nextPhoto + ".jpg", component._rev, imageData, 'image/jpeg', function(err, result){
-			if(err){
-				//error handling
-				setTimeout(function(){console.log(err);},100);
-			}else{
-				setTimeout(function(){console.log("Saved image: " + component.name + nextPhoto + ".jpg");},100);
-			}
-		});
+		
+		var newName = component.name.replace(/\s/g, '_') + nextPhoto + ".jpg";
+		
+		$ionicPopup.prompt({
+		   title: 'Enter Caption',
+		   inputType: 'text',
+		   inputPlaceholder: newName,
+	   	   default: newName
+		 }).then(function(res) {
+	 		$ngPouch.db.putAttachment(component._id, res, component._rev, imageData, 'image/jpeg', function(err, result){
+	 			if(err){
+	 				//error handling
+	 				setTimeout(function(){console.log(err);},100);
+	 			}else{		
+	 				setTimeout(function(){console.log("Saved image: " + component.name + nextPhoto + ".jpg");},100);
+	 			}
+	 		});
+		 });
+		 
+		
 			
       }, function(err) {
         // An error occured. Show a message to the user
@@ -1066,11 +1065,12 @@ angular.module('starter.controllers', [])
 		  //query start/end
 		  var options = {
 			  startkey:[id, "0"],
-			  endkey:[id, "9"]
+			  endkey:[id, "9"],
+			  include_docs:true
 		  };
 		  //get all the docs to delete
 		  $ngPouch.db.query("components/forProjectId", options).then(function(result){
-			  var components = _.pluck(result.rows, "value");
+			  var components = _.pluck(result.rows, "doc");
 			  
 			  for(var i = 0; i < components.length; i++){
 				  components[i]._deleted = true;
@@ -1133,7 +1133,8 @@ angular.module('starter.controllers', [])
 			var oldId = newProject._id;
 			var options = {
 				startkey: [oldId, "0"],
-				endkey: [oldId, "9"]
+				endkey: [oldId, "9"],
+				include_docs:true
 			};
 			
 			//strip the new project
@@ -1149,7 +1150,7 @@ angular.module('starter.controllers', [])
 				
 				//get all existing components associated with the template
 				$ngPouch.db.query("components/forProjectId", options).then(function(result){
-					var components = _.pluck(result.rows, "value");
+					var components = _.pluck(result.rows, "doc");
 					
 					//strip all info from the components
 		  			for(var i = 0; i < components.length; i++){

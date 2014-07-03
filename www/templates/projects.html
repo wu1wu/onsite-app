@@ -87,8 +87,8 @@
 		    <label class="item item-input  item-select">
 		      <span class="input-label">Report</span>
 			  	<select ng-model='selectedReport' 
-				ng-change='reportChanged()'
-				ng-options='report.name for report in reports'>
+				ng-change='reportChanged(selectedReport)'
+				ng-options='report as report.name for report in reports'>
 			    </select>
 		    </label>
 		    <label class="item item-input">

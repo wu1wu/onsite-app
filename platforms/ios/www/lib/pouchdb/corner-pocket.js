@@ -246,9 +246,8 @@ angular.module("corner-pocket", [])
 						//check each new result to ensure it meets the conditions
 						for(var i = 0; i < self.mapResults.length; i++){
 							var result = self.mapResults[i];
-							var include = false;
-							console.log(options);
-							if(options.startkey && options.endkey){
+							var include = true;
+							if(options && options.startkey && options.endkey){
 								//various key types
 								include = true;
 								if(result.key instanceof Array){
@@ -304,7 +303,7 @@ angular.module("corner-pocket", [])
 		init:function(name){
 			if(this.changes){//we've already initialized a db, lets turn off listening for that one.
 				this.changes.cancel();
-				console.log("---stope listening to " + this.name + "---");
+				console.log("---stop listening to " + this.name + "---");
 			}
 			
 			this.name = name;

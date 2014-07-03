@@ -87,31 +87,61 @@ angular.module('starter.services', [])
 			return result / count;
 		};
 		
+		self.Attachment = function(component, attachment){
+			console.log("--component--");
+			console.log(component);
+			console.log("--attachment--");
+			console.log(attachment);
+			
+			
+			
+			$ngPouch.db.getAttachment(component.id, attachment.name, function(err,res){
+				if(err){
+					console.log(err);
+					return;
+				}
+				console.log("starting read");
+				var reader = new window.FileReader();
+				 reader.readAsDataURL(res); 
+				 reader.onloadend = function() {
+					 console.log(reader.result);
+				 	attachment.data = reader.result;                
+				 }				
+			});
+			
+			return false;
+		}
+		
 	}
 	
 	
 	//return object/function
 	return {
 		fn:function(project, reportDoc){
+			console.log("report");
 			
+			console.log(reportDoc);
 			var deferred = $q.defer();
 			var options = {
 				startkey: [project._id,"0"],
-				endkey: [project._id, "9"],
-				attachments:true
+				endkey: [project._id, "9"]
 			};
+			
+			var reportText = "";
+			//begin scope configuration - project
+			var scope = $rootScope.$new(true);
 			
 			$ngPouch.db.query('components/forProjectId', options, function(err, result){
 				if(err){
-					//console.log(err);
+					console.log(err);
 					deferred.reject(err);
 					return;
 				}		
 				//project's components
-				var components = _.pluck(result.rows, "value");
-
-				//begin scope configuration
-			    var scope = $rootScope.$new(true);
+				var components = result.rows;
+				
+				console.log(components);
+				
 				scope.project = $.extend({}, project.values);
 				scope.project._notes = project.notes;
 			    scope.project._name = project.name;
@@ -122,150 +152,194 @@ angular.module('starter.services', [])
 				scope.triggers = {};
 				
 				var bodyText = "";
-    
-			    //now lets actually process the report
-			    for(var i = 0; i < reportDoc.triggers.length;i++){
-			        var trigger = reportDoc.triggers[i];
-					
-					//cleaned trigger name
-					var cleanedName = trigger.name.replace(' ', '_');
-					
-					//create trigger object
-					scope.triggers[cleanedName] = new Trigger();
-					
-			        ////console.log(trigger);
-					//we'll need to echo the body for each qualifiying component
-			        if(trigger.schemaIds){
-			            _.each(components, function(element){             
-							//test to make sure this component qualifies for this trigger
-			                if(_.contains(trigger.schemaIds, element.schemaId)){
-								//ok, we've got a match - lets prep the componentScope
-				                var componentScope = {};
-				                componentScope = element.values;
-				                componentScope['name'] = element.name;
-				                componentScope['tag'] = element.tag;
-				                componentScope['space'] = element.space;
-							
-			                    if($parse(trigger.condition)(componentScope) === true || !trigger.condition){    
-									//ok, we're in - lets add the attachments, now that we're sure this will be used
-									componentScope.attachments = .map(element._attachments, function(value, key){
-										value.name = key;
-										return value;
-									});                       
-									//add component to the list
-									scope.triggers[cleanedName].components.push(componentScope); 
-			                    }
-			                }
-			            });             
-            			
-					//if we found at least one component...
-					if(scope.triggers[cleanedName].components.length > 0){
-						//echo header
-			            if(trigger.header){
-			                bodyText += trigger.header;
-			            } 
-						
-						//echo body and add in the ngRepeat
-			            if(trigger.body){
-							var asElement = angular.element(trigger.body);
-							//console.log("--element");
-							//console.log(asElement);
-							
-							//if body has single parent element
-							if(asElement.length === 1){
-								//console.log(asElement[0]);
-								asElement[0].setAttribute("ng-repeat", 'component in triggers.' + cleanedName + '.components');
-								bodyText += asElement[0].outerHTML;
-								//console.log(asElement[0].outerHTML);
-							}else{//wrap in div
-								bodyText += "<div ng-repeat='component in triggers." + cleanedName + ".components'>";
-				                bodyText += trigger.body;
-								bodyText += "</div>";
-							}
-			            }
-						
-			            //lets echo the footer
-			            if(trigger.footer){
-			                bodyText += trigger.footer;
-			            } 
-		            
-			        }else{//just echo once
-			            //Echo header
-			            if(trigger.header){
-			                bodyText += trigger.header;
-			            }            
-			            //Echo header
-			            if(trigger.body){
-			                bodyText += trigger.body;
-			            }            
-			            //Echo footer
-			            if(trigger.footer){
-			                bodyText += trigger.footer; 
-			            }            
-			        }      
-			    }//Loop through to next trigger
+				console.log("1");
+				//promise array for fetching docs
+				var promises = [];
 				
-				var style = reportDoc.styles ? reportDoc.styles:"";
-				
-			    var reportText = "<html " + 
-			            "xmlns:o='urn:schemas-microsoft-com:office:office' " +
-			            "xmlns:w='urn:schemas-microsoft-com:office:word'" +
-			            "xmlns='http://www.w3.org/TR/REC-html40'>" +
-			            "<head><title>Time</title>";
-
-			    reportText += "<!--[if gte mso 9]>" +
-			                             "<xml>" + 
-			                             "<w:WordDocument>" +
-			                             "<w:View>Print</w:View>" +
-			                             "<w:Zoom>90</w:Zoom>" + 
-			                             "<w:DoNotOptimizeForBrowser/>" +
-			                             "</w:WordDocument>" +
-			                             "</xml>" + 
-			                             "<![endif]-->";
-
-			    reportText += "<style>" +
-			                            "<!-- /* Style Definitions */" +
-			                            "@page Section1" +
-			                            "   {size:8.5in 11.0in; " +
-			                            "   margin:1.0in 1.25in 1.0in 1.25in ; " +
-			                            "   mso-header-margin:.5in; " +
-			                            "   mso-footer-margin:.5in; mso-paper-source:0;}" +
-			                            " div.Section1" +
-			                            "   {page:Section1;}" +
-			                            "table{border-collapse: collapse;}" +
-			                            "td{border: 1px solid black;padding: 5pt;}" +
-			                            "th{border: 1px solid black;padding: 5pt;}" +
-			                            style +
-			                            "-->" +
-			                           "</style></head>";
-				
-				//compile report text 
-				var compiled = $compile(bodyText)(scope);
-				
-				//create temp document to hold elements
-				var tmp = document.createElement("div");
-				
-				//add each element to document
-				for(var i = 0; i < compiled.length; i++){
-					tmp.appendChild(compiled[i]);				
+				//get requests components
+				for(var i = 0; i < components.length; i++){
+					var component = components[i];
+					promises.push($ngPouch.db.get(component.id, {attachments:true}));
 				}
-				//causes compilation
-				scope.$apply();
+				console.log("2");
+				//upon promise resolution...
+				$q.all(promises).then(function(results){
+					console.log("3");
+					//...set up each doc
+					var loadedComponents = [];
+					
+					for(var i = 0; i < results.length; i++){
+						var component = results[i];
+						
+						var componentScope = {};
+		                componentScope = $.extend({}, component.values);
+						componentScope.schemaId = component.schemaId;
+						
+		                componentScope['name'] = component.name;
+		                componentScope['tag'] = component.tag;
+		                componentScope['space'] = component.space;
+						componentScope.attachments = [];
+						
+						for(var prop in component._attachments){
+							var attachment = component._attachments[prop];
+							componentScope.attachments.push({
+								name: prop.split(".")[0],
+								url: "data:" + attachment.content_type + ";base64," + attachment.data,
+							});
+						}	
+						loadedComponents.push(componentScope);
+					}
+					
+					//now that we have all the data, lets process the report
+				    //now lets actually process the report
+				    for(var i = 0; i < reportDoc.triggers.length;i++){
+				        var trigger = reportDoc.triggers[i];
+					
+						//cleaned trigger name
+						var cleanedName = trigger.name.replace(' ', '_');
+					
+						//create trigger object
+						scope.triggers[cleanedName] = new Trigger();
+					
+				        ////console.log(trigger);
+						//we'll need to echo the body for each qualifiying component
+				        if(trigger.schemaIds){
+				            _.each(loadedComponents, function(componentScope){             
+								//test to make sure this component qualifies for this trigger
+				                if(_.contains(trigger.schemaIds, componentScope.schemaId)){								
+				                    if($parse(trigger.condition)(componentScope) === true || trigger.condition == true){    
+										//add component to the list
+										scope.triggers[cleanedName].components.push(componentScope); 
+				                    }
+				                }
+				            });  
+						
+							console.log(scope.triggers);           
+            			
+							//if we found at least one component...
+							if(scope.triggers[cleanedName].components.length > 0){
+								//echo header
+					            if(trigger.header){
+					                bodyText += trigger.header;
+					            } 
+						
+								//echo body
+					            if(trigger.body){/*
+									var asElement = angular.element(trigger.body);
+									//console.log("--element");
+									//console.log(asElement);
+							
+									//if body has single parent element
+									if(asElement.length === 1){
+										//console.log(asElement[0]);
+										asElement[0].setAttribute("ng-repeat", 'component in triggers.' + cleanedName + '.components');
+										bodyText += asElement[0].outerHTML;
+										//console.log(asElement[0].outerHTML);
+									}else{//wrap in div
+										bodyText += "<div ng-repeat='component in triggers." + cleanedName + ".components'>";
+						                bodyText += trigger.body;
+										bodyText += "</div>";
+									}
+									*/
+									
+									bodyText += trigger.body;
+					            }
+						
+					            //lets echo the footer
+					            if(trigger.footer){
+					                bodyText += trigger.footer;
+					            } 
+							}
+		            
+				        }else{//just echo once
+				            //Echo header
+				            if(trigger.header){
+				                bodyText += trigger.header;
+				            }            
+				            //Echo header
+				            if(trigger.body){
+				                bodyText += trigger.body;
+				            }            
+				            //Echo footer
+				            if(trigger.footer){
+				                bodyText += trigger.footer; 
+				            }            
+				        }      
+				    }//Loop through to next trigger
 				
-				//strip out angular comments
-				var innerHtml = tmp.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+					var style = reportDoc.styles ? reportDoc.styles:"";
 				
-				//add to report text
-				reportText += "<body lang=EN-US style='tab-interval:.5in'>" + innerHtml + "</body>";
-				reportText += "</html>";
+				    reportText = "<html " + 
+				            "xmlns:o='urn:schemas-microsoft-com:office:office' " +
+				            "xmlns:w='urn:schemas-microsoft-com:office:word'" +
+				            "xmlns='http://www.w3.org/TR/REC-html40'>" +
+				            "<head><title>Time</title>";
+
+				    reportText += "<!--[if gte mso 9]>" +
+				                             "<xml>" + 
+				                             "<w:WordDocument>" +
+				                             "<w:View>Print</w:View>" +
+				                             "<w:Zoom>90</w:Zoom>" + 
+				                             "<w:DoNotOptimizeForBrowser/>" +
+				                             "</w:WordDocument>" +
+				                             "</xml>" + 
+				                             "<![endif]-->";
+
+				    reportText += "<style>" +
+				                            "<!-- /* Style Definitions */" +
+				                            "@page Section1" +
+				                            "   {size:8.5in 11.0in; " +
+				                            "   margin:1.0in 1.25in 1.0in 1.25in ; " +
+				                            "   mso-header-margin:.5in; " +
+				                            "   mso-footer-margin:.5in; mso-paper-source:0;}" +
+				                            " div.Section1" +
+				                            "   {page:Section1;}" +
+				                            "table{border-collapse: collapse;}" +
+				                            "td{border: 1px solid black;padding: 5pt;}" +
+				                            "th{border: 1px solid black;padding: 5pt;}" +
+				                            style +
+				                            "-->" +
+				                           "</style></head>";
 				
-			    //instantiate report
-			    var report = {};
-			    report.data = btoa(reportText); 
-			    report.title = project.name + " - " + reportDoc.name + ".doc";
+					//compile report text 
+					var compiled = $compile(bodyText)(scope);
+					
+					//create temp document to hold elements
+					var tmp = document.createElement("div");
 				
-				deferred.resolve(report);
+					//add each element to document
+					for(var i = 0; i < compiled.length; i++){
+						tmp.appendChild(compiled[i]);				
+					}
+					//need to remove this from angular so we can run out scope.apply in peace
+					setTimeout(function(){
+						//causes compilation
+						scope.$apply();
+
+						//strip out angular comments
+						var innerHtml = tmp.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+				
+						//add to report text
+						reportText += "<body lang=EN-US style='tab-interval:.5in'>" + innerHtml + "</body>";
+						reportText += "</html>";
+				
+					    //instantiate report
+					    var report = {};
+					
+						report.data = btoa(reportText); 
+					    report.title = project.name + " - " + reportDoc.name + ".doc";
+				
+						deferred.resolve(report);
+					});
+				}, function(err){
+					//ERROR HANDLING
+					console.log(err);
+				});		    
 			});
+			
+			var success = function(){
+				
+			};
 			return deferred.promise;
 		}	
 	}
@@ -586,9 +660,15 @@ angular.module('starter.services', [])
                                         '<div class="col"></div>' +
                                     '</div>'
 		  });
-		  $ngPouch.db.sync(currentBase).on('complete', function(data){
+		  $ngPouch.db.sync(currentBase)
+		  .on('complete', function(data){
 			  loadingPopup.close();
 			  deferred.resolve(data);
+		  })
+		  .on('error', function(error){
+			  console.log(error);
+			  $ionicPopup.alert({title:"Sync Error"});
+			  loadingPopup.close();
 		  });
 		  
 		  return deferred.promise;
