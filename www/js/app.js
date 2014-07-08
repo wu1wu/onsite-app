@@ -11,7 +11,6 @@ angular.module('starter',
 	'starter.directives',
 	'starter.services',
 	'corner-pocket',
-	'autocomplete',
 	'ngCordova'
 ])
 

@@ -403,7 +403,7 @@ angular.module('starter.controllers', [])
 	  
 	  //open report
 	  modalScope.viewReport = function(){
-	  	var ref = window.open("data:application/octet-stream;base64," + modalScope.generatedReport.data, '_blank', 'location=no');
+	  	var ref = window.open(modalScope.generatedReport.html, '_blank', 'location=no');
 		ref.addEventListener('loadstop', function(){
 			modalScope.close();
 		});
@@ -419,7 +419,7 @@ angular.module('starter.controllers', [])
 		     {
 		        mimeType: 'application/msword',
 		        encoding: 'Base64',
-		        data: modalScope.generatedReport.data,
+		        data: btoa(modalScope.generatedReport.doc),
 		        name: modalScope.reportName + '.doc'
 		      }
 		    ],

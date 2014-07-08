@@ -1,5 +1,31 @@
 angular.module('starter.services', [])
 
+.factory('MHTMLDoc', function(){
+	function MHTMLDoc (){
+	     this.boundary = '...BOUNDARY...';
+	    //begin configuring data on inialization.
+	    this.doc = 'MIME-Version: 1.0\nContent-Type: multipart/related; boundary="'+ this.boundary + '"';
+    
+	    this.addFile = function(path, contentType, data){
+	        this.doc += "\n\n--" + this.boundary;
+	        this.doc += "\nContent-Location: file:///C:/" + path.replace(/!\\\!/g,"/");
+	        this.doc += "\nContent-Transfer-Encoding: base64"
+	        this.doc += "\nContent-Type: "+ contentType + "\n\n";
+	        this.doc += data;
+	    };
+    
+	    this.getDoc = function(){
+	        return this.doc + "\n\n--" + this.boundary + "--";
+	    };
+	}
+	
+	return {
+		new: function(){
+			return new HTMLDoc();
+		}
+	};
+})
+
 .service('ifOnline', function($q, $ionicPopup){
 	
 	return function(opts){
@@ -52,7 +78,7 @@ angular.module('starter.services', [])
 	};
 })
 
-.factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','$ngPouch', function($q, $rootScope, $compile, $parse,$timeout, $ngPouch){
+.factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','$ngPouch', 'MHTMLDoc', function($q, $rootScope, $compile, $parse,$timeout, $ngPouch, MHTMLDoc){
 	
 	//trigger object, for later use
 	function Trigger(){
@@ -178,6 +204,7 @@ angular.module('starter.services', [])
 		                componentScope['name'] = component.name;
 		                componentScope['tag'] = component.tag;
 		                componentScope['space'] = component.space;
+						componentScope['id'] = component._id;
 						componentScope.attachments = [];
 						
 						for(var prop in component._attachments){
@@ -185,10 +212,14 @@ angular.module('starter.services', [])
 							componentScope.attachments.push({
 								name: prop.split(".")[0],
 								url: "data:" + attachment.content_type + ";base64," + attachment.data,
+								docUrl: "report_files/" + component._id + "----" + prop
 							});
 						}	
 						loadedComponents.push(componentScope);
 					}
+					
+					//index loaded components incase we need them
+					var indexedComponents = _.indexBy(loadedComponents. 'id');
 					
 					//now that we have all the data, lets process the report
 				    //now lets actually process the report
@@ -302,31 +333,60 @@ angular.module('starter.services', [])
 				                           "</style></head>";
 				
 					//compile report text 
-					var compiled = $compile(bodyText)(scope);
+					var compiledPreview = $compile(bodyText)(scope);
+					//replace .url with .murl for use with MHTML document
+					var compiledDoc = $compile(bodyText.replace(/\.url}}/g, ".docUrl}}"));
 					
-					//create temp document to hold elements
-					var tmp = document.createElement("div");
-				
-					//add each element to document
-					for(var i = 0; i < compiled.length; i++){
-						tmp.appendChild(compiled[i]);				
+					//create temp documents to hold elements
+					var tmpPreview = document.createElement("div");
+					var tmpDoc = document.createElement("div");
+					
+					//add each element to preview
+					for(var i = 0; i < compiledPreview.length; i++){
+						tmpPreview.appendChild(compiledPreview[i]);				
 					}
+					
+					//add each element to document
+					for(var i = 0; i < compiledDoc.length; i++){
+						tmpDoc.appendChild(compiledDoc[i]);				
+					}
+					
 					//need to remove this from angular so we can run out scope.apply in peace
 					setTimeout(function(){
 						//causes compilation
 						scope.$apply();
 
 						//strip out angular comments
-						var innerHtml = tmp.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+						var previewHtml = tmpPreview.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+						var docHtml = tmpDoc.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
 				
 						//add to report text
-						reportText += "<body lang=EN-US style='tab-interval:.5in'>" + innerHtml + "</body>";
-						reportText += "</html>";
-				
+						var previewHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + previewHtml + "</body></html>";
+						var docHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + docHtml + "</body></html>";
+						
 					    //instantiate report
 					    var report = {};
-					
-						report.data = btoa(reportText); 
+						
+						//set preview html
+						report.html = previewHtml;
+						
+						//construct MHTMLDocument
+						var doc = MHTMLDoc.new();
+						//main html body
+						doc.addFile("report.htm", "text/html", btoa(docHtml));
+						//IMAGES
+						//get list of matches where we're referencing an 'external' file
+						var urls = docHtml.match(/(report_files\/)([^'"]*)/g);
+						//loop through each and add file to reportDoc
+						for(var i = 0; i < urls.length; i++){
+							var urlTokens = urls[i][1].split("----");
+							var componentId = urlTokens[0];
+							var attachmentId = urlTokens[1];
+							doc.addFile(attachmentId, "image/jpeg", indexedComponents[componentId].attachments[attachmentId]);
+						}
+						//output MHTMLDocument to report object
+						report.doc = doc.getDoc();
+						
 					    report.title = project.name + " - " + reportDoc.name + ".doc";
 				
 						deferred.resolve(report);

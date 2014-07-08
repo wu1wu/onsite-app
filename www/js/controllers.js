@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('AppCtrl', function($scope, $ionicPopup, $ngPouch, $user, $sync, ifOnline, $state, $timeout) {
+.controller('AppCtrl', function($scope, $ionicPopup, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
 	
 	//change status bar color
 	if(window.StatusBar){
@@ -91,13 +91,13 @@ angular.module('starter.controllers', [])
 	$scope.toggleAutosync = function(shouldSync){
 		//console.log(shouldSync);
 		if(!shouldSync){
-			$ngPouch.autoSync.cancel();//stop listening, please!	
+			cornerPocket.autoSync.cancel();//stop listening, please!	
 		}else{
 	  	  ifOnline({alert:true}).then(function(){
                  $sync.live();
 	  			//add listener to handle if network connection is lost
 	  			document.addEventListener("offline", function(){
-	  				$ngPouch.autoSync.cancel();//stop listening, please!
+	  				cornerPocket.autoSync.cancel();//stop listening, please!
 	  				$scope.shouldSync = false;
 	    	  			$ionicPopup.alert({
 	    	  		  	  title:"Lost connection to server",
@@ -133,7 +133,7 @@ angular.module('starter.controllers', [])
     };
  })
 
-.controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, generateReport) {
+.controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
            
 	$scope.view = {};
 		   
@@ -142,8 +142,8 @@ angular.module('starter.controllers', [])
     //GET items and watch tags
     var promises = [];
 
-    promises.push($ngPouch.mapCollection("projects/all"));
-    promises.push($ngPouch.mapCollection("reports/all"));
+    promises.push(cornerPocket.mapCollection("projects/all"));
+    promises.push(cornerPocket.mapCollection("reports/all"));
     $q.all(promises).then(function(results){
             $scope.items = results[0].docs; 
             $scope.reports = results[1].docs;
@@ -154,8 +154,8 @@ angular.module('starter.controllers', [])
     //var libraries = [];
     var templates = [];
 
-    secondWave.push($ngPouch.db.query("templates/groupByTag"));//load these so we don't have to when we open the dialog box
-    //secondWave.push($ngPouch.mapCollection("libraries/all", {descending:true}));//load these so we don't have to when we open the dialog box
+    secondWave.push(cornerPocket.db.query("templates/groupByTag"));//load these so we don't have to when we open the dialog box
+    //secondWave.push(cornerPocket.mapCollection("libraries/all", {descending:true}));//load these so we don't have to when we open the dialog box
     $q.all(secondWave).then(function(results){
             templates = _.pluck(results[0].rows, 'value');
             //libraries = results[1].docs;
@@ -195,7 +195,7 @@ angular.module('starter.controllers', [])
 			  include_docs:true
 		  };
 		  //get all the docs to delete
-		  $ngPouch.db.query("components/forProjectId", options).then(function(result){
+		  cornerPocket.db.query("components/forProjectId", options).then(function(result){
 			  console.log(result);
 			  var components = _.pluck(result.rows, "doc");
 			  
@@ -204,7 +204,7 @@ angular.module('starter.controllers', [])
 			  }
 			  	
 			  if(components.length > 0){
-				  $ngPouch.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.bulkDocs({docs:components}).then(function(data){
 				  });
 			  }
 			  
@@ -276,11 +276,11 @@ angular.module('starter.controllers', [])
 			//console.log(newProject);
 			
 			//post project to DB
-			$ngPouch.db.post(newProject).then(function(result){
+			cornerPocket.db.post(newProject).then(function(result){
 				var newId = result.id;
 				console.log(result);
 				//get all existing components associated with the template
-				$ngPouch.db.query("components/forProjectId", options).then(function(result){
+				cornerPocket.db.query("components/forProjectId", options).then(function(result){
 					console.log(result);
 					var components = _.pluck(result.rows, "doc");
 					console.log(components);
@@ -294,7 +294,7 @@ angular.module('starter.controllers', [])
 		  				component.projectId = newId;
 		  			}
 					console.log(components);
-					$ngPouch.bulkDocs({docs:components}).then(function(){
+					cornerPocket.bulkDocs({docs:components}).then(function(){
 						//console.log("Saved!");
 					});
 				});
@@ -403,7 +403,7 @@ angular.module('starter.controllers', [])
 	  
 	  //open report
 	  modalScope.viewReport = function(){
-	  	var ref = window.open("data:application/octet-stream;base64," + modalScope.generatedReport.data, '_blank', 'location=no');
+	  	var ref = window.open(modalScope.generatedReport.html, '_blank', 'location=no');
 		ref.addEventListener('loadstop', function(){
 			modalScope.close();
 		});
@@ -419,7 +419,7 @@ angular.module('starter.controllers', [])
 		     {
 		        mimeType: 'application/msword',
 		        encoding: 'Base64',
-		        data: modalScope.generatedReport.data,
+		        data: btoa(modalScope.generatedReport.doc),
 		        name: modalScope.reportName + '.doc'
 		      }
 		    ],
@@ -465,7 +465,7 @@ angular.module('starter.controllers', [])
 	  });
   };
 })
-.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate, $cordovaCamera) {
+.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -480,7 +480,7 @@ angular.module('starter.controllers', [])
 		endkey: [projectId,9, "9"]
 	};
 	
-    $ngPouch.mapCollection("projects/packaged", options).then(function(result){
+    cornerPocket.mapCollection("projects/packaged", options).then(function(result){
 		//console.log(result);
 		//get project
 		$scope.project = result.docs[0];
@@ -493,7 +493,7 @@ angular.module('starter.controllers', [])
 
 	var componentSchemasByLibrary;
 	//use these later
-    $ngPouch.db.query("componentSchemas/forLibraryId").then(function(result){
+    cornerPocket.db.query("componentSchemas/forLibraryId").then(function(result){
 		//console.log("component Schemas");
 		//componentSchemas for add new
 		var docs = _.pluck(result.rows, 'value');
@@ -626,7 +626,7 @@ angular.module('starter.controllers', [])
 		copy.name = copy.name + " " + nextNumber;
 		//console.log(copy);
 	    //save doc to db
-		$ngPouch.doc(copy).then(function(newComponent){
+		cornerPocket.doc(copy).then(function(newComponent){
 			console.log("saved");
 			
 			if(newComponent.libraryId === $scope.view.activeLibrary._id){
@@ -692,7 +692,7 @@ angular.module('starter.controllers', [])
   		      var now = new Date();
   		      newItem.created = now.toISOString();
   			  newItem.updated = now.toISOString();
-              $ngPouch.db.post(newItem).then(function(data){
+              cornerPocket.db.post(newItem).then(function(data){
   				//console.log("item saved");
               	//console.log(data);
 				
@@ -813,7 +813,7 @@ angular.module('starter.controllers', [])
 	  var docs = [];
 	  console.log("saving...");
 	  console.log(template);
-	  $ngPouch.db.post(template, function(err, doc){
+	  cornerPocket.db.post(template, function(err, doc){
 		  
 		  if(err){
 			  console.log('error');
@@ -847,7 +847,7 @@ angular.module('starter.controllers', [])
 		  console.log(docs);
 		  
 		  //save all the docs
-		  $ngPouch.db.bulkDocs(docs, function(err, response){
+		  cornerPocket.db.bulkDocs(docs, function(err, response){
 			  if(err){
 				  //ERROR HANDLING
 				  console.log(err);
@@ -879,7 +879,7 @@ angular.module('starter.controllers', [])
 	modalScope.template = {};  
 	modalScope.view = {};
 	
-    $ngPouch.db.query('templates/groupByTag', function(err, response){
+    cornerPocket.db.query('templates/groupByTag', function(err, response){
 	  	modalScope.tags = _.uniq(_.pluck(response.rows, "key"), true);
 		console.log(modalScope.tags);
     });
@@ -912,7 +912,7 @@ angular.module('starter.controllers', [])
 	modalScope.loadImages = function(){		
 		modalScope.images = [];
 		//get doc with attachements
-		$ngPouch.db.get(modalScope.component._id, {attachments:true}).then(function(doc){
+		cornerPocket.db.get(modalScope.component._id, {attachments:true}).then(function(doc){
 			for(var prop in doc._attachments){
 				var attachment = doc._attachments[prop];
 				modalScope.images.push({
@@ -935,7 +935,7 @@ angular.module('starter.controllers', [])
    	  });
  	  promise.then(function(result){
  		  if(result){ 
-	   		$ngPouch.db.removeAttachment(modalScope.component._id, image.name, modalScope.component._rev, function(err,res){
+	   		cornerPocket.db.removeAttachment(modalScope.component._id, image.name, modalScope.component._rev, function(err,res){
 	   			if(err){
 	   				console.log(err);
 	   			}else{
@@ -1004,7 +1004,7 @@ angular.module('starter.controllers', [])
 		   inputPlaceholder: newName,
 	   	   default: newName
 		 }).then(function(res) {
-	 		$ngPouch.db.putAttachment(component._id, res, component._rev, imageData, 'image/jpeg', function(err, result){
+	 		cornerPocket.db.putAttachment(component._id, res, component._rev, imageData, 'image/jpeg', function(err, result){
 	 			if(err){
 	 				//error handling
 	 				setTimeout(function(){console.log(err);},100);
@@ -1023,7 +1023,7 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('templatesController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, generateReport) {
+.controller('templatesController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
            
 	$scope.view = {};
 		   
@@ -1031,7 +1031,7 @@ angular.module('starter.controllers', [])
         
     //GET items and watch tags
 	var templates = [];
-    $ngPouch.mapCollection("templates/all").then(function(results){
+    cornerPocket.mapCollection("templates/all").then(function(results){
         $scope.items = results.docs;
 		templates = _.sortBy($scope.items, 'tag');
     });
@@ -1069,7 +1069,7 @@ angular.module('starter.controllers', [])
 			  include_docs:true
 		  };
 		  //get all the docs to delete
-		  $ngPouch.db.query("components/forProjectId", options).then(function(result){
+		  cornerPocket.db.query("components/forProjectId", options).then(function(result){
 			  var components = _.pluck(result.rows, "doc");
 			  
 			  for(var i = 0; i < components.length; i++){
@@ -1077,7 +1077,7 @@ angular.module('starter.controllers', [])
 			  }
 			  	
 			  if(components.length > 0){
-				  $ngPouch.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.bulkDocs({docs:components}).then(function(data){
 				  });
 			  }
 			  
@@ -1145,11 +1145,11 @@ angular.module('starter.controllers', [])
 			//console.log(newProject);
 			
 			//post project to DB
-			$ngPouch.db.post(newProject).then(function(result){
+			cornerPocket.db.post(newProject).then(function(result){
 				var newId = result.id;
 				
 				//get all existing components associated with the template
-				$ngPouch.db.query("components/forProjectId", options).then(function(result){
+				cornerPocket.db.query("components/forProjectId", options).then(function(result){
 					var components = _.pluck(result.rows, "doc");
 					
 					//strip all info from the components
@@ -1162,7 +1162,7 @@ angular.module('starter.controllers', [])
 		  				component.projectId = newId;
 		  			}
 					
-					$ngPouch.bulkDocs({docs:components}).then(function(){
+					cornerPocket.bulkDocs({docs:components}).then(function(){
 						//console.log("Saved!");
 					});
 				});
@@ -1239,7 +1239,7 @@ angular.module('starter.controllers', [])
   });    
   
 })
-.controller('templatePageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate) {
+.controller('templatePageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -1254,7 +1254,7 @@ angular.module('starter.controllers', [])
 		endkey: [projectId,9, "9"]
 	};
 	
-    $ngPouch.mapCollection("templates/packaged", options).then(function(result){
+    cornerPocket.mapCollection("templates/packaged", options).then(function(result){
 		//console.log(result);
 		//get project
 		$scope.project = result.docs[0];
@@ -1267,7 +1267,7 @@ angular.module('starter.controllers', [])
 
 	var componentSchemasByLibrary;
 	//use these later
-    $ngPouch.db.query("componentSchemas/forLibraryId").then(function(result){
+    cornerPocket.db.query("componentSchemas/forLibraryId").then(function(result){
 		//console.log("component Schemas");
 		//componentSchemas for add new
 		var docs = _.pluck(result.rows, 'value');
@@ -1400,7 +1400,7 @@ angular.module('starter.controllers', [])
 		copy.name = copy.name + " " + nextNumber;
 		//console.log(copy);
 	    //save doc to db
-		$ngPouch.doc(copy).then(function(newComponent){
+		cornerPocket.doc(copy).then(function(newComponent){
 			console.log("saved");
 			
 			if(newComponent.libraryId === $scope.view.activeLibrary._id){
@@ -1466,7 +1466,7 @@ angular.module('starter.controllers', [])
   		      var now = new Date();
   		      newItem.created = now.toISOString();
   			  newItem.updated = now.toISOString();
-              $ngPouch.db.post(newItem).then(function(data){
+              cornerPocket.db.post(newItem).then(function(data){
   				//console.log("item saved");
               	//console.log(data);
 				
