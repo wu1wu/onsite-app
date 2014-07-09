@@ -282,3 +282,9 @@ onsite-inputs .item-input input {
 	margin-left: 20px;
 	vertical-align: middle;
 }
+
+/* CORRECTIONS */
+.scroll-content-false {
+	z-index: 4;
+}
+

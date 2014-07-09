@@ -21,7 +21,7 @@ angular.module('starter.services', [])
 	
 	return {
 		new: function(){
-			return new HTMLDoc();
+			return new MHTMLDoc();
 		}
 	};
 })
@@ -334,8 +334,8 @@ angular.module('starter.services', [])
 				
 					//compile report text 
 					var compiledPreview = $compile(bodyText)(scope);
-					//replace .url with .murl for use with MHTML document
-					var compiledDoc = $compile(bodyText.replace(/\.url}}/g, ".docUrl}}"));
+					//replace .url with .murl for use with MHTML document					
+					var compiledDoc = $compile(bodyText.replace(/\.url}}/g, ".docUrl}}"))(scope);
 					
 					//create temp documents to hold elements
 					var tmpPreview = document.createElement("div");
@@ -359,6 +359,8 @@ angular.module('starter.services', [])
 						//strip out angular comments
 						var previewHtml = tmpPreview.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
 						var docHtml = tmpDoc.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+						console.log(previewHtml);
+						console.log(docHtml);
 						/*
 						//add to report text
 						var previewHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + previewHtml + "</body></html>";
@@ -704,7 +706,7 @@ angular.module('starter.services', [])
 	        }else{
 	                currentBase = encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase;
 	        }	
-			
+			console.log(currentBase);
 			
 		  var loadingPopup = $ionicPopup.show({	
 			  template: '<div class="row">' + 

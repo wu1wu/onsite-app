@@ -21,7 +21,7 @@ angular.module('starter.services', [])
 	
 	return {
 		new: function(){
-			return new HTMLDoc();
+			return new MHTMLDoc();
 		}
 	};
 })
@@ -78,7 +78,7 @@ angular.module('starter.services', [])
 	};
 })
 
-.factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','$ngPouch', 'MHTMLDoc', function($q, $rootScope, $compile, $parse,$timeout, $ngPouch, MHTMLDoc){
+.factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','cornerPocket', 'MHTMLDoc', function($q, $rootScope, $compile, $parse,$timeout, cornerPocket, MHTMLDoc){
 	
 	//trigger object, for later use
 	function Trigger(){
@@ -121,7 +121,7 @@ angular.module('starter.services', [])
 			
 			
 			
-			$ngPouch.db.getAttachment(component.id, attachment.name, function(err,res){
+			cornerPocket.db.getAttachment(component.id, attachment.name, function(err,res){
 				if(err){
 					console.log(err);
 					return;
@@ -157,7 +157,7 @@ angular.module('starter.services', [])
 			//begin scope configuration - project
 			var scope = $rootScope.$new(true);
 			
-			$ngPouch.db.query('components/forProjectId', options, function(err, result){
+			cornerPocket.db.query('components/forProjectId', options, function(err, result){
 				if(err){
 					console.log(err);
 					deferred.reject(err);
@@ -185,7 +185,7 @@ angular.module('starter.services', [])
 				//get requests components
 				for(var i = 0; i < components.length; i++){
 					var component = components[i];
-					promises.push($ngPouch.db.get(component.id, {attachments:true}));
+					promises.push(cornerPocket.db.get(component.id, {attachments:true}));
 				}
 				console.log("2");
 				//upon promise resolution...
@@ -219,7 +219,7 @@ angular.module('starter.services', [])
 					}
 					
 					//index loaded components incase we need them
-					var indexedComponents = _.indexBy(loadedComponents. 'id');
+					var indexedComponents = _.indexBy(loadedComponents, 'id');
 					
 					//now that we have all the data, lets process the report
 				    //now lets actually process the report
@@ -334,8 +334,8 @@ angular.module('starter.services', [])
 				
 					//compile report text 
 					var compiledPreview = $compile(bodyText)(scope);
-					//replace .url with .murl for use with MHTML document
-					var compiledDoc = $compile(bodyText.replace(/\.url}}/g, ".docUrl}}"));
+					//replace .url with .murl for use with MHTML document					
+					var compiledDoc = $compile(bodyText.replace(/\.url}}/g, ".docUrl}}"))(scope);
 					
 					//create temp documents to hold elements
 					var tmpPreview = document.createElement("div");
@@ -359,11 +359,13 @@ angular.module('starter.services', [])
 						//strip out angular comments
 						var previewHtml = tmpPreview.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
 						var docHtml = tmpDoc.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
-				
+						console.log(previewHtml);
+						console.log(docHtml);
+						/*
 						//add to report text
 						var previewHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + previewHtml + "</body></html>";
 						var docHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + docHtml + "</body></html>";
-						
+						*/
 					    //instantiate report
 					    var report = {};
 						
@@ -405,7 +407,7 @@ angular.module('starter.services', [])
 	}
 }])
 
-.factory('$user',['$rootScope', '$location', '$ngPouch', '$http', '$q', '$timeout', 'ifOnline', '$ionicPopup',function($rootScope, $location, $ngPouch, $http, $q, $timeout, ifOnline, $ionicPopup) {
+.factory('$user',['$rootScope', '$location', 'cornerPocket', '$http', '$q', '$timeout', 'ifOnline', '$ionicPopup',function($rootScope, $location, cornerPocket, $http, $q, $timeout, ifOnline, $ionicPopup) {
 	
 	var user = {
 		/*load:function(){
@@ -439,7 +441,7 @@ angular.module('starter.services', [])
 					user.offline = false;
 					
 					//ok, lets check to see if it's the first time for each group 
-					$ngPouch.db.get('_design/projects', function(err, result){
+					cornerPocket.db.get('_design/projects', function(err, result){
 						if(err){
 							
 							//doc not found, better sync
@@ -471,7 +473,7 @@ angular.module('starter.services', [])
 	                                    '</div>'
 	                  		});
 												  
-						    $ngPouch.db.sync(currentBase)
+						    cornerPocket.db.sync(currentBase)
 							.on('change', function(data){
 								//console.log('change');
 								//console.log(data);
@@ -527,12 +529,12 @@ angular.module('starter.services', [])
 							
 							
 							//start up db
-							if($ngPouch.changes){
-								$ngPouch.changes.cancel();//stop listening, please!	
+							if(cornerPocket.changes){
+								cornerPocket.changes.cancel();//stop listening, please!	
 							}
 			
 							//lastly, initialize the database (locally)
-							$ngPouch.init(user.activeGroup.name);
+							cornerPocket.init(user.activeGroup.name);
 							
 							
 							//for some reason this redirect is not happening... :(	
@@ -554,8 +556,8 @@ angular.module('starter.services', [])
 		logOut:function(){
 			//console.log('logging out');
 			var user = this;
-			if($ngPouch.changes){
-				$ngPouch.changes.cancel();//stop listening, please!	
+			if(cornerPocket.changes){
+				cornerPocket.changes.cancel();//stop listening, please!	
 			}	
 			
 			//if user logged in online and is still online, delete session
@@ -591,11 +593,11 @@ angular.module('starter.services', [])
 				localUsers[user.name] = user;
 				localStorage.setItem('users', JSON.stringify(localUsers));
 				
-				if($ngPouch.changes){
-					$ngPouch.changes.cancel();//stop listening, please!	
+				if(cornerPocket.changes){
+					cornerPocket.changes.cancel();//stop listening, please!	
 				}
 				
-				$ngPouch.init(group.name);
+				cornerPocket.init(group.name);
 				$location.path("/app/projects").replace();
 			}
 			
@@ -650,12 +652,12 @@ angular.module('starter.services', [])
                         
                         
 			
-			if($ngPouch.changes){
-				$ngPouch.changes.cancel();//stop listening, please!	
+			if(cornerPocket.changes){
+				cornerPocket.changes.cancel();//stop listening, please!	
 			}
 			
 			//lastly, initialize the database (locally)
-			$ngPouch.init(user.activeGroup.name);
+			cornerPocket.init(user.activeGroup.name);
 		},
                 save: function(){
                     var user = this;
@@ -691,7 +693,7 @@ angular.module('starter.services', [])
 	
 }])
 
-.service('$sync', ['$q', '$ionicPopup','$user', '$ngPouch', 'ifOnline', function($q, $ionicPopup, $user, $ngPouch, ifOnline){
+.service('$sync', ['$q', '$ionicPopup','$user', 'cornerPocket', 'ifOnline', function($q, $ionicPopup, $user, cornerPocket, ifOnline){
 	return{
 		once: function(){
 			var deferred = $q.defer();
@@ -720,7 +722,7 @@ angular.module('starter.services', [])
                                         '<div class="col"></div>' +
                                     '</div>'
 		  });
-		  $ngPouch.db.sync(currentBase)
+		  cornerPocket.db.sync(currentBase)
 		  .on('complete', function(data){
 			  loadingPopup.close();
 			  deferred.resolve(data);
@@ -743,9 +745,9 @@ angular.module('starter.services', [])
 				currentBase = $user.name + ":" + $user.password + "@"+ currentBase;
 			}	
 			
-		    var result = $ngPouch.db.sync(currentBase, {live:true});
+		    var result = cornerPocket.db.sync(currentBase, {live:true});
 			//console.log(result);
-			$ngPouch.autoSync = result;
+			cornerPocket.autoSync = result;
 		}
 	};
 }]);
