@@ -359,8 +359,7 @@ angular.module('starter.services', [])
 						//strip out angular comments
 						var previewHtml = tmpPreview.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
 						var docHtml = tmpDoc.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
-						console.log(previewHtml);
-						console.log(docHtml);
+
 						/*
 						//add to report text
 						var previewHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + previewHtml + "</body></html>";
@@ -370,7 +369,8 @@ angular.module('starter.services', [])
 					    var report = {};
 						
 						//set preview html
-						report.html = previewHtml;
+						report.html = reportText + "<body>" + previewHtml + "</body><html>";
+						docHtml = reportText + "<body>" + docHtml + "</body><html>";
 						
 						//construct MHTMLDocument
 						var doc = MHTMLDoc.new();
@@ -380,12 +380,17 @@ angular.module('starter.services', [])
 						//get list of matches where we're referencing an 'external' file
 						var urls = docHtml.match(/(report_files\/)([^'"]*)/g);
 						//loop through each and add file to reportDoc
-						for(var i = 0; i < urls.length; i++){
-							var urlTokens = urls[i][1].split("----");
-							var componentId = urlTokens[0];
-							var attachmentId = urlTokens[1];
-							doc.addFile(attachmentId, "image/jpeg", indexedComponents[componentId].attachments[attachmentId]);
+						if(urls){
+							for(var i = 0; i < urls.length; i++){
+								var urlTokens = urls[i].replace("report_files/", '').split("----");
+								var componentId = urlTokens[0];
+								var attachmentId = urlTokens[1].split(".")[0];
+								var attachment = _.findWhere(indexedComponents[componentId].attachments, {name: attachmentId});
+								console.log(attachment.url.slice(23));
+								doc.addFile(attachmentId, "image/jpeg", attachment.url.slice(23));
+							}
 						}
+						
 						//output MHTMLDocument to report object
 						report.doc = doc.getDoc();
 						
@@ -698,15 +703,13 @@ angular.module('starter.services', [])
 		once: function(){
 			var deferred = $q.defer();
 			
-		   //add auth to the remote db URL
-	        var currentBase = localStorage.server + $user.activeGroup.name;
-	        if(currentBase.indexOf('http://') >= 0){
-	                //console.log('http');
-	                currentBase = currentBase.substr(0, 7) + encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase.substr(7);
-	        }else{
-	                currentBase = encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase;
-	        }	
-			console.log(currentBase);
+		   //add auth to the remote db URL			
+			var remote = new PouchDB(localStorage.server + $user.activeGroup.name, {
+				auth:{
+					username:$user.name,
+					password:$user.password
+				}
+			});
 			
 		  var loadingPopup = $ionicPopup.show({	
 			  template: '<div class="row">' + 
@@ -722,7 +725,7 @@ angular.module('starter.services', [])
                                         '<div class="col"></div>' +
                                     '</div>'
 		  });
-		  cornerPocket.db.sync(currentBase)
+		  cornerPocket.db.sync(remote)
 		  .on('complete', function(data){
 			  loadingPopup.close();
 			  deferred.resolve(data);

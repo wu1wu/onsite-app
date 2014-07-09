@@ -403,7 +403,7 @@ angular.module('starter.controllers', [])
 	  
 	  //open report
 	  modalScope.viewReport = function(){
-	  	var ref = window.open(modalScope.generatedReport.html, '_blank', 'location=no');
+	  	var ref = window.open("data:application/octet-stream;base64," + btoa(modalScope.generatedReport.html), '_blank', 'location=no');
 		ref.addEventListener('loadstop', function(){
 			modalScope.close();
 		});
