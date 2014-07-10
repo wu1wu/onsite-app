@@ -283,6 +283,11 @@ onsite-inputs .item-input input {
 	vertical-align: middle;
 }
 
+.loading-icon{
+	text-align: center;
+	font-size: 40px;
+}
+
 /* CORRECTIONS */
 .scroll-content-false {
 	z-index: 4;
