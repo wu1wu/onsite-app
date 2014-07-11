@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('AppCtrl', function($scope, $ionicPopup, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
+.controller('AppCtrl', function($scope, $ionicPopup, $ionicSideMenuDelegate, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
 	
 	//change status bar color
 	if(window.StatusBar){
@@ -119,8 +119,9 @@ angular.module('starter.controllers', [])
     $scope.setActiveGroup = function(group){
 		//console.log('setting active group');
 		$user.setGroup(group);
-                $user.save();
-                $state.go($state.current, {}, {reload: true});
+        $user.save();
+		$ionicSideMenuDelegate.toggleLeft(false);
+        $state.go($state.current, {}, {reload: true});
 	};
         
     //set default value
