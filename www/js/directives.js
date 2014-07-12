@@ -287,14 +287,17 @@ angular.module('starter.directives', [])
 			}, button);
 			
 			//match input show/hide
-			scope.$watch(attrs.ngHide, function(newVal){
-				if(newVal){
-					console.log("hiding");
-					button.hide();
-				}else{
-					button.show();
-				}
-			});
+			if(attrs.ngHide){
+				scope.$watch(attrs.ngHide, function(newVal){
+					if(newVal){
+						console.log("hiding");
+						button.hide();
+					}else{
+						button.show();
+					}
+				});
+			}
+			
 		}
 	};
 })
