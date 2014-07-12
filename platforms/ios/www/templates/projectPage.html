@@ -18,7 +18,7 @@
   </div>
 	<ion-content has-tabs="true" scroll='false'>
 	    <div class="row no-padding" ng-show='view.activeLibrary != "notes"'>
-	      <!--component list-->
+	      <!--headers-->
 	      <div class='col-33 right-shadow' style='z-index: 100'>
 	        <div class='bar bar-light bar-subheader' style='position: relative;top:0; '>
 	          <button class="button button-icon icon ion-ios7-copy" ng-click='copyComponent()'></button>
@@ -30,8 +30,8 @@
 	        <div class='bar bar-light bar-subheader' style='position: relative;top:0;'>
 	          <h2 class='title'>{{view.activeLibrary.selected.name}}</h2>
 			  
-			  <button class="button button-icon icon ion-ios7-photos" ng-click=''></button>
-			  <button class="button button-icon icon ion-ios7-camera" ng-click=''></button>
+			  <button class="button button-icon icon ion-ios7-photos" ng-click='showPhotos()' ng-show='view.activeLibrary.selected'></button>
+			  <button class="button button-icon icon ion-ios7-camera" ng-click='takePicture()' ng-show='view.activeLibrary.selected'></button>
 	        </div>
 	      </div>
 	    </div>
@@ -140,7 +140,32 @@
 		    </label>			  
 		  </div>  
 		</ion-content>
-		  
+	</div>
+</script>
+
+
+<!-- PHOTOS -->
+<script type="text/ng-template" id="photos.html">
+	<div class="modal fullscreen-modal">
+		<ion-header-bar>
+		  <button class="button button-stable" ng-click='close()'>
+		    Close
+		  </button>
+		  <h1 class="title">Component Photos</h1>
+		</ion-header-bar>
+		<ion-content scroll='true'>
+		  <div class="list">
+		      <div class="item image-item" ng-repeat='image in images' ng-show='image.visible'>
+				<img src="{{image.url}}"></img>
+				<h2>
+					{{image.name}}
+					<!--<a class="button button-icon icon ion-edit"></a>-->
+					<a class="button button-icon icon ion-trash-b" ng-click='deleteImage($index)'></a>
+				</h2>
+				<p></p>
+		      </div>
+		   </div>
+		</ion-content>
 	</div>
 </script>
 

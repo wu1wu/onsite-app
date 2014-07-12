@@ -1,5 +1,31 @@
 angular.module('starter.services', [])
 
+.factory('MHTMLDoc', function(){
+	function MHTMLDoc (){
+	     this.boundary = '...BOUNDARY...';
+	    //begin configuring data on inialization.
+	    this.doc = 'MIME-Version: 1.0\nContent-Type: multipart/related; boundary="'+ this.boundary + '"';
+    
+	    this.addFile = function(path, contentType, data){
+	        this.doc += "\n\n--" + this.boundary;
+	        this.doc += "\nContent-Location: file:///C:/" + path.replace(/!\\\!/g,"/");
+	        this.doc += "\nContent-Transfer-Encoding: base64"
+	        this.doc += "\nContent-Type: "+ contentType + "\n\n";
+	        this.doc += data;
+	    };
+    
+	    this.getDoc = function(){
+	        return this.doc + "\n\n--" + this.boundary + "--";
+	    };
+	}
+	
+	return {
+		new: function(){
+			return new MHTMLDoc();
+		}
+	};
+})
+
 .service('ifOnline', function($q, $ionicPopup){
 	
 	return function(opts){
@@ -52,10 +78,9 @@ angular.module('starter.services', [])
 	};
 })
 
-.factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','$ngPouch', function($q, $rootScope, $compile, $parse,$timeout, $ngPouch){
+.factory('generateReport',['$q','$rootScope', '$compile', '$parse', '$timeout','cornerPocket', 'MHTMLDoc', function($q, $rootScope, $compile, $parse,$timeout, cornerPocket, MHTMLDoc){
 	
 	//trigger object, for later use
-	
 	function Trigger(){
 		var self = this;
 		
@@ -88,35 +113,63 @@ angular.module('starter.services', [])
 			return result / count;
 		};
 		
+		self.Attachment = function(component, attachment){
+			console.log("--component--");
+			console.log(component);
+			console.log("--attachment--");
+			console.log(attachment);
+			
+			
+			
+			cornerPocket.db.getAttachment(component.id, attachment.name, function(err,res){
+				if(err){
+					console.log(err);
+					return;
+				}
+				console.log("starting read");
+				var reader = new window.FileReader();
+				 reader.readAsDataURL(res); 
+				 reader.onloadend = function() {
+					 console.log(reader.result);
+				 	attachment.data = reader.result;                
+				 }				
+			});
+			
+			return false;
+		}
+		
 	}
 	
 	
 	//return object/function
 	return {
 		fn:function(project, reportDoc){
+			console.log("report");
 			
+			console.log(reportDoc);
 			var deferred = $q.defer();
 			var options = {
 				startkey: [project._id,"0"],
 				endkey: [project._id, "9"]
 			};
 			
-			$ngPouch.db.query('components/forProjectId', options, function(err, result){
+			var reportText = "";
+			//begin scope configuration - project
+			var scope = $rootScope.$new(true);
+			
+			cornerPocket.db.query('components/forProjectId', options, function(err, result){
 				if(err){
-					//console.log(err);
+					console.log(err);
 					deferred.reject(err);
 					return;
 				}		
 				//project's components
-				var components = _.pluck(result.rows, "value");
-
+				var components = result.rows;
 				
-    			
+				console.log(components);
 				
-				//begin scope configuration
-			    var scope = $rootScope.$new(true);
 				scope.project = $.extend({}, project.values);
-				scope.project.notes = project.notes;
+				scope.project._notes = project.notes;
 			    scope.project._name = project.name;
 				scope.project._tag = project.tag;
 				scope.project._created = project.created;
@@ -125,151 +178,241 @@ angular.module('starter.services', [])
 				scope.triggers = {};
 				
 				var bodyText = "";
-    
-			    //now lets actually process the report
-			    for(var i = 0; i < reportDoc.triggers.length;i++){
-			        var trigger = reportDoc.triggers[i];
+				console.log("1");
+				//promise array for fetching docs
+				var promises = [];
+				
+				//get requests components
+				for(var i = 0; i < components.length; i++){
+					var component = components[i];
+					promises.push(cornerPocket.db.get(component.id, {attachments:true}));
+				}
+				console.log("2");
+				//upon promise resolution...
+				$q.all(promises).then(function(results){
+					console.log("3");
+					//...set up each doc
+					var loadedComponents = [];
 					
-					//cleaned trigger name
-					var cleanedName = trigger.name.replace(' ', '_');
+					for(var i = 0; i < results.length; i++){
+						var component = results[i];
+						
+						var componentScope = {};
+		                componentScope = $.extend({}, component.values);
+						componentScope.schemaId = component.schemaId;
+						
+		                componentScope['name'] = component.name;
+		                componentScope['tag'] = component.tag;
+		                componentScope['space'] = component.space;
+						componentScope['id'] = component._id;
+						componentScope.attachments = [];
+						
+						for(var prop in component._attachments){
+							var attachment = component._attachments[prop];
+							componentScope.attachments.push({
+								name: prop.split(".")[0],
+								url: "data:" + attachment.content_type + ";base64," + attachment.data,
+								docUrl: "report_files/" + component._id + "----" + prop
+							});
+						}	
+						loadedComponents.push(componentScope);
+					}
 					
-					//create trigger object
-					scope.triggers[cleanedName] = new Trigger();
+					//index loaded components incase we need them
+					var indexedComponents = _.indexBy(loadedComponents, 'id');
 					
-			        ////console.log(trigger);
-					//we'll need to echo the body for each qualifiying component
-			        if(trigger.schemaIds){
-			            _.each(components, function(element){
-			                var componentScope = {};
-			                componentScope = element.values;
-			                componentScope['name'] = element.name;
-			                componentScope['tag'] = element.tag;
-			                componentScope['space'] = element.space;                 
-                			
-			                if(_.contains(trigger.schemaIds, element.schemaId)){
-			                    if($parse(trigger.condition)(componentScope) === true || !trigger.condition){                         
-									//add component to the list
-									scope.triggers[cleanedName].components.push(componentScope); 
-			                    }
-			                }
-			            });             
+					//now that we have all the data, lets process the report
+				    //now lets actually process the report
+				    for(var i = 0; i < reportDoc.triggers.length;i++){
+				        var trigger = reportDoc.triggers[i];
+					
+						//cleaned trigger name
+						var cleanedName = trigger.name.replace(' ', '_');
+					
+						//create trigger object
+						scope.triggers[cleanedName] = new Trigger();
+					
+				        ////console.log(trigger);
+						//we'll need to echo the body for each qualifiying component
+				        if(trigger.schemaIds){
+				            _.each(loadedComponents, function(componentScope){             
+								//test to make sure this component qualifies for this trigger
+				                if(_.contains(trigger.schemaIds, componentScope.schemaId)){								
+				                    if($parse(trigger.condition)(componentScope) === true || trigger.condition == true){    
+										//add component to the list
+										scope.triggers[cleanedName].components.push(componentScope); 
+				                    }
+				                }
+				            });  
+						
+							console.log(scope.triggers);           
             			
-						//if we found at least one component...
-						if(scope.triggers[cleanedName].components.length > 0){
-							//echo header
+							//if we found at least one component...
+							if(scope.triggers[cleanedName].components.length > 0){
+								//echo header
+					            if(trigger.header){
+					                bodyText += trigger.header;
+					            } 
+						
+								//echo body
+					            if(trigger.body){/*
+									var asElement = angular.element(trigger.body);
+									//console.log("--element");
+									//console.log(asElement);
+							
+									//if body has single parent element
+									if(asElement.length === 1){
+										//console.log(asElement[0]);
+										asElement[0].setAttribute("ng-repeat", 'component in triggers.' + cleanedName + '.components');
+										bodyText += asElement[0].outerHTML;
+										//console.log(asElement[0].outerHTML);
+									}else{//wrap in div
+										bodyText += "<div ng-repeat='component in triggers." + cleanedName + ".components'>";
+						                bodyText += trigger.body;
+										bodyText += "</div>";
+									}
+									*/
+									
+									bodyText += trigger.body;
+					            }
+						
+					            //lets echo the footer
+					            if(trigger.footer){
+					                bodyText += trigger.footer;
+					            } 
+							}
+		            
+				        }else{//just echo once
+				            //Echo header
 				            if(trigger.header){
 				                bodyText += trigger.header;
-				            } 
-							
-							//echo body and add in the ngRepeat
+				            }            
+				            //Echo header
 				            if(trigger.body){
-								var asElement = angular.element(trigger.body);
-								//console.log("--element");
-								//console.log(asElement);
-								
-								//if body has single parent element
-								if(asElement.length === 1){
-									//console.log(asElement[0]);
-									asElement[0].setAttribute("ng-repeat", 'component in triggers.' + cleanedName + '.components');
-									bodyText += asElement[0].outerHTML;
-									//console.log(asElement[0].outerHTML);
-								}else{//wrap in div
-									bodyText += "<div ng-repeat='component in triggers." + cleanedName + ".components'>";
-					                bodyText += trigger.body;
-									bodyText += "</div>";
-								}
-				            }
-							
-				            //lets echo the footer
+				                bodyText += trigger.body;
+				            }            
+				            //Echo footer
 				            if(trigger.footer){
-				                bodyText += trigger.footer;
-				            } 
-							
+				                bodyText += trigger.footer; 
+				            }            
+				        }      
+				    }//Loop through to next trigger
+				
+					var style = reportDoc.styles ? reportDoc.styles:"";
+				
+				    reportText = "<html " + 
+				            "xmlns:o='urn:schemas-microsoft-com:office:office' " +
+				            "xmlns:w='urn:schemas-microsoft-com:office:word'" +
+				            "xmlns='http://www.w3.org/TR/REC-html40'>" +
+				            "<head><title>Time</title>";
+
+				    reportText += "<!--[if gte mso 9]>" +
+				                             "<xml>" + 
+				                             "<w:WordDocument>" +
+				                             "<w:View>Print</w:View>" +
+				                             "<w:Zoom>90</w:Zoom>" + 
+				                             "<w:DoNotOptimizeForBrowser/>" +
+				                             "</w:WordDocument>" +
+				                             "</xml>" + 
+				                             "<![endif]-->";
+
+				    reportText += "<style>" +
+				                            "<!-- /* Style Definitions */" +
+				                            "@page Section1" +
+				                            "   {size:8.5in 11.0in; " +
+				                            "   margin:1.0in 1.25in 1.0in 1.25in ; " +
+				                            "   mso-header-margin:.5in; " +
+				                            "   mso-footer-margin:.5in; mso-paper-source:0;}" +
+				                            " div.Section1" +
+				                            "   {page:Section1;}" +
+				                            "table{border-collapse: collapse;}" +
+				                            "td{border: 1px solid black;padding: 5pt;}" +
+				                            "th{border: 1px solid black;padding: 5pt;}" +
+				                            style +
+				                            "-->" +
+				                           "</style></head>";
+				
+					//compile report text 
+					var compiledPreview = $compile(bodyText)(scope);
+					//replace .url with .murl for use with MHTML document					
+					var compiledDoc = $compile(bodyText.replace(/\.url}}/g, ".docUrl}}"))(scope);
+					
+					//create temp documents to hold elements
+					var tmpPreview = document.createElement("div");
+					var tmpDoc = document.createElement("div");
+					
+					//add each element to preview
+					for(var i = 0; i < compiledPreview.length; i++){
+						tmpPreview.appendChild(compiledPreview[i]);				
+					}
+					
+					//add each element to document
+					for(var i = 0; i < compiledDoc.length; i++){
+						tmpDoc.appendChild(compiledDoc[i]);				
+					}
+					
+					//need to remove this from angular so we can run out scope.apply in peace
+					setTimeout(function(){
+						//causes compilation
+						scope.$apply();
+
+						//strip out angular comments
+						var previewHtml = tmpPreview.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+						var docHtml = tmpDoc.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
+
+						/*
+						//add to report text
+						var previewHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + previewHtml + "</body></html>";
+						var docHtml += reportText + "<body lang=EN-US style='tab-interval:.5in'>" + docHtml + "</body></html>";
+						*/
+					    //instantiate report
+					    var report = {};
+						
+						//set preview html
+						report.html = reportText + "<body>" + previewHtml + "</body><html>";
+						docHtml = reportText + "<body>" + docHtml + "</body><html>";
+						
+						//construct MHTMLDocument
+						var doc = MHTMLDoc.new();
+						//main html body
+						doc.addFile("report.htm", "text/html", btoa(docHtml));
+						//IMAGES
+						//get list of matches where we're referencing an 'external' file
+						var urls = docHtml.match(/(report_files\/)([^'"]*)/g);
+						//loop through each and add file to reportDoc
+						if(urls){
+							for(var i = 0; i < urls.length; i++){
+								var urlTokens = urls[i].replace("report_files/", '').split("----");
+								var componentId = urlTokens[0];
+								var attachmentId = urlTokens[1].split(".")[0];
+								var attachment = _.findWhere(indexedComponents[componentId].attachments, {name: attachmentId});
+								console.log(attachment.url.slice(23));
+								doc.addFile(attachmentId, "image/jpeg", attachment.url.slice(23));
+							}
 						}
-			            
-			        }else{//just echo once
-			            //Echo header
-			            if(trigger.header){
-			                bodyText += trigger.header;
-			            }            
-			            //Echo header
-			            if(trigger.body){
-			                bodyText += trigger.body;
-			            }            
-			            //Echo footer
-			            if(trigger.footer){
-			                bodyText += trigger.footer; 
-			            }            
-			        }      
-			    }//Loop through to next trigger
+						
+						//output MHTMLDocument to report object
+						report.doc = doc.getDoc();
+						
+					    report.title = project.name + " - " + reportDoc.name + ".doc";
 				
-				var style = reportDoc.styles ? reportDoc.styles:"";
-				
-			    var reportText = "<html " + 
-			            "xmlns:o='urn:schemas-microsoft-com:office:office' " +
-			            "xmlns:w='urn:schemas-microsoft-com:office:word'" +
-			            "xmlns='http://www.w3.org/TR/REC-html40'>" +
-			            "<head><title>Time</title>";
-
-			    reportText += "<!--[if gte mso 9]>" +
-			                             "<xml>" + 
-			                             "<w:WordDocument>" +
-			                             "<w:View>Print</w:View>" +
-			                             "<w:Zoom>90</w:Zoom>" + 
-			                             "<w:DoNotOptimizeForBrowser/>" +
-			                             "</w:WordDocument>" +
-			                             "</xml>" + 
-			                             "<![endif]-->";
-
-			    reportText += "<style>" +
-			                            "<!-- /* Style Definitions */" +
-			                            "@page Section1" +
-			                            "   {size:8.5in 11.0in; " +
-			                            "   margin:1.0in 1.25in 1.0in 1.25in ; " +
-			                            "   mso-header-margin:.5in; " +
-			                            "   mso-footer-margin:.5in; mso-paper-source:0;}" +
-			                            " div.Section1" +
-			                            "   {page:Section1;}" +
-			                            "table{border-collapse: collapse;}" +
-			                            "td{border: 1px solid black;padding: 5pt;}" +
-			                            "th{border: 1px solid black;padding: 5pt;}" +
-			                            style +
-			                            "-->" +
-			                           "</style></head>";
-				
-				//compile report text 
-				var compiled = $compile(bodyText)(scope);
-				
-				//create temp document to hold elements
-				var tmp = document.createElement("div");
-				
-				//add each element to document
-				for(var i = 0; i < compiled.length; i++){
-					tmp.appendChild(compiled[i]);				
-				}
-				//causes compilation
-				scope.$apply();
-				
-				//strip out angular comments
-				var innerHtml = tmp.innerHTML.replace(/<!--[\s\S]*?-->/g, "");
-				
-				//add to report text
-				reportText += "<body lang=EN-US style='tab-interval:.5in'>" + innerHtml + "</body>";
-				reportText += "</html>";
-				
-			    //instantiate report
-			    var report = {};
-			    report.data = btoa(reportText); 
-			    report.title = project.name + " - " + reportDoc.name + ".doc";
-				
-				deferred.resolve(report);
+						deferred.resolve(report);
+					});
+				}, function(err){
+					//ERROR HANDLING
+					console.log(err);
+				});		    
 			});
+			
+			var success = function(){
+				
+			};
 			return deferred.promise;
 		}	
 	}
 }])
 
-.factory('$user',['$rootScope', '$location', '$ngPouch', '$http', '$q', '$timeout', 'ifOnline', '$ionicPopup',function($rootScope, $location, $ngPouch, $http, $q, $timeout, ifOnline, $ionicPopup) {
+.factory('$user',['$rootScope', '$location', 'cornerPocket', '$http', '$q', '$timeout', 'ifOnline', '$ionicPopup',function($rootScope, $location, cornerPocket, $http, $q, $timeout, ifOnline, $ionicPopup) {
 	
 	var user = {
 		/*load:function(){
@@ -303,43 +446,31 @@ angular.module('starter.services', [])
 					user.offline = false;
 					
 					//ok, lets check to see if it's the first time for each group 
-					$ngPouch.db.get('_design/projects', function(err, result){
+					cornerPocket.db.get('_design/projects', function(err, result){
 						if(err){
 							
 							//doc not found, better sync
 							//can't use $sync here b/c of circular dependency
-							var currentBase = localStorage.server + user.activeGroup.name;
-							/*
-							if(currentBase.indexOf('http://') >= 0){
-								currentBase = currentBase.substr(0, 7) + encodeURIComponent(user.name) + ":" + user.password + "@" + currentBase.substr(7);
-							}else{
-								currentBase = encodeURIComponent(user.name) + ":" + user.password + "@" + currentBase;
-							}	
-							*/
-							//escaped URL
-							//console.log(currentBase);
-			
+							//add auth to the remote db URL			
+							var remote = new PouchDB(localStorage.server + user.activeGroup.name, {
+								auth:{
+									username:user.name,
+									password:user.password
+								}
+							});
 			
 						    var loadingPopup = $ionicPopup.show({	
-	                          template: '<div class="row">' + 
-	                                        '<div class="col" style="text-align: center;">' +  
-	                                                '<h3>Syncing...</h3><br/>' +
-	                                        '</div>' +
-	                                    '</div>' +
-	                                    '<div class="row">' +
-	                                        '<div class="col"></div>' + 
-	                                        '<div class="col">' +  
-	                                                '<a class="button button-icon icon ion-looping"></a>' + 
-	                                        '</div>' +
-	                                        '<div class="col"></div>' +
-	                                    '</div>'
+	                          template:'<div class="row">' + 
+				                            '<div class="col" style="text-align: center;">' +  
+				                                '<h3>Syncing...</h3><br/>' +
+				                            '</div>' +
+				                        '</div>' +
+				                        '<div class="loading-icon">' + 
+				                            '<i class="icon ion-looping"></i>' + 
+				                        '</div>'
 	                  		});
 												  
-						    $ngPouch.db.sync(currentBase)
-							.on('change', function(data){
-								//console.log('change');
-								//console.log(data);
-							})
+						    cornerPocket.db.sync(remote)
 							.on('complete', function(data){
 							  loadingPopup.close();
 	  						  $timeout(function(){
@@ -391,12 +522,12 @@ angular.module('starter.services', [])
 							
 							
 							//start up db
-							if($ngPouch.changes){
-								$ngPouch.changes.cancel();//stop listening, please!	
+							if(cornerPocket.changes){
+								cornerPocket.changes.cancel();//stop listening, please!	
 							}
 			
 							//lastly, initialize the database (locally)
-							$ngPouch.init(user.activeGroup.name);
+							cornerPocket.init(user.activeGroup.name);
 							
 							
 							//for some reason this redirect is not happening... :(	
@@ -418,8 +549,8 @@ angular.module('starter.services', [])
 		logOut:function(){
 			//console.log('logging out');
 			var user = this;
-			if($ngPouch.changes){
-				$ngPouch.changes.cancel();//stop listening, please!	
+			if(cornerPocket.changes){
+				cornerPocket.changes.cancel();//stop listening, please!	
 			}	
 			
 			//if user logged in online and is still online, delete session
@@ -455,11 +586,11 @@ angular.module('starter.services', [])
 				localUsers[user.name] = user;
 				localStorage.setItem('users', JSON.stringify(localUsers));
 				
-				if($ngPouch.changes){
-					$ngPouch.changes.cancel();//stop listening, please!	
+				if(cornerPocket.changes){
+					cornerPocket.changes.cancel();//stop listening, please!	
 				}
 				
-				$ngPouch.init(group.name);
+				cornerPocket.init(group.name);
 				$location.path("/app/projects").replace();
 			}
 			
@@ -514,12 +645,12 @@ angular.module('starter.services', [])
                         
                         
 			
-			if($ngPouch.changes){
-				$ngPouch.changes.cancel();//stop listening, please!	
+			if(cornerPocket.changes){
+				cornerPocket.changes.cancel();//stop listening, please!	
 			}
 			
 			//lastly, initialize the database (locally)
-			$ngPouch.init(user.activeGroup.name);
+			cornerPocket.init(user.activeGroup.name);
 		},
                 save: function(){
                     var user = this;
@@ -555,38 +686,39 @@ angular.module('starter.services', [])
 	
 }])
 
-.service('$sync', ['$q', '$ionicPopup','$user', '$ngPouch', 'ifOnline', function($q, $ionicPopup, $user, $ngPouch, ifOnline){
+.service('$sync', ['$q', '$ionicPopup','$user', 'cornerPocket', 'ifOnline', function($q, $ionicPopup, $user, cornerPocket, ifOnline){
 	return{
 		once: function(){
 			var deferred = $q.defer();
-			
-		   //add auth to the remote db URL
-                    var currentBase = localStorage.server + $user.activeGroup.name;
-                    if(currentBase.indexOf('http://') >= 0){
-                            //console.log('http');
-                            currentBase = currentBase.substr(0, 7) + encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase.substr(7);
-                    }else{
-                            currentBase = encodeURIComponent($user.name) + ":" + encodeURIComponent($user.password) + "@" + currentBase;
-                    }	
-			
+			console.log($user.name);
+			console.log($user.password);
+		   //add auth to the remote db URL			
+			var remote = new PouchDB(localStorage.server + $user.activeGroup.name, {
+				auth:{
+					username:$user.name,
+					password:$user.password
+				}
+			});
 			
 		  var loadingPopup = $ionicPopup.show({	
 			  template: '<div class="row">' + 
-                                        '<div class="col" style="text-align: center;">' +  
-                                                '<h3>Syncing...</h3><br/>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="row">' +
-                                        '<div class="col"></div>' + 
-                                        '<div class="col">' +  
-                                                '<a class="button button-icon icon ion-looping"></a>' + 
-                                        '</div>' +
-                                        '<div class="col"></div>' +
-                                    '</div>'
+                            '<div class="col" style="text-align: center;">' +  
+                                '<h3>Syncing...</h3><br/>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="loading-icon">' + 
+                            '<i class="icon ion-looping"></i>' + 
+                        '</div>'
 		  });
-		  $ngPouch.db.sync(currentBase).on('complete', function(data){
+		  cornerPocket.db.sync(remote)
+		  .on('complete', function(data){
 			  loadingPopup.close();
 			  deferred.resolve(data);
+		  })
+		  .on('error', function(error){
+			  console.log(error);
+			  $ionicPopup.alert({title:"Sync Error"});
+			  loadingPopup.close();
 		  });
 		  
 		  return deferred.promise;
@@ -601,9 +733,9 @@ angular.module('starter.services', [])
 				currentBase = $user.name + ":" + $user.password + "@"+ currentBase;
 			}	
 			
-		    var result = $ngPouch.db.sync(currentBase, {live:true});
+		    var result = cornerPocket.db.sync(currentBase, {live:true});
 			//console.log(result);
-			$ngPouch.autoSync = result;
+			cornerPocket.autoSync = result;
 		}
 	};
 }]);

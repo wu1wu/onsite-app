@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('AppCtrl', function($scope, $ionicPopup, $ngPouch, $user, $sync, ifOnline, $state, $timeout) {
+.controller('AppCtrl', function($scope, $ionicPopup, $ionicSideMenuDelegate, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
 	
 	//change status bar color
 	if(window.StatusBar){
@@ -91,13 +91,13 @@ angular.module('starter.controllers', [])
 	$scope.toggleAutosync = function(shouldSync){
 		//console.log(shouldSync);
 		if(!shouldSync){
-			$ngPouch.autoSync.cancel();//stop listening, please!	
+			cornerPocket.autoSync.cancel();//stop listening, please!	
 		}else{
 	  	  ifOnline({alert:true}).then(function(){
                  $sync.live();
 	  			//add listener to handle if network connection is lost
 	  			document.addEventListener("offline", function(){
-	  				$ngPouch.autoSync.cancel();//stop listening, please!
+	  				cornerPocket.autoSync.cancel();//stop listening, please!
 	  				$scope.shouldSync = false;
 	    	  			$ionicPopup.alert({
 	    	  		  	  title:"Lost connection to server",
@@ -119,8 +119,9 @@ angular.module('starter.controllers', [])
     $scope.setActiveGroup = function(group){
 		//console.log('setting active group');
 		$user.setGroup(group);
-                $user.save();
-                $state.go($state.current, {}, {reload: true});
+        $user.save();
+		$ionicSideMenuDelegate.toggleLeft(false);
+        $state.go($state.current, {}, {reload: true});
 	};
         
     //set default value
@@ -131,9 +132,9 @@ angular.module('starter.controllers', [])
         $user.settings.groupBy = groupBy;
         $user.save();
     };
-})
+ })
 
-.controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, generateReport) {
+.controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
            
 	$scope.view = {};
 		   
@@ -142,8 +143,8 @@ angular.module('starter.controllers', [])
     //GET items and watch tags
     var promises = [];
 
-    promises.push($ngPouch.mapCollection("projects/all"));
-    promises.push($ngPouch.mapCollection("reports/all"));
+    promises.push(cornerPocket.mapCollection("projects/all"));
+    promises.push(cornerPocket.mapCollection("reports/all"));
     $q.all(promises).then(function(results){
             $scope.items = results[0].docs; 
             $scope.reports = results[1].docs;
@@ -154,8 +155,8 @@ angular.module('starter.controllers', [])
     //var libraries = [];
     var templates = [];
 
-    secondWave.push($ngPouch.db.query("templates/groupByTag"));//load these so we don't have to when we open the dialog box
-    //secondWave.push($ngPouch.mapCollection("libraries/all", {descending:true}));//load these so we don't have to when we open the dialog box
+    secondWave.push(cornerPocket.db.query("templates/groupByTag"));//load these so we don't have to when we open the dialog box
+    //secondWave.push(cornerPocket.mapCollection("libraries/all", {descending:true}));//load these so we don't have to when we open the dialog box
     $q.all(secondWave).then(function(results){
             templates = _.pluck(results[0].rows, 'value');
             //libraries = results[1].docs;
@@ -191,18 +192,20 @@ angular.module('starter.controllers', [])
 		  //query start/end
 		  var options = {
 			  startkey:[id, "0"],
-			  endkey:[id, "9"]
+			  endkey:[id, "9"],
+			  include_docs:true
 		  };
 		  //get all the docs to delete
-		  $ngPouch.db.query("components/forProjectId", options).then(function(result){
-			  var components = _.pluck(result.rows, "value");
+		  cornerPocket.db.query("components/forProjectId", options).then(function(result){
+			  console.log(result);
+			  var components = _.pluck(result.rows, "doc");
 			  
 			  for(var i = 0; i < components.length; i++){
 				  components[i]._deleted = true;
 			  }
 			  	
 			  if(components.length > 0){
-				  $ngPouch.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.bulkDocs({docs:components}).then(function(data){
 				  });
 			  }
 			  
@@ -262,7 +265,8 @@ angular.module('starter.controllers', [])
 			var oldId = newProject._id;
 			var options = {
 				startkey: [oldId, "0"],
-				endkey: [oldId, "9"]
+				endkey: [oldId, "9"],
+				include_docs:true
 			};
 			
 			//strip the new project
@@ -273,13 +277,14 @@ angular.module('starter.controllers', [])
 			//console.log(newProject);
 			
 			//post project to DB
-			$ngPouch.db.post(newProject).then(function(result){
+			cornerPocket.db.post(newProject).then(function(result){
 				var newId = result.id;
-				
+				console.log(result);
 				//get all existing components associated with the template
-				$ngPouch.db.query("components/forProjectId", options).then(function(result){
-					var components = _.pluck(result.rows, "value");
-					
+				cornerPocket.db.query("components/forProjectId", options).then(function(result){
+					console.log(result);
+					var components = _.pluck(result.rows, "doc");
+					console.log(components);
 					//strip all info from the components
 		  			for(var i = 0; i < components.length; i++){
 		  				var component = components[i];
@@ -289,8 +294,8 @@ angular.module('starter.controllers', [])
 		  				//assign new projectId
 		  				component.projectId = newId;
 		  			}
-					
-					$ngPouch.bulkDocs({docs:components}).then(function(){
+					console.log(components);
+					cornerPocket.bulkDocs({docs:components}).then(function(){
 						//console.log("Saved!");
 					});
 				});
@@ -378,22 +383,28 @@ angular.module('starter.controllers', [])
 	  //configure modalScope
 	  modalScope.close = function(){
 		  modal.hide().then(function(){
-			  modalScope.project = null;
+			  delete modalScope.project;
+			  //delete modalScope.selectedReport;
+			  //delete modalScope.reportName;
 		  });
 	  };
 	  
-	  modalScope.reportChanged = function(){
-		  modalScope.reportName = modalScope.project.name + ' - ' + modalScope.selectedReport.name;
+	  modalScope.reportChanged = function(selectedReport){
+		  console.log("change");
+		  modalScope.reportName = modalScope.project.name + ' - ' + selectedReport.name;
 		  modalScope.generatedReport = null;
 		  
-		  generateReport.fn(modalScope.project, modalScope.selectedReport).then(function(report){
+		  generateReport.fn(modalScope.project, selectedReport).then(function(report){
 			  modalScope.generatedReport = report;
 		  });
+		  
+		  console.log("report changed");
+		  console.log(selectedReport);
 	  };
 	  
 	  //open report
 	  modalScope.viewReport = function(){
-	  	var ref = window.open("data:application/octet-stream;base64," + modalScope.generatedReport.data, '_blank', 'location=no');
+	  	var ref = window.open("data:application/octet-stream;base64," + btoa(modalScope.generatedReport.html), '_blank', 'location=no');
 		ref.addEventListener('loadstop', function(){
 			modalScope.close();
 		});
@@ -409,7 +420,7 @@ angular.module('starter.controllers', [])
 		     {
 		        mimeType: 'application/msword',
 		        encoding: 'Base64',
-		        data: modalScope.generatedReport.data,
+		        data: btoa(modalScope.generatedReport.doc),
 		        name: modalScope.reportName + '.doc'
 		      }
 		    ],
@@ -434,51 +445,28 @@ angular.module('starter.controllers', [])
 	  //configure scope again
 	  $scope.reportModal.scope.project = project;
 	  $scope.reportModal.scope.reports = $scope.reports;
-	  $scope.reportModal.scope.selectedReport = $scope.reports[0];
-	  $scope.reportModal.scope.reportName = project.name + ' - ' + $scope.reports[0].name;
-	  
-	  //console.log($scope.reportModal.scope.project);
-	  //console.log($scope.reportModal.scope.selectedReport);
-	  
+
+	  $scope.reportModal.scope.selectedReport =  $scope.reportModal.scope.reports[0];
+	  $scope.reportModal.scope.reportName = project.name + ' - ' + $scope.reportModal.scope.selectedReport.name;
+  
 	  //generate default report
 	  generateReport.fn($scope.reportModal.scope.project, $scope.reportModal.scope.selectedReport).then(function(report){
 		  //console.log('gened');
 		  $scope.reportModal.scope.generatedReport = report;
 	  });
 	  
+	  console.log($scope.reportModal.scope.project);
+	  console.log($scope.reportModal.scope.selectedReport);
+	  //console.log($scope.reports);
+	  
+	  
+	  
 	  $scope.reportModal.show().then(function(){
-	  	
+		  
 	  });
   };
-  $scope.downloadReport = function (report, project) {
-      var modalInstance = $modal.open({
-        templateUrl: 'Download-Content.html',
-        controller: ReportModalInstanceCtrl,
-        resolve: {
-          report: function () {
-            return report;
-          },
-          project: function(){
-              return project;
-          }
-        }
-      });
-  };
-  
-  var ReportModalInstanceCtrl = function ($scope, $modalInstance, generateReport, report, project) {
-    $scope.status = 'Generating Report...';
-	generateReport.fn(project, report).then(function(finalReport){
-		//console.log(finalReport);
-		$scope.report = finalReport;
-		$scope.status = 'Report Ready for Download'; 
-	});
-    
-    $scope.cancel = function () {
-      $modalInstance.dismiss('cancel');
-    };
-  };
 })
-.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate) {
+.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -493,7 +481,7 @@ angular.module('starter.controllers', [])
 		endkey: [projectId,9, "9"]
 	};
 	
-    $ngPouch.mapCollection("projects/packaged", options).then(function(result){
+    cornerPocket.mapCollection("projects/packaged", options).then(function(result){
 		//console.log(result);
 		//get project
 		$scope.project = result.docs[0];
@@ -506,7 +494,7 @@ angular.module('starter.controllers', [])
 
 	var componentSchemasByLibrary;
 	//use these later
-    $ngPouch.db.query("componentSchemas/forLibraryId").then(function(result){
+    cornerPocket.db.query("componentSchemas/forLibraryId").then(function(result){
 		//console.log("component Schemas");
 		//componentSchemas for add new
 		var docs = _.pluck(result.rows, 'value');
@@ -639,7 +627,7 @@ angular.module('starter.controllers', [])
 		copy.name = copy.name + " " + nextNumber;
 		//console.log(copy);
 	    //save doc to db
-		$ngPouch.doc(copy).then(function(newComponent){
+		cornerPocket.doc(copy).then(function(newComponent){
 			console.log("saved");
 			
 			if(newComponent.libraryId === $scope.view.activeLibrary._id){
@@ -705,7 +693,7 @@ angular.module('starter.controllers', [])
   		      var now = new Date();
   		      newItem.created = now.toISOString();
   			  newItem.updated = now.toISOString();
-              $ngPouch.db.post(newItem).then(function(data){
+              cornerPocket.db.post(newItem).then(function(data){
   				//console.log("item saved");
               	//console.log(data);
 				
@@ -789,6 +777,7 @@ angular.module('starter.controllers', [])
    $scope.$on('$destroy', function() {
      $scope.addNewModal.remove();
 	 $scope.templateModal.remove();
+	 $scope.photoModal.remove();
    });    
    
 
@@ -825,7 +814,7 @@ angular.module('starter.controllers', [])
 	  var docs = [];
 	  console.log("saving...");
 	  console.log(template);
-	  $ngPouch.db.post(template, function(err, doc){
+	  cornerPocket.db.post(template, function(err, doc){
 		  
 		  if(err){
 			  console.log('error');
@@ -859,7 +848,7 @@ angular.module('starter.controllers', [])
 		  console.log(docs);
 		  
 		  //save all the docs
-		  $ngPouch.db.bulkDocs(docs, function(err, response){
+		  cornerPocket.db.bulkDocs(docs, function(err, response){
 			  if(err){
 				  //ERROR HANDLING
 				  console.log(err);
@@ -891,7 +880,7 @@ angular.module('starter.controllers', [])
 	modalScope.template = {};  
 	modalScope.view = {};
 	
-    $ngPouch.db.query('templates/groupByTag', function(err, response){
+    cornerPocket.db.query('templates/groupByTag', function(err, response){
 	  	modalScope.tags = _.uniq(_.pluck(response.rows, "key"), true);
 		console.log(modalScope.tags);
     });
@@ -901,9 +890,141 @@ angular.module('starter.controllers', [])
 		modalScope.view.firstFocus = true;
 	});
   };
+  
+  //COMPONENT PHOTOTS
+  $ionicModal.fromTemplateUrl('photos.html', {}).then(function(modal) {
+  	$scope.photoModal = modal;
+	//configure modalScope
+	var modalScope = $scope.photoModal.scope;
+	
+	//close dialog
+	modalScope.close = function(){
+		//set status bar color
+		if(window.StatusBar){
+			StatusBar.styleLightContent();
+		}
+		$scope.photoModal.hide().then(function(){
+			//clean modal scope
+			delete modalScope.images;
+		}); 			
+	};	
+	
+	//loads image in viewing object
+	modalScope.loadImages = function(){		
+		modalScope.images = [];
+		//get doc with attachements
+		cornerPocket.db.get(modalScope.component._id, {attachments:true}).then(function(doc){
+			for(var prop in doc._attachments){
+				var attachment = doc._attachments[prop];
+				modalScope.images.push({
+					name: prop,
+					url: "data:" + attachment.content_type + ";base64," + attachment.data,
+					visible:true
+				});
+			}
+			$scope.$apply();
+		}, function(err){
+			console.log(err);
+		});	
+   };
+   
+   modalScope.deleteImage = function(index){
+	  var image = modalScope.images[index]; 
+   	  var promise = $ionicPopup.confirm({
+   		  title:"Confirm Delete",
+   		  subTitle: "Are you sure you want to delete " + image.name + "?"
+   	  });
+ 	  promise.then(function(result){
+ 		  if(result){ 
+	   		cornerPocket.db.removeAttachment(modalScope.component._id, image.name, modalScope.component._rev, function(err,res){
+	   			if(err){
+	   				console.log(err);
+	   			}else{
+					$scope.$apply(function(){
+						image.visible = false;
+					});
+	   			}
+	   		});
+   		  }
+ 	  });  
+   };
+  });
+  
+  $scope.showPhotos = function(){	  
+	//configure modal scope
+	var modalScope = $scope.photoModal.scope;
+	
+	//lets actually open it up
+	$scope.photoModal.show().then(function(){
+		//set status bar color
+		if(window.StatusBar){
+			StatusBar.styleDefault();
+		}
+		//set up component
+		modalScope.component = $scope.view.activeLibrary.selected;
+		modalScope.loadImages();
+		
+	});
+  };
+  
+  
+  /* ---- ADDITIONAL FUNCTIONALITY --- */
+  
+  //PHOTOS
+  $scope.takePicture = function() {
+	  var nextPhoto = 1;
+	  var component = $scope.view.activeLibrary.selected;
+	  
+	  console.log(component._attachments);
+	  if(component._attachments){
+		  console.log(Object.keys(component._attachments).length);
+		  nextPhoto = nextPhoto + Object.keys(component._attachments).length;
+	  }
+	  
+      var options = { 
+          quality : 25, 
+          destinationType : Camera.DestinationType.DATA_URL, 
+          sourceType : Camera.PictureSourceType.CAMERA, 
+          allowEdit : false,
+          encodingType: Camera.EncodingType.JPEG,
+          saveToPhotoAlbum: false,
+		  correctOrientation: true,
+		  targetWidth: 300,
+		  targetHeight:400
+      };
+
+      $cordovaCamera.getPicture(options).then(function(imageData) {
+        // Success! Image data is here
+		imageData = imageData = imageData.replace(/\s/g, '');
+		
+		var newName = component.name.replace(/\s/g, '_') + nextPhoto + ".jpg";
+		
+		$ionicPopup.prompt({
+		   title: 'Enter Caption',
+		   inputType: 'text',
+		   inputPlaceholder: newName,
+	   	   default: newName
+		 }).then(function(res) {
+	 		cornerPocket.db.putAttachment(component._id, res, component._rev, imageData, 'image/jpeg', function(err, result){
+	 			if(err){
+	 				//error handling
+	 				setTimeout(function(){console.log(err);},100);
+	 			}else{		
+	 				setTimeout(function(){console.log("Saved image: " + component.name + nextPhoto + ".jpg");},100);
+	 			}
+	 		});
+		 });
+		 
+		
+			
+      }, function(err) {
+        // An error occured. Show a message to the user
+      });
+	  
+    };
 })
 
-.controller('templatesController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, generateReport) {
+.controller('templatesController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
            
 	$scope.view = {};
 		   
@@ -911,7 +1032,7 @@ angular.module('starter.controllers', [])
         
     //GET items and watch tags
 	var templates = [];
-    $ngPouch.mapCollection("templates/all").then(function(results){
+    cornerPocket.mapCollection("templates/all").then(function(results){
         $scope.items = results.docs;
 		templates = _.sortBy($scope.items, 'tag');
     });
@@ -945,18 +1066,19 @@ angular.module('starter.controllers', [])
 		  //query start/end
 		  var options = {
 			  startkey:[id, "0"],
-			  endkey:[id, "9"]
+			  endkey:[id, "9"],
+			  include_docs:true
 		  };
 		  //get all the docs to delete
-		  $ngPouch.db.query("components/forProjectId", options).then(function(result){
-			  var components = _.pluck(result.rows, "value");
+		  cornerPocket.db.query("components/forProjectId", options).then(function(result){
+			  var components = _.pluck(result.rows, "doc");
 			  
 			  for(var i = 0; i < components.length; i++){
 				  components[i]._deleted = true;
 			  }
 			  	
 			  if(components.length > 0){
-				  $ngPouch.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.bulkDocs({docs:components}).then(function(data){
 				  });
 			  }
 			  
@@ -1012,7 +1134,8 @@ angular.module('starter.controllers', [])
 			var oldId = newProject._id;
 			var options = {
 				startkey: [oldId, "0"],
-				endkey: [oldId, "9"]
+				endkey: [oldId, "9"],
+				include_docs:true
 			};
 			
 			//strip the new project
@@ -1023,12 +1146,12 @@ angular.module('starter.controllers', [])
 			//console.log(newProject);
 			
 			//post project to DB
-			$ngPouch.db.post(newProject).then(function(result){
+			cornerPocket.db.post(newProject).then(function(result){
 				var newId = result.id;
 				
 				//get all existing components associated with the template
-				$ngPouch.db.query("components/forProjectId", options).then(function(result){
-					var components = _.pluck(result.rows, "value");
+				cornerPocket.db.query("components/forProjectId", options).then(function(result){
+					var components = _.pluck(result.rows, "doc");
 					
 					//strip all info from the components
 		  			for(var i = 0; i < components.length; i++){
@@ -1040,7 +1163,7 @@ angular.module('starter.controllers', [])
 		  				component.projectId = newId;
 		  			}
 					
-					$ngPouch.bulkDocs({docs:components}).then(function(){
+					cornerPocket.bulkDocs({docs:components}).then(function(){
 						//console.log("Saved!");
 					});
 				});
@@ -1117,7 +1240,7 @@ angular.module('starter.controllers', [])
   });    
   
 })
-.controller('templatePageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, $ngPouch, $user, $ionicTabsDelegate) {
+.controller('templatePageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -1132,7 +1255,7 @@ angular.module('starter.controllers', [])
 		endkey: [projectId,9, "9"]
 	};
 	
-    $ngPouch.mapCollection("templates/packaged", options).then(function(result){
+    cornerPocket.mapCollection("templates/packaged", options).then(function(result){
 		//console.log(result);
 		//get project
 		$scope.project = result.docs[0];
@@ -1145,7 +1268,7 @@ angular.module('starter.controllers', [])
 
 	var componentSchemasByLibrary;
 	//use these later
-    $ngPouch.db.query("componentSchemas/forLibraryId").then(function(result){
+    cornerPocket.db.query("componentSchemas/forLibraryId").then(function(result){
 		//console.log("component Schemas");
 		//componentSchemas for add new
 		var docs = _.pluck(result.rows, 'value');
@@ -1278,7 +1401,7 @@ angular.module('starter.controllers', [])
 		copy.name = copy.name + " " + nextNumber;
 		//console.log(copy);
 	    //save doc to db
-		$ngPouch.doc(copy).then(function(newComponent){
+		cornerPocket.doc(copy).then(function(newComponent){
 			console.log("saved");
 			
 			if(newComponent.libraryId === $scope.view.activeLibrary._id){
@@ -1344,7 +1467,7 @@ angular.module('starter.controllers', [])
   		      var now = new Date();
   		      newItem.created = now.toISOString();
   			  newItem.updated = now.toISOString();
-              $ngPouch.db.post(newItem).then(function(data){
+              cornerPocket.db.post(newItem).then(function(data){
   				//console.log("item saved");
               	//console.log(data);
 				

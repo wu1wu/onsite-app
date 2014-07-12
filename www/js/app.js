@@ -11,10 +11,10 @@ angular.module('starter',
 	'starter.directives',
 	'starter.services',
 	'corner-pocket',
-	'autocomplete'
+	'ngCordova'
 ])
 
-.run(function($ionicPlatform, $ngPouch) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       // org.apache.cordova.statusbar required

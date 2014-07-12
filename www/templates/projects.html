@@ -3,12 +3,12 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <button class="button button-icon icon ion-plus-round" io-tap='dialogOpen()'></button>
+    <button class="button button-icon icon ion-plus-round" ng-click='dialogOpen()'></button>
   </ion-nav-buttons>
   <ion-content class="has-header" scroll='false'>
 	<div class="row height-100">
 	  <ion-scroll class="col-25 height-100">
-  		<div class="card" ng-repeat="tag in tags" io-tap='view.activeTag = tag'>
+  		<div class="card" ng-repeat="tag in tags" ng-click='view.activeTag = tag'>
   		  <div class="item item-text-wrap"  ng-class="{selected: tag === view.activeTag}">
   		    {{tag}}
   		  </div>
@@ -47,7 +47,7 @@
 		    Save
 		  </button>
 		</ion-header-bar>
-		<ion-content scroll='false' padding='true'>
+		<ion-content scroll='false' padding='true' class='overflow-visible'>
 		  <div class="list bottom-border">
 		    <label class="item item-input">
 		      <span class="input-label">Name</span>
@@ -56,19 +56,15 @@
 		    <label class="item item-input autocomplete-label">
 		      <span class="input-label">Tag</span>
 			  <autocomplete ng-model="newItem.tag" data="tags" on-type="" attr-placeholder='Tag' click-activation='true' class='autocomplete-tag'></autocomplete>
-		    </label>			  
+		    </label>	
+		    <label class="item item-input item-select" style='z-index: 1'>
+			    <div class="input-label">
+			      Template
+			    </div>
+			    <select ng-model='newItem.template' ng-options='template.name group by template.tag for template in templates'>
+			    </select>
+			</label>		  
 		  </div>
-		  <h4 ng-hide='itemToUpdate'>Templates</h4>
-		  <ion-scroll  style='height: -webkit-calc(100% - 160px);' ng-hide='itemToUpdate'>
-	  		  <div class="list">
-				 <div ng-repeat="template in templates">
-   				  <div class="item item-divider" ng-show='template.tag != templates[$index-1].tag'>
-   				      {{template.tag}}
-   				   </div>
-   	  		       <ion-radio ng-model="newItem.template" ng-value="template">{{template.name}}</ion-radio>
-			     </div>
-	  		  </div>
-		  </ion-scroll>
 		</ion-content>
 	</div>
 </script>
@@ -82,13 +78,13 @@
 		  </button>
 		  <h1 class="title">Download Report for {{project.name}}</h1>
 		</ion-header-bar>
-		<ion-content scroll='false' padding='true'>
+		<ion-content scroll='false' padding='true' >
 		  <div class="list bottom-border">
 		    <label class="item item-input  item-select">
 		      <span class="input-label">Report</span>
 			  	<select ng-model='selectedReport' 
-				ng-change='reportChanged()'
-				ng-options='report.name for report in reports'>
+				ng-change='reportChanged(selectedReport)'
+				ng-options='report as report.name for report in reports'>
 			    </select>
 		    </label>
 		    <label class="item item-input">

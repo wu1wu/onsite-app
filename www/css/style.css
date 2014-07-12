@@ -195,6 +195,10 @@ textarea {
   color: #fff;
 }
 
+.overflow-visible{
+	overflow: visible;
+}
+
 .notes{
     
 }
@@ -255,3 +259,41 @@ onsite-inputs .item-input input {
 .item-input textarea{
 	padding-top: 7px;
 }
+
+.fullscreen-modal{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.image-item img{
+	height:300px;
+	width:225px;
+	display:block;
+	float:right;
+	border-radius: 4px;
+}
+
+.image-item h2{
+	line-height: 275px;
+	display:block;
+	float:left;
+}
+
+.image-item h2 .button{
+	margin-left: 20px;
+	vertical-align: middle;
+}
+
+.loading-icon{
+	text-align: center;
+	font-size: 40px;
+}
+
+/* CORRECTIONS */
+.scroll-content-false {
+	z-index: 4;
+}
+
