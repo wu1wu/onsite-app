@@ -195,6 +195,10 @@ textarea {
   color: #fff;
 }
 
+.overflow-visible{
+	overflow: visible;
+}
+
 .notes{
     
 }

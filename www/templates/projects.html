@@ -47,7 +47,7 @@
 		    Save
 		  </button>
 		</ion-header-bar>
-		<ion-content scroll='false' padding='true'>
+		<ion-content scroll='false' padding='true' class='overflow-visible'>
 		  <div class="list bottom-border">
 		    <label class="item item-input">
 		      <span class="input-label">Name</span>
@@ -56,19 +56,15 @@
 		    <label class="item item-input autocomplete-label">
 		      <span class="input-label">Tag</span>
 			  <autocomplete ng-model="newItem.tag" data="tags" on-type="" attr-placeholder='Tag' click-activation='true' class='autocomplete-tag'></autocomplete>
-		    </label>			  
+		    </label>	
+		    <label class="item item-input item-select" style='z-index: 1'>
+			    <div class="input-label">
+			      Template
+			    </div>
+			    <select ng-model='newItem.template' ng-options='template.name group by template.tag for template in templates'>
+			    </select>
+			</label>		  
 		  </div>
-		  <h4 ng-hide='itemToUpdate'>Templates</h4>
-		  <ion-scroll  style='height: -webkit-calc(100% - 160px);' ng-hide='itemToUpdate'>
-	  		  <div class="list">
-				 <div ng-repeat="template in templates">
-   				  <div class="item item-divider" ng-show='template.tag != templates[$index-1].tag'>
-   				      {{template.tag}}
-   				   </div>
-   	  		       <ion-radio ng-model="newItem.template" ng-value="template">{{template.name}}</ion-radio>
-			     </div>
-	  		  </div>
-		  </ion-scroll>
 		</ion-content>
 	</div>
 </script>
@@ -82,7 +78,7 @@
 		  </button>
 		  <h1 class="title">Download Report for {{project.name}}</h1>
 		</ion-header-bar>
-		<ion-content scroll='false' padding='true'>
+		<ion-content scroll='false' padding='true' >
 		  <div class="list bottom-border">
 		    <label class="item item-input  item-select">
 		      <span class="input-label">Report</span>
