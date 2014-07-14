@@ -35,11 +35,11 @@
 	         </div>
 	       </label>
         </ion-item>
-        <ion-item class='item-input item-select'>
+        <ion-item nav-clear class='item-input item-select'>
                 <div class="input-label">
                     Group
                 </div>
-            <select nav-clear menu-close ng-model='group' ng-options='group.name for group in groups' ng-change='setActiveGroup(group)'>
+            <select ng-model='group' ng-options='group.name for group in groups' ng-change='setActiveGroup(group)'>
             </select>	    	
         </ion-item>
         <ion-item nav-clear class='item-input item-select'>

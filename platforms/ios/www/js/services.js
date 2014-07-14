@@ -451,38 +451,26 @@ angular.module('starter.services', [])
 							
 							//doc not found, better sync
 							//can't use $sync here b/c of circular dependency
-							var currentBase = localStorage.server + user.activeGroup.name;
-							/*
-							if(currentBase.indexOf('http://') >= 0){
-								currentBase = currentBase.substr(0, 7) + encodeURIComponent(user.name) + ":" + user.password + "@" + currentBase.substr(7);
-							}else{
-								currentBase = encodeURIComponent(user.name) + ":" + user.password + "@" + currentBase;
-							}	
-							*/
-							//escaped URL
-							//console.log(currentBase);
-			
+							//add auth to the remote db URL			
+							var remote = new PouchDB(localStorage.server + user.activeGroup.name, {
+								auth:{
+									username:user.name,
+									password:user.password
+								}
+							});
 			
 						    var loadingPopup = $ionicPopup.show({	
-	                          template: '<div class="row">' + 
-	                                        '<div class="col" style="text-align: center;">' +  
-	                                                '<h3>Syncing...</h3><br/>' +
-	                                        '</div>' +
-	                                    '</div>' +
-	                                    '<div class="row">' +
-	                                        '<div class="col"></div>' + 
-	                                        '<div class="col">' +  
-	                                                '<a class="button button-icon icon ion-looping"></a>' + 
-	                                        '</div>' +
-	                                        '<div class="col"></div>' +
-	                                    '</div>'
+	                          template:'<div class="row">' + 
+				                            '<div class="col" style="text-align: center;">' +  
+				                                '<h3>Syncing...</h3><br/>' +
+				                            '</div>' +
+				                        '</div>' +
+				                        '<div class="loading-icon">' + 
+				                            '<i class="icon ion-looping"></i>' + 
+				                        '</div>'
 	                  		});
 												  
-						    cornerPocket.db.sync(currentBase)
-							.on('change', function(data){
-								//console.log('change');
-								//console.log(data);
-							})
+						    cornerPocket.db.sync(remote)
 							.on('complete', function(data){
 							  loadingPopup.close();
 	  						  $timeout(function(){
@@ -702,7 +690,8 @@ angular.module('starter.services', [])
 	return{
 		once: function(){
 			var deferred = $q.defer();
-			
+			console.log($user.name);
+			console.log($user.password);
 		   //add auth to the remote db URL			
 			var remote = new PouchDB(localStorage.server + $user.activeGroup.name, {
 				auth:{
@@ -713,17 +702,13 @@ angular.module('starter.services', [])
 			
 		  var loadingPopup = $ionicPopup.show({	
 			  template: '<div class="row">' + 
-                                        '<div class="col" style="text-align: center;">' +  
-                                                '<h3>Syncing...</h3><br/>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="row">' +
-                                        '<div class="col"></div>' + 
-                                        '<div class="col">' +  
-                                                '<a class="button button-icon icon ion-looping"></a>' + 
-                                        '</div>' +
-                                        '<div class="col"></div>' +
-                                    '</div>'
+                            '<div class="col" style="text-align: center;">' +  
+                                '<h3>Syncing...</h3><br/>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="loading-icon">' + 
+                            '<i class="icon ion-looping"></i>' + 
+                        '</div>'
 		  });
 		  cornerPocket.db.sync(remote)
 		  .on('complete', function(data){

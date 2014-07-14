@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('AppCtrl', function($scope, $ionicPopup, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
+.controller('AppCtrl', function($scope, $ionicPopup, $ionicSideMenuDelegate, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
 	
 	//change status bar color
 	if(window.StatusBar){
@@ -119,8 +119,9 @@ angular.module('starter.controllers', [])
     $scope.setActiveGroup = function(group){
 		//console.log('setting active group');
 		$user.setGroup(group);
-                $user.save();
-                $state.go($state.current, {}, {reload: true});
+        $user.save();
+		$ionicSideMenuDelegate.toggleLeft(false);
+        $state.go($state.current, {}, {reload: true});
 	};
         
     //set default value
@@ -154,10 +155,11 @@ angular.module('starter.controllers', [])
     //var libraries = [];
     var templates = [];
 
-    secondWave.push(cornerPocket.db.query("templates/groupByTag"));//load these so we don't have to when we open the dialog box
+    secondWave.push(cornerPocket.db.query("templates/groupByTag", {include_docs:true}));//load these so we don't have to when we open the dialog box
     //secondWave.push(cornerPocket.mapCollection("libraries/all", {descending:true}));//load these so we don't have to when we open the dialog box
     $q.all(secondWave).then(function(results){
-            templates = _.pluck(results[0].rows, 'value');
+		console.log(results);
+            templates = _.pluck(results[0].rows, 'doc');
             //libraries = results[1].docs;
 
     });

@@ -286,6 +286,7 @@ angular.module('starter.controllers', [])
 					console.log(result);
 					var components = _.pluck(result.rows, "doc");
 					console.log(components);
+					var today = new Date();
 					//strip all info from the components
 		  			for(var i = 0; i < components.length; i++){
 		  				var component = components[i];
@@ -294,10 +295,16 @@ angular.module('starter.controllers', [])
 		  				delete component._rev;
 		  				//assign new projectId
 		  				component.projectId = newId;
+						component.created = today.toISOString();
+						component.updated = today.toISOString();
 		  			}
 					console.log(components);
-					cornerPocket.bulkDocs({docs:components}).then(function(){
-						//console.log("Saved!");
+					cornerPocket.db.bulkDocs({docs:components}, function(err, response){
+						if(err){
+							console.log("error :(");
+						}else{
+							//success
+						}
 					});
 				});
 			});
