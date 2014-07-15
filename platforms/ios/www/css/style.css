@@ -125,11 +125,11 @@ textarea {
 .autocomplete-tag{
 	width: 100%;
 	padding-right: 12px;
-	-webkit-flex: 1 0 220px;
+	-webkit-flex: 1 0 200px;
 	-moz-box-flex: 1;
-	-moz-flex: 1 0 220px;
-	-ms-flex: 1 0 220px;
-	flex: 1 0 220px; 
+	-moz-flex: 1 0 200px;
+	-ms-flex: 1 0 200px;
+	flex: 1 0 200px; 
 }
 
 .autocomplete{
@@ -239,17 +239,27 @@ textarea {
 	
 }
 
-.input-accessories {
+.onsite-inputs .input-accessories {
 	text-align: right;
 	display: table;
 }
 
-.item-input .has-units{
+
+
+.onsite-inputs .item-input .has-units{
 	-webkit-flex: 1 0 160px;
 	-moz-box-flex: 1;
 	-moz-flex: 1 0 160px;
 	-ms-flex: 1 0 160px;
 	flex: 1 0 160px;
+}
+
+.onsite-inputs .item-input .has-units-large{
+	-webkit-flex: 1 0 125px;
+	-moz-box-flex: 1;
+	-moz-flex: 1 0 125px;
+	-ms-flex: 1 0 125px;
+	flex: 1 0 125px;
 }
 
 
@@ -273,7 +283,7 @@ textarea {
 	flex: 1 0 200px;
 }
 
-.card .item.item-input input{
+.onsite-inputs .card .item.item-input input{
 	padding-right: 6px;
 }
 

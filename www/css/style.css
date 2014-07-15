@@ -103,6 +103,7 @@ textarea {
 
 .item-input select{
 	font-size:16px;
+	padding-left: 1px;
 }
 
 .icon-left a{
