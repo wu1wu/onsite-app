@@ -103,6 +103,7 @@ textarea {
 
 .item-input select{
 	font-size:16px;
+	padding-left: 1px;
 }
 
 .icon-left a{
@@ -289,11 +290,20 @@ textarea {
 
 .fullscreen-modal{
 	width: 100%;
-	height: 100%;
-	position: absolute;
 	left: 0;
 	top: 0;
+	bottom: 0;
+	right: 0;
 }
+
+.platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .bar-header:not(.bar-subheader){
+	height: 64px;
+}
+
+.platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .title{
+	margin-top: 20px;
+}
+
 
 .image-item img{
 	height:300px;
@@ -324,3 +334,10 @@ textarea {
 	z-index: 4;
 }
 
+.platform-ios.platform-cordova .fullscreen-modal .bar-header{
+	height: 64px;
+}
+
+.platform-ios.platform-cordova .fullscreen-modal .title{
+	margin-top: 20px;
+}
