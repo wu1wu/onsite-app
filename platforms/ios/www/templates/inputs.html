@@ -8,7 +8,7 @@
 		     <span class="input-label" ng-class="{'memo-label': input.keyboard == 'memo'}">{{input.name}}</span>
 	 
 		     <input  ng-hide='input.view.options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard ? input.keyboard:"text"}}'
-		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' data-index='{{$index}}'
+		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' data-index='{{$index}}' ng-class="{'has-units': input.units}"
 		             ng-change="onInputChange(component.values[input.alias])" ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(component.values[input.alias], input)'
 				     ng-focus='onInputFocus(component.values[input.alias])' clear-button> 
@@ -42,8 +42,8 @@
 		  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
 		     <span class="input-label" ng-class="{'memo-label': input.keyboard == 'memo'}">{{input.name}}</span>
 	 
-		     <input  ng-hide='input.view.options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard ? input.keyboard:"text"}}'
-		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' 
+		     <input  ng-hide='input.view.options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard ? input.keyboard:"text"}}' 
+		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' ng-class="{'has-units': input.units}"
 		             ng-change="onInputChange(project.values[input.alias])" ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(project.values[input.alias], input)' data-index='{{$parent.$index + "." + $index}}'
 				     ng-focus='onInputFocus(project.values[input.alias])' clear-button> 

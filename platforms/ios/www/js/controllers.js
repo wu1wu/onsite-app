@@ -502,10 +502,13 @@ angular.module('starter.controllers', [])
 
 	var componentSchemasByLibrary;
 	//use these later
-    cornerPocket.db.query("componentSchemas/forLibraryId").then(function(result){
+    cornerPocket.db.query("componentSchemas/forLibraryId", {include_docs: true}).then(function(result){
 		//console.log("component Schemas");
 		//componentSchemas for add new
-		var docs = _.pluck(result.rows, 'value');
+		var docs = _.pluck(result.rows, 'doc');
+		console.log("--docs--");
+		console.log(docs);
+		console.log(result);
 		//console.log(docs);
 		componentSchemasByLibrary = _.groupBy(docs, 'libraryId');
 		//console.log(componentSchemasByLibrary);
@@ -1276,11 +1279,12 @@ angular.module('starter.controllers', [])
 
 	var componentSchemasByLibrary;
 	//use these later
-    cornerPocket.db.query("componentSchemas/forLibraryId").then(function(result){
+    cornerPocket.db.query("componentSchemas/forLibraryId", {include_docs: true}).then(function(result){
 		//console.log("component Schemas");
 		//componentSchemas for add new
-		var docs = _.pluck(result.rows, 'value');
-		//console.log(docs);
+		var docs = _.pluck(result.rows, 'doc');
+		console.log("--docs--");
+		console.log(docs);
 		componentSchemasByLibrary = _.groupBy(docs, 'libraryId');
 		//console.log(componentSchemasByLibrary);
     });

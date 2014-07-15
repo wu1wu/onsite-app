@@ -96,21 +96,18 @@
 		    <label class="item item-input autocomplete-label">
 		      <span class="input-label">Space</span>
 			  <autocomplete ng-model="newItem.space" data="spaces" on-type="" attr-placeholder='Space' click-activation='true' class='autocomplete-tag'></autocomplete>
-		    </label>			  
-		  </div>
-		  <h4 ng-hide='itemToUpdate' style='padding-left:5px;'>Component Schemas</h4>
-		  <ion-scroll  style='height: -webkit-calc(100% - 160px);' ng-hide='itemToUpdate'>
-	  		  <div class="list list-inset" style="margin-top:0">
-				 <div ng-repeat="schema in schemas">
-	 				  <div class="item item-divider" ng-show='schema.tag != schemas[$index-1].tag'>
-	 				      {{schema.tag}}
-	 				   </div>
-	 	  		       <ion-radio ng-model="newItem.schema" ng-value="schema" ng-change='view.named || name(schema)'>{{schema.name}}</ion-radio>
-			     </div>
+		    </label>	
+  	      	<label class="item item-input item-select" style='z-index: 1' ng-hide='itemToUpdate'>
+	  		  <div class="input-label">
+	  		    Component Schema
 	  		  </div>
-		  </ion-scroll>		  
+	  		  <select ng-model='newItem.schema' ng-options='schema.name group by schema.tag for schema in schemas' ng-change='view.named || name(newItem.schema)'>
+	  		  	<option value="">-- select schema --</option>
+	  		  </select>
+  		  	</label>		  
+		  </div>
+	        
 		</ion-content>
-		  
 	</div>
 </script>
 
