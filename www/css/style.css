@@ -254,6 +254,14 @@ textarea {
 	flex: 1 0 160px;
 }
 
+.onsite-inputs .item-input .has-units-large{
+	-webkit-flex: 1 0 125px;
+	-moz-box-flex: 1;
+	-moz-flex: 1 0 125px;
+	-ms-flex: 1 0 125px;
+	flex: 1 0 125px;
+}
+
 
 .height-100{
 	height:100%;
