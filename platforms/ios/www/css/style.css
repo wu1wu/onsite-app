@@ -288,21 +288,6 @@ textarea {
 	padding-right: 6px;
 }
 
-.fullscreen-modal{
-	width: 100%;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-}
-
-.platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .bar-header:not(.bar-subheader){
-	height: 64px;
-}
-
-.platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .title{
-	margin-top: 20px;
-}
 
 
 .image-item img{
@@ -334,10 +319,20 @@ textarea {
 	z-index: 4;
 }
 
-.platform-ios.platform-cordova .fullscreen-modal .bar-header{
-	height: 64px;
+
+.fullscreen-modal{
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
 }
 
-.platform-ios.platform-cordova .fullscreen-modal .title{
+.platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .bar-header:not(.bar-subheader){
+	height: 64px;
+	padding-top: 20px;
+}
+
+.platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .title{
 	margin-top: 20px;
 }

@@ -206,7 +206,14 @@ angular.module('starter.controllers', [])
 			  }
 			  	
 			  if(components.length > 0){
-				  cornerPocket.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.db.bulkDocs({docs:components},function(err, result){
+					  if(err){
+						  //ERROR HANDLING
+						  console.log(err);
+					  }else{
+						  //success!
+						  
+					  }
 				  });
 			  }
 			  
@@ -246,7 +253,7 @@ angular.module('starter.controllers', [])
 	modalScope.ok = function(){
 		var newItem = modalScope.newItem;
 		
-        if(!modalScope.view.existing && !modalScope.itemToUpdate){//if new && template
+        if(!modalScope.itemToUpdate){//if new && template
 			var newProject = {};
 			
 			//copy template to item
@@ -334,15 +341,6 @@ angular.module('starter.controllers', [])
 	
   });
   $scope.dialogOpen = function(itemToUpdate){
-	  /*
-	if(templates && templates.length < 1){
-		$ionicPopup.alert({
-			title: "Error",
-			subTitle: "No templates set up!  You'll need at least one to create a project."
-		});
-		return;
-	}  
-	  */
 	//configure modal scope
 	var modalScope = $scope.addNewModal.scope;
 	
@@ -361,7 +359,7 @@ angular.module('starter.controllers', [])
 	//if new
 	if(!itemToUpdate){
 		modalScope.title = "Add New Project";
-		modalScope.view.existing = false;
+		modalScope.view.showTemplates = true;
 		//default behaviour
 		modalScope.newItem.template = templates[0];
 	}else{
@@ -369,13 +367,39 @@ angular.module('starter.controllers', [])
 		modalScope.newItem.name = itemToUpdate.name;
 		modalScope.newItem.tag = itemToUpdate.tag;
 		modalScope.itemToUpdate = itemToUpdate;
-		modalScope.view.existing = true; 
+		modalScope.view.showTemplates = false; 
 	}
 	
 	//lets actually open it up
 	$scope.addNewModal.show().then(function(){
 		modalScope.view.firstFocus = true;
 	});
+  };
+  $scope.copyProject = function(project){
+	  //configure modal scope
+	  var modalScope = $scope.addNewModal.scope;
+	  
+	  //view object
+	  modalScope.view = {};
+	  modalScope.newItem = {};
+	  //assign tags
+	  modalScope.tags = $scope.tags;
+	  
+	  if(project){
+		  modalScope.title = "Copy - " + project.name;
+		  modalScope.newItem.name = project.name;
+		  modalScope.newItem.tag = project.tag;
+		  modalScope.newItem.template = project;
+		  
+		  modalScope.view.showTemplate = false;
+		  modalScope.itemToUpdate = null;
+	  	//lets actually open it up
+	  	$scope.addNewModal.show().then(function(){
+	  		modalScope.view.firstFocus = true;
+			console.log(modalScope.itemToUpdate);
+	  	});
+	  }
+	  
   };
   //Cleanup the modals when we're done with it!
   $scope.$on('$destroy', function() {
@@ -474,6 +498,7 @@ angular.module('starter.controllers', [])
 	  });
   };
 })
+
 .controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
@@ -848,13 +873,17 @@ angular.module('starter.controllers', [])
 	  		  }	
 			  //assign new projectId
 			  component.projectId = doc.id;
+			  
 			  //standard doc info
 			  var now = new Date();
 			  now = now.toISOString();
 			  component.created = now;
 			  component.update = now;
+			  
+			  //tag as forTemplate
+			  component.forTemplate = true;
+			  
 			  docs.push(component);
-			  console.log(component);
 		  }
 		  console.log(docs);
 		  
@@ -1089,7 +1118,14 @@ angular.module('starter.controllers', [])
 			  }
 			  	
 			  if(components.length > 0){
-				  cornerPocket.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.db.bulkDocs({docs:components},function(err, result){
+					  if(err){
+						  //ERROR HANDLING
+						  console.log(err);
+					  }else{
+						  //success!
+						  
+					  }
 				  });
 			  }
 			  
@@ -1170,13 +1206,26 @@ angular.module('starter.controllers', [])
 		  				//clean up component
 		  				delete component._id;
 		  				delete component._rev;
+						component.forTemplate = false;
+						
+						//set up dates
+						now.setSeconds(now.getSeconds() + 1);
+						component.created = now.toISOString();
+						component.updated = component.created;
+						
 		  				//assign new projectId
 		  				component.projectId = newId;
 		  			}
 					
-					cornerPocket.bulkDocs({docs:components}).then(function(){
-						//console.log("Saved!");
-					});
+					cornerPocket.db.bulkDocs({docs:components},function(err, result){
+					  if(err){
+						  //ERROR HANDLING
+						  console.log(err);
+					  }else{
+						  //success!
+						  
+					  }
+				  });
 				});
 			});
         }else{//existing
