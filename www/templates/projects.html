@@ -16,15 +16,14 @@
 	  </ion-scroll>
 	  <ion-scroll class="col height-100">
 		  <ion-list class='card-list' ng-show='view.activeTag'>		  
-		          <ion-item ng-repeat="item in items | filter: {tag: view.activeTag}" 
-		                    item="item"
-		                    href="#/app/project/{{item._id}}">
-		            <div class='bold'>{{item.name}}</div>
-			    <div class='italic'>Last Update: {{item.updated | date:'longDate'}}</div>
-		            <ion-option-button class="button-assertive option-button-2" ng-click="deleteItem(item)">Delete</ion-option-button>
-		            <ion-option-button class="button-positive option-button-2" ng-click="dialogOpen(item)">Edit</ion-option-button>
-			    <ion-option-button class="button-stable option-button-2" ng-click="downloadDialog(item)">Reports</ion-option-button>
-		          </ion-item>
+	      	<ion-item ng-repeat="item in items | filter: {tag: view.activeTag}" item="item" href="#/app/project/{{item._id}}">
+		        <div class='bold'>{{item.name}}</div>
+		   	 	<div class='italic'>Last Update: {{item.updated | date:'longDate'}}</div>
+		        <ion-option-button class="button-assertive option-button-2" ng-click="deleteItem(item)">Delete</ion-option-button>
+				<ion-option-button class="button-dark option-button-2" ng-click="copyProject(item)">Copy</ion-option-button>
+		        <ion-option-button class="button-positive option-button-2" ng-click="dialogOpen(item)">Edit</ion-option-button>
+		    	<ion-option-button class="button-stable option-button-2" ng-click="downloadDialog(item)">Reports</ion-option-button>
+		    </ion-item>
 		   </ion-list>
 	  </ion-scroll>
   </div>
@@ -57,7 +56,7 @@
 		      <span class="input-label">Tag</span>
 			  <autocomplete ng-model="newItem.tag" data="tags" on-type="" attr-placeholder='Tag' click-activation='true' class='autocomplete-tag'></autocomplete>
 		    </label>	
-		    <label class="item item-input item-select" style='z-index: 1'>
+		    <label class="item item-input item-select" style='z-index: 1' ng-show='view.showTemplates'>
 			    <div class="input-label">
 			      Template
 			    </div>
