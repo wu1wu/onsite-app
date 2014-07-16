@@ -206,7 +206,14 @@ angular.module('starter.controllers', [])
 			  }
 			  	
 			  if(components.length > 0){
-				  cornerPocket.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.db.bulkDocs({docs:components},function(err, result){
+					  if(err){
+						  //ERROR HANDLING
+						  console.log(err);
+					  }else{
+						  //success!
+						  
+					  }
 				  });
 			  }
 			  
@@ -491,6 +498,7 @@ angular.module('starter.controllers', [])
 	  });
   };
 })
+
 .controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
@@ -865,13 +873,17 @@ angular.module('starter.controllers', [])
 	  		  }	
 			  //assign new projectId
 			  component.projectId = doc.id;
+			  
 			  //standard doc info
 			  var now = new Date();
 			  now = now.toISOString();
 			  component.created = now;
 			  component.update = now;
+			  
+			  //tag as forTemplate
+			  component.forTemplate = true;
+			  
 			  docs.push(component);
-			  console.log(component);
 		  }
 		  console.log(docs);
 		  
@@ -1106,7 +1118,14 @@ angular.module('starter.controllers', [])
 			  }
 			  	
 			  if(components.length > 0){
-				  cornerPocket.bulkDocs({docs:components}).then(function(data){
+				  cornerPocket.db.bulkDocs({docs:components},function(err, result){
+					  if(err){
+						  //ERROR HANDLING
+						  console.log(err);
+					  }else{
+						  //success!
+						  
+					  }
 				  });
 			  }
 			  
@@ -1187,13 +1206,26 @@ angular.module('starter.controllers', [])
 		  				//clean up component
 		  				delete component._id;
 		  				delete component._rev;
+						component.forTemplate = false;
+						
+						//set up dates
+						now.setSeconds(now.getSeconds() + 1);
+						component.created = now.toISOString();
+						component.updated = component.created;
+						
 		  				//assign new projectId
 		  				component.projectId = newId;
 		  			}
 					
-					cornerPocket.bulkDocs({docs:components}).then(function(){
-						//console.log("Saved!");
-					});
+					cornerPocket.db.bulkDocs({docs:components},function(err, result){
+					  if(err){
+						  //ERROR HANDLING
+						  console.log(err);
+					  }else{
+						  //success!
+						  
+					  }
+				  });
 				});
 			});
         }else{//existing
