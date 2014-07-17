@@ -320,7 +320,6 @@ textarea {
 	z-index: 4;
 }
 
-
 .fullscreen-modal{
 	width: 100%;
 	left: 0;
@@ -336,4 +335,8 @@ textarea {
 
 .platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .title{
 	margin-top: 20px;
+}
+
+.modal .title{
+	margin: 0 60px;
 }
