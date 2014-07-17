@@ -582,7 +582,8 @@ angular.module('starter.controllers', [])
   		  for(var i = 0; i < projectCopy.libraries.length; i++){
   			  delete projectCopy.libraries[i].selected;
   		  }
-  		  projectCopy.save().then(function(data){
+		  var promises = [projectCopy.save(), $scope.view.activeLibrary.selected.save()];
+  		  $q.all(promises).then(function(data){
   	          $scope.view.status = 'Saved!';
   			  //console.log("project saved!");
   			  //console.log($scope.project)
@@ -1381,7 +1382,8 @@ angular.module('starter.controllers', [])
   		  for(var i = 0; i < projectCopy.libraries.length; i++){
   			  delete projectCopy.libraries[i].selected;
   		  }
-  		  projectCopy.save().then(function(data){
+		  var promises = [projectCopy.save(), $scope.view.activeLibrary.selected.save()];
+  		  $q.all(promises).then(function(data){
   	          $scope.view.status = 'Saved!';
   			  //console.log("project saved!");
   			  //console.log($scope.project)

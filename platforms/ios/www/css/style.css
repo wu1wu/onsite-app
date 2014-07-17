@@ -231,6 +231,7 @@ textarea {
  direction: ltr;
  -webkit-flex: 1 1 290px;
  text-overfl0w: ellipsis;
+ margin-left: 8px;
 }
 
 .input-accessories .button-clear{

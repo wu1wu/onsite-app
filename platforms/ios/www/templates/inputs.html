@@ -1,28 +1,26 @@
 <div ng-switch='component.schema.type' class='onsite-inputs'>
-	<ion-scroll zoom='false' ng-switch-when='Descriptive' class='height-100'>
+	<ion-scroll zoom='false' ng-switch-when='Component-Based' class='height-100'>
 	  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
 		  <div class="item item-divider">
 		    {{section.name}}
 		  </div>
-		  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
+		  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="component.state[input.alias].isHidden" ng-class="{'item-select': component.state[input.alias].options.length > 1}">
 		     <span class="input-label" ng-class="{'memo-label': input.keyboard == 'memo'}">{{input.name}}</span>
 	 
-		     <input  ng-hide='input.view.options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard ? input.keyboard:"text"}}'
+		     <input  ng-hide='component.state[input.alias].options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard && input.keyboard == "number" ? "tel":"text"}}'
 		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' data-index='{{$index}}' ng-class="{'has-units': input.units && input.units.length < 6, 'has-units-large': input.units && input.units.length >= 6}"
-		             ng-change="onInputChange(component.values[input.alias])" ng-readonly="input.restricted == '1'" 
+		             ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(component.values[input.alias], input)'
 				     ng-focus='onInputFocus(component.values[input.alias])' clear-button> 
 					 
 		     <textarea  ng-show='input.keyboard == "memo"' rows='5'
-		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' 
-		             ng-change="onInputChange(component.values[input.alias])" ng-readonly="input.restricted == '1'" 
+		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(component.values[input.alias], input)' data-index='{{$index}}'
 				     ng-focus='onInputFocus(component.values[input.alias])'></textarea>
 
-		     <select ng-show='input.view.options.length > 1' ng-model='component.values[input.alias]' 
-		             ng-change="onInputChange(component.values[input.alias])" ng-options="o for o in input.view.options" 
-				  	 ng-blur='onInputBlur(component.values[input.alias], input)' data-index='{{$index}}'
-				  	 ng-focus='onInputFocus(component.values[input.alias])' advance-on-change>
+		     <select ng-show='component.state[input.alias].options.length > 1' ng-model='component.values[input.alias]' 
+		             ng-change="onInputChange(input)" ng-options="o for o in component.state[input.alias].options" 
+				  	 data-index='{{$index}}' advance-on-change>
 			 </select>
 	 
 	 		<div class='input-accessories'>
@@ -34,30 +32,28 @@
 	   </div>
 	</ion-scroll>
 
-	<ion-scroll zoom='false' ng-switch-when='Component-Based'>
+	<ion-scroll zoom='false' ng-switch-when='Descriptive'>
 	  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
 		  <div class="item item-divider">
 		    {{section.name}}
 		  </div>
-		  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="input.view.isHidden" ng-class="{'item-select': input.view.options.length > 1}">
+		  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="component.state[input.alias].isHidden" ng-class="{'item-select': component.state[input.alias].options.length > 1}">
 		     <span class="input-label" ng-class="{'memo-label': input.keyboard == 'memo'}">{{input.name}}</span>
 	 
-		     <input  ng-hide='input.view.options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard ? input.keyboard:"text"}}' 
+		     <input  ng-hide='component.state[input.alias].options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard && input.keyboard == "number" ? "tel":"text"}}' 
 		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' ng-class="{'has-units': input.units && input.units.length < 6, 'has-units-large': input.units && input.units.length >= 6}"
-		             ng-change="onInputChange(project.values[input.alias])" ng-readonly="input.restricted == '1'" 
+		             ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(project.values[input.alias], input)' data-index='{{$parent.$index + "." + $index}}'
 				     ng-focus='onInputFocus(project.values[input.alias])' clear-button> 
 					 
 		     <textarea  ng-show='input.keyboard == "memo"' rows='5'
-		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' 
-		             ng-change="onInputChange(project.values[input.alias])" ng-readonly="input.restricted == '1'" 
+		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(project.values[input.alias], input)' data-index='{{$parent.$index + "." + $index}}'
 				     ng-focus='onInputFocus(project.values[input.alias])'></textarea>
 
-		     <select ng-show='input.view.options.length > 1' ng-model='project.values[input.alias]' 
-		             ng-change="onInputChange(project.values[input.alias])" ng-options="o for o in input.view.options" 
-				  	 ng-blur='onInputBlur(project.values[input.alias], input)' data-index='{{$parent.$index + "." + $index}}'
-				  	 ng-focus='onInputFocus(project.values[input.alias])' advance-on-change> 
+		     <select ng-show='component.state[input.alias].options.length > 1' ng-model='project.values[input.alias]' 
+		             ng-change="onInputChange(input)" ng-options="o for o in component.state[input.alias].options" 
+				  	 data-index='{{$parent.$index + "." + $index}}' advance-on-change> 
 			 </select>
 	 
 	   		<div class='input-accessories'>

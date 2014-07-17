@@ -63,7 +63,7 @@ angular.module('starter.directives', [])
 	
 	  	$scope.onInputBlur = function(value, input){
 	  		if($scope.view.activeInputValue !== value){
-	  			input.userValue = true;
+	  			$scope.component.state[input.alias].userValue = true;
 	  			$scope.digestValues();
 	  			$scope.save();
 
@@ -73,13 +73,12 @@ angular.module('starter.directives', [])
 	  		$scope.view.activeInputValue = null;
 	  	};
 	
-	  	$scope.onInputChange = function(value){
-	  		if($scope.view.activeInputValue !== value){
-	  			//$scope.setStatus({status:"Unsaved"});
-	  		}else{
-	  			//$scope.setStatus({status:"Saved!"});
-	  		}
-	  	}
+	  	$scope.onInputChange = function(input){
+			console.log("setting user value");
+			$scope.component.state[input.alias].userValue = true;
+			$scope.digestValues();
+			$scope.save();
+	  	};
 		
 		$scope.$watch('component', function(newValue, oldValue){
 			if(newValue === oldValue){return;}
@@ -91,8 +90,13 @@ angular.module('starter.directives', [])
 		
 		//INPUT ENGINE
 	    $scope.digestValues = function(restoreDefaults){
+			
+			//initialize state object if not already present
+		  if(!$scope.component.state){
+			  $scope.component.state = {};
+		  }
       
-	      for(var i = 0;i < $scope.component.schema.sections.length; i++){
+	      for(var i = 0; i < $scope.component.schema.sections.length; i++){
           
 	            var hiddenInputs = 0;
 	            var section = $scope.component.schema.sections[i];
@@ -101,32 +105,37 @@ angular.module('starter.directives', [])
 	            _.each(section.inputs, function(input){
 	              var timer = new Date();  
 	              console.log('----------' + input.name + "----------"); 
-	              //console.log(input);
-	              input.view = {};
-            
-	              //create the new scope for the inputs
-	              var inputScope = {};
-	              inputScope = $.extend({}, $scope.project.values, $scope.component.values);
-            
+				  
+		          //create the new scope for the inputs - NEEDS to refresh for each input.
+		          var inputScope = {};
+				  inputScope = $.extend({}, $scope.project.values, $scope.component.values);
+				  console.log(inputScope);
+		
+  				  //initialize input state if necessary
+  				  if(!$scope.component.state[input.alias]){
+  					$scope.component.state[input.alias] = {};
+  				  }
+  			 	  var inputState = $scope.component.state[input.alias];
+				  console.log(inputState);
+				  
 	              //view controls  - check if hidden then go to next in loop        
-	              if(input.hidden){               
-	                  //console.log("--testing hide--");
-	                  //console.log(input.hidden);
+	              if(input.hidden){   
+					  console.log(input.hidden);
+					  console.log($parse(input.hidden)(inputScope));            
 	                  if($parse(input.hidden)(inputScope)){
-	                      input.view.isHidden = true;
-	                      //console.log("hide!");
+						  inputState.isHidden = true;
 	                      hiddenInputs += 1;
 	                      return;
 	                  }else{
-	                      input.view.isHidden = false;
-	                      //console.log("show!");                    
+	                       inputState.isHidden = false;              
 	                  }
-                
+	              }else{
+					  inputState.isHidden = false;
 	              }
             
 	              //if restoring defaults, set userValue to false, will recalculate default values
 	              if(restoreDefaults){
-	                  input.userValue = false;
+	                  inputState.userValue = false;
 	              }
             
 	              var placeholder = {};
@@ -155,62 +164,63 @@ angular.module('starter.directives', [])
 	                          }
 	                      }
 	                  }
+					  //initialize input state options
+	                  inputState.options = [];                
                 
-	                  //console.log(inputOptions);
-	                  input.view.options = [];                
-                
-	                  if(inputOptions.length === 1 && !input.userValue){                    
+	                  if(inputOptions.length === 1 && !inputState.userValue){     
+						  //if just one, set this to the input value      
+						  console.log("184 - " + $parse(inputOptions[0])(inputScope));          
 	                      placeholder.inputValue = $parse(inputOptions[0])(inputScope);                    
 	                  }
                 
 	                  if(inputOptions.length > 1){
 	                      for(var i = 0;i < inputOptions.length; i++){
-	                          input.view.options.push($parse(inputOptions[i])(inputScope));
+	                          inputState.options.push($parse(inputOptions[i])(inputScope));
 	                      }
-	                  }               
-                        
+						  //when more than one, set the first matching option to the input value
+						  console.log("184 - " + inputState.options[0]); 
+						  placeholder.inputValue = inputState.options[0];
+	                  }              
 	              } //end lookup table options    
             
-	              //lookuptable through default value
-            
-	              if(!input.userValue && input.defaultValue){//if the default value hasn't been overrided, calculate new value
+	              //check default value
+	              if(!inputState.userValue && input.defaultValue){
+					  //if the default value hasn't been overrided and this is not supposed to be a dropdown list, calculate new value
 	                  if(input.defaultValue.indexOf(";") === -1){                      
 	                      var expression = angular.copy(input.defaultValue);
-                    
-	                      placeholder.inputValue = $parse(expression)(inputScope);
-	                      //console.log("--reassigning to default value--");
-	                      //console.log(placeholder.inputValue);
+						  console.log("193 - " + $parse(expression)(inputScope)); 
+                          placeholder.inputValue = $parse(expression)(inputScope);
+
 	                  }
 	              }
 				  
-	              if(input.defaultValue){//set up dropdown options
+				  //set up dropdown options from default value list
+	              if(input.defaultValue){
 	                  if(input.defaultValue.indexOf(";") !== -1){    
 	                      var inputOptions = input.defaultValue.split(";");                
 	                      //console.log(inputOptions);
-	                      input.view.options = []; 
+	                      inputState.options = []; 
 						  
 						  //set first value as default             
-	                      if(!input.userValue){     
-							  console.log("setting first value");               
-	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);           
-							  console.log("set first value");         
+	                      if(!inputState.userValue){  
+							  console.log("207 - " + $parse(inputOptions[0])(inputScope));                 
+	                          placeholder.inputValue = $parse(inputOptions[0])(inputScope);                 
 	                      }
 						  
 	                      if(inputOptions.length > 1){
 	                          for(var i = 0;i < inputOptions.length; i++){
-	                              input.view.options.push($parse(inputOptions[i])(inputScope));
+	                              inputState.options.push($parse(inputOptions[i])(inputScope));
 	                          }
 	                      }
 	                  }
 	              }
             
-            
+            	  console.log(placeholder);
 	              if(placeholder.inputValue !== undefined){//if a new value should be assigned
-	                  //console.log("reassigning value")
 					  //if not not a number (ie a number), then set it as such
 					  if(!isNaN(placeholder.inputValue)){
 						  placeholder.inputValue = Number(placeholder.inputValue);
-					  }else if(Object.prototype.toString.call(placeholder.inputValue) === '[object Date]'){
+					  }else if(Object.prototype.toString.call(placeholder.inputValue) === '[object Date]'){//catch date objects and convert to ISO string format
 					  	  placeholder.inputValue = placeholder.inputValue.toISOString();
 					  }
 
@@ -224,11 +234,6 @@ angular.module('starter.directives', [])
 	              var endTime = new Date();
 	              var elapsed = endTime.getTime() - timer.getTime();
 	              console.log("Timer: " + elapsed);
-				  console.log("---Component---");
-				  console.log($scope.component);
-				  //console.log("---Project---");
-				  //console.log($scope.project);
-				  
 	          });
 	          if(section.inputs.length === hiddenInputs){
 				  section.view.isHidden = true;
@@ -339,18 +344,20 @@ angular.module('starter.directives', [])
 			$(element[0]).on("change",function(){
 				console.log("changed!");
 				var address = attrs.index.split(".");
-				
+				console.log("focussing on:");
 				var nextInput = parseInt(address[1]) + 1;
 				var nextAddress = address[0] + "." + nextInput;
-				
-				var nextElement = $("[data-index='"+nextAddress+"']")
-				
+				var nextElement = $("[data-index='"+nextAddress+"']:not(.ng-hide)");
 				if(nextElement.length == 1){
 					nextElement.focus();
+					console.log("one");
+					console.log(nextElement);
 				}else{
 					var section = parseInt(address[0]) + 1;
 					nextAddress = section + ".0";
 					nextElement = $("[data-index='"+nextAddress+"']");
+					console.log("next section");
+					console.log(nextElement);
 					nextElement.focus();
 				}
 			});
