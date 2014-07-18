@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ngFitText', '--save' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 warn package.json onsite-app@0.1.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'ngFitText', null ]
+7 verbose cache add name=undefined spec="ngFitText" args=["ngFitText",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'ngFitText',
+8 verbose parsed url   path: 'ngFitText',
+8 verbose parsed url   href: 'ngFitText' }
+9 silly lockFile b3f1ef5e-ngFitText ngFitText
+10 verbose lock ngFitText /Users/DrewT/.npm/b3f1ef5e-ngFitText.lock
+11 silly lockFile b3f1ef5e-ngFitText ngFitText
+12 silly lockFile b3f1ef5e-ngFitText ngFitText
+13 verbose addNamed [ 'ngFitText', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 59f2359b-ngFitText ngFitText@
+16 verbose lock ngFitText@ /Users/DrewT/.npm/59f2359b-ngFitText.lock
+17 silly addNameRange { name: 'ngFitText', range: '*', hasData: false }
+18 verbose url raw ngFitText
+19 verbose url resolving [ 'https://registry.npmjs.org/', './ngFitText' ]
+20 verbose url resolved https://registry.npmjs.org/ngFitText
+21 info trying registry request attempt 1 at 21:23:15
+22 http GET https://registry.npmjs.org/ngFitText
+23 http 404 https://registry.npmjs.org/ngFitText
+24 silly registry.get cb [ 404,
+24 silly registry.get   { date: 'Thu, 17 Jul 2014 01:23:16 GMT',
+24 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=0',
+24 silly registry.get     'content-length': '52',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '0',
+24 silly registry.get     'x-served-by': 'cache-at52-ATL',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1405560195.863459,VS0,VE200',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     connection: 'Keep-Alive' } ]
+25 silly lockFile 59f2359b-ngFitText ngFitText@
+26 silly lockFile 59f2359b-ngFitText ngFitText@
+27 error 404 'ngFitText' is not in the npm registry.
+27 error 404 You should bug the author to publish it
+27 error 404 It was specified as a dependency of 'onsite-app'
+27 error 404
+27 error 404 Note that you can also install from a
+27 error 404 tarball, folder, or http url, or git url.
+28 error System Darwin 13.2.0
+29 error command "node" "/usr/local/bin/npm" "install" "ngFitText" "--save"
+30 error cwd /Users/DrewT/Developer/cordova/onsite-app/www
+31 error node -v v0.10.26
+32 error npm -v 1.4.3
+33 error code E404
+34 verbose exit [ 1, true ]

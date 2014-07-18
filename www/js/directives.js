@@ -385,6 +385,7 @@ angular.module('starter.directives', [])
       // set new index
       $scope.setIndex = function(i){
         $scope.selectedIndex = parseInt(i);
+		console.log("set selected index: " + i);
       }
 
       this.setIndex = function(i){
@@ -449,17 +450,13 @@ angular.module('starter.directives', [])
 
       // selecting a suggestion with RIGHT ARROW or ENTER
       $scope.select = function(suggestion){
-		  console.log($scope.filteredList);
-		  console.log(suggestion);
         if(suggestion){
           $scope.searchParam = suggestion;
           $scope.searchFilter = suggestion;
         }
         watching = false;
         $scope.completing = false;
-        setTimeout(function(){watching = true;},1000);
         $scope.setIndex(-1);
-
       }
 
 
@@ -490,8 +487,6 @@ angular.module('starter.directives', [])
 
 
         $input.on('focus', function(e){
-			console.log($input); 
-			console.log('got focus')
             scope.completing = true;
             scope.$apply();
         });
@@ -515,8 +510,10 @@ angular.module('starter.directives', [])
       $input.on("blur", function(e){
         // disable suggestions on blur
         // we do a timeout to prevent hiding it before a click event is registered
+		
         console.log('blur');
-        scope.select();
+		var index = scope.getIndex();
+        scope.select(angular.element(element.find('li')[index]).text());
         scope.setIndex(-1);
         scope.$apply();
       });
@@ -598,9 +595,8 @@ angular.module('starter.directives', [])
                 '<ul ng-show="(completing && filteredList.length > 0)" class=\'card list\'>' +
                   '<li suggestion ng-repeat="suggestion in filteredList = (suggestions | filter:searchFilter | orderBy:\'toString()\') track by $index"'+
                   'index="{{$index}}" val="{{suggestion}}" ng-class="{active: '+
-                  '($index == selectedIndex)}" ng-click="select(suggestion)" '+
+                  '($index == selectedIndex)}" io-tap="select(suggestion)" '+
                   'ng-bind-html="suggestion | highlight:searchParam" class="item">'+
-                    '{{suggestion}}' +
                   '</li>'+
                 '</ul>'+
               '</div>'

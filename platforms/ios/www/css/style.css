@@ -118,6 +118,21 @@ textarea {
 }
 
 /* AUTOCOMPLETE */
+/*
+.autocomplete{
+	position: absolute;
+	left: 200px;
+	top: 60px;
+	width: calc(100% - 280px);
+	border-bottom: 1px solid gray;
+}*/
+
+.autocomplete-label{
+	overflow: visible;
+}
+
+
+
 
 .autocomplete-label{
 	overflow:visible;
@@ -149,11 +164,7 @@ textarea {
   top: 39px;
   width: 100%;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  /*border-left: 1px solid #888;
-  
-  border-bottom: 1px solid #888;
-  border-top: 1px solid #888;
-  border-radius: 5px;*/
+
   z-index: 100;
   background-color: #fff;
   box-shadow: 0 0px 2px 2px rgba(0, 0, 0, 0.1);
@@ -197,7 +208,7 @@ textarea {
   background: #666;
   color: #fff;
 }
-
+*/
 .overflow-visible{
 	overflow: visible;
 }
@@ -320,7 +331,6 @@ textarea {
 	z-index: 4;
 }
 
-
 .fullscreen-modal{
 	width: 100%;
 	left: 0;
@@ -336,4 +346,8 @@ textarea {
 
 .platform-ios.platform-cordova .modal-wrapper .modal.fullscreen-modal .title{
 	margin-top: 20px;
+}
+
+.modal .title{
+	margin: 0 60px;
 }

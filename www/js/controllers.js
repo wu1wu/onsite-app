@@ -244,11 +244,20 @@ angular.module('starter.controllers', [])
 	modalScope.close = function(){
 		$scope.addNewModal.hide().then(function(){
 			//clean modal scope
+			console.log('close');
 			delete modalScope.newItem;
 			delete modalScope.view;
 			delete modalScope.itemToUpdate;
 		});
 		
+	};
+	
+	modalScope.setTag = function(tag){
+		console.log(tag);
+		modalScope.newItem.tag = tag;
+	};
+	modalScope.test = function(){
+		alert('test');
 	};
 	modalScope.ok = function(){
 		var newItem = modalScope.newItem;
