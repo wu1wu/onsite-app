@@ -11,7 +11,7 @@
 		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' data-index='{{$index}}' ng-class="{'has-units': input.units && input.units.length < 6, 'has-units-large': input.units && input.units.length >= 6}"
 		             ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(component.values[input.alias], input)'
-				     ng-focus='onInputFocus(component.values[input.alias])' clear-button> 
+				     ng-focus='onInputFocus(component.values[input.alias])' clear-button="input.restricted != 1"> 
 					 
 		     <textarea  ng-show='input.keyboard == "memo"' rows='5'
 		             placeholder='{{input.name}}' ng-model='component.values[input.alias]' ng-readonly="input.restricted == '1'" 
@@ -44,7 +44,7 @@
 		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' ng-class="{'has-units': input.units && input.units.length < 6, 'has-units-large': input.units && input.units.length >= 6}"
 		             ng-readonly="input.restricted == '1'" 
 				     ng-blur='onInputBlur(project.values[input.alias], input)' data-index='{{$parent.$index + "." + $index}}'
-				     ng-focus='onInputFocus(project.values[input.alias])' clear-button> 
+				     ng-focus='onInputFocus(project.values[input.alias])' clear-button='input.restricted != 1'> 
 					 
 		     <textarea  ng-show='input.keyboard == "memo"' rows='5'
 		             placeholder='{{input.name}}' ng-model='project.values[input.alias]' ng-readonly="input.restricted == '1'" 
