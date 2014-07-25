@@ -252,6 +252,9 @@ textarea {
 	
 }
 
+.onsite-inputs{
+	margin-bottom: 30px;
+}
 .onsite-inputs .input-accessories {
 	text-align: right;
 	display: table;

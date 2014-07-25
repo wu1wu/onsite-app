@@ -1,5 +1,5 @@
 <div ng-switch='component.schema.type' class='onsite-inputs'>
-	<ion-scroll zoom='false' ng-switch-when='Component-Based' class='height-100'>
+	<div ng-switch-when='Component-Based'>
 	  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
 		  <div class="item item-divider">
 		    {{section.name}}
@@ -30,9 +30,9 @@
 		   </div>
 		   </div>
 	   </div>
-	</ion-scroll>
+	</div>
 
-	<ion-scroll zoom='false' ng-switch-when='Descriptive'>
+	<div ng-switch-when='Descriptive'>
 	  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
 		  <div class="item item-divider">
 		    {{section.name}}
@@ -64,5 +64,5 @@
 			 
 		   </div>
 	   </div>
-	</ion-scroll>
+	</div>
 </div>
