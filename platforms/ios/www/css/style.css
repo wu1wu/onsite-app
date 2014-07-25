@@ -252,6 +252,9 @@ textarea {
 	
 }
 
+.onsite-inputs{
+	margin-bottom: 30px;
+}
 .onsite-inputs .input-accessories {
 	text-align: right;
 	display: table;
@@ -286,6 +289,8 @@ textarea {
 
 .item-input textarea{
 	padding-top: 7px;
+	flex:1 0 200px;
+	-webkit-flex:1 0 200px;
 }
 
 .item-input input{
@@ -350,4 +355,8 @@ textarea {
 
 .modal .title{
 	margin: 0 60px;
+}
+
+.platform-ios.platform-cordova .fullscreen-modal .has-header{
+	top:64px !important;
 }

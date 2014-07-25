@@ -356,3 +356,7 @@ textarea {
 .modal .title{
 	margin: 0 60px;
 }
+
+.platform-ios.platform-cordova .fullscreen-modal .has-header{
+	top:64px !important;
+}

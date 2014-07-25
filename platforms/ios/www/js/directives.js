@@ -267,13 +267,16 @@ angular.module('starter.directives', [])
 			//find button
 			var container = element.siblings('.input-accessories');
 			
-			//append
-			//element.after(button);
-			if(container.length > 0){
-				container.append(button);
-			}else{
-				label.append(button);
-			}		
+			//append if called for
+			console.log("clearButton: " + scope.$eval(attrs.clearButton));
+			if(scope.$eval(attrs.clearButton) || scope.$eval(attrs.clearButton) === undefined){
+				if(container.length > 0){
+					container.append(button);
+				}else{
+					label.append(button);
+				}	
+			}
+				
 			//attach event handler
 			var $input = element;
 			$ionicGesture.on('tap click', function(e){
@@ -302,7 +305,6 @@ angular.module('starter.directives', [])
 					}
 				});
 			}
-			
 		}
 	};
 })

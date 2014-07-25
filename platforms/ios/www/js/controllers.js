@@ -309,6 +309,11 @@ angular.module('starter.controllers', [])
 		  				//clean up component
 		  				delete component._id;
 		  				delete component._rev;
+						if(component._attachments){
+							delete component._attachments;
+						}
+						component.forTemplate = false;
+						
 		  				//assign new projectId
 		  				component.projectId = newId;
 						component.created = today.toISOString();
@@ -591,7 +596,11 @@ angular.module('starter.controllers', [])
   		  for(var i = 0; i < projectCopy.libraries.length; i++){
   			  delete projectCopy.libraries[i].selected;
   		  }
-		  var promises = [projectCopy.save(), $scope.view.activeLibrary.selected.save()];
+  		  console.log("saving!");
+		  var promises = [projectCopy.save()]
+		  if($scope.view.activeLibrary != 'notes'){
+		  	promises.push($scope.view.activeLibrary.selected.save());
+		  }
   		  $q.all(promises).then(function(data){
   	          $scope.view.status = 'Saved!';
   			  //console.log("project saved!");
@@ -634,6 +643,8 @@ angular.module('starter.controllers', [])
 		//strip db identifiers
 		delete copy._id;
 		delete copy._rev;
+		delete copy._attachments;
+		
 		//strip out digits
 		copy.name = copy.name.replace(/(\d+)/g,"");
 	    //more regex
@@ -876,6 +887,8 @@ angular.module('starter.controllers', [])
 			  //clean up component
 			  delete component._id;
 			  delete component._rev;
+			  delete component._attachments;
+			  
 	  		  //strip functions
 	  		  var functions = _.functions(component);
 	  		  for(var f = 0; f < functions.length; f++){
@@ -1216,7 +1229,7 @@ angular.module('starter.controllers', [])
 		  				//clean up component
 		  				delete component._id;
 		  				delete component._rev;
-						component.forTemplate = false;
+						component.forTemplate = true;
 						
 						//set up dates
 						now.setSeconds(now.getSeconds() + 1);
@@ -1391,7 +1404,10 @@ angular.module('starter.controllers', [])
   		  for(var i = 0; i < projectCopy.libraries.length; i++){
   			  delete projectCopy.libraries[i].selected;
   		  }
-		  var promises = [projectCopy.save(), $scope.view.activeLibrary.selected.save()];
+		  var promises = [projectCopy.save()]
+		  if($scope.view.activeLibrary != 'notes'){
+		  	promises.push($scope.view.activeLibrary.selected.save());
+		  }
   		  $q.all(promises).then(function(data){
   	          $scope.view.status = 'Saved!';
   			  //console.log("project saved!");
@@ -1528,6 +1544,7 @@ angular.module('starter.controllers', [])
 		   	  newItem.channels = ["public"];
 		   	  newItem.projectId = $scope.project._id;
 			  newItem.values = {};
+			  newItem.forTemplate = true;
   
 		   	  //move these forward for easy access
 		   	  newItem.libraryId = newItem.schema.libraryId;

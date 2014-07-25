@@ -6,17 +6,17 @@
     <button ng-show="project.type === 'project'" class="button button-icon icon ion-share" ng-click='saveAsTemplate()'></button>
   </ion-nav-buttons>
   
-  <div class="tabs tabs-dark tabs-icon-top">
-    <a class="tab-item" ng-class="{'tab-item-active': library == view.activeLibrary}" ng-repeat='library in project.libraries' ng-click='view.activeLibrary = library'>
-      <i class="icon" ng-class="{'ion-home': library.tag === 'Descriptive', 'ion-ios7-gear': library.tag === 'Component-Based'}"></i>
-      {{library.name}}
-    </a>
-    <a class="tab-item" ng-class="{'tab-item-active': view.activeLibrary == 'notes'}" ng-click='view.activeLibrary = "notes"'>
-      <i class="icon ion-compose"></i>
-      Notes
-    </a>
-  </div>
 	<ion-content has-tabs="true" scroll='false'>
+		  <div class="tabs tabs-dark tabs-icon-top">
+		    <a class="tab-item" ng-class="{'tab-item-active': library == view.activeLibrary}" ng-repeat='library in project.libraries' ng-click='view.activeLibrary = library'>
+		      <i class="icon" ng-class="{'ion-home': library.tag === 'Descriptive', 'ion-ios7-gear': library.tag === 'Component-Based'}"></i>
+		      {{library.name}}
+		    </a>
+		    <a class="tab-item" ng-class="{'tab-item-active': view.activeLibrary == 'notes'}" ng-click='view.activeLibrary = "notes"'>
+		      <i class="icon ion-compose"></i>
+		      Notes
+		    </a>
+		  </div>
 	    <div class="row no-padding" ng-show='view.activeLibrary != "notes"'>
 	      <!--headers-->
 	      <div class='col-33 right-shadow' style='z-index: 100'>
@@ -52,7 +52,9 @@
 	            </ion-list>
 	      </ion-scroll>
 	      <!-- input content -->
-	      <onsite-inputs component='view.activeLibrary.selected' project='project' save-component='saveComponent()' class='col-67 height-100'></onsite-inputs>
+	      <ion-scroll zoom='false' class='col-67'>
+	      	<onsite-inputs component='view.activeLibrary.selected' project='project' save-component='saveComponent()'></onsite-inputs>
+      	  </ion-scroll>
 	   </div>
 	   
 	   
@@ -61,7 +63,7 @@
 		   <div class='col'>
 	 	  	   <div class="card">
 	 	           <div class="item item-text-wrap">
-	 	             <textarea placeholder='Project Notes' autofocus style='height:400px'></textarea>
+	 	             <textarea placeholder='Project Notes' autofocus style='height:400px' ng-model='project.notes' ng-blur='saveComponent()'></textarea>
 	 	           </div>
 	 	       </div>
 		   </div>
