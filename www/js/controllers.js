@@ -51,9 +51,9 @@ angular.module('starter.controllers', [])
 	
 	//load user's settings
 	//console.log($user);
-        if(!localStorage.groupBy){
-            localStorage.groupBy = 'tag';
-        }
+    if(!localStorage.groupBy){
+    	localStorage.groupBy = 'tag';
+    }
 	
 	$scope.groups = $user.groups;
 	$scope.group = $user.activeGroup;
@@ -133,7 +133,6 @@ angular.module('starter.controllers', [])
         $user.save();
     };
  })
-
 .controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
            
 	$scope.view = {};
@@ -308,12 +307,11 @@ angular.module('starter.controllers', [])
 		  				var component = components[i];
 		  				//clean up component
 		  				delete component._id;
-		  				delete component._rev;
+						delete component._rev;
 						if(component._attachments){
 							delete component._attachments;
 						}
 						component.forTemplate = false;
-						
 		  				//assign new projectId
 		  				component.projectId = newId;
 						component.created = today.toISOString();
@@ -512,7 +510,6 @@ angular.module('starter.controllers', [])
 	  });
   };
 })
-
 .controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
@@ -730,9 +727,9 @@ angular.module('starter.controllers', [])
     
 		         //clean up component schema
 		   	  newItem.schema.type = $scope.view.activeLibrary.tag;
-		   	  delete newItem.schema._rev;
 		   	  delete newItem.schema.channels;
 		   	  delete newItem.schema.tag;
+			  //preserve newItem.schema._rev for use updating this component in place
   
 		   	  //configure document
 		   	  newItem.type = "component";
@@ -836,7 +833,6 @@ angular.module('starter.controllers', [])
 	 $scope.templateModal.remove();
 	 $scope.photoModal.remove();
    });    
-   
 
   //SAVE TO TEMPLATE
   $ionicModal.fromTemplateUrl('save-as-template.html', {}).then(function(modal) {
@@ -1086,7 +1082,6 @@ angular.module('starter.controllers', [])
 	  
     };
 })
-
 .controller('templatesController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
            
 	$scope.view = {};
@@ -1535,7 +1530,7 @@ angular.module('starter.controllers', [])
     
 		         //clean up component schema
 		   	  newItem.schema.type = $scope.view.activeLibrary.tag;
-		   	  delete newItem.schema._rev;
+		   	  //preserve schema._rev to check for schema updates
 		   	  delete newItem.schema.channels;
 		   	  delete newItem.schema.tag;
   
