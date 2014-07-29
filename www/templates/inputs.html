@@ -1,10 +1,10 @@
-<div ng-switch='component.schema.type' class='onsite-inputs'>
+<div ng-switch='component.schema.libraryType' class='onsite-inputs'>
 	<div ng-switch-when='Component-Based'>
-	  <div class="card" ng-repeat='section in component.schema.sections' ng-hide="section.view.isHidden">
+	  <div class="card" ng-repeat='section in component.schema.sections track by $index' ng-hide="section.view.isHidden">
 		  <div class="item item-divider">
 		    {{section.name}}
 		  </div>
-		  <div class="item item-input" ng-repeat="input in section.inputs" ng-hide="component.state[input.alias].isHidden" ng-class="{'item-select': component.state[input.alias].options.length > 1}">
+		  <div class="item item-input" ng-repeat="input in section.inputs track by $index" ng-hide="component.state[input.alias].isHidden" ng-class="{'item-select': component.state[input.alias].options.length > 1}">
 		     <span class="input-label" ng-class="{'memo-label': input.keyboard == 'memo'}">{{input.name}}</span>
 	 
 		     <input  ng-hide='component.state[input.alias].options.length > 1 || input.keyboard == "memo"' type='{{input.keyboard && input.keyboard == "number" ? "tel":"text"}}'

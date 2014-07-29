@@ -790,6 +790,7 @@ angular.module('starter.services', [])
 						deferred.reject(err);
 					}else{
 						var indexedSchemas = _.indexBy(response.rows, "id");
+						console.log(indexedSchemas);
 						var component;
 						var schema;
 						var promises = [];
@@ -798,8 +799,12 @@ angular.module('starter.services', [])
 						for(var i = 0; i < self.outOfDateComponents.length; i++){
 							component = self.outOfDateComponents[i];
 							schema = indexedSchemas[component.schemaId].doc;
+							//set up schema
 							if(schema._id){delete schema._id;}
+							schema
+							console.log(angular.copy(component));
 							component.schema = schema;
+							console.log(angular.copy(component));
 							promises.push(component.save());
 						}
 						$q.all(promises).then(function(){

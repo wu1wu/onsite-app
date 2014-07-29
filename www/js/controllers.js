@@ -621,6 +621,9 @@ angular.module('starter.controllers', [])
 	$scope.$watch(function(){return $user.settings.groupBy;}, $scope.updateView);
 	
 	/*--VIEW OPERATIONS--*/
+	$scope.setActiveComponent = function(component){
+		$scope.view.activeLibrary.selected = component;
+	};
 	
 	$scope.saveComponent = function(){
   	  if(($scope.view.activeLibrary && $scope.view.activeLibrary.tag === 'Descriptive') || $scope.view.activeLibrary === 'notes'){
@@ -763,10 +766,12 @@ angular.module('starter.controllers', [])
 		   	  newItem.tag = newItem.schema.tag;
     
 		         //clean up component schema
-		   	  newItem.schema.type = $scope.view.activeLibrary.tag;
-		   	  delete newItem.schema.channels;
-		   	  delete newItem.schema.tag;
-			  //preserve newItem.schema._rev for use updating this component in place
+			  delete $scope.newItem.schema.type
+		      delete $scope.newItem.schema.created;
+		      delete $scope.newItem.schema.updated;
+			  //preserve newItem.schema._rev so we can use it to check for updates
+			  delete $scope.newItem.schema.channels;
+			  delete $scope.newItem.schema.tag;
   
 		   	  //configure document
 		   	  newItem.type = "component";
@@ -1353,7 +1358,6 @@ angular.module('starter.controllers', [])
   $scope.$on('$destroy', function() {
     $scope.addNewModal.remove();
   });    
-  
 })
 .controller('templatePageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate) {
 	//console.log($ionicTabsDelegate);
@@ -1566,10 +1570,12 @@ angular.module('starter.controllers', [])
 		   	  newItem.tag = newItem.schema.tag;
     
 		         //clean up component schema
-		   	  newItem.schema.type = $scope.view.activeLibrary.tag;
-		   	  //preserve schema._rev to check for schema updates
-		   	  delete newItem.schema.channels;
-		   	  delete newItem.schema.tag;
+				  delete $scope.newItem.schema.type
+			      delete $scope.newItem.schema.created;
+			      delete $scope.newItem.schema.updated;
+				  //preserve newItem.schema._rev so we can use it to check for updates
+				  delete $scope.newItem.schema.channels;
+				  delete $scope.newItem.schema.tag;
   
 		   	  //configure document
 		   	  newItem.type = "component";

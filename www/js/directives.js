@@ -224,7 +224,7 @@ angular.module('starter.directives', [])
 					  	  placeholder.inputValue = placeholder.inputValue.toISOString();
 					  }
 
-	                  if($scope.component.schema.type === 'Descriptive'){
+	                  if($scope.component.schema.libraryType === 'Descriptive'){
 	                      $scope.project.values[input.alias] = placeholder.inputValue;//if descriptive library, add it to the project values
 	                  }else{
 	                      $scope.component.values[input.alias] = placeholder.inputValue;//if component, add it to component values
