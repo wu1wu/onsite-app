@@ -738,4 +738,83 @@ angular.module('starter.services', [])
 			cornerPocket.autoSync = result;
 		}
 	};
+}]).factory('componentUpdate', ['$q', 'cornerPocket', function($q, cornerPocket){
+	//object
+	function componentCheck (){
+		//accepts components and returns the ones which are out of date
+		this.check = function(components){
+			console.log("checking");
+			var self = this;
+			var deferred = $q.defer();
+			var schemaIds = _.uniq(_.pluck(components, 'schemaId'));
+			var outOfDateComponents = [];
+			cornerPocket.db.query('componentSchemas/check', {keys: schemaIds}, function(err, response){
+				if(err){
+					deferred.reject(err);
+				}else{
+					console.log(response);
+					var indexedSchemas = _.indexBy(response.rows, "id");
+					var component, currentSchema;
+					for(var i = 0; i < components.length; i++){
+						component = components[i];
+						currentSchema = indexedSchemas[component.schemaId];
+						console.log(component);
+						console.log(currentSchema);
+						if(component.schema._rev < currentSchema.value){
+							outOfDateComponents.push(component);
+						}			
+					}
+					self.outOfDateComponents = outOfDateComponents;
+					console.log("--OOD--");
+					console.log(self.outOfDateComponents);
+					deferred.resolve(outOfDateComponents);
+				}
+			});
+			return deferred.promise;		
+		};
+		//update outofdate components
+		this.update = function(){
+
+			var deferred = $q.defer();
+			var self = this;
+			console.log(angular.copy(self.outOfDateComponents));
+			if(!self.outOfDateComponents){
+				deferred.reject({error:true, message: "You must run a check before updating."});
+			}else if (self.outOfDateComponents.length == 0){
+				deferred.resolve({error:false, message: "All components are up to date."});
+			}else{
+				var schemaIds = _.uniq(_.pluck(self.outOfDateComponents, 'schemaId'));
+				console.log(schemaIds);
+				cornerPocket.db.query('componentSchemas/check', {keys:schemaIds, include_docs:true}, function (err, response){
+					if(err){
+						deferred.reject(err);
+					}else{
+						var indexedSchemas = _.indexBy(response.rows, "id");
+						var component;
+						var schema;
+						var promises = [];
+						console.log("--OOD--");
+						console.log(angular.copy(self));
+						for(var i = 0; i < self.outOfDateComponents.length; i++){
+							component = self.outOfDateComponents[i];
+							schema = indexedSchemas[component.schemaId].doc;
+							if(schema._id){delete schema._id;}
+							component.schema = schema;
+							promises.push(component.save());
+						}
+						$q.all(promises).then(function(){
+							deferred.resolve();
+						}, function(error){
+							console.log(error);
+							deferred.reject(error);
+						});
+						
+					}
+				});
+			}
+			return deferred.promise;
+		};
+	};
+	//return new instance of the object.
+	return componentCheck;
 }]);

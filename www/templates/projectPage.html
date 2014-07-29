@@ -5,8 +5,15 @@
   <ion-nav-buttons side="right">
     <button ng-show="project.type === 'project'" class="button button-icon icon ion-share" ng-click='saveAsTemplate()'></button>
   </ion-nav-buttons>
+  	<div align-title="center" class="bar bar-positive bar-subheader update" ng-hide = '!view.showAlert'>
+  		<h2 class='title'>
+	  		One or more components are out of date. <a ng-click='updateComponents()'>Update</a>
+	  		or
+	  		<a ng-click='ignoreUpdates()'>Ignore future updates.</a>
+  		</h2>
+	</div>
   
-	<ion-content has-tabs="true" scroll='false'>
+	<ion-content has-tabs="true" scroll='false' ng-class='{"double-subheader": view.showAlert}'>
 		  <div class="tabs tabs-dark tabs-icon-top">
 		    <a class="tab-item" ng-class="{'tab-item-active': library == view.activeLibrary}" ng-repeat='library in project.libraries' ng-click='view.activeLibrary = library'>
 		      <i class="icon" ng-class="{'ion-home': library.tag === 'Descriptive', 'ion-ios7-gear': library.tag === 'Component-Based'}"></i>
@@ -43,7 +50,7 @@
 		                <div class="item item-divider">
 		                  {{group.name}}
 		                </div>
-		                <ion-item ng-repeat='component in group.components' ng-click='view.activeLibrary.selected = component' ng-class="{'selected': component == view.activeLibrary.selected}">
+		                <ion-item ng-repeat='component in group.components track by _id' ng-click='view.activeLibrary.selected = component' ng-class="{'selected': component == view.activeLibrary.selected}">
 		                  {{component.name}}
 		                  <ion-option-button class="button-positive" ng-click='dialogOpen(component)'>Edit</ion-option-button>
 		                  <ion-option-button class="button-assertive" ng-click='deleteComponent(component)'>Delete</ion-option-button>

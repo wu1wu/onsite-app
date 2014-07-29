@@ -510,7 +510,7 @@ angular.module('starter.controllers', [])
 	  });
   };
 })
-.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera) {
+.controller('projectPageController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, $user, $ionicTabsDelegate, $cordovaCamera, componentUpdate) {
 	//console.log($ionicTabsDelegate);
 	//console.log($scope);
 	//object for managing view state
@@ -534,6 +534,43 @@ angular.module('starter.controllers', [])
 		$scope.components = result.docs;
 		//active first tab
 		$scope.view.activeLibrary = $scope.project.libraries[0];
+
+		//but wait, lets check to see if these components are out of date
+        //however, we only want to run this if the user isn't ignoring updates
+        //TODO - need a way to start listening again to updates
+        //TODO - perhaps use 'ignore this update', and save the date.
+        //TODO - then filter future updates for those occurring after the saved date.
+        if(!$scope.project.ignoreUpdates){
+            $scope.componentUpdate = new componentUpdate();
+            $scope.componentUpdate.check(result.docs).then(function(outOfDateComponents){
+                console.log("AFTER CHECK");
+                console.log(outOfDateComponents);
+                if(outOfDateComponents.length > 0){
+                    //oh crap, some of these components are out of date
+                    //lets set up the scope to handle this situation.
+                    $scope.view.showAlert = true;
+                    $scope.updateComponents = function(){
+                        console.log($scope.componentUpdate);
+                        $scope.componentUpdate.update().then(function(res){
+                            $scope.view.showAlert = false;
+                            alert("Components(s) update successful!");                           
+                        },function(err){
+                            console.log(err);
+                            alert("An error occured during the update");
+                        });
+                    };
+
+                    $scope.ignoreUpdates = function(){
+                        $scope.project.ignoreUpdates = true;
+                        $scope.view.showAlert = false;
+                        $scope.project.save();
+                    }
+                }
+            }, function(error){
+                console.log("ERROR");
+                console.log(error);
+            });
+        }
     });
 
 	var componentSchemasByLibrary;

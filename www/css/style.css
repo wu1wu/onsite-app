@@ -331,6 +331,19 @@ textarea {
 	font-size: 40px;
 }
 
+.update .title a{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.double-subheader{
+	top:88px;
+}
+
+.platform-ios.platform-cordova .double-subheader{
+	top:108px;
+}
+
 /* CORRECTIONS */
 .scroll-content-false {
 	z-index: 4;
