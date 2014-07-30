@@ -1,4 +1,4 @@
-angular.module('starter.controllers', []).controller('loginController', function($scope, $ionicPopup, $user, $sync) {
+angular.module('starter.controllers', []).controller('loginController', function($scope, $ionicPopup, $user, $sync, $location) {
     if (window.StatusBar) {
         StatusBar.styleDefault();
     }
@@ -30,7 +30,9 @@ angular.module('starter.controllers', []).controller('loginController', function
         localStorage.password = $scope.user.password;
         $user.logIn($scope.user).then(function(needSync){
             if(needSync){
-                $sync.once();
+                $sync.once().then(function(){
+                    $location.path("/app/projects").replace();
+                });
             }            
         });
     };

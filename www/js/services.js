@@ -334,7 +334,6 @@ angular.module('starter.services', [])
                         response.password = userInfo.password; //now we need to store the password
                         user.construct(response);
                         user.offline = false;
-                        $location.path("/app/projects").replace();
                         //ok, lets check to see if it's the first time for each group 
                         cornerPocket.db.get('_design/projects', function(err, result) {
                             if (err) {
@@ -375,7 +374,7 @@ angular.module('starter.services', [])
                                     cornerPocket.changes.cancel(); //stop listening, please!	
                                 }
                                 //lastly, initialize the database (locally)
-                                cornerPocket.init(user.activeGroup.name);
+                                cornerPocket.init(user.activeGroup.name, {adapter: 'websql'});
                                 //for some reason this redirect is not happening... :(	
                                 $location.path("/app/projects").replace();
                                 deferred.resolve();
@@ -427,7 +426,7 @@ angular.module('starter.services', [])
                     if (cornerPocket.changes) {
                         cornerPocket.changes.cancel(); //stop listening, please!	
                     }
-                    cornerPocket.init(group.name);
+                    cornerPocket.init(group.name, {adapter: 'websql'});
                     $location.path("/app/projects").replace();
                 }
             },
@@ -473,7 +472,7 @@ angular.module('starter.services', [])
                     cornerPocket.changes.cancel(); //stop listening, please!	
                 }
                 //lastly, initialize the database (locally)
-                cornerPocket.init(user.activeGroup.name);
+                cornerPocket.init(user.activeGroup.name, {adapter: 'websql'});
             },
             save: function() {
                 var user = this;
