@@ -531,12 +531,12 @@ angular.module('starter.services', [])
                             title: "Sync Error"
                         });
                         loadingPopup.close();
-                    }
+                    };
                     //Step 1 - first things first, get map of projectIDs
                     remote.query('projects/authorMap', {
                         keys:["All", $user.name]
-                    }, function(err, response) {
-                        var activeIDs = _.uniq(_.pluck(response.rows, "id"));
+                    }, function(err, res1) {
+                        var activeIDs = _.uniq(_.pluck(res1.rows, "id"));
                         console.log(activeIDs);
                         //Step 2 - pull down data from server
                         cornerPocket.db.replicate.from(remote, {
@@ -544,24 +544,17 @@ angular.module('starter.services', [])
                             query_params: {
                                 ids:activeIDs
                             }
+                        }).on("change", function(change){
+                            console.log(change);
                         }).on("complete", function(info){
                             //Step 3 - conflict resolution
-                            
-                            //STEP 4 - mark inactive projects as not deployed
-                            //create a view that gets all projects which are tagged inactive: true AND deployed:true
-                            //update each document to indicatd it's not deployed
-                            //save documents back to the server
-                            //delete documents from local database
-                            //keep track of deleted projects
-                            
-                            //STEP 5 - push projects back to the server
-                            cornerPocket.db.replicate.to(remote, {
-                                //we'll stick a filter function here that prevents projects which were deleted from syncing back to the server
-                            }).on("complete", function(info){
+                            //STEP 4 - push projects back to the server
+                            cornerPocket.db.replicate.to(remote)
+                            .on("complete", function(info){
+                                //STEP 5 - We're done!                                  
                                 loadingPopup.close();
-                                deferred.resolve(info);
-                            }).on("error", onError);
-                            
+                                deferred.resolve();
+                            }).on("error", onError);                         
                         }).on("error", onError);
                     });
                 });
@@ -605,11 +598,12 @@ angular.module('starter.services', [])
                         var indexedSchemas = _.indexBy(response.rows, "id");
                         var component, currentSchema;
                         for (var i = 0; i < components.length; i++) {
+                            //slice off revision number and treat as number
                             component = components[i];
                             currentSchema = indexedSchemas[component.schemaId];
-                            console.log(component);
-                            console.log(currentSchema);
-                            if (component.schema._rev < currentSchema.value) {
+                            component = +component.schema._rev.split("-")[0];
+                            currentSchema = +currentSchema.value.split("-")[0];
+                            if (component < currentSchema) {
                                 outOfDateComponents.push(component);
                             }
                         }

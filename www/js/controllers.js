@@ -129,11 +129,12 @@ angular.module('starter.controllers', []).controller('loginController', function
     //----------CRUD OPERATIONS----------//
     //GET items and watch tags
     var promises = [];
-    promises.push(cornerPocket.mapCollection("projects/all"));
+    promises.push(cornerPocket.mapCollection("projects/active"));
     promises.push(cornerPocket.mapCollection("reports/all"));
     $q.all(promises).then(function(results) {
         $scope.items = results[0].docs;
         $scope.reports = results[1].docs;
+        console.log($scope.items);
     });
     //second wave - used for the 'Add New' Dialog
     var secondWave = [];
