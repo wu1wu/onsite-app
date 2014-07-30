@@ -270,7 +270,7 @@ angular.module('starter.controllers', []).controller('loginController', function
                 cornerPocket.db.post(newProject).then(function(result) {
                     var newId = result.id;
                     console.log("new project");
-                    console.log(result);
+                    console.log(newProject);
                     //get all existing components associated with the template
                     cornerPocket.db.query("components/forProjectId", options).then(function(result) {
                         console.log(result);
@@ -378,8 +378,9 @@ angular.module('starter.controllers', []).controller('loginController', function
             modalScope.title = "Copy - " + project.name;
             modalScope.newItem.name = project.name;
             modalScope.newItem.tag = project.tag;
+            modalScope.newItem.isActive = true;
             modalScope.newItem.template = project;
-            modalScope.view.showTemplate = false;
+            modalScope.view.showTemplates = false;
             modalScope.itemToUpdate = null;
             //lets actually open it up
             $scope.addNewModal.show().then(function() {
