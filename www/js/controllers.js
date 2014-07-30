@@ -124,7 +124,7 @@ angular.module('starter.controllers', []).controller('loginController', function
         $user.settings.groupBy = groupBy;
         $user.save();
     };
-}).controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport) {
+}).controller('projectsController', function($scope, $stateParams, $q, $timeout, $ionicModal, $ionicPopup, cornerPocket, generateReport, $user) {
     $scope.view = {};
     //----------CRUD OPERATIONS----------//
     //GET items and watch tags
@@ -227,7 +227,7 @@ angular.module('starter.controllers', []).controller('loginController', function
                 console.log('close');
                 delete modalScope.newItem;
                 delete modalScope.view;
-                delete modalScope.itemToUpdate;
+                modalScope.itemToUpdate = null;
             });
         };
         modalScope.setTag = function(tag) {
@@ -239,13 +239,16 @@ angular.module('starter.controllers', []).controller('loginController', function
         };
         modalScope.ok = function() {
             var newItem = modalScope.newItem;
-            if (!modalScope.itemToUpdate) { //if new && template
+            if (!modalScope.itemToUpdate) { //if new
                 var newProject = {};
                 //copy template to item
                 angular.copy(newItem.template, newProject);
                 //configure new Project
                 newProject.name = newItem.name;
                 newProject.tag = newItem.tag;
+                newProject.isActive = true;
+                newProject.authors = newItem.share ? ["All"]: [$user.name];
+                
                 newProject.type = 'project';
                 //date/time
                 var now = new Date();
@@ -266,6 +269,7 @@ angular.module('starter.controllers', []).controller('loginController', function
                 //post project to DB
                 cornerPocket.db.post(newProject).then(function(result) {
                     var newId = result.id;
+                    console.log("new project");
                     console.log(result);
                     //get all existing components associated with the template
                     cornerPocket.db.query("components/forProjectId", options).then(function(result) {
@@ -300,24 +304,35 @@ angular.module('starter.controllers', []).controller('loginController', function
                         });
                     });
                 });
+                modalScope.close();
             } else { //existing
-                //console.log('update!');
-                modalScope.itemToUpdate.name = newItem.name;
-                modalScope.itemToUpdate.tag = newItem.tag;
-                modalScope.itemToUpdate.save().then(function() {
-                    $scope.status = 'Saved!';
-                    $scope.showStatus = true;
-                }, function() {
-                    $scope.status = 'Error :(';
-                    $scope.showStatus = true;
-                });
+                //console.log('update!');                
+                var save = function(){
+                    modalScope.itemToUpdate.name = newItem.name;
+                    modalScope.itemToUpdate.tag = newItem.tag;
+                    modalScope.itemToUpdate.isActive = newItem.isActive;
+                    modalScope.itemToUpdate.save().then(function() {
+                        $scope.status = 'Saved!';
+                        $scope.showStatus = true;
+                    }, function() {
+                        $scope.status = 'Error :(';
+                        $scope.showStatus = true;
+                    });
+                    modalScope.close();
+                };
+                if(!newItem.isActive){
+                    var promise = $ionicPopup.confirm({
+                        title: "Confirm Deactivation",
+                        subTitle: "Are you sure you want to deactivate: " + newItem.name + "?  This will remove this project from your device."
+                    });
+                    promise.then(function(){
+                        save();
+                    });
+                }else{
+                    save();
+                }
+                
             }
-            $scope.addNewModal.hide().then(function() {
-                //clean modal scope
-                delete modalScope.newItem;
-                delete modalScope.view;
-                modalScope.itemToUpdate = null;
-            });
         };
         modalScope.reports = $scope.reports;
     });
@@ -341,6 +356,8 @@ angular.module('starter.controllers', []).controller('loginController', function
             modalScope.title = "Edit " + itemToUpdate.name;
             modalScope.newItem.name = itemToUpdate.name;
             modalScope.newItem.tag = itemToUpdate.tag;
+            modalScope.newItem.isActive = itemToUpdate.isActive;
+            modalScope.newItem.authors = itemToUpdate.authors;
             modalScope.itemToUpdate = itemToUpdate;
             modalScope.view.showTemplates = false;
         }

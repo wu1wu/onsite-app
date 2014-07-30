@@ -42,7 +42,7 @@
 		    Close
 		  </button>
 		  <h1 class="title" fittext>{{title}}</h1>
-		  <button class="button button-positive" ng-click='ok()' ng-disabled='(!newItem.name || !newItem.tag) &&  (!newItem.template || itemToUpdate)'>
+		  <button class="button button-positive" ng-click='ok()' ng-disabled='(!newItem.name || !newItem.tag) &&  (newItem.template || itemToUpdate)'>
 		    Save
 		  </button>
 		</ion-header-bar>
@@ -62,7 +62,25 @@
 			    </div>
 			    <select ng-model='newItem.template' ng-options='template.name group by template.tag for template in templates'>
 			    </select>
-			</label>		  
+			</label>
+            <label class="item item-input item-toggle" ng-show='view.showTemplates' style='z-index: 1'>
+                <span class="input-label">Share Project</span>
+                <label class="toggle toggle-postive">
+                   <input type="checkbox" ng-model='newItem.share'>
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                </label>
+             </label>
+            <label class="item item-input item-toggle" ng-show='!view.showTemplates' style='z-index: 1'>
+                <span class="input-label">Active</span>
+                <label class="toggle toggle-postive">
+                   <input type="checkbox" ng-model='newItem.isActive'>
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                </label>
+             </label>  
 		  </div>
 		</ion-content>
 	</div>

@@ -545,7 +545,6 @@ angular.module('starter.services', [])
                                 ids:activeIDs
                             }
                         }).on("change", function(change){
-                            console.log(change);
                         }).on("complete", function(info){
                             //Step 3 - conflict resolution
                             //STEP 4 - push projects back to the server
