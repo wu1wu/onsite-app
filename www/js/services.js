@@ -1,4 +1,5 @@
-angular.module('starter.services', []).factory('MHTMLDoc', function() {
+angular.module('starter.services', [])
+.factory('MHTMLDoc', function() {
     function MHTMLDoc() {
         this.boundary = '...BOUNDARY...';
         //begin configuring data on inialization.
@@ -320,23 +321,6 @@ angular.module('starter.services', []).factory('MHTMLDoc', function() {
 ]).factory('$user', ['$rootScope', '$location', 'cornerPocket', '$http', '$q', '$timeout', 'ifOnline', '$ionicPopup',
     function($rootScope, $location, cornerPocket, $http, $q, $timeout, ifOnline, $ionicPopup) {
         var user = {
-            /*load:function(){
-			var user = this;
-			
-			var localUsers = JSON.parse(localStorage.getItem('users'));
-			
-			if(localUsers){//logged in
-				var localUsers = JSON.parse(localUsersString);
-				
-				//add in user name, password, groups, and activeGroup
-				
-				
-				return true;
-			}else{//not logged in
-				
-				return false;
-			}
-		},*/
             logIn: function(userInfo) {
                 var deferred = $q.defer();
                 var user = this;
@@ -350,41 +334,17 @@ angular.module('starter.services', []).factory('MHTMLDoc', function() {
                         response.password = userInfo.password; //now we need to store the password
                         user.construct(response);
                         user.offline = false;
+                        $location.path("/app/projects").replace();
                         //ok, lets check to see if it's the first time for each group 
                         cornerPocket.db.get('_design/projects', function(err, result) {
                             if (err) {
                                 //doc not found, better sync
-                                //can't use $sync here b/c of circular dependency
-                                //add auth to the remote db URL			
-                                var remote = new PouchDB(localStorage.server + user.activeGroup.name, {
-                                    auth: {
-                                        username: user.name,
-                                        password: user.password
-                                    }
-                                });
-                                var loadingPopup = $ionicPopup.show({
-                                    template: '<div class="row">' + '<div class="col" style="text-align: center;">' + '<h3>Syncing...</h3><br/>' + '</div>' + '</div>' + '<div class="loading-icon">' + '<i class="icon ion-looping"></i>' + '</div>'
-                                });
-                                cornerPocket.db.sync(remote).on('complete', function(data) {
-                                    loadingPopup.close();
-                                    $timeout(function() {
-                                        $location.path("/app/projects").replace();
-                                        deferred.resolve();
-                                    });
-                                }, function(info) {
-                                    //console.log("SYNC ERROR");
-                                    //console.log(info);
-                                    deferred.reject();
-                                });
+                                deferred.resolve(true);
                             } else { //doc found, go right ahead!
-                                $timeout(function() {
-                                    $location.path("/app/projects").replace();
-                                    deferred.resolve();
-                                });
+                                deferred.resolve(false);
                             }
                         });
                     }).error(function(data, status) {
-                        //$location.path("/login").replace();
                         deferred.reject();
                     });
                 }, function() { //offline handling
@@ -546,31 +506,65 @@ angular.module('starter.services', []).factory('MHTMLDoc', function() {
         return deferred.promise;
     }
 ]).service('$sync', ['$q', '$ionicPopup', '$user', 'cornerPocket', 'ifOnline',
-    function($q, $ionicPopup, $user, cornerPocket, ifOnline) {
+    function($q, $ionicPopup, $user,cornerPocket, ifOnline) {
         return {
             once: function() {
                 var deferred = $q.defer();
-                console.log($user.name);
-                console.log($user.password);
-                //add auth to the remote db URL			
-                var remote = new PouchDB(localStorage.server + $user.activeGroup.name, {
-                    auth: {
-                        username: $user.name,
-                        password: $user.password
-                    }
-                });
-                var loadingPopup = $ionicPopup.show({
-                    template: '<div class="row">' + '<div class="col" style="text-align: center;">' + '<h3>Syncing...</h3><br/>' + '</div>' + '</div>' + '<div class="loading-icon">' + '<i class="icon ion-looping"></i>' + '</div>'
-                });
-                cornerPocket.db.sync(remote).on('complete', function(data) {
-                    loadingPopup.close();
-                    deferred.resolve(data);
-                }).on('error', function(error) {
-                    console.log(error);
-                    $ionicPopup.alert({
-                        title: "Sync Error"
+                
+                //check to make sure we've got internet access
+                ifOnline({
+                    alert: true
+                }).then(function(){
+                    //add auth to the remote db URL			
+                    var remote = new PouchDB(localStorage.server + $user.activeGroup.name, {
+                        auth: {
+                            username: $user.name,
+                            password: $user.password
+                        }
                     });
-                    loadingPopup.close();
+                    var loadingPopup = $ionicPopup.show({
+                        template: '<div class="row">' + '<div class="col" style="text-align: center;">' + '<h3>Syncing...</h3><br/>' + '</div>' + '</div>' + '<div class="loading-icon">' + '<i class="icon ion-looping"></i>' + '</div>'
+                    });
+                    //execute if we run into issues
+                    var onError = function(info){
+                        console.log(info);
+                        $ionicPopup.alert({
+                            title: "Sync Error"
+                        });
+                        loadingPopup.close();
+                    }
+                    //Step 1 - first things first, get map of projectIDs
+                    remote.query('projects/authorMap', {
+                        keys:["All", $user.name]
+                    }, function(err, response) {
+                        var activeIDs = _.uniq(_.pluck(response.rows, "id"));
+                        console.log(activeIDs);
+                        //Step 2 - pull down data from server
+                        cornerPocket.db.replicate.from(remote, {
+                            filter: "filter/mobile",
+                            query_params: {
+                                ids:activeIDs
+                            }
+                        }).on("complete", function(info){
+                            //Step 3 - conflict resolution
+                            
+                            //STEP 4 - mark inactive projects as not deployed
+                            //create a view that gets all projects which are tagged inactive: true AND deployed:true
+                            //update each document to indicatd it's not deployed
+                            //save documents back to the server
+                            //delete documents from local database
+                            //keep track of deleted projects
+                            
+                            //STEP 5 - push projects back to the server
+                            cornerPocket.db.replicate.to(remote, {
+                                //we'll stick a filter function here that prevents projects which were deleted from syncing back to the server
+                            }).on("complete", function(info){
+                                loadingPopup.close();
+                                deferred.resolve(info);
+                            }).on("error", onError);
+                            
+                        }).on("error", onError);
+                    });
                 });
                 return deferred.promise;
             },

@@ -1,4 +1,4 @@
-angular.module('starter.controllers', []).controller('loginController', function($scope, $ionicPopup, $user) {
+angular.module('starter.controllers', []).controller('loginController', function($scope, $ionicPopup, $user, $sync) {
     if (window.StatusBar) {
         StatusBar.styleDefault();
     }
@@ -28,7 +28,11 @@ angular.module('starter.controllers', []).controller('loginController', function
         $scope.user.name = $scope.user.name.toLowerCase();
         localStorage.name = $scope.user.name;
         localStorage.password = $scope.user.password;
-        $user.logIn($scope.user);
+        $user.logIn($scope.user).then(function(needSync){
+            if(needSync){
+                $sync.once();
+            }            
+        });
     };
 }).controller('AppCtrl', function($scope, $ionicPopup, $ionicSideMenuDelegate, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {
     //change status bar color
