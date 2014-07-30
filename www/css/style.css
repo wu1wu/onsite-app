@@ -3,6 +3,12 @@ textarea {
    resize: none;
 }
 
+.login-error{
+    color:red;
+}
+.italic{
+    font-style:italic;
+}
 .memo-label{
 	align-self: baseline;
 	-webkit-align-self: baseline;

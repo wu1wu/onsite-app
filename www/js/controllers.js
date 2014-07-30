@@ -24,6 +24,7 @@ angular.module('starter.controllers', []).controller('loginController', function
     $scope.user.name = localStorage.name;
     $scope.user.password = localStorage.password;
     $scope.login = function() {
+        $scope.status = "Logging In...";
         //temporary during testing
         $scope.user.name = $scope.user.name.toLowerCase();
         localStorage.name = $scope.user.name;
@@ -33,7 +34,11 @@ angular.module('starter.controllers', []).controller('loginController', function
                 $sync.once().then(function(){
                     $location.path("/app/projects").replace();
                 });
-            }            
+            }else{
+                $location.path("/app/projects").replace();
+            }   
+        }, function(error){
+            $scope.status = error;
         });
     };
 }).controller('AppCtrl', function($scope, $ionicPopup, $ionicSideMenuDelegate, cornerPocket, $user, $sync, ifOnline, $state, $timeout) {

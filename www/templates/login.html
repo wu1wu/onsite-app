@@ -13,7 +13,10 @@
 			</div>	
 			<button class="button button-full button-stable" ng-click='login()'>
 			  Login
-			</button>	
+			</button>
+            <div ng-show='status' class='italic' ng-class="{'login-error': status !== 'Logging In...'}">
+                {{status}}
+            </div>	
 		</div>		
     </div>
   </div>

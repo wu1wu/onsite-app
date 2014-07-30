@@ -344,7 +344,7 @@ angular.module('starter.services', [])
                             }
                         });
                     }).error(function(data, status) {
-                        deferred.reject();
+                        deferred.reject("Username or Password is incorrect.  Please try again.");
                     });
                 }, function() { //offline handling
                     $timeout(function() {
@@ -380,11 +380,11 @@ angular.module('starter.services', [])
                                 deferred.resolve();
                             } else {
                                 //console.log('password error');
-                                deferred.reject('Incorrect Password');
+                                deferred.reject('Username or Password is incorrect.  Please try again.');
                             }
                         } else {
                             //console.log('users error');
-                            deferred.reject('No users found with that username');
+                            deferred.reject('Username or Password is incorrect.  Please try again.');
                         }
                     }, 100);
                 });
